@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="node_modules/vis/dist/vis.min.css" />
+    <style type="text/css">
+      #mynetwork,
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <title>Front-end Developer Roadmap of Guides</title>
+  </head>
+  <body>
+    <script src="node_modules/vis/dist/vis.min.js"></script>
+    <div id="mynetwork"></div>
+    <script type="text/javascript">
+      const createLabel = labelContent => {
+        let title = `<b>${labelContent.title}</b>\n\n <i>covers:</i> \n`;
+        let covers = "";
+        labelContent.covers.forEach((item, index) => {
+          covers += `<code>${item}</code>`;
+          covers += labelContent.covers.length === index + 1 ? "" : "\n";
+        });
+        return title + covers;
+      };
+
+      var nodes = [
+        {
+          id: 0,
+          color: {
+            border: "#4d4d4d"
+          },
+          font: {
+            bold: "20px arial #000"
+          },
+          label:
+            "<b>Front-end Developer Roadmap of Guides</b> \n <code>Click a guide below to start reading</code>",
+          x: -175,
+          y: -800
+        },
+        {
+          id: 1,
+          color: {
+            border: "#4d4d4d"
+          },
+          label: createLabel({
+            title: "1 - Front-end Developer Discipline/Career",
+            covers: [
+              "Overview of Displine",
+              "Job Titles",
+              "Salaries",
+              "Overlapping disciplines",
+              "Communities"
+            ]
+          }),
+          x: -475,
+          y: -500
+        },
+        {
+          id: 2,
+          label: createLabel({
+            title: "2 - Front-end Development Overview",
+            covers: [
+              "The Internet Overview",
+              "The Web Platform Overview",
+              "HTML Overview",
+              "CSS Overview",
+              "JavaScript Overview",
+              "JSON (data API's) Overview",
+              "Web Accessibility Overview",
+              "UI Development Overview"
+            ]
+          }),
+          x: 150,
+          y: -500
+        },
+        {
+          id: 3,
+          color: {
+            background: "#e8e8e8"
+          },
+          label: createLabel({
+            title: "3 - Getting a Front-end Developer Job",
+            covers: [
+              "Interview preparation",
+              "Training/Schooling/Degrees",
+              "Job Boards"
+            ]
+          }),
+          x: -150,
+          y: -600
+        },
+        {
+          id: 4,
+          label: createLabel({
+            title: "4 - The Internet",
+            covers: ["Domains", "URL's", "DNS", "HTTP", "server/client"]
+          }),
+          x: -150,
+          y: -300
+        },
+        {
+          id: 5,
+          label: createLabel({
+            title: "5 - The Web Platform",
+            covers: [
+              "Browser Runtime",
+              "Headless Browsers",
+              "Webview's",
+              "Web to Native",
+              "Web API's",
+              "Hosting"
+            ]
+          }),
+          x: 80,
+          y: -250
+        },
+        {
+          id: 6,
+          color: {
+            background: "#e8e8e8"
+          },
+          label: createLabel({
+            title: "6 - Web Security",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: 400,
+          y: -400
+        },
+        {
+          id: 7,
+          label: createLabel({
+            title: "7 - Code Editors",
+            covers: ["What is it", "VS code", "codesandbox.io"]
+          }),
+          x: 300,
+          y: -220
+        },
+        {
+          id: 8,
+          label: createLabel({
+            title: "8 - HTML & Webpage Fundamentals",
+            covers: ["Markup", "Semantical HTML", "Accessibility", "SEO"]
+          }),
+          x: 550,
+          y: -220
+        },
+        {
+          id: 9,
+          label: createLabel({
+            title: "9 - Web Image Fundamentals",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: 850,
+          y: -20
+        },
+        {
+          id: 10,
+          label: createLabel({
+            title: "10 - CSS Fundamentals",
+            covers: [
+              "Inheritance & Cacade",
+              "Specificity",
+              "Selectors",
+              "Box Model",
+              "Flow",
+              "Units",
+              "Colors & Gradients"
+            ]
+          }),
+          x: 600,
+          y: -30
+        },
+        {
+          id: 11,
+          label: createLabel({
+            title: "11 - CSS Fonts & Typography",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: 345,
+          y: -30
+        },
+        {
+          id: 12,
+          label: createLabel({
+            title: "12 - CSS Grid & Flexbox",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: 100,
+          y: -30
+        },
+        {
+          id: 13,
+          label: createLabel({
+            title: "13 - CSS Media Queries & RWD",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: -150,
+          y: -30
+        },
+        {
+          id: 14,
+          label: createLabel({
+            title: "14 - CSS Transitions, Transforms & Animation",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: -450,
+          y: 50
+        },
+        {
+          id: 15,
+          color: {
+            background: "#e8e8e8"
+          },
+          label: createLabel({
+            title: "15 - HTML Emails",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: -350,
+          y: -250
+        },
+        {
+          id: 16,
+          label: createLabel({
+            title: "16 - CSS Practices",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: -550,
+          y: -150
+        },
+        {
+          id: 17,
+          color: {
+            background: "#e8e8e8"
+          },
+          label: createLabel({
+            title: "17 - UI Design / Patterns",
+            covers: ["Interaction Design", "HCI", "UI Patterns"]
+          }),
+          x: -550,
+          y: -330
+        },
+        {
+          id: 18,
+          label: createLabel({
+            title: "18 - JavaScript Fundamentals",
+            covers: [
+              "Syntax",
+              "Variables / Assignment",
+              "Values",
+              "Operators",
+              "Functions",
+              "Statements",
+              "Objects",
+              "Scope & Closure"
+            ]
+          }),
+          x: -800,
+          y: -330
+        },
+        {
+          id: 19,
+          color: {
+            background: "#e8e8e8"
+          },
+          label: createLabel({
+            title: "19 - JavaScript Regular Expressions",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: -900,
+          y: -100
+        }
+      ];
+
+      var edges = [
+        { from: 0, to: 1, arrows: "to" },
+        { from: 1, to: 3, arrows: "to" },
+        { from: 3, to: 2, arrows: "to" },
+        { from: 2, to: 4, arrows: "to" },
+        { from: 1, to: 2, arrows: "to" },
+        { from: 4, to: 5, arrows: "to" },
+        { from: 5, to: 6, arrows: "to" },
+        { from: 6, to: 7, arrows: "to" },
+        { from: 5, to: 7, arrows: "to" },
+        { from: 7, to: 8, arrows: "to" },
+        { from: 8, to: 9, arrows: "to" },
+        { from: 9, to: 10, arrows: "to" },
+        { from: 10, to: 11, arrows: "to" },
+        { from: 11, to: 12, arrows: "to" },
+        { from: 12, to: 13, arrows: "to" },
+        { from: 13, to: 14, arrows: "to" },
+        { from: 15, to: 16, arrows: "to" },
+        { from: 14, to: 16, arrows: "to" },
+        { from: 14, to: 15, arrows: "to" },
+        { from: 16, to: 17, arrows: "to" },
+        { from: 16, to: 18, arrows: "to" },
+        { from: 17, to: 18, arrows: "to" },
+        { from: 18, to: 19, arrows: "to" }
+      ];
+
+      var container = document.getElementById("mynetwork");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+        interaction: {
+          hover: true
+        },
+        edges: {
+          font: {
+            size: 12
+          }
+        },
+        nodes: {
+          shape: "box",
+          title: "coming soon",
+
+          color: {
+            border: "#4d4d4d",
+            background: "#fff"
+          },
+          shapeProperties: {
+            borderRadius: 3
+          },
+          font: {
+            multi: true,
+            bold: "12px arial #262626",
+            mono: "11px arial #4d4d4d",
+            ital: "11px arial #999"
+          },
+          widthConstraint: {
+            maximum: 300
+          },
+          margin: 20
+        },
+        physics: {
+          enabled: false
+        }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+      //Get the canvas HTML element
+      var networkCanvas = container.getElementsByTagName("canvas")[0];
+
+      function changeCursor(newCursorStyle) {
+        networkCanvas.style.cursor = newCursorStyle;
+      }
+
+      network.on("hoverNode", function(e) {
+        changeCursor("pointer");
+      });
+      network.on("blurNode", function(e) {
+        changeCursor("default");
+      });
+      network.on("hoverEdge", function(e) {
+        changeCursor("grab");
+      });
+      network.on("blurEdge", function(e) {
+        changeCursor("default");
+      });
+      network.on("dragStart", function(e) {
+        changeCursor("grabbing");
+      });
+      network.on("dragging", function(e) {
+        changeCursor("grabbing");
+      });
+      network.on("dragEnd", function(e) {
+        changeCursor("pointer");
+      });
+    </script>
+  </body>
+</html>
