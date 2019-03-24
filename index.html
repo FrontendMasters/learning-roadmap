@@ -13,7 +13,7 @@
         height: 100%;
       }
     </style>
-    <title>Front-end Developer Roadmap of Guides</title>
+    <title>Roadmap of Front-end Developer Guides</title>
   </head>
   <body>
     <script src="node_modules/vis/dist/vis.min.js"></script>
@@ -39,7 +39,7 @@
             bold: "20px arial #000"
           },
           label:
-            "<b>Front-end Developer Roadmap of Guides</b> \n <code>Click a guide below to start reading</code>",
+            "<b>Roadmap of Front-end Developer Guides</b> \n <code>Click a guide below to start reading</code>",
           x: -175,
           y: -800
         },
@@ -63,8 +63,24 @@
         },
         {
           id: 2,
+          color: {
+            background: "#e8e8e8"
+          },
           label: createLabel({
-            title: "2 - Front-end Development Overview",
+            title: "2 - Getting a Front-end Developer Job",
+            covers: [
+              "Interview preparation",
+              "Training/Schooling/Degrees",
+              "Job Boards"
+            ]
+          }),
+          x: -150,
+          y: -600
+        },
+        {
+          id: 3,
+          label: createLabel({
+            title: "3 - Front-end Development Overview",
             covers: [
               "The Internet Overview",
               "The Web Platform Overview",
@@ -78,22 +94,6 @@
           }),
           x: 150,
           y: -500
-        },
-        {
-          id: 3,
-          color: {
-            background: "#e8e8e8"
-          },
-          label: createLabel({
-            title: "3 - Getting a Front-end Developer Job",
-            covers: [
-              "Interview preparation",
-              "Training/Schooling/Degrees",
-              "Job Boards"
-            ]
-          }),
-          x: -150,
-          y: -600
         },
         {
           id: 4,
@@ -272,16 +272,328 @@
             title: "19 - JavaScript Regular Expressions",
             covers: ["...", "...", "...", "..."]
           }),
-          x: -900,
+          x: -1100,
           y: -100
+        },
+        {
+          id: 20,
+          label: createLabel({
+            title: "20 - JavaScript ES Modules / Scripts",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: -800,
+          y: -100
+        },
+        {
+          id: 21,
+          color: {
+            background: "#e8e8e8"
+          },
+          label: createLabel({
+            title: "21 - CLI",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: -880,
+          y: 100
+        },
+        {
+          id: 22,
+          label: createLabel({
+            title: "22 - GIT/Github",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: -700,
+          y: 100
+        },
+        {
+          id: 23,
+          label: createLabel({
+            title: "23 - NPM/Yarn & Node.js",
+            covers: ["NPM/Yarn", "Semantic Versioning", "Node.js Basics"]
+          }),
+          x: -900,
+          y: 300
+        },
+        {
+          id: 24,
+          color: {
+            background: "#e8e8e8"
+          },
+          label: createLabel({
+            title: "24 - NPM/Yarn Scripts/Run",
+            covers: ["Building/Automation", "...", "..."]
+          }),
+          x: -650,
+          y: 270
+        },
+        {
+          id: 25,
+          label: createLabel({
+            title: "25 - CSS Tooling",
+            covers: [
+              "Preprocessors",
+              "Postprocessors",
+              "Utitlites",
+              "Linting/Hinting",
+              "CSS in JS"
+            ]
+          }),
+          x: -650,
+          y: 450
+        },
+        {
+          id: 26,
+          color: {
+            background: "#e8e8e8"
+          },
+          label: createLabel({
+            title: "26 - CSS UI Toolkits",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: -400,
+          y: 450
+        },
+        {
+          id: 27,
+          label: createLabel({
+            title: "27 - DOM, BOM, CSSOM",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: -400,
+          y: 250
+        },
+        {
+          id: 28,
+          label: createLabel({
+            title: "28 - JavaScript Inheritance",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: -150,
+          y: 150
+        },
+        {
+          id: 29,
+          label: createLabel({
+            title: "29 - JavaScript Promises/Async",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: -150,
+          y: 350
+        },
+        {
+          id: 30,
+          label: createLabel({
+            title: "30 - JavaScript FP Fundamentals",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: -150,
+          y: 550
+        },
+        {
+          id: 31,
+          label: createLabel({
+            title: "31 - JavaScript Web API's",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: 100,
+          y: 400
+        },
+        {
+          id: 32,
+          label: createLabel({
+            title: "32 - JavaScript Practices/Tools",
+            covers: [
+              "Libraries",
+              "Utilities",
+              "Linting/Hinting",
+              "Formatting",
+              "Style Guides"
+            ]
+          }),
+          x: 200,
+          y: 180
+        },
+        {
+          id: 33,
+          color: {
+            background: "#e8e8e8"
+          },
+          label: createLabel({
+            title: "33 - JavaScript UI Toolkit's",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: 550,
+          y: 160
+        },
+        {
+          id: 34,
+          color: {
+            background: "#e8e8e8"
+          },
+          label: createLabel({
+            title: "34 - JavaScript Runtime & AST",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: 550,
+          y: 360
+        },
+        {
+          id: 35,
+          color: {
+            background: "#e8e8e8"
+          },
+          label: createLabel({
+            title: "35 - JavaScript Performance",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: 550,
+          y: 560
+        },
+        {
+          id: 36,
+          color: {
+            background: "#e8e8e8"
+          },
+          label: createLabel({
+            title: "36 - JavaScript CS",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: 550,
+          y: 750
+        },
+        {
+          id: 37,
+          label: createLabel({
+            title: "37 - Web Developer Tools",
+            covers: ["Chrome Dev Tools", "...", "...", "..."]
+          }),
+          x: 250,
+          y: 600
+        },
+        {
+          id: 38,
+          label: createLabel({
+            title: "38 - Websites",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: 250,
+          y: 800
+        },
+        {
+          id: 39,
+          label: createLabel({
+            title: "39 - Progressive Web Apps",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: 0,
+          y: 720
+        },
+        {
+          id: 40,
+          label: createLabel({
+            title: "40 - JavaScript Module Loaders",
+            covers: ["Webpack", "Parcel", "Rollup"]
+          }),
+          x: -250,
+          y: 720
+        },
+        {
+          id: 41,
+          color: {
+            background: "#e8e8e8"
+          },
+          label: createLabel({
+            title: "41 - X Compiler to JS",
+            covers: [
+              "Typescript",
+              "Reason",
+              "Elm",
+              "ClojureScript",
+              "PureScript"
+            ]
+          }),
+          x: -500,
+          y: 630
+        },
+        {
+          id: 42,
+          label: createLabel({
+            title: "42 - JS Compilers to JS",
+            covers: ["Babel"]
+          }),
+          x: -500,
+          y: 800
+        },
+        {
+          id: 43,
+          label: createLabel({
+            title: "43 - React / JSX",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: -740,
+          y: 850
+        },
+        {
+          id: 44,
+          label: createLabel({
+            title: "44 - React Router",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: -700,
+          y: 630
+        },
+        {
+          id: 45,
+          label: createLabel({
+            title: "45 - Application State",
+            covers: ["Mobx", "Redux", "...", "..."]
+          }),
+          x: -900,
+          y: 530
+        },
+        {
+          id: 46,
+          label: createLabel({
+            title: "46 - Data API's",
+            covers: ["REST", "GraphQL", "...", "..."]
+          }),
+          x: -900,
+          y: 730
+        },
+        {
+          id: 47,
+          label: createLabel({
+            title: "47 - Web Software Development/Architecture",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: -1150,
+          y: 430
+        },
+        {
+          id: 48,
+          label: createLabel({
+            title: "48 - Serverless",
+            covers: ["...", "...", "...", "..."]
+          }),
+          x: -1100,
+          y: 690
+        },
+        {
+          id: 49,
+          label: createLabel({
+            title: "49 - Testing (unit, Integration, Functional",
+            covers: ["Jest", "Enzyme", "Chai", "Cypress"]
+          }),
+          x: -1100,
+          y: 930
         }
       ];
 
       var edges = [
         { from: 0, to: 1, arrows: "to" },
         { from: 1, to: 3, arrows: "to" },
-        { from: 3, to: 2, arrows: "to" },
-        { from: 2, to: 4, arrows: "to" },
+        { from: 2, to: 3, arrows: "to" },
+        { from: 3, to: 4, arrows: "to" },
         { from: 1, to: 2, arrows: "to" },
         { from: 4, to: 5, arrows: "to" },
         { from: 5, to: 6, arrows: "to" },
@@ -300,7 +612,52 @@
         { from: 16, to: 17, arrows: "to" },
         { from: 16, to: 18, arrows: "to" },
         { from: 17, to: 18, arrows: "to" },
-        { from: 18, to: 19, arrows: "to" }
+        { from: 18, to: 19, arrows: "to" },
+        { from: 18, to: 20, arrows: "to" },
+        { from: 19, to: 20, arrows: "to" },
+        { from: 20, to: 21, arrows: "to" },
+        { from: 21, to: 22, arrows: "to" },
+        { from: 20, to: 22, arrows: "to" },
+        { from: 22, to: 23, arrows: "to" },
+        { from: 23, to: 24, arrows: "to" },
+        { from: 23, to: 25, arrows: "to" },
+        { from: 24, to: 25, arrows: "to" },
+        { from: 25, to: 26, arrows: "to" },
+        { from: 25, to: 27, arrows: "to" },
+        { from: 26, to: 27, arrows: "to" },
+        { from: 27, to: 28, arrows: "to" },
+        { from: 28, to: 29, arrows: "to" },
+        { from: 29, to: 30, arrows: "to" },
+        { from: 30, to: 31, arrows: "to" },
+        { from: 31, to: 32, arrows: "to" },
+        { from: 32, to: 33, arrows: "to" },
+        { from: 32, to: 34, arrows: "to" },
+        { from: 32, to: 35, arrows: "to" },
+        { from: 32, to: 36, arrows: "to" },
+        { from: 32, to: 37, arrows: "to" },
+        { from: 33, to: 37, arrows: "to" },
+        { from: 34, to: 37, arrows: "to" },
+        { from: 35, to: 37, arrows: "to" },
+        { from: 33, to: 34, arrows: "to, from" },
+        { from: 34, to: 35, arrows: "to, from" },
+        { from: 36, to: 37, arrows: "to" },
+        { from: 36, to: 37, arrows: "to" },
+        { from: 38, to: 39, arrows: "to" },
+        { from: 37, to: 38, arrows: "to" },
+        { from: 35, to: 36, arrows: "to, from" },
+        { from: 39, to: 40, arrows: "to" },
+        { from: 40, to: 41, arrows: "to" },
+        { from: 41, to: 42, arrows: "to" },
+        { from: 40, to: 42, arrows: "to" },
+        { from: 42, to: 43, arrows: "to" },
+        { from: 43, to: 44, arrows: "to" },
+        { from: 45, to: 46, arrows: "to" },
+        { from: 44, to: 45, arrows: "to" },
+        { from: 46, to: 48, arrows: "to" },
+        { from: 46, to: 47, arrows: "to" },
+        { from: 46, to: 49, arrows: "to" },
+        { from: 47, to: 48, arrows: "to, from" },
+        { from: 48, to: 49, arrows: "to, from" }
       ];
 
       var container = document.getElementById("mynetwork");
