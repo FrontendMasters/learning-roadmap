@@ -48,8 +48,10 @@
           color: {
             border: "#4d4d4d"
           },
+          title: "read now",
+          url: "guides/the-front-end-developer-discipline/index.html",
           label: createLabel({
-            title: "1 - Front-end Developer Discipline/Career",
+            title: "1 - The Front-end Developer Discipline",
             covers: [
               "Overview of Displine",
               "Job Titles",
@@ -228,7 +230,13 @@
           id: 16,
           label: createLabel({
             title: "16 - CSS Practices",
-            covers: ["...", "...", "...", "..."]
+            covers: [
+              "Naming Systems",
+              "Architecture",
+              "Conventions",
+              "Resets",
+              "Style Guides"
+            ]
           }),
           x: -550,
           y: -150
@@ -273,7 +281,7 @@
             covers: ["...", "...", "...", "..."]
           }),
           x: -1100,
-          y: -100
+          y: -200
         },
         {
           id: 20,
@@ -347,7 +355,7 @@
             background: "#e8e8e8"
           },
           label: createLabel({
-            title: "26 - CSS UI Toolkits",
+            title: "26 - CSS UI Toolkit's",
             covers: ["...", "...", "...", "..."]
           }),
           x: -400,
@@ -563,7 +571,7 @@
         {
           id: 47,
           label: createLabel({
-            title: "47 - Web Software Development/Architecture",
+            title: "47 - Web Software Development/Architecture/Practices",
             covers: ["...", "...", "...", "..."]
           }),
           x: -1150,
@@ -712,8 +720,23 @@
         networkCanvas.style.cursor = newCursorStyle;
       }
 
-      network.on("hoverNode", function(e) {
-        changeCursor("pointer");
+      network.on("click", params => {
+        const clickedNode = nodes.find(node => {
+          return node.id === nodes[params.nodes[0]].id;
+        });
+        if (clickedNode.url !== undefined) {
+          window.open(clickedNode.url, "_blank");
+        }
+      });
+
+      network.on("hoverNode", function(params) {
+        console.log(params);
+        const hoveredNode = nodes.find(node => {
+          return node.id === nodes[params.node].id;
+        });
+        if (hoveredNode.url !== undefined) {
+          changeCursor("pointer");
+        }
       });
       network.on("blurNode", function(e) {
         changeCursor("default");
