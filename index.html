@@ -12,12 +12,39 @@
         width: 100%;
         height: 100%;
       }
+      #key {
+        position: absolute;
+        right: 20px;
+        z-index: 1000000000;
+        top: 20px;
+        font-size: 12px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.7);
+        padding: 20px;
+      }
+      #primary {
+        border: solid 1px #4d4d4d;
+        padding: 5px;
+        background-color: #fff;
+        margin-top: 10px;
+      }
+      #secondary {
+        border: solid 1px #4d4d4d;
+        padding: 5px;
+        background-color: #e8e8e8;
+        margin-top: 10px;
+      }
     </style>
     <title>Roadmap of Front-end Developer Guides</title>
   </head>
   <body>
-    <script src="node_modules/vis/dist/vis.min.js"></script>
+    <div id="key">
+      <div>Key:</div>
+      <div id="primary">Foundational Path</div>
+      <div id="secondary">Digging Deeper Path</div>
+    </div>
     <div id="mynetwork"></div>
+    <script src="node_modules/vis/dist/vis.min.js"></script>
     <script type="text/javascript">
       const createLabel = labelContent => {
         let title = `<b>${labelContent.title}</b>\n\n <i>covers:</i> \n`;
@@ -36,12 +63,12 @@
             border: "#4d4d4d"
           },
           font: {
-            bold: "20px arial #000"
+            bold: "24px arial #000"
           },
           label:
             "<b>Roadmap of Front-end Developer Guides</b> \n <code>Click a guide below to start reading</code>",
-          x: -175,
-          y: -800
+          x: -600,
+          y: -670
         },
         {
           id: 1,
@@ -49,14 +76,14 @@
             border: "#4d4d4d"
           },
           title: "read now",
-          url: "guides/the-front-end-developer-discipline/index.html",
+          url: "guides/the-front-end-developer-profession/index.html",
           label: createLabel({
-            title: "1 - The Front-end Developer Discipline",
+            title: "1 - The Front-end Developer Profession",
             covers: [
-              "Overview of Displine",
+              "Overview of Occupation",
               "Job Titles",
               "Salaries",
-              "Overlapping disciplines",
+              "Overlapping Occupations",
               "Communities"
             ]
           }),
@@ -71,9 +98,11 @@
           label: createLabel({
             title: "2 - Getting a Front-end Developer Job",
             covers: [
-              "Interview preparation",
-              "Training/Schooling/Degrees",
-              "Job Boards"
+              "A Self Directed Education",
+              "A Directed Education",
+              "Building a Resume",
+              "Interviewing",
+              "Finding a Job"
             ]
           }),
           x: -150,
@@ -704,7 +733,7 @@
           widthConstraint: {
             maximum: 300
           },
-          margin: 20
+          margin: 16
         },
         physics: {
           enabled: false
