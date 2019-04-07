@@ -73,7 +73,12 @@
         {
           id: 1,
           color: {
-            border: "#4d4d4d"
+            border: "#2B7CE9",
+            background: "#D2E5FF",
+            hover: {
+              border: "#2B7CE9",
+              background: "#D2E5FF"
+            }
           },
           title: "read now",
           url: "guides/the-front-end-developer-profession/index.html",
@@ -705,6 +710,7 @@
       };
 
       var options = {
+        dragNodes: false,
         interaction: {
           hover: true
         },
@@ -719,7 +725,11 @@
 
           color: {
             border: "#4d4d4d",
-            background: "#fff"
+            background: "#fff",
+            hover: {
+              border: "#4d4d4d",
+              background: "#fff"
+            }
           },
           shapeProperties: {
             borderRadius: 3
