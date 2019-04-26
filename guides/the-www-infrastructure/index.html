@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/prism.css" />
+    <script src="assets/prism.js"></script>
+    <title>The WWW Infrastructure</title>
+  </head>
+
+  <body>
+    <div id="menu">
+      <a id="backToRoadMapLink" href="/">← Front-end Developer Roadmap</a>
+      <div id="toc"></div>
+    </div>
+
+    <div id="panel">
+      <div id="menuButton">|||</div>
+
+      <div id="bookPadding">
+        <h1>The WWW Infrastructure</h1>
+
+        <h4 style="margin-top:0px">
+          Written by
+          <a href="http://codylindley.com/">Cody Lindley</a>
+          <span id="lastMod" style="display:none"
+            >updated <span id="lastModDate"></span
+          ></span>
+        </h4>
+
+        <script>
+          if (document.lastModified) {
+            document.getElementById("lastMod").style.display = "inline";
+            document.getElementById(
+              "lastModDate"
+            ).innerText = document.lastModified.split(" ")[0];
+          }
+        </script>
+
+        <section>
+          <p>
+            <em
+              ><a href="/">Guide books and roadmap</a> from
+              <a href="https://frontendmasters.com/">Frontend Masters</a>.
+              <br />
+              Advancing your skills with in-depth, modern front-end engineering
+              courses.</em
+            >
+          </p>
+        </section>
+
+        <hr />
+
+        <h3>Overview:</h3>
+
+        <p>
+          A closer look at the fundamental building blocks of the World Wide
+          Web.
+        </p>
+        <hr />
+        <p>
+          <strong>Contribute content, suggestions, and fixes on github</strong>:
+        </p>
+
+        <p>
+          <a href="https://github.com/FrontendMasters/guides"
+            >https://github.com/FrontendMasters/guides</a
+          >
+        </p>
+
+        <hr />
+
+        <div id="chapter1" class="chapter">
+          <h2>The Internet</h2>
+
+          <p>
+            It is the internet that makes the WWW possible. The internet is a
+            global system of connected devices, routers, and modems.
+          </p>
+
+          <p class="image">
+            <a
+              href="http://www.theshulers.com/whitepapers/internet_whitepaper/index.html"
+            >
+              <img
+                alt="Internet Network"
+                src="images/ruswp_diag3.gif"
+                title="https://www.helloitsliam.com/2014/12/20/how-the-internet-works-infographic/"
+              />
+            </a>
+          </p>
+          <p class="imageCite">
+            <cite
+              >Image source:
+              <a
+                href="http://www.theshulers.com/whitepapers/internet_whitepaper/index.html"
+                target="_blank"
+                >http://www.theshulers.com/whitepapers/internet_whitepaper/index.html</a
+              ></cite
+            >
+          </p>
+
+          <p>
+            People will often think of the internet and the World Wide Web (aka
+            WWW) interchangeable but the internet is specifically the layers of
+            networking that exist to make the connection of devices possible.
+            Most people are connected to this network by paying an
+            <a href="https://www.whoismyisp.org/"
+              >Internet Service Provider (aka ISP)</a
+            >
+            for access in the form of a wired connect directly to a
+            business/home or a wireless connection from a cellular tower or
+            satellite.
+          </p>
+
+          <p>
+            No one person, company, or organization or government runs the
+            internet.
+          </p>
+
+          <p class="image">
+            <a
+              href="http://www.bitrebels.com/technology/find-out-who-runs-the-internet-chart/"
+            >
+              <img
+                alt="How the internet works"
+                src="images/who-runs-the-internet-infographic.jpg"
+                title="https://www.helloitsliam.com/2014/12/20/how-the-internet-works-infographic/"
+              />
+            </a>
+          </p>
+          <p class="imageCite">
+            <cite
+              >Image source:
+              <a
+                href="http://www.bitrebels.com/technology/find-out-who-runs-the-internet-chart/"
+                target="_blank"
+                >http://www.bitrebels.com/technology/find-out-who-runs-the-internet-chart/</a
+              ></cite
+            >
+          </p>
+        </div>
+
+        <div id="chapter2" class="chapter">
+          <h2>TCP/IP</h2>
+
+          <p>
+            TCP/IP is roughly the baseline protocol that is used so that
+            interconnect devices on the internet can communicate with each
+            other. In other words the internet infrastructure connects devices
+            to each other, but TCP/IP is the baseline language/interface (i.e
+            protocols) that allow devices (computers, laptops, phones etc..) to
+            speak to each other in a common way (i.e. TCP/IP defines how data
+            travels on the internet).
+          </p>
+          <p>
+            The Transmission Control Protocol (aka TCP) specifically directs
+            packets (i.e. chunked data) of information to a specific application
+            on a computer connected to the network that can be identified using
+            a Internet Protocol Address (aka IP address).
+          </p>
+        </div>
+
+        <div id="chapter3" class="chapter">
+          <h2>
+            The Web Server and The Web Browser/Client
+          </h2>
+
+          <p>
+            The internet and TCP/IP made it possible for one device to exchange
+            data with another device on the network using basically ones and
+            zeros (i.e. packets of data). On the world wide web when dealing
+            with web pages a specific type of data exchange is taking place.
+            Typically a web browser or client/user-agent is asking for data from
+            a specific location/device serving a very specific type of data over
+            the network (e.g. a computer running server software on the
+            network/internet). This requires a specific protocol sitting on top
+            of the baseline TCP/IP protocols. Basically, the WWW runs because a
+            client can connect to a web server through the internet, and this
+            client can talk to the web server use the Hypertext Transfer
+            Protocol (aka HTTP) to exchange text data most commonly written in
+            the Hyper Text Markup Language (aka HTML).
+          </p>
+        </div>
+
+        <div id="chapter4" class="chapter">
+          <h2>HTTP</h2>
+
+          <p>
+            Hypertext Transfer Protocol (aka HTTP) is the foundation protocol
+            that sits on top of the TCP/IP protocols. In terms of the WWW HTTP
+            is the foundational system that allows a user to request a specific
+            document/file (i.e. request .html, .jpg, .js, .css etc...) on the
+            internet via a Universal Resource Locator (aka URL) and for the web
+            server to give a response (i.e. send the .html, .jpg, .js, .css
+            files to the client).
+          </p>
+        </div>
+
+        <div id="chapter5" class="chapter">
+          <h2>HTML</h2>
+
+          <p>
+            When a user enters a URL into a web browser/client, an HTTP request
+            is sent over the internet to a web server typically asking the
+            server to send back a specific an <code>.html</code> document/file
+            containing HTML. What is returned is a document containing
+            information written in the Hyper Text Markup Language that is then
+            used by the web browser/client to visually display information to
+            the user. It might be helpful to think of an HTML document as a very
+            particular kind of text document that contains meta data, text,
+            images, and videos wrap with semantical meaning to be displayed to
+            the user.
+          </p>
+        </div>
+
+        <div id="chapter5" class="chapter">
+          <h2>URL's/Domains/Sub-Domains</h2>
+
+          <p></p>
+        </div>
+
+        <div id="chapter5" class="chapter">
+          <h2>Domain Name Server (aka DNS)</h2>
+
+          <p></p>
+        </div>
+
+        <div id="chapter5" class="chapter">
+          <h2>HTML</h2>
+
+          <p>
+            When a user enters a URL into a web browser/client, an HTTP request
+            is sent over the internet to a web server typically asking the
+            server to send back a specific an <code>.html</code> document/file
+            containing HTML. What is returned is a document containing
+            information written in the Hyper Text Markup Language that is then
+            used by the web browser/client to visually display information to
+            the user. It might be helpful to think of an HTML document as a very
+            particular kind of text document that contains meta data, text,
+            images, and videos wrap with semantical meaning to be displayed to
+            the user.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/slideout.min.js"></script>
+    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+
+    <script>
+      // Create slide out TOC
+      var slideout = new Slideout({
+        panel: document.getElementById("panel"),
+        menu: document.getElementById("menu"),
+        padding: 356,
+        tolerance: 70
+      });
+
+      // Create TOC dynamically from content
+      jQuery(".chapter").each(function(index) {
+        jQuery("h2", "#chapter" + (index + 1)).each(function(i) {
+          $(this).attr("id", index + 1);
+          $("#toc").append(
+            '<h5><a href="#' + (index + 1) + '">' + $(this).html() + "</a></h5>"
+          );
+        });
+
+        jQuery("h3", "#chapter" + (index + 1)).each(function(i) {
+          $(this).attr("id", index + 1 + "." + (i + 1));
+          $("#toc").append(
+            '<h6><a href="#' +
+              (index + 1) +
+              "." +
+              (i + 1) +
+              '">' +
+              $(this).html() +
+              "</a></h6>"
+          );
+        });
+      });
+
+      jQuery("#panel").on(
+        "click",
+        "a:not(.codesandboxlink a, .toolbar a)",
+        function() {
+          window.open($(this).attr("href"));
+          return false;
+        }
+      );
+
+      // toggle TOC from hamburger icon
+      document
+        .querySelector("#menuButton")
+        .addEventListener("click", function() {
+          slideout.toggle();
+        });
+
+      // toggle TOC on window resize
+      window.addEventListener("resize", resizeThrottler, false);
+      var resizeTimeout;
+      function resizeThrottler() {
+        // ignore resize events as long as an actualResizeHandler execution is in the queue
+        if (!resizeTimeout) {
+          resizeTimeout = setTimeout(function() {
+            resizeTimeout = null;
+            actualResizeHandler();
+
+            // The actualResizeHandler will execute at a rate of 15fps
+          }, 66);
+        }
+      }
+      function actualResizeHandler() {
+        if (window.innerWidth > 1036) {
+          slideout.open();
+        } else {
+          slideout.close();
+        }
+      }
+
+      // open TOC on load if window is wide enough
+      window.addEventListener("load", function(event) {
+        if (window.innerWidth > 1036) {
+          slideout.open();
+        } else {
+          slideout.close();
+        }
+      });
+    </script>
+  </body>
+</html>

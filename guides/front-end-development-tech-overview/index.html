@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/prism.css" />
-    <script src="assets/prism.js"></script>
-    <title>The Front-end Developer Profession</title>
+    <script src="../js/prism.js"></script>
+    <title>The Front-end Development Tech Overview</title>
   </head>
 
   <body>
@@ -230,6 +230,85 @@
         </div>
 
         <div id="chapter4" class="chapter">
+            <h2 id="hypertext-transfer-protocol-aka-http">
+              Hypertext Transfer Protocol (aka HTTP)
+            </h2>
+            <blockquote>
+              <p>
+                The Hypertext Transfer Protocol (HTTP) is an application protocol
+                for distributed, collaborative, hypermedia information systems.
+                HTTP is the foundation of data communication for the World Wide
+                Web.
+              </p>
+              <p>
+                <cite
+                  >—
+                  <a
+                    href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol"
+                    target="_blank"
+                    >Wikipedia</a
+                  ></cite
+                >
+              </p>
+            </blockquote>
+            <p>Most relevant specifications:</p>
+            <ul>
+              <li>
+                <a href="https://tools.ietf.org/html/rfc2616" target="_blank"
+                  >Hypertext Transfer Protocol -- HTTP/1.1</a
+                >
+              </li>
+              <li>
+                <a href="http://httpwg.org/specs/rfc7540.html" target="_blank"
+                  >HTTP/2</a
+                >
+              </li>
+            </ul>
+          </div>
+  
+          <div id="chapter5" class="chapter">
+            <h2>Uniform Resource Locators (aka URL)</h2>
+            <blockquote>
+              <p>
+                A uniform resource locator (URL) (also called a web address) is a
+                reference to a resource that specifies the location of the
+                resource on a computer network and a mechanism for retrieving it.
+                A URL is a specific type of uniform resource identifier (URI),
+                although many people use the two terms interchangeably. A URL
+                implies the means to access an indicated resource, which is not
+                true of every URI. URLs occur most commonly to reference web pages
+                (http), but are also used for file transfer (ftp), email (mailto),
+                database access (JDBC), and many other applications.
+              </p>
+              <p>
+                <cite
+                  >—
+                  <a
+                    href="https://en.wikipedia.org/wiki/Uniform_Resource_Locator"
+                    target="_blank"
+                    >Wikipedia</a
+                  ></cite
+                >
+              </p>
+            </blockquote>
+            <p>Most relevant specifications:</p>
+            <ul>
+              <li>
+                <a
+                  href="http://www.w3.org/Addressing/URL/url-spec.txt"
+                  target="_blank"
+                  >Uniform Resource Locators (URL)</a
+                >
+              </li>
+              <li>
+                <a href="https://url.spec.whatwg.org/" target="_blank"
+                  >URL Living Standard</a
+                >
+              </li>
+            </ul>
+          </div>
+
+        <div id="chapter6" class="chapter">
           <h2>Hyper Text Markup Language (aka HTML)</h2>
 
           <blockquote>
@@ -250,6 +329,18 @@
               >
             </p>
           </blockquote>
+
+          <p>Below is an example of a basic HTML file, with a <code>&lt;h1&gt;&lt;/h1&gt;</code> heading that a web browser will read.</p>
+
+          <div class="codesandboxlinkNotDynamic"><a href="https://codesandbox.io/s/p38w4j32vq">run/edit in
+            codesandbox.io</a></div>
+
+    <pre class="line-numbers"><code class="language-markup">
+&lt;!DOCTYPE html&gt;&#10;&lt;html&gt;&#10;&#10;&lt;head&gt;&#10;  &lt;meta charset=&quot;UTF-8&quot; /&gt;&#10;  &lt;title&gt;Name of Web Page&lt;/title&gt;&#10;&lt;/head&gt;&#10;&#10;&lt;body&gt;&#10;&#10;  &lt;h1&gt;I am a web page&lt;/h1&gt;&#10;&lt;/body&gt;&#10;&#10;&lt;/html&gt;
+
+</pre></code>
+
+
           <p>Most relevant specifications / documentation:</p>
           <ul>
             <li>
@@ -309,7 +400,7 @@
           </ul>
         </div>
 
-        <div id="chapter5" class="chapter">
+        <div id="chapter7" class="chapter">
           <h2>
             Cascading Style Sheets (aka CSS)
           </h2>
@@ -336,6 +427,16 @@
               >
             </p>
           </blockquote>
+
+          <p>Below is an example of a basic HTML file, with an internal CSS style sheet that styles the <code>&lt;h1&gt;&lt;/h1&gt;</code> red using a CSS declaration.</p>
+
+          <div class="codesandboxlinkNotDynamic"><a href="https://codesandbox.io/s/pw8p1wyxj0">run/edit in
+            codesandbox.io</a></div>
+
+    <pre class="line-numbers"><code class="language-markup">
+&lt;!DOCTYPE html&gt;&#10;&lt;html&gt;&#10;  &lt;head&gt;&#10;    &lt;meta charset=&quot;UTF-8&quot; /&gt;&#10;    &lt;title&gt;Name of Web Page&lt;/title&gt;&#10;    &lt;!-- internal style sheet --&gt;&#10;    &lt;style type=&quot;text/css&quot;&gt;&#10;      /* css declaration */&#10;      h1 {&#10;        color: red;&#10;      }&#10;    &lt;/style&gt;&#10;  &lt;/head&gt;&#10;&#10;  &lt;body&gt;&#10;    &lt;h1&gt;I am a web page&lt;/h1&gt;&#10;  &lt;/body&gt;&#10;&lt;/html&gt;
+</pre></code>
+
           <p>Most relevant specifications / documentation:</p>
           <ul>
             <li>
@@ -362,84 +463,9 @@
               >
             </li>
           </ul>
-          <h4 id="hypertext-transfer-protocol-aka-http">
-            Hypertext Transfer Protocol (aka HTTP)
-          </h4>
-          <blockquote>
-            <p>
-              The Hypertext Transfer Protocol (HTTP) is an application protocol
-              for distributed, collaborative, hypermedia information systems.
-              HTTP is the foundation of data communication for the World Wide
-              Web.
-            </p>
-            <p>
-              <cite
-                >—
-                <a
-                  href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol"
-                  target="_blank"
-                  >Wikipedia</a
-                ></cite
-              >
-            </p>
-          </blockquote>
-          <p>Most relevant specifications:</p>
-          <ul>
-            <li>
-              <a href="https://tools.ietf.org/html/rfc2616" target="_blank"
-                >Hypertext Transfer Protocol -- HTTP/1.1</a
-              >
-            </li>
-            <li>
-              <a href="http://httpwg.org/specs/rfc7540.html" target="_blank"
-                >HTTP/2</a
-              >
-            </li>
-          </ul>
         </div>
 
-        <div id="chapter6" class="chapter">
-          <h2>Uniform Resource Locators (aka URL)</h2>
-          <blockquote>
-            <p>
-              A uniform resource locator (URL) (also called a web address) is a
-              reference to a resource that specifies the location of the
-              resource on a computer network and a mechanism for retrieving it.
-              A URL is a specific type of uniform resource identifier (URI),
-              although many people use the two terms interchangeably. A URL
-              implies the means to access an indicated resource, which is not
-              true of every URI. URLs occur most commonly to reference web pages
-              (http), but are also used for file transfer (ftp), email (mailto),
-              database access (JDBC), and many other applications.
-            </p>
-            <p>
-              <cite
-                >—
-                <a
-                  href="https://en.wikipedia.org/wiki/Uniform_Resource_Locator"
-                  target="_blank"
-                  >Wikipedia</a
-                ></cite
-              >
-            </p>
-          </blockquote>
-          <p>Most relevant specifications:</p>
-          <ul>
-            <li>
-              <a
-                href="http://www.w3.org/Addressing/URL/url-spec.txt"
-                target="_blank"
-                >Uniform Resource Locators (URL)</a
-              >
-            </li>
-            <li>
-              <a href="https://url.spec.whatwg.org/" target="_blank"
-                >URL Living Standard</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div id="chapter7" class="chapter">
+        <div id="chapter8" class="chapter">
           <h2>Document Object Model (aka DOM)</h2>
           <blockquote>
             <p>
@@ -482,7 +508,7 @@
           </ul>
         </div>
 
-        <div id="chapter8" class="chapter">
+        <div id="chapter9" class="chapter">
           <h2>JavaScript Programming Language (aka ECMAScript 262)</h2>
           <blockquote>
             <p>
@@ -511,6 +537,16 @@
               >
             </p>
           </blockquote>
+
+          <p>Below is an example of a basic HTML file containing inline JavaScript that will show a browser alert when the <code>&lt;h1&gt;&lt;/h1&gt;</code> is clicked by the mouse pointer.</p>
+
+          <div class="codesandboxlinkNotDynamic"><a href="https://codesandbox.io/s/52wmwpjrm4">run/edit in
+            codesandbox.io</a></div>
+
+    <pre class="line-numbers"><code class="language-markup">
+&lt;!DOCTYPE html&gt;&#10;&lt;html&gt;&#10;  &lt;head&gt;&#10;    &lt;meta charset=&quot;UTF-8&quot; /&gt;&#10;    &lt;title&gt;Name of Web Page&lt;/title&gt;&#10;    &lt;!-- internal style sheet --&gt;&#10;    &lt;style type=&quot;text/css&quot;&gt;&#10;      /* css declaration */&#10;      h1 {&#10;        color: red;&#10;      }&#10;    &lt;/style&gt;&#10;  &lt;/head&gt;&#10;&#10;  &lt;body&gt;&#10;    &lt;h1&gt;I am a web page&lt;/h1&gt;&#10;    &lt;!-- internal javascript --&gt;&#10;    &lt;script type=&quot;text/javascript&quot;&gt;&#10;      document.querySelector(&quot;h1&quot;).onclick = function() {&#10;        alert(&quot;You click an h1!&quot;);&#10;      };&#10;    &lt;/script&gt;&#10;  &lt;/body&gt;&#10;&lt;/html&gt;
+        
+</pre></code>
           <p>Most relevant specifications / documentation:</p>
           <ul>
             <li>
@@ -530,7 +566,7 @@
           </ul>
         </div>
 
-        <div id="chapter9" class="chapter">
+        <div id="chapter10" class="chapter">
           <h2>Web APIs (aka Browser APIs)</h2>
           <blockquote>
             <p>
@@ -562,7 +598,7 @@
           </ul>
         </div>
 
-        <div id="chapter10" class="chapter">
+        <div id="chapter11" class="chapter">
           <h2>JavaScript Object Notation (aka JSON)</h2>
           <blockquote>
             <p>
@@ -604,7 +640,7 @@
           </ul>
         </div>
 
-        <div id="chapter11" class="chapter">
+        <div id="chapter12" class="chapter">
           <h2>
             Web Content Accessibility Guidelines (aka WCAG) &amp; Accessible
             Rich Internet Applications (aka ARIA)
@@ -729,6 +765,66 @@
           slideout.close();
         }
       });
+
+      jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function () {
+            window.open($(this).attr('href'));
+            return false;
+        });
+        
+        // create link to codesandob
+        jQuery('.line-numbers:has(.language-js)').not(':has(.noRun)').before('<div class="codesandboxlink"><a href="#">run/edit in codesandbox.io</a></div>');
+        
+        // create event handler for codesandbox link
+        jQuery('#panel').on('click', '.codesandboxlink a', function (e) {
+            const code = $(this).parent().next('.code-toolbar:has(.language-js)').find('code').text();
+            var newWindow = window.open("", "_blank");
+            fetch("https://codesandbox.io/api/v1/sandboxes/define?json=1", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: JSON.stringify({
+                    files: {
+                        "index.js": {
+                            content: code
+                        },
+                        "index.html": {
+                            content: '<script src="./node_modules/babel-polyfill/dist/polyfill.js"><\/script><script src="https://unpkg.com/core-js-bundle@3.0.0-beta.3/index.js"><\/script><script src="index.js"><\/script>'
+                        },
+                        ".babelrc": {
+                            "content": {
+                                "presets": ["env", "stage-0"]
+                            }
+                        },
+                        "package.json": {
+                            "content": {
+                                "name": "ES2015+ Enlightenment Code Example",
+                                "version": "1.0.0",
+                                "description": "Simple Parcel/Babel Sandbox",
+                                "main": "index.html",
+                                "scripts": {
+                                    "start": "parcel index.html --open",
+                                    "build": "parcel build index.html"
+                                },
+                                "dependencies": { "babel-polyfill": "6.26.0" },
+                                "devDependencies": {
+                                    "parcel-bundler": "^1.9.7",
+                                    "babel-preset-env": "^1.7.0",
+                                    "babel-preset-stage-0": "^6.24.1"
+                                }
+                            }
+                        }
+                    }
+                })
+            })
+                .then(x => x.json())
+                .then(data => {
+                    newWindow.location.href = 'https://codesandbox.io/embed/' + data.sandbox_id + '?forcerefresh=1&eslint=1&expanddevtools=1&hidenavigation=1&module=%2Findex.js';
+                }
+                );
+            e.preventDefault();
+        });
     </script>
   </body>
 </html>
