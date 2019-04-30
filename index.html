@@ -23,15 +23,21 @@
         padding: 20px;
       }
       #primary {
-        border: solid 1px #4d4d4d;
+        border: solid 1px #2b7ce9;
         padding: 5px;
         background-color: #fff;
         margin-top: 10px;
       }
       #secondary {
+        border: solid 1px #f4d442;
+        padding: 5px;
+        background-color: #fff;
+        margin-top: 10px;
+      }
+      #notyet {
         border: solid 1px #4d4d4d;
         padding: 5px;
-        background-color: #e8e8e8;
+        background-color: #ededed;
         margin-top: 10px;
       }
     </style>
@@ -40,8 +46,9 @@
   <body>
     <div id="key">
       <div>Key:</div>
-      <div id="primary">Foundational Path</div>
-      <div id="secondary">Digging Deeper Path</div>
+      <div id="primary">Foundational</div>
+      <div id="secondary">Professional</div>
+      <div id="notyet">Not Written Yet</div>
     </div>
     <div id="mynetwork"></div>
     <script src="node_modules/vis/dist/vis.min.js"></script>
@@ -67,6 +74,7 @@
               background: "#98FB98"
             }
           },
+          margin: 30,
           font: {
             bold: "24px arial #000"
           },
@@ -79,7 +87,7 @@
           id: 1,
           color: {
             border: "#2B7CE9",
-            background: "#D2E5FF",
+            background: "#ffffff",
             hover: {
               border: "#2B7CE9",
               background: "#D2E5FF"
@@ -104,11 +112,11 @@
         {
           id: 2,
           color: {
-            border: "#2B7CE9",
-            background: "#D2E5FF",
+            border: "#f4d442",
+            background: "#ffffff",
             hover: {
-              border: "#2B7CE9",
-              background: "#D2E5FF"
+              border: "#f4d442",
+              background: "#fff6a8"
             }
           },
           title: "read now",
@@ -131,7 +139,7 @@
           id: 3,
           color: {
             border: "#2B7CE9",
-            background: "#D2E5FF",
+            background: "#ffffff",
             hover: {
               border: "#2B7CE9",
               background: "#D2E5FF"
@@ -162,7 +170,7 @@
           id: 4,
           color: {
             border: "#2B7CE9",
-            background: "#D2E5FF",
+            background: "#ffffff",
             hover: {
               border: "#2B7CE9",
               background: "#D2E5FF"
@@ -176,73 +184,89 @@
               "Internet",
               "TCP/IP",
               "HTTP",
-              "HTML",
               "URL's/Domains/Sub-Domains",
+              "Web Hosting",
+              "Domain Registrars",
               "DNS"
             ]
           }),
           x: -150,
-          y: -300
+          y: -370
         },
         {
           id: 5,
+          color: {
+            border: "#f4d442",
+            background: "#ffffff",
+            hover: {
+              border: "#f4d442",
+              background: "#fff6a8"
+            }
+          },
+          title: "read now",
+          url: "guides/http/index.html",
           label: createLabel({
-            title: "5 - The Web Platform",
+            title: "5 - HTTP",
+            covers: ["HTTP"]
+          }),
+          x: -150,
+          y: -200
+        },
+        {
+          id: 6,
+          label: createLabel({
+            title: "6 - The Web Platform",
             covers: [
               "Browser Runtime",
               "Headless Browsers",
               "Webview's",
               "Web to Native",
-              "Web API's",
-              "Hosting"
+              "Web API's"
             ]
           }),
           x: 80,
           y: -250
         },
         {
-          id: 6,
-          color: {
-            background: "#e8e8e8"
-          },
+          id: 7,
           label: createLabel({
-            title: "6 - Web Security",
+            title: "7 - Web Security",
             covers: ["...", "...", "...", "..."]
           }),
           x: 400,
           y: -400
         },
         {
-          id: 7,
+          id: 8,
           label: createLabel({
-            title: "7 - Code Editors",
+            title: "8 - Code Editors",
             covers: ["What is it", "VS code", "codesandbox.io"]
           }),
           x: 300,
           y: -220
         },
         {
-          id: 8,
+          id: 9,
           label: createLabel({
-            title: "8 - HTML & Webpage Fundamentals",
+            title: "9 - HTML & Webpage Fundamentals",
             covers: ["Markup", "Semantical HTML", "Accessibility", "SEO"]
           }),
           x: 550,
           y: -220
         },
         {
-          id: 9,
+          id: 10,
           label: createLabel({
-            title: "9 - Web Image Fundamentals",
+            title: "10 - Web Image Fundamentals",
             covers: ["...", "...", "...", "..."]
           }),
           x: 850,
           y: -20
         },
         {
-          id: 10,
+          id: 11,
           label: createLabel({
-            title: "10 - CSS Fundamentals",
+            title: "11 - CSS Fundamentals",
             covers: [
               "Inheritance & Cacade",
               "Specificity",
@@ -257,57 +281,54 @@
           y: -30
         },
         {
-          id: 11,
+          id: 12,
           label: createLabel({
-            title: "11 - CSS Fonts & Typography",
+            title: "12 - CSS Fonts & Typography",
             covers: ["...", "...", "...", "..."]
           }),
           x: 345,
           y: -30
         },
         {
-          id: 12,
+          id: 13,
           label: createLabel({
-            title: "12 - CSS Grid & Flexbox",
+            title: "13 - CSS Grid & Flexbox",
             covers: ["...", "...", "...", "..."]
           }),
           x: 100,
           y: -30
         },
         {
-          id: 13,
+          id: 14,
           label: createLabel({
-            title: "13 - CSS Media Queries & RWD",
+            title: "14 - CSS Media Queries & RWD",
             covers: ["...", "...", "...", "..."]
           }),
           x: -150,
           y: -30
         },
         {
-          id: 14,
+          id: 15,
           label: createLabel({
-            title: "14 - CSS Transitions, Transforms & Animation",
+            title: "15 - CSS Transitions, Transforms & Animation",
             covers: ["...", "...", "...", "..."]
           }),
           x: -450,
           y: 50
         },
         {
-          id: 15,
-          color: {
-            background: "#e8e8e8"
-          },
+          id: 16,
           label: createLabel({
-            title: "15 - HTML Emails",
+            title: "16 - HTML Emails",
             covers: ["...", "...", "...", "..."]
           }),
           x: -350,
           y: -250
         },
         {
-          id: 16,
+          id: 17,
           label: createLabel({
-            title: "16 - CSS Practices",
+            title: "17 - CSS Practices",
             covers: [
               "Naming Systems",
               "Architecture",
@@ -320,21 +341,18 @@
           y: -150
         },
         {
-          id: 17,
-          color: {
-            background: "#e8e8e8"
-          },
+          id: 18,
           label: createLabel({
-            title: "17 - UI Design / Patterns",
+            title: "18 - UI Design / Patterns",
             covers: ["Interaction Design", "HCI", "UI Patterns"]
           }),
           x: -550,
           y: -330
         },
         {
-          id: 18,
+          id: 19,
           label: createLabel({
-            title: "18 - JavaScript Fundamentals",
+            title: "19 - JavaScript Fundamentals",
             covers: [
               "Syntax",
               "Variables / Assignment",
@@ -350,72 +368,63 @@
           y: -330
         },
         {
-          id: 19,
-          color: {
-            background: "#e8e8e8"
-          },
+          id: 20,
           label: createLabel({
-            title: "19 - JavaScript Regular Expressions",
+            title: "20 - JavaScript Regular Expressions",
             covers: ["...", "...", "...", "..."]
           }),
           x: -1100,
           y: -200
         },
         {
-          id: 20,
+          id: 21,
           label: createLabel({
-            title: "20 - JavaScript ES Modules / Scripts",
+            title: "21 - JavaScript ES Modules / Scripts",
             covers: ["...", "...", "...", "..."]
           }),
           x: -800,
           y: -100
         },
         {
-          id: 21,
-          color: {
-            background: "#e8e8e8"
-          },
+          id: 22,
           label: createLabel({
-            title: "21 - CLI",
+            title: "22 - CLI",
             covers: ["...", "...", "...", "..."]
           }),
           x: -880,
           y: 100
         },
         {
-          id: 22,
+          id: 23,
           label: createLabel({
-            title: "22 - GIT/Github",
+            title: "23 - GIT/Github",
             covers: ["...", "...", "...", "..."]
           }),
           x: -700,
           y: 100
         },
         {
-          id: 23,
+          id: 24,
           label: createLabel({
-            title: "23 - NPM/Yarn & Node.js",
+            title: "24 - NPM/Yarn & Node.js",
             covers: ["NPM/Yarn", "Semantic Versioning", "Node.js Basics"]
           }),
           x: -900,
           y: 300
         },
         {
-          id: 24,
-          color: {
-            background: "#e8e8e8"
-          },
+          id: 25,
           label: createLabel({
-            title: "24 - NPM/Yarn Scripts/Run",
+            title: "25 - NPM/Yarn Scripts/Run",
             covers: ["Building/Automation", "...", "..."]
           }),
           x: -650,
           y: 270
         },
         {
-          id: 25,
+          id: 26,
           label: createLabel({
-            title: "25 - CSS Tooling",
+            title: "26 - CSS Tooling",
             covers: [
               "Preprocessors",
               "Postprocessors",
@@ -428,66 +437,63 @@
           y: 450
         },
         {
-          id: 26,
-          color: {
-            background: "#e8e8e8"
-          },
+          id: 27,
           label: createLabel({
-            title: "26 - CSS UI Toolkit's",
+            title: "27 - CSS UI Toolkit's",
             covers: ["...", "...", "...", "..."]
           }),
           x: -400,
           y: 450
         },
         {
-          id: 27,
+          id: 28,
           label: createLabel({
-            title: "27 - DOM, BOM, CSSOM",
+            title: "28 - DOM, BOM, CSSOM",
             covers: ["...", "...", "...", "..."]
           }),
           x: -400,
           y: 250
         },
         {
-          id: 28,
+          id: 29,
           label: createLabel({
-            title: "28 - JavaScript Inheritance",
+            title: "29 - JavaScript Inheritance",
             covers: ["...", "...", "...", "..."]
           }),
           x: -150,
           y: 150
         },
         {
-          id: 29,
+          id: 30,
           label: createLabel({
-            title: "29 - JavaScript Promises/Async",
+            title: "30 - JavaScript Promises/Async",
             covers: ["...", "...", "...", "..."]
           }),
           x: -150,
           y: 350
         },
         {
-          id: 30,
+          id: 31,
           label: createLabel({
-            title: "30 - JavaScript FP Fundamentals",
+            title: "31 - JavaScript FP Fundamentals",
             covers: ["...", "...", "...", "..."]
           }),
           x: -150,
           y: 550
         },
         {
-          id: 31,
+          id: 32,
           label: createLabel({
-            title: "31 - JavaScript Web API's",
+            title: "32 - JavaScript Web API's",
             covers: ["...", "...", "...", "..."]
           }),
           x: 100,
           y: 400
         },
         {
-          id: 32,
+          id: 33,
           label: createLabel({
-            title: "32 - JavaScript Practices/Tools",
+            title: "33 - JavaScript Practices/Tools",
             covers: [
               "Libraries",
               "Utilities",
@@ -500,96 +506,81 @@
           y: 180
         },
         {
-          id: 33,
-          color: {
-            background: "#e8e8e8"
-          },
+          id: 34,
           label: createLabel({
-            title: "33 - JavaScript UI Toolkit's",
+            title: "34 - JavaScript UI Toolkit's",
             covers: ["...", "...", "...", "..."]
           }),
           x: 550,
           y: 160
         },
         {
-          id: 34,
-          color: {
-            background: "#e8e8e8"
-          },
+          id: 35,
           label: createLabel({
-            title: "34 - JavaScript Runtime & AST",
+            title: "35 - JavaScript Runtime & AST",
             covers: ["...", "...", "...", "..."]
           }),
           x: 550,
           y: 360
         },
         {
-          id: 35,
-          color: {
-            background: "#e8e8e8"
-          },
+          id: 36,
           label: createLabel({
-            title: "35 - JavaScript Performance",
+            title: "36 - JavaScript Performance",
             covers: ["...", "...", "...", "..."]
           }),
           x: 550,
           y: 560
         },
         {
-          id: 36,
-          color: {
-            background: "#e8e8e8"
-          },
+          id: 37,
           label: createLabel({
-            title: "36 - JavaScript CS",
+            title: "37 - JavaScript CS",
             covers: ["...", "...", "...", "..."]
           }),
           x: 550,
           y: 750
         },
         {
-          id: 37,
+          id: 38,
           label: createLabel({
-            title: "37 - Web Developer Tools",
+            title: "38 - Web Developer Tools",
             covers: ["Chrome Dev Tools", "...", "...", "..."]
           }),
           x: 250,
           y: 600
         },
         {
-          id: 38,
+          id: 39,
           label: createLabel({
-            title: "38 - Websites",
+            title: "39 - Websites",
             covers: ["...", "...", "...", "..."]
           }),
           x: 250,
           y: 800
         },
         {
-          id: 39,
+          id: 40,
           label: createLabel({
-            title: "39 - Progressive Web Apps",
+            title: "40 - Progressive Web Apps",
             covers: ["...", "...", "...", "..."]
           }),
           x: 0,
           y: 720
         },
         {
-          id: 40,
+          id: 41,
           label: createLabel({
-            title: "40 - JavaScript Module Loaders",
+            title: "41 - JavaScript Module Loaders",
             covers: ["Webpack", "Parcel", "Rollup"]
           }),
           x: -250,
           y: 720
         },
         {
-          id: 41,
-          color: {
-            background: "#e8e8e8"
-          },
+          id: 42,
           label: createLabel({
-            title: "41 - X Compiler to JS",
+            title: "42 - X Compiler to JS",
             covers: [
               "Typescript",
               "Reason",
@@ -602,72 +593,72 @@
           y: 630
         },
         {
-          id: 42,
+          id: 43,
           label: createLabel({
-            title: "42 - JS Compilers to JS",
+            title: "43 - JS Compilers to JS",
             covers: ["Babel"]
           }),
           x: -500,
           y: 800
         },
         {
-          id: 43,
+          id: 44,
           label: createLabel({
-            title: "43 - React / JSX",
+            title: "44 - React / JSX",
             covers: ["...", "...", "...", "..."]
           }),
           x: -740,
           y: 850
         },
         {
-          id: 44,
+          id: 45,
           label: createLabel({
-            title: "44 - React Router",
+            title: "45 - React Router",
             covers: ["...", "...", "...", "..."]
           }),
           x: -700,
           y: 630
         },
         {
-          id: 45,
+          id: 46,
           label: createLabel({
-            title: "45 - Application State",
+            title: "46 - Application State",
             covers: ["Mobx", "Redux", "...", "..."]
           }),
           x: -900,
           y: 530
         },
         {
-          id: 46,
+          id: 47,
           label: createLabel({
-            title: "46 - Data API's",
+            title: "47 - Data API's",
             covers: ["REST", "GraphQL", "...", "..."]
           }),
           x: -900,
           y: 730
         },
         {
-          id: 47,
+          id: 48,
           label: createLabel({
-            title: "47 - Web Software Development/Architecture/Practices",
+            title: "48 - Web Software Development/Architecture/Practices",
             covers: ["...", "...", "...", "..."]
           }),
           x: -1150,
           y: 430
         },
         {
-          id: 48,
+          id: 49,
           label: createLabel({
-            title: "48 - Serverless",
+            title: "49 - Serverless",
             covers: ["...", "...", "...", "..."]
           }),
           x: -1100,
           y: 690
         },
         {
-          id: 49,
+          id: 50,
           label: createLabel({
-            title: "49 - Testing (unit, Integration, Functional",
+            title: "50 - Testing (unit, Integration, Functional",
             covers: ["Jest", "Enzyme", "Chai", "Cypress"]
           }),
           x: -1100,
@@ -682,9 +673,11 @@
         { from: 3, to: 4, arrows: "to" },
         { from: 1, to: 2, arrows: "to" },
         { from: 4, to: 5, arrows: "to" },
+        { from: 4, to: 6, arrows: "to" },
+        { from: 4.5, to: 5, arrows: "to" },
         { from: 5, to: 6, arrows: "to" },
         { from: 6, to: 7, arrows: "to" },
-        { from: 5, to: 7, arrows: "to" },
+        { from: 6, to: 8, arrows: "to" },
         { from: 7, to: 8, arrows: "to" },
         { from: 8, to: 9, arrows: "to" },
         { from: 9, to: 10, arrows: "to" },
@@ -769,7 +762,7 @@
 
           color: {
             border: "#4d4d4d",
-            background: "#fff",
+            background: "#ededed",
             hover: {
               border: "#4d4d4d",
               background: "#fff"

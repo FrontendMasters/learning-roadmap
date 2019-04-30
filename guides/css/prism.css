@@ -186,7 +186,7 @@ pre[data-line] {
 .line-highlight {
     background: hsla(0, 0%, 33%, 0.25);
     /* #545454 */
-    background: linear-gradient( to right, hsla(0, 0%, 33%, 0.1) 70%, hsla(0, 0%, 33%, 0));
+    background: linear-gradient(to right, hsla(0, 0%, 33%, 0.1) 70%, hsla(0, 0%, 33%, 0));
     /* #545454 */
     border-bottom: 1px dashed hsl(0, 0%, 33%);
     /* #545454 */
@@ -243,7 +243,7 @@ pre[data-line] {
     margin-top: 1em;
     /* Same as .prism’s padding-top */
     background: hsla(24, 20%, 50%, 0.08);
-    background: linear-gradient( to right, hsla(24, 20%, 50%, 0.1) 70%, hsla(24, 20%, 50%, 0));
+    background: linear-gradient(to right, hsla(24, 20%, 50%, 0.1) 70%, hsla(24, 20%, 50%, 0));
     pointer-events: none;
     line-height: inherit;
     white-space: pre;
