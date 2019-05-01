@@ -177,17 +177,16 @@
             }
           },
           title: "read now",
-          url: "guides/the-www-infrastructure/index.html",
+          url: "guides/the-www-basic-mechanics/index.html",
           label: createLabel({
-            title: "4 - The WWW Infrastructure",
+            title: "4 - The WWW Basic Mechanics",
             covers: [
               "Internet",
-              "TCP/IP",
+              "TCP / IP / DNS",
               "HTTP",
-              "URL's/Domains/Sub-Domains",
+              "URL's / Domains / Sub-Domains",
               "Web Hosting",
-              "Domain Registrars",
-              "DNS"
+              "Domain Registrars"
             ]
           }),
           x: -150,
@@ -736,7 +735,8 @@
         { from: 46, to: 47, arrows: "to" },
         { from: 46, to: 49, arrows: "to" },
         { from: 47, to: 48, arrows: "to, from" },
-        { from: 48, to: 49, arrows: "to, from" }
+        { from: 48, to: 49, arrows: "to, from" },
+        { from: 49, to: 50, arrows: "to, from" }
       ];
 
       var container = document.getElementById("mynetwork");
@@ -747,9 +747,9 @@
       };
 
       var options = {
-        dragNodes: false,
         interaction: {
-          hover: true
+          hover: true,
+          dragNodes: false
         },
         edges: {
           font: {

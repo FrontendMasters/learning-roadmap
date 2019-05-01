@@ -177,6 +177,7 @@ hr {
     margin-right: auto;
     max-width: 1024px;
     padding: 0 60px 0 60px;
+    margin-bottom: 200px
 }
 
 .slideout-open .slideout-panel {
@@ -340,4 +341,29 @@ tbody tr:nth-child(odd) {
 .imageCite {
     margin-top: 5px;
     padding-top: 0;
+}
+
+dl {
+    margin-top: 30px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+dt {
+    float: left;
+    clear: left;
+    width: 120px;
+    text-align: right;
+    font-weight: bold;
+    color: #666666;
+}
+
+dt::after {
+    content: ":";
+    margin-right: 10px;
+}
+
+dd {
+    margin: 0 0 0 110px;
+    padding: 0 0 0.5em 0;
 }
