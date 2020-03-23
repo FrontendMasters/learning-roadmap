@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/prism.css" />
+        <script src="../js/prism.js"></script>
+        <title>JavaScript Fundamentals</title>
+    </head>
+
+    <body>
+        <div id="menu">
+            <a id="backToRoadMapLink" href="/">← Front-end Developer Roadmap</a>
+            <div id="toc"></div>
+        </div>
+
+        <div id="panel">
+            <div id="menuButton">|||</div>
+
+            <div id="bookPadding">
+                <h1>JavaScript Fundamentals</h1>
+
+                <h4 style="margin-top:0px">
+                    Written by
+                    <a href="http://codylindley.com/">Cody Lindley</a>
+                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                </h4>
+
+                <script>
+                    if (document.lastModified) {
+                        document.getElementById('lastMod').style.display = 'inline';
+                        document.getElementById('lastModDate').innerText = document.lastModified.split(' ')[0];
+                    }
+                </script>
+
+                <section>
+                    <p>
+                        <em
+                            ><a href="/">Guide books and roadmap</a> from <a href="https://frontendmasters.com/">Frontend Masters</a>.
+                            <br />
+                            Advancing your skills with in-depth, modern front-end engineering courses.</em
+                        >
+                    </p>
+                </section>
+
+                <hr />
+
+                <p><strong>Overview:</strong></p>
+
+                <p>
+                    learning resources and tools.
+                </p>
+
+                <hr />
+
+                <p><strong>Definitions:</strong></p>
+
+                <dl>
+                    <dt>
+                        JavaScript
+                    </dt>
+                    <dd>
+                        JavaScript is a high level, dynamic, untyped, and interpreted programming language. It has been standardized in the ECMAScript language
+                        specification. Alongside HTML and CSS, it is one of the three essential technologies of World Wide Web content production; the majority
+                        of websites employ it and it is supported by all modern web browsers without plug-ins. JavaScript is prototype-based with first-class
+                        functions, making it a multi-paradigm language, supporting object-oriented, imperative, and functional programming styles. It has an API
+                        for working with text, arrays, dates and regular expressions, but does not include any I/O, such as networking, storage or graphics
+                        facilities, relying for these upon the host environment in which it is embedded.
+                    </dd>
+                </dl>
+
+                <hr />
+                <p><strong>Contribute content, suggestions, and fixes on github</strong>:</p>
+
+                <p>
+                    <a href="https://github.com/FrontendMasters/guides">https://github.com/FrontendMasters/guides</a>
+                </p>
+
+                <hr />
+
+                <div id="chapter1" class="chapter">
+                    <h2>Learning Resources</h2>
+
+                    <h4>Getting Started:</h4>
+
+                    <ul>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript" target="_blank"
+                                >MDN: JavaScript</a
+                            >
+                            [read]
+                        </li>
+                        <li><a href="https://javascript.info/intro#what-is-javascript" target="_blank">javascript.info</a> [read]</li>
+                        <li><a href="http://eloquentjavascript.net/" target="_blank">Eloquent JavaScript</a> [read]</li>
+                    </ul>
+
+                    <h4>General Learning:</h4>
+
+                    <ul>
+                        <li>
+                            <a href="https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/README.md" target="_blank"
+                                >You Don't Know JS Yet: Get Started - 2nd Edition</a
+                            >
+                            [read]
+                        </li>
+
+                        <li><a href="http://speakingjs.com/es5/index.html" target="_blank">Speaking JavaScript</a> [read]</li>
+
+                        <li><a href="https://frontendmasters.com/courses/javascript-hard-parts/" target="_blank">JavaScript: The Hard Parts</a> [watch][$]</li>
+                        <li>
+                            <a href="https://frontendmasters.com/courses/getting-started-javascript-v2/" target="_blank">Getting Started with JavaScript</a>
+                            [watch][$]
+                        </li>
+                        <li><a href="http://exploringjs.com/impatient-js/index.html" target="_blank">JavaScript for impatient programmers</a> [read]</li>
+                    </ul>
+
+                    <h4>Mastering:</h4>
+
+                    <ul>
+                        <li><a href="https://exploringjs.com/deep-js/index.html" target="_blank">Deep JavaScript: Theory and techniques</a> [read]</li>
+
+                        <li>
+                            <a href="https://frontendmasters.com/courses/javascript-hard-parts-v2/" target="_blank">JavaScript: The Hard Parts</a> [watch][$]
+                        </li>
+                        <li><a href="https://frontendmasters.com/courses/deep-javascript-v3/" target="_blank">Deep JavaScript Foundations</a> [watch][$]</li>
+
+                        <li><a href="https://molily.de/robust-javascript/" target="_blank">Robust Client-Side JavaScript A Developer’s Guide</a> [read][$]</li>
+
+                        <li>
+                            <a href="https://github.com/leonardomso/33-js-concepts" target="_blank">33 Concepts Every JavaScript Developer Should Know</a>
+                            [read]
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter2" class="chapter">
+                    <h2>Standards/Specifications:</h2>
+
+                    <ul>
+                        <li>
+                            <a href="https://timothygu.me/es-howto/" target="_blank">How to Read the ECMAScript Specification</a>
+                        </li>
+                        <li>
+                            <a href="http://ecma-international.org/ecma-262/10.0/index.html#Title" target="_blank">ECMAScript® 2019 Language Specification</a>
+                        </li>
+                        <li>
+                            <a href="https://tc39.es/ecma262/" target="_blank">ECMAScript® 2020 Language Specification</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/tc39/ecma262" target="_blank">Status, Process, and Documents for ECMA262</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/tc39/proposals" target="_blank">ECMAScript proposals</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter3" class="chapter">
+                    <h2>References/Docs</h2>
+
+                    <ul>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference" target="_blank">MDN JavaScript Reference</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter4" class="chapter">
+                    <h2>Glossary/Jargon:</h2>
+                    <ul>
+                        <li>
+                            <a href="https://www.codecademy.com/articles/glossary-javascript" target="_blank">JavaScript Glossary</a>
+                        </li>
+                        <li>
+                            <a href="http://jargon.js.org/" target="_blank">Simplified JavaScript Jargon</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter5" class="chapter">
+                    <h2>JS Explorers/Visualizers:</h2>
+                    <ul>
+                        <li>
+                            <a href="https://sdras.github.io/array-explorer/" target="_blank">JavaScript Array Explorer</a>
+                        </li>
+                        <li>
+                            <a href="https://sdras.github.io/object-explorer/" target="_blank">JavaScript Object Explorer</a>
+                        </li>
+                        <li>
+                            <a href="https://tylermcginnis.com/javascript-visualizer/" target="_blank">JavaScript Visualizer</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/slideout.min.js"></script>
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
+
+        <script>
+            // Create slide out TOC
+            var slideout = new Slideout({
+                panel: document.getElementById('panel'),
+                menu: document.getElementById('menu'),
+                padding: 356,
+                tolerance: 70,
+            });
+
+            // Create TOC dynamically from content
+            jQuery('.chapter').each(function(index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1);
+                    $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
+                });
+
+                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1 + '.' + (i + 1));
+                    $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
+                });
+            });
+
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+                window.open($(this).attr('href'));
+                return false;
+            });
+
+            // toggle TOC from hamburger icon
+            document.querySelector('#menuButton').addEventListener('click', function() {
+                slideout.toggle();
+            });
+
+            // toggle TOC on window resize
+            window.addEventListener('resize', resizeThrottler, false);
+            var resizeTimeout;
+            function resizeThrottler() {
+                // ignore resize events as long as an actualResizeHandler execution is in the queue
+                if (!resizeTimeout) {
+                    resizeTimeout = setTimeout(function() {
+                        resizeTimeout = null;
+                        actualResizeHandler();
+
+                        // The actualResizeHandler will execute at a rate of 15fps
+                    }, 66);
+                }
+            }
+            function actualResizeHandler() {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            }
+
+            // open TOC on load if window is wide enough
+            window.addEventListener('load', function(event) {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            });
+        </script>
+    </body>
+</html>

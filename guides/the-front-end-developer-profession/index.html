@@ -1,718 +1,589 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/prism.css" />
-    <script src="../js/prism.js"></script>
-    <title>The Front-end Developer Profession</title>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/prism.css" />
+        <script src="../js/prism.js"></script>
+        <title>The Front-end Developer Profession</title>
+    </head>
 
-  <body>
-    <div id="menu">
-      <a id="backToRoadMapLink" href="/">← Front-end Developer Roadmap</a>
-      <div id="toc"></div>
-    </div>
+    <body>
+        <div id="menu">
+            <a id="backToRoadMapLink" href="/">← Front-end Developer Roadmap</a>
+            <div id="toc"></div>
+        </div>
 
-    <div id="panel">
-      <div id="menuButton">|||</div>
+        <div id="panel">
+            <div id="menuButton">|||</div>
 
-      <div id="bookPadding">
-        <h1>The Front-end Developer Profession</h1>
+            <div id="bookPadding">
+                <h1>The Front-end Developer Profession</h1>
 
-        <h4 style="margin-top:0px">
-          Written by
-          <a href="http://codylindley.com/">Cody Lindley</a>
-          <span id="lastMod" style="display:none"
-            >updated <span id="lastModDate"></span
-          ></span>
-        </h4>
+                <h4 style="margin-top:0px">
+                    Written by
+                    <a href="http://codylindley.com/">Cody Lindley</a>
+                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                </h4>
+
+                <script>
+                    if (document.lastModified) {
+                        document.getElementById('lastMod').style.display = 'inline';
+                        document.getElementById('lastModDate').innerText = document.lastModified.split(' ')[0];
+                    }
+                </script>
+
+                <section>
+                    <p>
+                        <em
+                            ><a href="/">Guide books and roadmap</a> from <a href="https://frontendmasters.com/">Frontend Masters</a>.
+                            <br />
+                            Advancing your skills with in-depth, modern front-end engineering courses.</em
+                        >
+                    </p>
+                </section>
+
+                <hr />
+
+                <p><strong>Overview:</strong></p>
+
+                <p>
+                    A broad examination of the front-end developer profession.
+                </p>
+                <hr />
+                <p><strong>Contribute content, suggestions, and fixes on github</strong>:</p>
+
+                <p>
+                    <a href="https://github.com/FrontendMasters/guides">https://github.com/FrontendMasters/guides</a>
+                </p>
+
+                <hr />
+
+                <div id="chapter1" class="chapter">
+                    <h2>Defining the Front-end Developer Role</h2>
+
+                    <p>
+                        Fundamentally a front-end developer, historically sometimes refereed to as a client-side developer, produces the code sent from a web
+                        server to a client/front-end, to establish a user interface. For example, when you load a webpage into a web browser code is sent from a
+                        web server to the device/client requesting the page. The code sent will produce the user interface one sees in the web browser. This
+                        code is considered front-end code and is a mixture of the web technologies <a href="https://www.w3.org/html/">HTML</a>,
+                        <a href="https://www.w3.org/Style/CSS/">CSS</a>, and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>.
+                    </p>
+
+                    <p>
+                        An individual typically enters into the field of front-end development by first learning to
+                        <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web"> build a simple website using HTML and CSS</a>.
+                        HTML or Hyper Text Markup Language is likened to the structural framing of a house while CSS or Cascading Style Sheets can be considered
+                        the finishing touches one sees once a home is complete.
+                    </p>
+
+                    <p>
+                        Eventually, the house (i.e., a website) will need to become automated. In other words, it will need to become interactive and respond to
+                        events orchestrated by the user or the device on which it runs (e.g., on click or on load do X). To accomplish this, front-end
+                        developers
+                        <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics"
+                            >learn the JavaScript programming language</a
+                        >
+                        and use this language and the Document Object Model (aka the DOM) to add dynamic and interactive aspects to HTML and CSS.
+                    </p>
+
+                    <p>
+                        As a front-end developer progresses in their career they will move from a simple understanding of web pages and web sites to potentially
+                        a robust grasp of
+                        <a href="https://en.wikipedia.org/wiki/Best_coding_practices">software development practices</a>
+                        as it is done on <a href="https://developer.mozilla.org/bm/docs/Web">the web platform</a> using the JavaScript programming language.
+                    </p>
+                </div>
+
+                <div id="chapter2" class="chapter">
+                    <h2>Front-End Developers Develop For...</h2>
+
+                    <p>
+                        Front-end developers develop for the web platform, and the web platform is most commonly associated with web browser run times. Open a
+                        web browser like google Chrome, navigate to a web page like google.com, and what you are looking at was developed by a front-end
+                        developer who developed the web page using HTML, CSS, and JavaScript.
+                    </p>
+
+                    <p>
+                        The web platform runtime is not just for web browsers, it can also be used by
+                        <a href="https://storage.googleapis.com/pub-tools-public-publication-data/pdf/94181cd63583b60835d2db9869d9a194bab308ed.pdf">WebViews</a>
+                        and <a href="https://en.wikipedia.org/wiki/Progressive_web_applications">Progressive Web App (aka PWA)</a> techniques to create
+                        native-like applications that are installed on an operating system (i.e. cross platform developer using single one code base). This
+                        means that a front-end developer can take their knowledge of web technologies and the web platform run time associated with browsers and
+                        web development and use these skills to create native applications for popular operating systems like Windows, Mac OS X, Mac iOS,
+                        Android, and Linux.
+                    </p>
+
+                    <p>
+                        Loosely, think of a WebView or PWA like a single tab from a web browser without an address bar or backward and forward buttons, that is
+                        embedded into a native application. This scenario is identical to the browser, and WebViews/PWA's run from HTML, CSS, and JavaScript but
+                        instead of facilitating internet access to web pages the intention is the web platform runtime is used to access the native operating
+                        systems API's (i.e. A single browser view of a web page(s), using web technologies, that is run like a native application that may or
+                        may not be connected to the internet that has access to native operations either via native web API's or bridges from web technologies
+                        to native API's).
+                    </p>
+
+                    <p>
+                        The most common solutions for <a href="http://developer.telerik.com/featured/what-is-a-webview/" target="_blank">WebView</a> development
+                        are:
+                    </p>
+
+                    <ul>
+                        <li>
+                            <a href="http://electron.atom.io/" target="_blank">Electron</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/nwjs/nw.js" target="_blank">NW.js</a>
+                        </li>
+                        <li>
+                            <a href="https://neutralino.js.org/" target="_blank">Neutralino.js</a>
+                        </li>
+                        <li>
+                            <a href="https://deskgap.com/" target="_blank">DeskGap</a>
+                        </li>
+                    </ul>
+
+                    <p>
+                        Front-end developers can also find themselves developing source code using web platform technologies (e.g. CSS and JavaScript) but then
+                        the source code created is not used by a web platform run time scenario but instead as input which gets translated to native run time
+                        code. Basically, coding environments exists where web technologies are written not to run on the web platform but written to be used as
+                        input to create real native applications using native API's.
+                    </p>
+
+                    <p>Some examples of these environments are:</p>
+
+                    <ul>
+                        <li>
+                            <a href="https://flutter.io/" target="_blank">Flutter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.nativescript.org/" target="_blank">NativeScript</a>
+                        </li>
+                        <li>
+                            <a href="https://facebook.github.io/react-native/" target="_blank">React Native</a> (The
+                            <a href="https://instagram-engineering.com/react-native-at-instagram-dd828a9a90c7"
+                                >Instagram application for iOS and Android was develop using React Native</a
+                            >)
+                        </li>
+                        <li><a href="https://tabrisjs.com/" target="_blank">tabris.js</a> [free to $]</li>
+                        <li><a href="https://trigger.io/how-it-works/" target="_blank">trigger.io</a> [$]</li>
+                        <li>
+                            <a href="https://weex.apache.org/" target="_blank">weex</a>
+                        </li>
+                    </ul>
+
+                    <p>
+                        As you can see Front-end developers not only develop for web browsers but also for several other run time scenarios beyond web browsers.
+                        Being a front-end developer today could mean creating webpages and web applications that are accessed via web browsers but it can also
+                        mean creating native applications that are installed on operating systems and run offline (e.g.
+                        <a href="https://electronjs.org/apps/visual-studio-code">Visual Studio Code is built using Electron</a>).
+                    </p>
+                </div>
+
+                <div id="chapter3" class="chapter">
+                    <h2>Required Skills</h2>
+
+                    <p>
+                        A professional front-end developer will minimally have a working knowledge of
+                        <a href="https://www.mozilla.org/en-US/technology/what-is-a-browser/">browsers</a>, the
+                        <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work">internet</a>, and be skilled at
+                        using the following web technologies:
+                    </p>
+
+                    <ol>
+                        <li>Hyper Text Markup Language (aka HTML)</li>
+                        <li>Cascading Style Sheets (aka CSS)</li>
+                        <li>Uniform Resource Locators (aka URLs)</li>
+                        <li>Hypertext Transfer Protocol (aka HTTP)</li>
+                        <li>JavaScript Programming Language (aka ECMAScript 262)</li>
+                        <li>JavaScript Object Notation (aka JSON)</li>
+                        <li>Document Object Model (aka DOM)</li>
+                        <li>Web APIs (aka Browser API's)</li>
+                        <li>
+                            Web Content Accessibility Guidelines (aka WCAG) &amp; Accessible Rich Internet Applications (aka ARIA)
+                        </li>
+                    </ol>
+
+                    <p>
+                        Beyond being skilled at the technologies just mentioned, a front-end developer might also be skilled in one or more of the following
+                        areas:
+                    </p>
+
+                    <ul>
+                        <li>Content Management Systems (aka CMS)</li>
+                        <li>Node.js</li>
+                        <li>Cross-Browser Testing</li>
+                        <li>Cross-Platform Testing</li>
+                        <li>Unit Testing</li>
+                        <li>Cross-Device Testing</li>
+                        <li>Accessibility / WAI-ARIA</li>
+                        <li>Search Engine Optimization (aka SEO)</li>
+                        <li>Interaction or User Interface Design</li>
+                        <li>User Experience</li>
+                        <li>Usability</li>
+                        <li>E-commerce Systems</li>
+                        <li>Portal Systems</li>
+                        <li>Wireframing</li>
+                        <li>CSS Layout / Grids</li>
+                        <li>DOM Manipulation (e.g., jQuery)</li>
+                        <li>Mobile Web Performance</li>
+                        <li>Load Testing</li>
+                        <li>Performance Testing</li>
+                        <li>Progressive Enhancement / Graceful Degradation</li>
+                        <li>Version Control (e.g., GIT)</li>
+                        <li>MVC / MVVM / MV*</li>
+                        <li>Functional Programming</li>
+                        <li>Data Formats (e.g., JSON, XML)</li>
+                        <li>Data APIs (e.g Restful API)</li>
+                        <li>Web Font Embedding</li>
+                        <li>Scalable Vector Graphics (aka SVG)</li>
+                        <li>Regular Expressions</li>
+                        <li>Microdata / Microformats</li>
+                        <li>Task Runners, Build Tools, Process Automation Tools</li>
+                        <li>Responsive Web Design</li>
+                        <li>Object-Oriented Programming</li>
+                        <li>Application Architecture</li>
+                        <li>Modules</li>
+                        <li>Dependency Managers</li>
+                        <li>Package Managers</li>
+                        <li>JavaScript Animation</li>
+                        <li>CSS Animation</li>
+                        <li>Charts / Graphs</li>
+                        <li>UI Toolkits</li>
+                        <li>Code Quality Testing</li>
+                        <li>Code Coverage Testing</li>
+                        <li>Code Complexity Analysis</li>
+                        <li>Integration Testing</li>
+                        <li>Command Line / CLI</li>
+                        <li>Templating Strategies</li>
+                        <li>Templating Engines</li>
+                        <li>Single Page Applications</li>
+                        <li>Web/Browser Security</li>
+                        <li>Browser Developer Tools</li>
+                    </ul>
+
+                    <p>
+                        As of late defining the skills of a front-end developer has become complicated due to a significant divide in the front-end developer
+                        profession. A <a href="https://css-tricks.com/the-great-divide/">gap has arisen between those front-end developer</a>s who focus on
+                        programming and becoming a traditional computer science oriented JavaScript/software developer, and all this entails, and those who
+                        focus more on the UI, HTML, CSS and happen to know some JavaScript. This gap for better or worse was orchestrated by the fact that
+                        JavaScript infiltrated the back-end and thus back-end developers in time found themselves writing JavaScript back-ends with tools like
+                        <a href="https://nodejs.org/">Node.js</a> and <a href="https://www.mongodb.com/">mongoDB</a>. Eventually, these engineers infiltrated
+                        the front-end. The good news is this scenario resulted in a front-end and JavaScript renaissance. Pretty much, everything got better.
+                        Tools. Frameworks. Package Managers. Libraries. CSS. JavaScript. But, it especially got better for those who already had a command of
+                        the JavaScript programming language. The bad news this renaissance also diluted and complicated the skills required to do front-end
+                        development and has pulled the profession towards a more engineering focused field of work often requiring traditional computer science
+                        training and software development know-how over UI experience. Unfortunately, for the time being, getting a front-end developer job
+                        today might come down to how much you know about computer science theory, software development, or the specifics parts of the ECMAScript
+                        specification. I say unfortunately because, in my opinion, what is more important than these matters is a robust understanding of how to
+                        construct a usable touch point between the user and the code.
+                    </p>
+
+                    <p>
+                        Simultaneously, a trend has been occurring for several years now where websites and web applications are being built using a
+                        <a href="https://en.wikipedia.org/wiki/Fat_client">thick/fat client architecture</a> (e.g.,
+                        <a href="https://en.wikipedia.org/wiki/Single-page_application">Single Page Applications or SPA's</a>). Meaning, what was once mostly
+                        done on the server is now done in the client at runtime. In short, the application logic that runs a website or web application will
+                        today often run in the client instead of on the server. When this architecture is in use, the data that drives the website or web
+                        application is requested at runtime by the client using a <a href="https://www.programmableweb.com/api-university">data API</a>
+                        (i.e., an interface that returns data only, typically in the form of
+                        <a href="https://www.json.org/">JSON</a>). What this means for the front-end developer profession is what was once consider back-end
+                        competencies are now becoming required competencies to do front-end development (e.g.,
+                        <a href="https://en.wikipedia.org/wiki/Software_development">Software Development</a>,
+                        <a href="https://en.wikipedia.org/wiki/Web_application_development">Web Application Development</a>,
+                        <a href="https://en.wikipedia.org/wiki/Software_build">Software Build Processes</a>,
+                        <a href="https://en.wikipedia.org/wiki/State_(computer_science)">State management</a>,
+                        <a href="https://en.wikipedia.org/wiki/Application_performance_management">Application performance</a>, etc).
+                    </p>
+
+                    <p>
+                        Due to the divide mentioned above and the movement towards thick/fat applications in the client, the front-end skill set spectrum is
+                        currently being stretch by what is known as a full-stack developer. A full-stack developer can supposedly not only code a front-end
+                        application UI using HTML, CSS, and JavaScript for multiple screen sizes but can also develop the database and data API as well as the
+                        web server serving the client. It is this authors opinion that this jack of all development trades has been seen before in the form of a
+                        <a href="https://en.wikipedia.org/wiki/Webmaster">webmaster</a> and
+                        <a href="https://dotnet.microsoft.com/">back-end framework developers</a>. The author believes that history will repeat itself and the
+                        notion of a single do it all developer will run its course again and then eventually be wisely replaced with reasonably focused
+                        developers either working mainly on the front-end or back-end with a clear separation. I believe this will happen because the mile wide
+                        and inch deep developer is ultimately inept at properly caring for the UI and user experience. Don't get me wrong, a one in a million,
+                        unicorn, rock star developer, does exist. But modeling a profession on such an individual is impractical.
+                    </p>
+                </div>
+
+                <div id="chapter4" class="chapter">
+                    <h2>Job Titles</h2>
+
+                    <p>
+                        As I just mentioned, a great
+                        <a href="https://css-tricks.com/the-great-divide/">divide</a> has been brewing in the front-end developer space for several years
+                        between two very different types of front-end developers. On the one side, you have JavaScript-focused programmers who write JavaScript
+                        for front-end runtimes that likely have computer science skills with a software development history. They probably view HTML and CSS as
+                        an abstraction (i.e., <a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a> and
+                        <a href="https://hackernoon.com/all-you-need-to-know-about-css-in-js-984a72d48ebc">CSS in JS</a>). On the other side, you have, most
+                        likely, non-computer science educated developers who focus on HTML, CSS, and JavaScript as it specifically pertains to the UI. When
+                        entering or trying to understand the front-end developer space, you will absolutely feel this divide. The term front-end developer is on
+                        the verge of meaninglessness without clarifying words to address what type of front-end developer is being discussed.
+                    </p>
+
+                    <p>
+                        Below is a list and description of the most common front-end job titles (Keep in mind titles are
+                        <a href="https://blog.prototypr.io/dissecting-front-end-job-titles-7f72a0ef0bc5">hard</a>). The common, or most used (i.e., generic),
+                        title for a front-end developer is, "front-end developer" or "front-end engineer". Note that any job that contains the word "front-end",
+                        "client-side", "web UI", "HTML", "CSS", or "JavaScript" typically infers that a person has some degree of HTML, CSS, DOM, and JavaScript
+                        professional know-how.
+                    </p>
+
+                    <p>
+                        <strong>Front-End Developer/Engineer (Previously called Client-side Developer)</strong>: The generic job title that describes a
+                        developer who is skilled to some degree at HTML, CSS, DOM, and JavaScript and implementing these technologies on the web platform (URLs,
+                        HTTP, Browsers, Web APIs, etc).
+                    </p>
+
+                    <p>
+                        <strong>Application/JavaScript Developer/Engineer</strong>: The job title given to a developer who comes from a computer science,
+                        engineering, background and is using these skills to work with front-end technologies. This role typically requires computer science
+                        knowledge and years of software development experience. When the word "JavaScript Application" is included in the job title, this will
+                        denote that the developer should be an advanced JavaScript developer possessing advanced programming, software development, and
+                        application development skills (i.e has years of experience building front-end software applications). In all likely hood if the words
+                        engineer, JavaScript, or full-stack appear in the job title this will entail server-side JavaScript (i.e. Node.js, MongoDB, etc).
+                    </p>
+
+                    <p>
+                        <strong>Front-End Performance Developer/Engineer </strong>: The job title given to a JavaScript Application Engineer or UI Developer who
+                        is focused on the performance implications of JavaScript and JavaScript runtimes.
+                    </p>
+
+                    <p>
+                        <strong>CSS/HTML Developer</strong>: The front-end job title that describes a developer who is skilled at HTML and CSS, excluding
+                        JavaScript and Application know-how.
+                    </p>
+
+                    <p>
+                        <strong>Front-End Web Designer</strong>: When the word "Designer" is included in the job title, this will denote that the designer will
+                        possess front-end skills (i.e., HTML &amp; CSS) but also professional design (Visual Design and Interaction Design) skills.
+                    </p>
+
+                    <p>
+                        <strong>UI (User Interface) Developer/Engineer</strong>: When the word "Interface" or "UI" is included in the job title, this will
+                        denote that the developer should have interaction design skills in addition to front-end developer skills or front-end engineering
+                        skills.
+                    </p>
+
+                    <p>
+                        <strong>Mobile/Tablet Front-End Developer/Engineer</strong>: When the word "Mobile" or "Tablet" is included in the job title, this will
+                        denote that the developer has experience developing front-ends that run on mobile or tablet devices (either natively e.g. React Native,
+                        or on the web platform, i.e., in a browser).
+                    </p>
+
+                    <p>
+                        <strong>Front-End SEO Expert</strong>: When the word "SEO" is included in the job title, this will denote that the developer has
+                        extensive experience crafting front-end technologies towards an SEO strategy.
+                    </p>
+
+                    <p>
+                        <strong>Front-End Accessibility Expert</strong>: When the word "Accessibility" is included in the job title, this will denote that the
+                        developer has extensive experience crafting front-end technologies that support accessibility requirements and standards.
+                    </p>
+
+                    <p>
+                        <strong>Front-End Developer Operations Engineer</strong>: When the word "DevOps" is included in the job title, this will denote that the
+                        developer has extensive experience with software development practices pertaining to developer collaboration, tooling, integration,
+                        deployment, automation, and quality.
+                    </p>
+
+                    <p>
+                        <strong>Front-End Testing/QA Engineer</strong>: When the word "Testing" or "QA" is included in the job title, this will denote that the
+                        developer has extensive experience testing and managing software that involves manual testing, unit testing, functional/integration
+                        testing, user testing, and A/B testing.
+                    </p>
+
+                    <p>
+                        Note that each of these job titles could potential be prefixed with the terms "Junior", "Mid-level", "Senior", "Lead", "Director", or
+                        "Principle".
+                    </p>
+                </div>
+
+                <div id="chapter5" class="chapter">
+                    <h2>Overlapping Disciplines</h2>
+                    <p>
+                        A front-end developer will often work on a web development team containing the following roles:
+                    </p>
+                    <ul>
+                        <li>
+                            Project Lead / Product owner (i.e., stakeholder, project manager, etc.)
+                        </li>
+                        <li>
+                            Visual Designer (i.e., fonts, colors, spacing, emotion, visual concepts &amp; themes)
+                        </li>
+                        <li>
+                            UI/Interaction Designer (i.e., wireframes, specifying all user interactions and UI functionality, structuring information)
+                        </li>
+                        <li>
+                            Front-End Developer (i.e., writes code that runs on the client or front-end)
+                        </li>
+                        <li>
+                            Back-End Developer (i.e., writes code that runs on the server)
+                        </li>
+                    </ul>
+                    <p>
+                        The five roles just mentioned can overlap each other. For example, a front-end developer will typically have a good handle on
+                        UI/Interaction design as well as Back-end development. Additionally, it is not uncommon to find a Visual Designer who does Interaction
+                        Design and can also contribute to front-end coding efforts.
+                    </p>
+                    <p>
+                        A larger web development team might include the following roles not mentioned above:
+                    </p>
+                    <ul>
+                        <li>SEO Strategists</li>
+                        <li>Developer Operations Engineers (aka DevOp Engineers)</li>
+                        <li>Performance Engineers</li>
+                        <li>API Developers</li>
+                        <li>Database Administrators (aka DBA's)</li>
+                        <li>QA Engineers / Testers</li>
+                    </ul>
+                </div>
+
+                <div id="chapter6" class="chapter">
+                    <h2>Compensation</h2>
+                    <p>
+                        The national average in the U.S for a mid-level front-end developer is somewhere between
+                        <a href="https://www.payscale.com/research/US/Job=Front_End_Developer_%2f_Engineer/Salary">$65k</a>
+                        and
+                        <a href="https://www.indeed.com/salaries/Front-End-Developer-Salaries" target="_blank">100k</a>.
+                    </p>
+
+                    <p>
+                        Of course when you first enter into the profession expect to enter the field at around 40k a year depending upon location and
+                        experience.
+                    </p>
+
+                    <p>
+                        A lead/senior/principle front-end developer/engineer can potentially live wherever they want (i.e., work remotely) and make over $150k a
+                        year (visit
+                        <a href="https://angel.co/jobs" target="_blank">angel.co</a>, sign-up, review front-end jobs over $150k or examine the salary ranges on
+                        <a href="https://stackoverflow.com/jobs?q=front-end&amp;sort=y" target="_blank">Stack Overflow Jobs</a>).
+                    </p>
+                </div>
+
+                <div id="chapter7" class="chapter">
+                    <h2>Occupational Challenges</h2>
+
+                    <ul>
+                        <li>
+                            Front-end developer training and education is still a complicated endeavor, and those who break into the occupation often have done
+                            so by pure determination and self-directed learning resources.
+                        </li>
+                        <li>
+                            Front-end developers have to write code that will support a user interface on an extensive spectrum of device types and screen
+                            sizes.
+                        </li>
+                        <li>
+                            While not as complex of a problem as it once was front-end developers still have to write code that will run in several different
+                            browsers (i.e. runtimes).
+                        </li>
+                        <li>
+                            Front-end developers are expected not only to be highly skilled at user interface design and interaction design but also at the
+                            practice of computer programming, computer science, and software engineering.
+                        </li>
+                        <li>
+                            Front-end developers have to ride the wave of changing technologies, specifications, frameworks, and tools. This moving foundation
+                            has implications not only on an individual's skills but additionally on how easy it is to switch jobs.
+                        </li>
+                        <li>
+                            Front-end developers not only have to be experts at HTML, CSS, and JavaScript but also experts at complicated dialects of these
+                            languages (JSX, Markdown, SASS, Flow, Immutable.js, TypeScript, Reason, etc.).
+                        </li>
+                        <li>
+                            Front-end developers have to deal with non-trivial areas of complexity such as font rendering, search engine optimizations,
+                            accessibility standards, web security (e.g. SSL, OAuth2, XSS), image optimizations, network performance, HTML email, browser
+                            performance, JavaScript performance, HTML, CSS, and DOM rendering, and divergent JavaScript runtimes.
+                        </li>
+                        <li>
+                            Front-end developers today are dealing with the implications of trying to do all things on a platform that was initially designed to
+                            be a static document viewer. Real-time. Applications. Animation. Video games. The web has to be all things. And all things is very
+                            hard on front-end developers given that the web is viewed through a user-determined device, using a user-determined application,
+                            over a user-determined network. It is hard to do all the things when code has to account for a complicated spectrum of
+                            user-determined variables.
+                        </li>
+                        <li>
+                            Front-end developers today are stuck in an evolving job situation where a professional aptitude for UI design, software
+                            architecture, interaction design, and back-end/server-side programming can be placed on the front-end developer. Essentially,
+                            unrealistic expectations are being placed on front-end developers to operate at a professional level anywhere in the development
+                            stack while also being proficient at user interface development.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/slideout.min.js"></script>
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
 
         <script>
-          if (document.lastModified) {
-            document.getElementById("lastMod").style.display = "inline";
-            document.getElementById(
-              "lastModDate"
-            ).innerText = document.lastModified.split(" ")[0];
-          }
+            // Create slide out TOC
+            var slideout = new Slideout({
+                panel: document.getElementById('panel'),
+                menu: document.getElementById('menu'),
+                padding: 356,
+                tolerance: 70,
+            });
+
+            // Create TOC dynamically from content
+            jQuery('.chapter').each(function(index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1);
+                    $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
+                });
+
+                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1 + '.' + (i + 1));
+                    $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
+                });
+            });
+
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+                window.open($(this).attr('href'));
+                return false;
+            });
+
+            // toggle TOC from hamburger icon
+            document.querySelector('#menuButton').addEventListener('click', function() {
+                slideout.toggle();
+            });
+
+            // toggle TOC on window resize
+            window.addEventListener('resize', resizeThrottler, false);
+            var resizeTimeout;
+            function resizeThrottler() {
+                // ignore resize events as long as an actualResizeHandler execution is in the queue
+                if (!resizeTimeout) {
+                    resizeTimeout = setTimeout(function() {
+                        resizeTimeout = null;
+                        actualResizeHandler();
+
+                        // The actualResizeHandler will execute at a rate of 15fps
+                    }, 66);
+                }
+            }
+            function actualResizeHandler() {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            }
+
+            // open TOC on load if window is wide enough
+            window.addEventListener('load', function(event) {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            });
         </script>
-
-        <section>
-          <p>
-            <em
-              ><a href="/">Guide books and roadmap</a> from
-              <a href="https://frontendmasters.com/">Frontend Masters</a>.
-              <br />
-              Advancing your skills with in-depth, modern front-end engineering
-              courses.</em
-            >
-          </p>
-        </section>
-
-        <hr />
-
-        <p><strong>Overview:</strong></p>
-
-        <p>
-          A broad examination of the front-end developer profession.
-        </p>
-        <hr />
-        <p>
-          <strong>Contribute content, suggestions, and fixes on github</strong>:
-        </p>
-
-        <p>
-          <a href="https://github.com/FrontendMasters/guides"
-            >https://github.com/FrontendMasters/guides</a
-          >
-        </p>
-
-        <hr />
-
-        <div id="chapter1" class="chapter">
-          <h2>Defining the Front-end Developer Role</h2>
-
-          <p>
-            Fundamentally a front-end developer, historically sometimes refereed
-            to as a client-side developer, produces the code sent from a web
-            server to a client/front-end, to establish a user interface. For
-            example, when you load a webpage into a web browser code is sent
-            from a web server to the device/client requesting the page. The code
-            sent will produce the user interface one sees in the web browser.
-            This code is considered front-end code and is a mixture of the web
-            technologies <a href="https://www.w3.org/html/">HTML</a>,
-            <a href="https://www.w3.org/Style/CSS/">CSS</a>, and
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-              >JavaScript</a
-            >.
-          </p>
-
-          <p>
-            An individual typically enters into the field of front-end
-            development by first learning to
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web"
-            >
-              build a simple website using HTML
-              and CSS development by first learning to </a
-            >. HTML or Hyper Text Markup Language is likened to the structural
-            framing of a house while CSS or Cascading Style Sheets can be
-            considered the finishing touches one sees once a home is complete.
-          </p>
-
-          <p>
-            Eventually, the house (i.e., a website) will need to become
-            automated. In other words, it will need to become interactive and
-            respond to events orchestrated by the user or the device on which it
-            runs (e.g., on click or on load do X). To accomplish this, front-end
-            developers
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics"
-              >learn the JavaScript programming language</a
-            >
-            and use this language and the Document Object Model (aka the DOM) to
-            add dynamic and interactive aspects to HTML and CSS.
-          </p>
-
-          <p>
-            As a front-end developer progresses in their career they will move
-            from a simple understanding of web pages and web sites to
-            potentially a robust grasp of
-            <a href="https://en.wikipedia.org/wiki/Best_coding_practices"
-              >software development practices</a
-            >
-            as it is done on <a href="https://developer.mozilla.org/bm/docs/Web">the web platfor</a h>m using the JavaScript programming
-            language.
-          </p>
-        </div>
-
-        <div id="chapter2" class="chapter">
-            <h2>Front-End Developers Develop For...</h2>
-
-            <p>Front-end developers develop for the web platform, and the web platform is most commonly associated with web browser run times. Open a web browser like Chrome then navigate to a web page like google.com and what you are looking at was developed by a front-end developer who developed the web page using HTML, CSS, and JavaScript. But the web platform runtime can also be used by <a href="https://storage.googleapis.com/pub-tools-public-publication-data/pdf/94181cd63583b60835d2db9869d9a194bab308ed.pdf">WebViews</a> and <a href="https://en.wikipedia.org/wiki/Progressive_web_applications">Progressive Web App (aka PWA)</a> techniques to create native applications that are installed on an operating system. This means that a front-end developer can take their knowledge of web technologies and the web platform run time and use these skills to create native applications for popular operating systems like Windows, Mac OS X, Mac iOS, Android, and Linux.</p>
-
-              <p>Loosely, think of a WebView or PWA like a single tab from a web browser without an address bar or backward and forward UI buttons that is embedded into a native application. This scenario is identical to the browser, and WebViews/PWA's run from HTML, CSS, and JavaScript but instead of facilitating internet access to web pages the intention is the web platform runtime is used to access the native operating systems API's (i.e. A single browser view of a web page(s), using web technologies, that is run like a native application that may or may not be connected to the internet that has access to native operations either via native web API's or bridges from web technologies to native API's).</p>
-
-              <p>The most common solutions for <a href="http://developer.telerik.com/featured/what-is-a-webview/" target="_blank">WebView</a> development are:</p>
-
-              <ul>
-                  <li>
-                    <a href="http://electron.atom.io/" target="_blank">Electron</a> (<a href="https://electronjs.org/apps/visual-studio-code">Visual Studio Code, the code editor is built using Electron</a>)
-                  </li>
-                  <li>
-                    <a href="https://github.com/nwjs/nw.js" target="_blank">NW.js</a>
-                  </li>
-                  <li>
-                    <a href="https://proton-native.js.org/#/" target="_blank">proton</a>
-                  </li>
-                  <li>
-                    <a href="https://neutralino.js.org/" target="_blank">Neutralino.js</a>
-                  </li>
-                  <li>
-                    <a href="https://deskgap.com/" target="_blank">DeskGap</a>
-                  </li>
-                </ul>
-
-              <p>Front-end developers can also find themselves developing source code using web platform technologies (e.g. CSS and JavaScript) but then the source code created is not used by a web platform run time scenario but instead as input which gets translated to native run time code. Basically, coding environments exists where web technologies are written not to run on the web platform but written to be used as input to create real native applications using native API's.</p>
-
-              <p>Some examples of these environments are:</p>
-
-              <ul>
-                  <li>
-                    <a href="https://flutter.io/" target="_blank">Flutter</a>
-                  </li>
-                  <li>
-                    <a href="https://www.nativescript.org/" target="_blank">NativeScript</a>
-                  </li>
-                  <li>
-                    <a href="https://facebook.github.io/react-native/" target="_blank">React Native</a> (The <a href="https://instagram-engineering.com/react-native-at-instagram-dd828a9a90c7">Instagram application for iOS and Android was develop using React Native</a>)
-                  </li>
-                  <li>
-                    <a href="https://tabrisjs.com/" target="_blank">tabris.js</a> [free to $]
-                  </li>
-                  <li>
-                    <a href="https://trigger.io/how-it-works/" target="_blank">trigger.io</a> [$]
-                  </li>
-                  <li>
-                    <a href="https://weex.apache.org/" target="_blank">weex</a>
-                  </li>
-                </ul>
-
-
-              <p>As you can see Front-end developers not only develop for web browsers but also for several other run time scenarios beyond web browsers. Being a front-end developer today could mean creating webpages and web applications that are accessed via web browsers but it can also mean creating native applications that are installed on operating systems and run offline.</p>
-        </div>
-
-        <div id="chapter3" class="chapter">
-          <h2>Required Skills</h2>
-
-          <p>
-            A professional front-end developer will minimally have a working
-            knowledge of <a href="https://www.mozilla.org/en-US/technology/what-is-a-browser/">browsers</a>, the <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work">internet</a>, and be skilled at using the
-            following web technologies:
-          </p>
-
-          <ol>
-            <li>Hyper Text Markup Language (aka HTML)</li>
-            <li>Cascading Style Sheets (aka CSS)</li>
-            <li>Uniform Resource Locators (aka URLs)</li>
-            <li>Hypertext Transfer Protocol (aka HTTP)</li>
-            <li>JavaScript Programming Language (aka ECMAScript 262)</li>
-            <li>JavaScript Object Notation (aka JSON)</li>
-            <li>Document Object Model (aka DOM)</li>
-            <li>Web APIs (aka Browser API's)</li>
-            <li>
-              Web Content Accessibility Guidelines (aka WCAG) &amp; Accessible
-              Rich Internet Applications (aka ARIA)
-            </li>
-          </ol>
-
-          <p>
-            Beyond being skilled at the technologies just mentioned, a front-end
-            developer might also be skilled in one or more of the following
-            areas:
-          </p>
-
-          <ul>
-            <li>Content Management Systems (aka CMS)</li>
-            <li>Node.js</li>
-            <li>Cross-Browser Testing</li>
-            <li>Cross-Platform Testing</li>
-            <li>Unit Testing</li>
-            <li>Cross-Device Testing</li>
-            <li>Accessibility / WAI-ARIA</li>
-            <li>Search Engine Optimization (aka SEO)</li>
-            <li>Interaction or User Interface Design</li>
-            <li>User Experience</li>
-            <li>Usability</li>
-            <li>E-commerce Systems</li>
-            <li>Portal Systems</li>
-            <li>Wireframing</li>
-            <li>CSS Layout / Grids</li>
-            <li>DOM Manipulation (e.g., jQuery)</li>
-            <li>Mobile Web Performance</li>
-            <li>Load Testing</li>
-            <li>Performance Testing</li>
-            <li>Progressive Enhancement / Graceful Degradation</li>
-            <li>Version Control (e.g., GIT)</li>
-            <li>MVC / MVVM / MV*</li>
-            <li>Functional Programming</li>
-            <li>Data Formats (e.g., JSON, XML)</li>
-            <li>Data APIs (e.g Restful API)</li>
-            <li>Web Font Embedding</li>
-            <li>Scalable Vector Graphics (aka SVG)</li>
-            <li>Regular Expressions</li>
-            <li>Microdata / Microformats</li>
-            <li>Task Runners, Build Tools, Process Automation Tools</li>
-            <li>Responsive Web Design</li>
-            <li>Object-Oriented Programming</li>
-            <li>Application Architecture</li>
-            <li>Modules</li>
-            <li>Dependency Managers</li>
-            <li>Package Managers</li>
-            <li>JavaScript Animation</li>
-            <li>CSS Animation</li>
-            <li>Charts / Graphs</li>
-            <li>UI Toolkits</li>
-            <li>Code Quality Testing</li>
-            <li>Code Coverage Testing</li>
-            <li>Code Complexity Analysis</li>
-            <li>Integration Testing</li>
-            <li>Command Line / CLI</li>
-            <li>Templating Strategies</li>
-            <li>Templating Engines</li>
-            <li>Single Page Applications</li>
-            <li>Web/Browser Security</li>
-            <li>Browser Developer Tools</li>
-          </ul>
-
-          <p>
-            As of late defining the skills of a front-end developer has become
-            complicated due to a significant divide in the front-end developer
-            profession. A <a href="https://css-tricks.com/the-great-divide/">gap has arisen between those front-end developer</a>s who
-            focus on programming and becoming a traditional computer science
-            oriented JavaScript/software developer, and all this entails, and
-            those who focus more on the UI, HTML, CSS and happen to know some
-            JavaScript. This gap for better or worse was orchestrated by the
-            fact that JavaScript infiltrated the back-end and thus back-end
-            developers in time found themselves writing JavaScript back-ends
-            with tools like <a href="https://nodejs.org/">Node.js</a> and <a href="https://www.mongodb.com/">mongoDB</a>. Eventually, these engineers
-            infiltrated the front-end. The good news is this scenario resulted
-            in a front-end and JavaScript renaissance. Pretty much, everything
-            got better. Tools. Frameworks. Package Managers. Libraries. CSS. JavaScript. But, it
-            especially got better for those who already had a command of the
-            JavaScript programming language. The bad news this renaissance also
-            diluted and complicated the skills required to do front-end
-            development and has pulled the profession towards a more engineering
-            focused field of work often requiring traditional computer science
-            training and software development know-how over UI experience.
-            Unfortunately, for the time being, getting a front-end developer job
-            today might come down to how much you know about computer science
-            theory, software development, or the specifics parts of the
-            ECMAScript specification. I say unfortunately because, in my
-            opinion, what is more important than these matters is a robust
-            understanding of how to construct a usable touch point between the
-            user and the code.
-          </p>
-
-          <p>
-            Simultaneously, a trend has been occurring for several years now
-            where websites and web applications are being built using a
-            <a href="https://en.wikipedia.org/wiki/Fat_client">thick/fat client architecture</a> (e.g., <a href="https://en.wikipedia.org/wiki/Single-page_application">Single Page Applications or SPA's</a>). Meaning, what was once mostly done on
-            the server is now done in the client at runtime. In short, the
-            application logic that runs a website or web application will today
-            often run in the client instead of on the server. When this
-            architecture is in use, the data that drives the website or web
-            application is requested at runtime by the client using a <a href="https://www.programmableweb.com/api-university">data API</a>
-            (i.e., an interface that returns data only, typically in the form of
-            <a href="https://www.json.org/">JSON</a>). What this means for the front-end developer profession is
-            what was once consider back-end competencies are now becoming
-            required competencies to do front-end development (e.g., <a href="https://en.wikipedia.org/wiki/Software_development">Software Development</a>, <a href="https://en.wikipedia.org/wiki/Web_application_development">Web Application Development</a>, <a href="https://en.wikipedia.org/wiki/Software_build">Software Build Processes</a>,
-            <a href="https://en.wikipedia.org/wiki/State_(computer_science)">State management</a>, <a href="https://en.wikipedia.org/wiki/Application_performance_management">Application performance</a>, etc).
-          </p>
-
-          <p>
-            Due to the divide mentioned above and the movement towards thick/fat
-            applications in the client, the front-end skill set spectrum is
-            currently being stretch by what is known as a full-stack developer.
-            A full-stack developer can supposedly not only code a front-end
-            application UI using HTML, CSS, and JavaScript for multiple screen
-            sizes but can also develop the database and data API as well as the
-            web server serving the client. It is this authors opinion that this
-            jack of all development trades has been seen before in the form of a
-            <a href="https://en.wikipedia.org/wiki/Webmaster">webmaster</a> and <a href="https://dotnet.microsoft.com/">back-end framework developers</a>. The author believes that history
-            will repeat itself and the notion of a single do it all developer
-            will run its course again and then eventually be wisely replaced
-            with reasonably focused developers either working mainly on the
-            front-end or back-end with a clear separation. I believe this will
-            happen because the mile wide and inch deep developer is ultimately
-            inept at properly caring for the UI and user experience. Don't get
-            me wrong, a one in a million, unicorn, rock star developer, does
-            exist. But modeling a profession on such an individual is
-            impractical.
-          </p>
-        </div>
-
-        <div id="chapter4" class="chapter">
-          <h2>Job Titles</h2>
-
-          <p>
-            As I just mentioned, a great
-            <a href="https://css-tricks.com/the-great-divide/">divide</a> has
-            been brewing in the front-end developer space for several years
-            between two very different types of front-end developers. On the one
-            side, you have JavaScript-focused programmers who write JavaScript
-            for front-end runtimes that likely have computer science skills with
-            a software development history. They probably view HTML and CSS as
-            an abstraction (i.e.,
-            <a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a> and
-            <a
-              href="https://hackernoon.com/all-you-need-to-know-about-css-in-js-984a72d48ebc"
-              >CSS in JS</a
-            >). On the other side, you have, most likely, non-computer science
-            educated developers who focus on HTML, CSS, and JavaScript as it
-            specifically pertains to the UI. When entering or trying to
-            understand the front-end developer space, you will absolutely feel
-            this divide. The term front-end developer is on the verge of
-            meaninglessness without clarifying words to address what type of
-            front-end developer is being discussed.
-          </p>
-
-          <p>
-            Below is a list and description of the most common front-end job
-            titles (Keep in mind titles are
-            <a
-              href="https://blog.prototypr.io/dissecting-front-end-job-titles-7f72a0ef0bc5"
-              >hard</a
-            >). The common, or most used (i.e., generic), title for a front-end
-            developer is, "front-end developer" or "front-end engineer". Note
-            that any job that contains the word "front-end", "client-side", "web
-            UI", "HTML", "CSS", or "JavaScript" typically infers that a person
-            has some degree of HTML, CSS, DOM, and JavaScript professional
-            know-how.
-          </p>
-
-          <p>
-            <strong
-              >Front-End Developer/Engineer (Previously called Client-side
-              Developer)</strong
-            >: The generic job title that describes a developer who is skilled
-            to some degree at HTML, CSS, DOM, and JavaScript and implementing
-            these technologies on the web platform (URLs, HTTP, Browsers, Web
-            APIs, etc).
-          </p>
-
-          <p>
-            <strong>Application/JavaScript Developer/Engineer</strong>: The job
-            title given to a developer who comes from a computer science,
-            engineering, background and is using these skills to work with
-            front-end technologies. This role typically requires computer
-            science knowledge and years of software development experience. When
-            the word "JavaScript Application" is included in the job title, this
-            will denote that the developer should be an advanced JavaScript
-            developer possessing advanced programming, software development, and
-            application development skills (i.e has years of experience building
-            front-end software applications). In all likely hood if the words
-            engineer, JavaScript, or full-stack appear in the job title this
-            will entail server-side JavaScript (i.e. Node.js, MongoDB, etc).
-          </p>
-
-          <p>
-            <strong>Front-End Performance Developer/Engineer </strong>: The job
-            title given to a JavaScript Application Engineer or UI Developer who
-            is focused on the performance implications of JavaScript and
-            JavaScript runtimes.
-          </p>
-
-          <p>
-            <strong>CSS/HTML Developer</strong>: The front-end job title that
-            describes a developer who is skilled at HTML and CSS, excluding
-            JavaScript and Application know-how.
-          </p>
-
-          <p>
-            <strong>Front-End Web Designer</strong>: When the word "Designer" is
-            included in the job title, this will denote that the designer will
-            possess front-end skills (i.e., HTML &amp; CSS) but also
-            professional design (Visual Design and Interaction Design) skills.
-          </p>
-
-          <p>
-            <strong>UI (User Interface) Developer/Engineer</strong>: When the
-            word "Interface" or "UI" is included in the job title, this will
-            denote that the developer should have interaction design skills in
-            addition to front-end developer skills or front-end engineering
-            skills.
-          </p>
-
-          <p>
-            <strong>Mobile/Tablet Front-End Developer/Engineer</strong>: When
-            the word "Mobile" or "Tablet" is included in the job title, this
-            will denote that the developer has experience developing front-ends
-            that run on mobile or tablet devices (either natively e.g. React
-            Native, or on the web platform, i.e., in a browser).
-          </p>
-
-          <p>
-            <strong>Front-End SEO Expert</strong>: When the word "SEO" is
-            included in the job title, this will denote that the developer has
-            extensive experience crafting front-end technologies towards an SEO
-            strategy.
-          </p>
-
-          <p>
-            <strong>Front-End Accessibility Expert</strong>: When the word
-            "Accessibility" is included in the job title, this will denote that
-            the developer has extensive experience crafting front-end
-            technologies that support accessibility requirements and standards.
-          </p>
-
-          <p>
-            <strong>Front-End Developer Operations Engineer</strong>: When the
-            word "DevOps" is included in the job title, this will denote that
-            the developer has extensive experience with software development
-            practices pertaining to developer collaboration, tooling,
-            integration, deployment, automation, and quality.
-          </p>
-
-          <p>
-            <strong>Front-End Testing/QA Engineer</strong>: When the word
-            "Testing" or "QA" is included in the job title, this will denote
-            that the developer has extensive experience testing and managing
-            software that involves manual testing, unit testing,
-            functional/integration testing, user testing, and A/B testing.
-          </p>
-
-          <p>
-            Note that each of these job titles could potential be prefixed with
-            the terms "Junior", "Mid-level", "Senior", "Lead", "Director", or
-            "Principle".
-          </p>
-        </div>
-
-        <div id="chapter5" class="chapter">
-          <h2>Overlapping Disciplines</h2>
-          <p>
-            A front-end developer will often work on a web development team
-            containing the following roles:
-          </p>
-          <ul>
-            <li>
-              Project Lead / Product owner (i.e., stakeholder, project manager,
-              etc.)
-            </li>
-            <li>
-              Visual Designer (i.e., fonts, colors, spacing, emotion, visual
-              concepts &amp; themes)
-            </li>
-            <li>
-              UI/Interaction Designer (i.e., wireframes, specifying all user
-              interactions and UI functionality, structuring information)
-            </li>
-            <li>
-              Front-End Developer (i.e., writes code that runs on the client or
-              front-end)
-            </li>
-            <li>
-              Back-End Developer (i.e., writes code that runs on the server)
-            </li>
-          </ul>
-          <p>
-            The five roles just mentioned can overlap each other. For example, a
-            front-end developer will typically have a good handle on
-            UI/Interaction design as well as Back-end development. Additionally,
-            it is not uncommon to find a Visual Designer who does Interaction
-            Design and can also contribute to front-end coding efforts.
-          </p>
-          <p>
-            A larger web development team might include the following roles not
-            mentioned above:
-          </p>
-          <ul>
-            <li>SEO Strategists</li>
-            <li>Developer Operations Engineers (aka DevOp Engineers)</li>
-            <li>Performance Engineers</li>
-            <li>API Developers</li>
-            <li>Database Administrators (aka DBA's)</li>
-            <li>QA Engineers / Testers</li>
-          </ul>
-        </div>
-
-        <div id="chapter6" class="chapter">
-          <h2>Compensation</h2>
-          <p>
-            The national average in the U.S for a mid-level front-end developer
-            is somewhere between
-            <a
-              href="https://www.payscale.com/research/US/Job=Front_End_Developer_%2f_Engineer/Salary"
-              >$65k</a
-            >
-            and
-            <a
-              href="https://www.indeed.com/salaries/Front-End-Developer-Salaries"
-              target="_blank"
-              >100k</a
-            >.
-          </p>
-
-          <p>
-            Of course when you first enter into the profession expect to enter
-            the field at around 40k a year depending upon location and
-            experience.
-          </p>
-
-          <p>
-            A lead/senior/principle front-end developer/engineer can potentially
-            live wherever they want (i.e., work remotely) and make over $150k a
-            year (visit
-            <a href="https://angel.co/jobs" target="_blank">angel.co</a>,
-            sign-up, review front-end jobs over $150k or examine the salary
-            ranges on
-            <a
-              href="https://stackoverflow.com/jobs?q=front-end&amp;sort=y"
-              target="_blank"
-              >Stack Overflow Jobs</a
-            >).
-          </p>
-        </div>
-
-        <div id="chapter7" class="chapter">
-          <h2>Occupational Challenges</h2>
-
-          <ul>
-            <li>
-              Front-end developer training and education is still a complicated
-              endeavor, and those who break into the occupation often have done
-              so by pure determination and self-directed learning resources.
-            </li>
-            <li>
-              Front-end developers have to write code that will support a user
-              interface on an extensive spectrum of device types and screen
-              sizes.
-            </li>
-            <li>
-              While not as complex of a problem as it once was front-end
-              developers still have to write code that will run in several
-              different browsers.
-            </li>
-            <li>
-              Front-end developers are expected not only to be highly skilled at
-              user interface design and interaction design but also at the
-              practice of computer programming, computer science, and software
-              engineering.
-            </li>
-            <li>
-              Front-end developers have to ride the wave of changing
-              technologies, specifications, frameworks, and tools. This moving
-              foundation has implications not only on an individual's skills but
-              additionally on how easy it is to switch jobs.
-            </li>
-            <li>
-              Front-end developers not only have to be experts at HTML, CSS, and
-              JavaScript but also experts at complicated dialects of these
-              languages (JSX, Markdown, Stylus, Less, SASS, TypeScript, Reason,
-              PureScript, etc.). They are potentially learning six languages,
-              which is far more difficult than learning just three (i.e. HTML,
-              CSS, JavaScript).
-            </li>
-            <li>
-              Front-end developers have to deal with non-trivial areas of
-              complexity such as font rendering, search engine optimizations,
-              accessibility standards, web security (e.g. SSL, OAuth2, XSS), image optimizations, network performance,
-              HTML email, browser performance, JavaScript performance, HTML,
-              CSS, and DOM rendering, and divergent JavaScript runtimes.
-            </li>
-            <li>
-              Front-end developers today are dealing with the implications of
-              trying to do all things on a platform that was initially designed
-              to be a static document viewer. Real-time. Applications.
-              Animation. Video games. The web has to be all things. And all
-              things is very hard on front-end developers given that the web is
-              viewed through a user-determined device, using a user-determined
-              application, over a user-determined network. It is hard to do all
-              the things when code has to account for a complicated spectrum of
-              user-determined variables.
-            </li>
-            <li>
-              Front-end developers today are stuck in an evolving job situation
-              where a professional aptitude for UI design, software
-              architecture, interaction design, and back-end/server-side
-              programming can be placed on the front-end developer. Essentially,
-              unrealistic expectations are being placed on front-end developers
-              to operate at a professional level anywhere in the development
-              stack while also being proficient at user interface development.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <script src="../js/slideout.min.js"></script>
-    <script src="../js/jquery-3.3.1.slim.min.js"></script>
-
-    <script>
-      // Create slide out TOC
-      var slideout = new Slideout({
-        panel: document.getElementById("panel"),
-        menu: document.getElementById("menu"),
-        padding: 356,
-        tolerance: 70
-      });
-
-      // Create TOC dynamically from content
-      jQuery(".chapter").each(function(index) {
-        jQuery("h2", "#chapter" + (index + 1)).each(function(i) {
-          $(this).attr("id", index + 1);
-          $("#toc").append(
-            '<h5><a href="#' + (index + 1) + '">' + $(this).html() + "</a></h5>"
-          );
-        });
-
-        jQuery("h3", "#chapter" + (index + 1)).each(function(i) {
-          $(this).attr("id", index + 1 + "." + (i + 1));
-          $("#toc").append(
-            '<h6><a href="#' +
-              (index + 1) +
-              "." +
-              (i + 1) +
-              '">' +
-              $(this).html() +
-              "</a></h6>"
-          );
-        });
-      });
-
-      jQuery("#panel").on(
-        "click",
-        "a:not(.codesandboxlink a, .toolbar a)",
-        function() {
-          window.open($(this).attr("href"));
-          return false;
-        }
-      );
-
-      // toggle TOC from hamburger icon
-      document
-        .querySelector("#menuButton")
-        .addEventListener("click", function() {
-          slideout.toggle();
-        });
-
-      // toggle TOC on window resize
-      window.addEventListener("resize", resizeThrottler, false);
-      var resizeTimeout;
-      function resizeThrottler() {
-        // ignore resize events as long as an actualResizeHandler execution is in the queue
-        if (!resizeTimeout) {
-          resizeTimeout = setTimeout(function() {
-            resizeTimeout = null;
-            actualResizeHandler();
-
-            // The actualResizeHandler will execute at a rate of 15fps
-          }, 66);
-        }
-      }
-      function actualResizeHandler() {
-        if (window.innerWidth > 1036) {
-          slideout.open();
-        } else {
-          slideout.close();
-        }
-      }
-
-      // open TOC on load if window is wide enough
-      window.addEventListener("load", function(event) {
-        if (window.innerWidth > 1036) {
-          slideout.open();
-        } else {
-          slideout.close();
-        }
-      });
-    </script>
-  </body>
+    </body>
 </html>

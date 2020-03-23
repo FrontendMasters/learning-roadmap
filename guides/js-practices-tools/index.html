@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/prism.css" />
+        <script src="../js/prism.js"></script>
+        <title>JavaScript Practices & Tooling</title>
+    </head>
+
+    <body>
+        <div id="menu">
+            <a id="backToRoadMapLink" href="/">← Front-end Developer Roadmap</a>
+            <div id="toc"></div>
+        </div>
+
+        <div id="panel">
+            <div id="menuButton">|||</div>
+
+            <div id="bookPadding">
+                <h1>JavaScript Practices & Tooling</h1>
+
+                <h4 style="margin-top:0px">
+                    Written by
+                    <a href="http://codylindley.com/">Cody Lindley</a>
+                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                </h4>
+
+                <script>
+                    if (document.lastModified) {
+                        document.getElementById('lastMod').style.display = 'inline';
+                        document.getElementById('lastModDate').innerText = document.lastModified.split(' ')[0];
+                    }
+                </script>
+
+                <section>
+                    <p>
+                        <em
+                            ><a href="/">Guide books and roadmap</a> from <a href="https://frontendmasters.com/">Frontend Masters</a>.
+                            <br />
+                            Advancing your skills with in-depth, modern front-end engineering courses.</em
+                        >
+                    </p>
+                </section>
+
+                <hr />
+
+                <p><strong>Overview:</strong></p>
+
+                <p>
+                    learning resources and tools.
+                </p>
+
+                <!--                 <hr />
+
+                <p><strong>Definitions:</strong></p>
+
+                <dl>
+                    <dt>
+                        Web Page
+                    </dt>
+                    <dd>
+                        A document with a .html extensions that can be display in a web browser. This file can be loaded into a web browser from you local
+                        computer or it can be sent over the internet to a web browsers using HTTP. Web pages can link to other web pages. Web pages typically
+                        display a text, images, videos, audio, and graphical user interfaces.
+                    </dd>
+                    <dt>
+                        Website
+                    </dt>
+                    <dd>
+                        A group of web pages linked to each other by design.
+                    </dd>
+                    <dt>
+                        Web Server
+                    </dt>
+                    <dd>
+                        Aka, an "HTTP server". A device on the internet (a computer) setup to host and server web pages to other devices (computers, phones,
+                        etc...) that request web pages using HTTP. A web server can server static files as is or dynamic files that are built upon requesting,
+                        typically holding data from a database.
+                    </dd>
+                </dl> -->
+
+                <hr />
+                <p><strong>Contribute content, suggestions, and fixes on github</strong>:</p>
+
+                <p>
+                    <a href="https://github.com/FrontendMasters/guides">https://github.com/FrontendMasters/guides</a>
+                </p>
+
+                <hr />
+
+                <div id="chapter1" class="chapter">
+                    <h2>JS Authoring Conventions</h2>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/airbnb/javascript" target="_blank">JavaScript Style Guide</a>
+                        </li>
+                        <li>
+                            <a href="https://standardjs.com/" target="_blank">Standard JS</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter2" class="chapter">
+                    <h2>Compile JS'ish to JS:</h2>
+
+                    <ul>
+                        <li>
+                            <a href="https://babeljs.io/" target="_blank">Babel</a>
+                        </li>
+                        <li>
+                            <a href="https://sucrase.io" target="_blank">sucrase</a>
+                        </li>
+                        <li>
+                            <a href="https://swc-project.github.io/" target="_blank">scw</a>
+                        </li>
+                        <li>
+                            <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter3" class="chapter">
+                    <h2>Compile Other Language(s) to JS:</h2>
+
+                    <ul>
+                        <li>
+                            <a href="https://reasonml.github.io/" target="_blank">Reason</a>
+                        </li>
+                        <li>
+                            <a href="https://elm-lang.org/" target="_blank">Elm</a>
+                        </li>
+                        <li>
+                            <a href="https://www.purescript.org/" target="_blank">PureScript</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter4" class="chapter">
+                    <h2>Minifier/Compressor/Optimizer:</h2>
+
+                    <ul>
+                        <li>
+                            <a href="http://lisperator.net/uglifyjs/" target="_blank">UglifyJS</a>
+                        </li>
+                        <li>
+                            <a href="https://terser.org/" target="_blank">Terser</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter5" class="chapter">
+                    <h2>Strongly Typed JS</h2>
+
+                    <ul>
+                        <li>
+                            <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>
+                        </li>
+                        <li>
+                            <a href="https://flow.org/" target="_blank">Flow</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter6" class="chapter">
+                    <h2>Linting/Hinting/Formatting</h2>
+                    <ul>
+                        <li>
+                            <a href="http://eslint.org/" target="_blank">eslint</a>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/jlongster/prettier" target="_blank">prettier</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter7" class="chapter">
+                    <h2>Tools</h2>
+
+                    <h4>JavaScript Utilities</h4>
+
+                    <ul>
+                        <li>
+                            <a href="http://openexchangerates.github.io/accounting.js/" target="_blank">accounting.js</a>
+                        </li>
+                        <li>
+                            <a href="http://caolan.github.io/async/" target="_blank">async</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/mzabriskie/axios" target="_blank">axios</a>
+                        </li>
+                        <li>
+                            <a href="http://chancejs.com/" target="_blank">chance</a>
+                        </li>
+                        <li>
+                            <a href="https://date-fns.org/" target="_blank">date-fns</a>
+                        </li>
+                        <li>
+                            <a href="https://sarahdayan.github.io/dinero.js/module-Dinero.html" target="_blank">dinero</a>
+                        </li>
+                        <li>
+                            <a href="http://financejs.org/" target="_blank">Finance.js</a>
+                        </li>
+                        <li>
+                            <a href="http://formatjs.io/" target="_blank">format.js</a>
+                        </li>
+                        <li>
+                            <a href="https://howlerjs.com" target="_blank">Howler.js</a>
+                        </li>
+                        <li>
+                            <a href="https://facebook.github.io/immutable-js/" target="_blank">immutable</a>
+                        </li>
+                        <li>
+                            <a href="http://arasatasaygin.github.io/is.js/" target="_blank">is.js</a>
+                        </li>
+                        <li>
+                            <a href="https://lodash.com/" target="_blank">lodash</a>
+                            <ul>
+                                <li>
+                                    <a href="https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore" target="_blank"
+                                        >You-Dont-Need-Lodash-Underscore</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://moment.github.io/luxon/" target="_blank">Luxon</a>
+                            <ul>
+                                <li>
+                                    <a href="https://github.com/you-dont-need/You-Dont-Need-Momentjs">You don't (may not) need Moment.js</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://mathjs.org/" target="_blank">Math.js</a>
+                        </li>
+                        <li>
+                            <a href="http://momentjs.com/" target="_blank">Moment.js</a>
+                        </li>
+                        <li>
+                            <a href="http://numeraljs.com/" target="_blank">Numeral.js</a>
+                        </li>
+                        <li>
+                            <a href="http://ramdajs.com/" target="_blank">Ramda</a>
+                        </li>
+                        <li>
+                            <a href="http://reactivex.io/rxjs/" target="_blank">RxJS</a>
+                        </li>
+                        <li>
+                            <a href="https://theorem.js.org/" target="_blank">TheoremJS</a>
+                        </li>
+                        <li>
+                            <a href="https://vocajs.com/" target="_blank">voca</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/elving/wait" target="_blank">wait</a>
+                        </li>
+                    </ul>
+
+                    <h4>Performance Testing</h4>
+
+                    <ul>
+                        <li>
+                            <a href="http://benchmarkjs.com/" target="_blank">benchmark.js</a>
+                        </li>
+                        <li>
+                            <a href="https://jsperf.com/" target="_blank">jsperf.com</a>
+                        </li>
+                    </ul>
+
+                    <h4>Static Code Analysis</h4>
+
+                    <ul>
+                        <li>
+                            <a href="https://ternjs.net/" target="_blank">Tern</a>
+                        </li>
+                        <li>
+                            <a href="http://esprima.org/" target="_blank">Esprima</a>
+                        </li>
+                    </ul>
+
+                    <h4>Obfuscate</h4>
+
+                    <ul>
+                        <li><a href="http://www.javascriptobfuscator.com/" target="_blank">Javascript Obfuscator</a> [free to $]</li>
+                        <li><a href="https://jscrambler.com/" target="_blank">JScrambler</a> [$]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/slideout.min.js"></script>
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
+
+        <script>
+            // Create slide out TOC
+            var slideout = new Slideout({
+                panel: document.getElementById('panel'),
+                menu: document.getElementById('menu'),
+                padding: 356,
+                tolerance: 70,
+            });
+
+            // Create TOC dynamically from content
+            jQuery('.chapter').each(function(index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1);
+                    $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
+                });
+
+                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1 + '.' + (i + 1));
+                    $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
+                });
+            });
+
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+                window.open($(this).attr('href'));
+                return false;
+            });
+
+            // toggle TOC from hamburger icon
+            document.querySelector('#menuButton').addEventListener('click', function() {
+                slideout.toggle();
+            });
+
+            // toggle TOC on window resize
+            window.addEventListener('resize', resizeThrottler, false);
+            var resizeTimeout;
+            function resizeThrottler() {
+                // ignore resize events as long as an actualResizeHandler execution is in the queue
+                if (!resizeTimeout) {
+                    resizeTimeout = setTimeout(function() {
+                        resizeTimeout = null;
+                        actualResizeHandler();
+
+                        // The actualResizeHandler will execute at a rate of 15fps
+                    }, 66);
+                }
+            }
+            function actualResizeHandler() {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            }
+
+            // open TOC on load if window is wide enough
+            window.addEventListener('load', function(event) {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            });
+        </script>
+    </body>
+</html>

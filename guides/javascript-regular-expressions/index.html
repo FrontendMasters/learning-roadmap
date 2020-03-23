@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/prism.css" />
+        <script src="../js/prism.js"></script>
+        <title>JavaScript Regular Expressions</title>
+    </head>
+
+    <body>
+        <div id="menu">
+            <a id="backToRoadMapLink" href="/">← Front-end Developer Roadmap</a>
+            <div id="toc"></div>
+        </div>
+
+        <div id="panel">
+            <div id="menuButton">|||</div>
+
+            <div id="bookPadding">
+                <h1>JavaScript Regular Expressions</h1>
+
+                <h4 style="margin-top:0px">
+                    Written by
+                    <a href="http://codylindley.com/">Cody Lindley</a>
+                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                </h4>
+
+                <script>
+                    if (document.lastModified) {
+                        document.getElementById('lastMod').style.display = 'inline';
+                        document.getElementById('lastModDate').innerText = document.lastModified.split(' ')[0];
+                    }
+                </script>
+
+                <section>
+                    <p>
+                        <em
+                            ><a href="/">Guide books and roadmap</a> from <a href="https://frontendmasters.com/">Frontend Masters</a>.
+                            <br />
+                            Advancing your skills with in-depth, modern front-end engineering courses.</em
+                        >
+                    </p>
+                </section>
+
+                <hr />
+
+                <p><strong>Overview:</strong></p>
+
+                <p>
+                    learning resources and tools.
+                </p>
+
+                <hr />
+
+                <p><strong>Definitions:</strong></p>
+
+                <dl>
+                    <dt>
+                        Regular expression
+                    </dt>
+                    <dd>
+                        A regular expression, regex or regexp (sometimes called a rational expression) is a sequence of characters that define a search pattern.
+                        Usually such patterns are used by string searching algorithms for "find" or "find and replace" operations on strings, or for input
+                        validation. It is a technique developed in theoretical computer science and formal language theory.
+                    </dd>
+                </dl>
+
+                <hr />
+                <p><strong>Contribute content, suggestions, and fixes on github</strong>:</p>
+
+                <p>
+                    <a href="https://github.com/FrontendMasters/guides">https://github.com/FrontendMasters/guides</a>
+                </p>
+
+                <hr />
+
+                <div id="chapter1" class="chapter">
+                    <h2>Learning Resources</h2>
+                    <ul>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank"
+                                >MDN: Regular expressions</a
+                            >
+                            [read]
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=EkluES9Rvak" target="_blank">Demystifying Regular Expressions</a>
+                            [watch]
+                        </li>
+                        <li>
+                            <a href="http://www.lynda.com/Regular-Expressions-tutorials/Using-Regular-Expressions/85870-2.html" target="_blank"
+                                >Using Regular Expressions</a
+                            >
+                            [watch][$]
+                        </li>
+                        <li>
+                            <a href="https://regexone.com/lesson/introduction_abcs" target="_blank">https://regexone.com/lesson/introduction_abcs</a>
+                            [interact]
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter2" class="chapter">
+                    <h2>Tools</h2>
+
+                    <ul>
+                        <li>
+                            <a href="https://ihateregex.io/" target="_blank">iHateRegex</a>
+                        </li>
+                        <li>
+                            <a href="https://www.debuggex.com" target="_blank">debuggex</a>
+                        </li>
+                        <li>
+                            <a href="https://regex101.com/" target="_blank">regex101</a>
+                        </li>
+                        <li>
+                            <a href="http://regexper.com/" target="_blank">regexper</a>
+                        </li>
+                        <li>
+                            <a href="http://regexr.com/" target="_blank">RegExr</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/slideout.min.js"></script>
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
+
+        <script>
+            // Create slide out TOC
+            var slideout = new Slideout({
+                panel: document.getElementById('panel'),
+                menu: document.getElementById('menu'),
+                padding: 356,
+                tolerance: 70,
+            });
+
+            // Create TOC dynamically from content
+            jQuery('.chapter').each(function(index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1);
+                    $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
+                });
+
+                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1 + '.' + (i + 1));
+                    $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
+                });
+            });
+
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+                window.open($(this).attr('href'));
+                return false;
+            });
+
+            // toggle TOC from hamburger icon
+            document.querySelector('#menuButton').addEventListener('click', function() {
+                slideout.toggle();
+            });
+
+            // toggle TOC on window resize
+            window.addEventListener('resize', resizeThrottler, false);
+            var resizeTimeout;
+            function resizeThrottler() {
+                // ignore resize events as long as an actualResizeHandler execution is in the queue
+                if (!resizeTimeout) {
+                    resizeTimeout = setTimeout(function() {
+                        resizeTimeout = null;
+                        actualResizeHandler();
+
+                        // The actualResizeHandler will execute at a rate of 15fps
+                    }, 66);
+                }
+            }
+            function actualResizeHandler() {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            }
+
+            // open TOC on load if window is wide enough
+            window.addEventListener('load', function(event) {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            });
+        </script>
+    </body>
+</html>

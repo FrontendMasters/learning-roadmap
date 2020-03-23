@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/prism.css" />
+        <script src="../js/prism.js"></script>
+        <title>Accessibility</title>
+    </head>
+
+    <body>
+        <div id="menu">
+            <a id="backToRoadMapLink" href="/">← Front-end Developer Roadmap</a>
+            <div id="toc"></div>
+        </div>
+
+        <div id="panel">
+            <div id="menuButton">|||</div>
+
+            <div id="bookPadding">
+                <h1>Accessibility</h1>
+
+                <h4 style="margin-top:0px">
+                    Written by
+                    <a href="http://codylindley.com/">Cody Lindley</a>
+                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                </h4>
+
+                <script>
+                    if (document.lastModified) {
+                        document.getElementById('lastMod').style.display = 'inline';
+                        document.getElementById('lastModDate').innerText = document.lastModified.split(' ')[0];
+                    }
+                </script>
+
+                <section>
+                    <p>
+                        <em
+                            ><a href="/">Guide books and roadmap</a> from <a href="https://frontendmasters.com/">Frontend Masters</a>.
+                            <br />
+                            Advancing your skills with in-depth, modern front-end engineering courses.</em
+                        >
+                    </p>
+                </section>
+
+                <hr />
+
+                <p><strong>Overview:</strong></p>
+
+                <p>
+                    learning resources and tools.
+                </p>
+
+                <hr />
+
+                <p><strong>Definitions:</strong></p>
+
+                <dl>
+                    <dd>
+                        Accessibility refers to the design of products, devices, services, or environments for people with disabilities. The concept of
+                        accessible design ensures both “direct access” (i.e., unassisted) and "indirect access" meaning compatibility with a person's assistive
+                        technology (for example, computer screen readers). Accessibility can be viewed as the "ability to access" and benefit from some system
+                        or entity. The concept focuses on enabling access for people with disabilities, or special needs, or enabling access through the use of
+                        assistive technology; however, research and development in accessibility brings benefits to everyone. Accessibility is not to be
+                        confused with usability, which is the extent to which a product (such as a device, service, or environment) can be used by specified
+                        users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use.Accessibility is strongly
+                        related to universal design which is the process of creating products that are usable by people with the widest possible range of
+                        abilities, operating within the widest possible range of situations. This is about making things accessible to all people (whether they
+                        have a disability or not).
+                    </dd>
+                </dl>
+
+                <hr />
+                <p><strong>Contribute content, suggestions, and fixes on github</strong>:</p>
+
+                <p>
+                    <a href="https://github.com/FrontendMasters/guides">https://github.com/FrontendMasters/guides</a>
+                </p>
+
+                <hr />
+
+                <div id="chapter1" class="chapter">
+                    <h2>Accessibility Learning Resources</h2>
+
+                    <h4>General Learning:</h4>
+                    <ul>
+                        <li>
+                            <a href="https://medium.com/@realabhijeet4u/9-tips-to-get-bare-minimum-of-web-accessibility-739899a9437c" target="_blank"
+                                >9 tips to get bare minimum of web accessibility</a
+                            >
+                        </li>
+                        <li>
+                            <a href="http://www.lynda.com/Accessibility-tutorials/Foundations-UX-Accessibility/435008-2.html" target="_blank"
+                                >Foundations of UX: Accessibility</a
+                            >
+                            [watch][$]
+                        </li>
+                        <li>
+                            <a href="http://thepaciellogroup.github.io/AT-browser-tests/?utm_source=html5weekly&amp;utm_medium=email" target="_blank"
+                                >How HTML elements are supported by screen readers</a
+                            >
+                            [read]
+                        </li>
+                        <li><a href="https://www.w3.org/WAI/intro/accessibility.php" target="_blank">Introduction to Web Accessibility</a> - WAI [read]</li>
+                        <li>
+                            <a href="http://www.amazon.com/Universal-Design-Web-Applications-Everyone/dp/0596518730/ref=sr_1_1" target="_blank"
+                                >Universal Design for Web Applications: Web Applications That Reach Everyone</a
+                            >
+                            [read][$]
+                        </li>
+                        <li>
+                            <a href="http://www.pluralsight.com/courses/web-accessibility-getting-started" target="_blank"
+                                >Web Accessibility: Getting Started</a
+                            >
+                            [watch][$]
+                        </li>
+                        <li><a href="http://rosenfeldmedia.com/books/a-web-for-everyone/" target="_blank">A Web for Everyone</a> [read][$]</li>
+                        <li><a href="https://frontendmasters.com/courses/web-accessibility/" target="_blank">Web Accessibility</a> [watch][$]</li>
+                        <li><a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g" target="_blank">A11ycasts</a> [watch]</li>
+                        <li>
+                            <a href="https://www.udacity.com/course/web-accessibility--ud891" target="_blank">Accessibility by Google</a> - Udacity course
+                            [watch]
+                        </li>
+                    </ul>
+                    <h4>Standards/Specifications:</h4>
+                    <ul>
+                        <li>
+                            <a href="http://www.w3.org/standards/techs/aria#w3c_all" target="_blank"
+                                >Accessible Rich Internet Applications (WAI-ARIA) Current Status</a
+                            >
+                        </li>
+                        <li><a href="http://www.w3.org/WAI/" target="_blank">Web Accessibility Initiative (WAI)</a></li>
+                        <li>
+                            <a href="http://www.w3.org/standards/techs/wcag#w3c_all" target="_blank"
+                                >Web Content Accessibility Guidelines (WCAG) Current Status</a
+                            >
+                        </li>
+                    </ul>
+
+                    <h4 id="guides">Guides</h4>
+                    <ul>
+                        <li><a href="http://a11y-style-guide.com/style-guide/" target="_blank">A11Y Style Guide</a></li>
+                        <li><a href="http://accessibility.voxmedia.com" target="_blank">Accessibility Guidelines Checklist</a></li>
+                        <li><a href="http://code.viget.com/interactive-wcag/" target="_blank">Interactive WCAG 2.0</a></li>
+                        <li><a href="https://pages.18f.gov/accessibility/checklist/" target="_blank">18F Accessibility Guide</a></li>
+                    </ul>
+
+                    <h4 id="articles">Articles</h4>
+                    <ul>
+                        <li><a href="http://a11yproject.com/posts/getting-started-aria/" target="_blank">Getting Started with ARIA</a></li>
+                        <li>
+                            <a href="http://alistapart.com/article/reframing-accessibility-for-the-web" target="_blank">Reframing Accessibility for the Web</a>
+                        </li>
+                        <li><a href="https://the-pastry-box-project.net/anne-gibson/2014-July-31" target="_blank">An Alphabet of Accessibility Issues</a></li>
+                        <li><a href="http://heydonworks.com/practical_aria_examples/" target="_blank">Practical ARIA Examples</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility" target="_blank">MDN Accessibility Guide</a></li>
+                        <li>
+                            <a href="https://umaar.com/dev-tips/101-accessibility-inspection/" target="_blank"
+                                >Enable accessibility panel in Chrome dev tools</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter2" class="chapter">
+                    <h2>Accessibility Tools</h2>
+
+                    <h4 id="site-scanners">Site Scanners</h4>
+                    <ul>
+                        <li><a href="http://www.deque.com/products/axe/" target="_blank">aXe Browser Extension</a></li>
+                        <li>
+                            <a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb" target="_blank"
+                                >Chrome Accessibility Developer Tools</a
+                            >
+                        </li>
+                        <li><a href="https://tenon.io" target="_blank">Tenon Accessibility Tool</a></li>
+                        <li><a href="http://wave.webaim.org" target="_blank">WAVE Accessibility Tool</a></li>
+                    </ul>
+                    <h4 id="color-contrast-testers">Color Contrast Testers</h4>
+                    <ul>
+                        <li><a href="http://jxnblk.com/colorable/demos/text/" target="_blank">Colorable</a></li>
+                        <li><a href="http://jxnblk.com/colorable/demos/matrix/" target="_blank">Colorable Matrix</a></li>
+                        <li><a href="http://colorsafe.co" target="_blank">Color Safe</a></li>
+                        <li><a href="http://leaverou.github.io/contrast-ratio/" target="_blank">Color Ratio</a></li>
+                    </ul>
+                    <h4 id="low-vision-simulators">Low-Vision Simulators</h4>
+                    <ul>
+                        <li><a href="https://chrome.google.com/webstore/detail/see/dkihcccbkkakkbpikjmpnbamkgbjfdcn" target="_blank">SEE</a> (Chrome)</li>
+                        <li>
+                            <a href="https://chrome.google.com/webstore/detail/spectrum/ofclemegkcmilinpcimpjkfhjfgmhieb" target="_blank">Spectrum</a> (Chrome)
+                        </li>
+                        <li>
+                            <a href="https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl" target="_blank">NoCoffee</a> (Chrome)
+                        </li>
+                    </ul>
+                    <h4 id="screen-readers">Screen Readers</h4>
+                    <ul>
+                        <li><a href="http://www.apple.com/accessibility/" target="_blank">VoiceOver</a> (Mac)</li>
+                        <li><a href="http://www.freedomscientific.com/Products/Blindness/JAWS" target="_blank">JAWS</a> (Win)</li>
+                        <li><a href="https://www.nvaccess.org" target="_blank">NVDA</a> (Win)</li>
+                        <li><a href="http://www.chromevox.com" target="_blank">ChromeVox</a> (Chrome extension)</li>
+                        <li>
+                            <a href="https://www.paciellogroup.com/blog/2015/01/basic-screen-reader-commands-for-accessibility-testing/" target="_blank"
+                                >Basic screen reader commands</a
+                            >
+                        </li>
+                    </ul>
+                    <h4 id="readability-testers">Readability Testers</h4>
+                    <ul>
+                        <li><a href="http://www.expresso-app.org" target="_blank">Expresso App</a></li>
+                        <li><a href="http://www.hemingwayapp.com" target="_blank">Hemingway App</a></li>
+                        <li><a href="https://www.grammarly.com" target="_blank">Grammarly</a></li>
+                        <li><a href="https://readability-score.com/text/" target="_blank">Readability Score</a></li>
+                        <li>
+                            <a
+                                href="https://support.office.com/en-us/article/Test-your-document-s-readability-0adc0e9a-b3fb-4bde-85f4-c9e88926c6aa"
+                                target="_blank"
+                                >MS Office</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/slideout.min.js"></script>
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
+
+        <script>
+            // Create slide out TOC
+            var slideout = new Slideout({
+                panel: document.getElementById('panel'),
+                menu: document.getElementById('menu'),
+                padding: 356,
+                tolerance: 70,
+            });
+
+            // Create TOC dynamically from content
+            jQuery('.chapter').each(function(index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1);
+                    $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
+                });
+
+                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1 + '.' + (i + 1));
+                    $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
+                });
+            });
+
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+                window.open($(this).attr('href'));
+                return false;
+            });
+
+            // toggle TOC from hamburger icon
+            document.querySelector('#menuButton').addEventListener('click', function() {
+                slideout.toggle();
+            });
+
+            // toggle TOC on window resize
+            window.addEventListener('resize', resizeThrottler, false);
+            var resizeTimeout;
+            function resizeThrottler() {
+                // ignore resize events as long as an actualResizeHandler execution is in the queue
+                if (!resizeTimeout) {
+                    resizeTimeout = setTimeout(function() {
+                        resizeTimeout = null;
+                        actualResizeHandler();
+
+                        // The actualResizeHandler will execute at a rate of 15fps
+                    }, 66);
+                }
+            }
+            function actualResizeHandler() {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            }
+
+            // open TOC on load if window is wide enough
+            window.addEventListener('load', function(event) {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            });
+        </script>
+    </body>
+</html>

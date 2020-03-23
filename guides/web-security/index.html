@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/prism.css" />
+        <script src="../js/prism.js"></script>
+        <title>Web Security</title>
+    </head>
+
+    <body>
+        <div id="menu">
+            <a id="backToRoadMapLink" href="/">← Front-end Developer Roadmap</a>
+            <div id="toc"></div>
+        </div>
+
+        <div id="panel">
+            <div id="menuButton">|||</div>
+
+            <div id="bookPadding">
+                <h1>Web Security</h1>
+
+                <h4 style="margin-top:0px">
+                    Written by
+                    <a href="http://codylindley.com/">Cody Lindley</a>
+                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                </h4>
+
+                <script>
+                    if (document.lastModified) {
+                        document.getElementById('lastMod').style.display = 'inline';
+                        document.getElementById('lastModDate').innerText = document.lastModified.split(' ')[0];
+                    }
+                </script>
+
+                <section>
+                    <p>
+                        <em
+                            ><a href="/">Guide books and roadmap</a> from <a href="https://frontendmasters.com/">Frontend Masters</a>.
+                            <br />
+                            Advancing your skills with in-depth, modern front-end engineering courses.</em
+                        >
+                    </p>
+                </section>
+
+                <hr />
+
+                <p><strong>Overview:</strong></p>
+
+                <p>
+                    Web Security learning resources and tools.
+                </p>
+
+                <hr />
+                <p><strong>Contribute content, suggestions, and fixes on github</strong>:</p>
+
+                <p>
+                    <a href="https://github.com/FrontendMasters/guides">https://github.com/FrontendMasters/guides</a>
+                </p>
+
+                <hr />
+
+                <div id="chapter1" class="chapter">
+                    <h2>Learning Resources</h2>
+
+                    <ul>
+                        <li><a href="https://code.google.com/p/browsersec/wiki/Main" target="_blank">Browser Security Handbook</a> [read]</li>
+                        <li><a href="https://mikewest.org/2013/09/frontend-security-frontendconf-2013" target="_blank">Frontend Security</a> [watch]</li>
+                        <li><a href="https://www.hacksplaining.com/" target="_blank">Hacksplaining</a> [read]</li>
+                        <li><a href="https://html5sec.org" target="_blank">HTML5 Security Cheatsheet</a> [read]</li>
+
+                        <li>
+                            <a
+                                href="https://www.amazon.com/Identity-Data-Security-Web-Development/dp/1491937017?&amp;_encoding=UTF8&amp;tag=frontend-handbook-20&amp;linkCode=ur2&amp;linkId=f5f2aaa4d5f944a3ccc316a16e3673f4&amp;camp=1789&amp;creative=9325"
+                                target="_blank"
+                                >Identity and Data Security for Web Development: Best Practices</a
+                            >
+                            [read][$]
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.amazon.com/Security-Web-Developers-Using-JavaScript/dp/1491928646/?&amp;_encoding=UTF8&amp;tag=frontend-handbook-20&amp;linkCode=ur2&amp;linkId=df49be399d7d1a12acebe5a85637a7a8&amp;camp=1789&amp;creative=9325"
+                                target="_blank"
+                                >Security for Web Developers: Using JavaScript, HTML, and CSS</a
+                            >
+                            [read][$]
+                        </li>
+                        <li>
+                            <a href="http://martinfowler.com/articles/web-security-basics.html" target="_blank">The Basics of Web Application Security</a>
+                            [read]
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=ZghMPWGXexs&amp;list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&amp;index=6" target="_blank"
+                                >The Internet: Encryption &amp; Public Keys</a
+                            >
+                            [watch]
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=AuYNXgO_f3Y&amp;list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7&amp;index=7" target="_blank"
+                                >The Internet: Cybersecurity &amp; Crime</a
+                            >
+                            [watch]
+                        </li>
+                        <li>
+                            <a href="http://lcamtuf.coredump.cx/tangled/" target="_blank">The Tangled Web: A Guide to Securing Modern Web Applications</a>
+                            [read][$]
+                        </li>
+                        <li><a href="https://github.com/vasanthk/web-security-basics" target="_blank">Web Security Basics</a> [read]</li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/Security" target="_blank">Web security</a> [read]</li>
+                        <li><a href="https://frontendmasters.com/courses/web-security/" target="_blank">Web Security</a> [watch][$]</li>
+                    </ul>
+                </div>
+
+                <div id="chapter2" class="chapter">
+                    <h2>Tools</h2>
+
+                    <ul>
+                        <li>
+                            <a href="https://github.com/cure53/DOMPurify" target="_blank">DOMPurify</a>
+                        </li>
+                        <li>
+                            <a href="http://jsxss.com/en/index.html" target="_blank">XSS</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.netsparker.com" target="_blank">Netsparker</a>
+                        </li>
+                        <li>
+                            <a href="http://www.websecurify.com/" target="_blank">Websecurify</a>
+                        </li>
+                        <li>
+                            <a href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project" target="_blank">OWASP ZAP</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/slideout.min.js"></script>
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
+
+        <script>
+            // Create slide out TOC
+            var slideout = new Slideout({
+                panel: document.getElementById('panel'),
+                menu: document.getElementById('menu'),
+                padding: 356,
+                tolerance: 70,
+            });
+
+            // Create TOC dynamically from content
+            jQuery('.chapter').each(function(index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1);
+                    $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
+                });
+
+                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1 + '.' + (i + 1));
+                    $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
+                });
+            });
+
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+                window.open($(this).attr('href'));
+                return false;
+            });
+
+            // toggle TOC from hamburger icon
+            document.querySelector('#menuButton').addEventListener('click', function() {
+                slideout.toggle();
+            });
+
+            // toggle TOC on window resize
+            window.addEventListener('resize', resizeThrottler, false);
+            var resizeTimeout;
+            function resizeThrottler() {
+                // ignore resize events as long as an actualResizeHandler execution is in the queue
+                if (!resizeTimeout) {
+                    resizeTimeout = setTimeout(function() {
+                        resizeTimeout = null;
+                        actualResizeHandler();
+
+                        // The actualResizeHandler will execute at a rate of 15fps
+                    }, 66);
+                }
+            }
+            function actualResizeHandler() {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            }
+
+            // open TOC on load if window is wide enough
+            window.addEventListener('load', function(event) {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            });
+        </script>
+    </body>
+</html>

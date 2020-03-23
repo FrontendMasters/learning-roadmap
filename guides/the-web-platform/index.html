@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/prism.css" />
+        <script src="../js/prism.js"></script>
+        <title>The Web Platform</title>
+    </head>
+
+    <body>
+        <div id="menu">
+            <a id="backToRoadMapLink" href="/">← Front-end Developer Roadmap</a>
+            <div id="toc"></div>
+        </div>
+
+        <div id="panel">
+            <div id="menuButton">|||</div>
+
+            <div id="bookPadding">
+                <h1>The Web Platform</h1>
+
+                <h4 style="margin-top:0px">
+                    Written by
+                    <a href="http://codylindley.com/">Cody Lindley</a>
+                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                </h4>
+
+                <script>
+                    if (document.lastModified) {
+                        document.getElementById('lastMod').style.display = 'inline';
+                        document.getElementById('lastModDate').innerText = document.lastModified.split(' ')[0];
+                    }
+                </script>
+
+                <section>
+                    <p>
+                        <em
+                            ><a href="/">Guide books and roadmap</a> from <a href="https://frontendmasters.com/">Frontend Masters</a>.
+                            <br />
+                            Advancing your skills with in-depth, modern front-end engineering courses.</em
+                        >
+                    </p>
+                </section>
+
+                <hr />
+
+                <p><strong>Overview:</strong></p>
+
+                <p>
+                    Web Platform learning resources and tools.
+                </p>
+
+                <hr />
+
+                <p><strong>Definitions:</strong></p>
+
+                <dl>
+                    <dt>
+                        Web Platform
+                    </dt>
+                    <dd>
+                        The Web platform is a collection of technologies developed as open standards by the World Wide Web Consortium and other standardization
+                        bodies such as The Web Hypertext Application Technology Working Group, the Unicode Consortium, the Internet Engineering Task Force, and
+                        Ecma International.
+                    </dd>
+                    <dt>
+                        Web Runtime
+                    </dt>
+                    <dd>
+                        Anywhere web platform technologies run e.g. browser or webview
+                    </dd>
+                    <dt>Web Browser</dt>
+                    <dd>
+                        A web browser (commonly referred to as a browser) is a software application for retrieving, presenting, and traversing information
+                        resources on the World Wide Web. An information resource is identified by a Uniform Resource Identifier (URI/URL) and may be a web page,
+                        image, video or other piece of content. Hyperlinks present in resources enable users easily to navigate their browsers to related
+                        resources. Although browsers are primarily intended to use the World Wide Web, they can also be used to access information provided by
+                        web servers in private networks or files in file systems.
+                    </dd>
+                </dl>
+
+                <hr />
+                <p><strong>Contribute content, suggestions, and fixes on github</strong>:</p>
+
+                <p>
+                    <a href="https://github.com/FrontendMasters/guides">https://github.com/FrontendMasters/guides</a>
+                </p>
+
+                <hr />
+
+                <div id="chapter1" class="chapter">
+                    <h2>Web Platform API's</h2>
+
+                    <p>
+                        The BOM (Browser Object Model) and the DOM (Document Object Model) are not the only web APIs that are made available on the web
+                        platform. Everything that is not specifically the DOM or BOM, but an interface for programming the web runtime could be considered a web
+                        or browser API.
+                    </p>
+
+                    <p>MDN has a great deal of information about web/browser APIs.</p>
+                    <ul>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/Reference/API" target="_blank">MDN Web API Reference</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank"
+                                >MDN Web APIs Interface Reference - All Interfaces, Arranged Alphabetically</a
+                            >
+                        </li>
+                    </ul>
+                    <p>Keep in mind that not every API is specified by the W3C or WHATWG.</p>
+                    <p>In addition to MDN, you might find the following resources helpful for learning about all the web/browser API's:</p>
+                    <ul>
+                        <li>
+                            <a href="http://html5-overview.net/current" target="_blank">HTML5 Overview</a>
+                        </li>
+                        <li>
+                            <a href="https://platform.html5.org/" target="_blank">platform.html5.org</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="chapter2" class="chapter">
+                    <h2>Web Runtimes</h2>
+
+                    <p>
+                        Generally speaking, front-end technologies can run on the aforementioned operating systems and devices using the following run time web
+                        platform scenarios:
+                    </p>
+                    <ul>
+                        <li>A web browser (examples: <a href="http://outdatedbrowser.com/en" target="_blank">Chrome, IE, Safari, Firefox</a>).</li>
+                        <li>
+                            A <a href="https://en.wikipedia.org/wiki/Headless_browser" target="_blank">headless browser</a> (examples:
+                            <a href="https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md" target="_blank">Headless Chromium</a>).
+                        </li>
+                        <li>
+                            A <a href="http://developer.telerik.com/featured/what-is-a-webview/" target="_blank">WebView</a>/browser tab (think
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iframe</a>) embedded within a native application as a
+                            runtime with a bridge to native APIs. WebView applications typically contain a UI constructed from web technologies. WebViews are
+                            commonly leverage to create cross platform applications from a single code base (e.g.
+                            <a href="http://electron.atom.io/" target="_blank">Electron</a>).
+                        </li>
+                    </ul>
+                </div>
+                <div id="chapter3" class="chapter">
+                    <h2>Web to Native</h2>
+
+                    <p>
+                        A native application built from web tech that is interpreted at runtime with a bridge to native APIs. The UI will make use of native UI
+                        parts (e.g., iOS native controls) not web technologies. (examples:
+                        <a href="https://www.nativescript.org/" target="_blank">NativeScript</a>,
+                        <a href="https://facebook.github.io/react-native/" target="_blank">React Native</a>)
+                    </p>
+                </div>
+
+                <div id="chapter4" class="chapter">
+                    <h2>Developing for Browsers</h2>
+
+                    <p>
+                        In the past, front-end developers spent a lot of time making code work in several different browsers. This was once a bigger issue than
+                        it is today. Today, abstractions (e.g., React, Webpack, Post-CSS, Babel etc...) combined with modern browsers make browser development
+                        fairly easy. The new challenge is not which browser the user will use, but on which device they will run the browser.
+                    </p>
+
+                    <p>
+                        The latest versions of most modern browsers are considered evergreen browsers. That is, in theory, they are supposed to automatically
+                        update themselves silently without prompting the user. In reality, most users just update the browser when prompted. This move towards
+                        self-updating browsers has been in reaction to the slow process of eliminating older browsers that do not auto-update.
+                    </p>
+
+                    <p>
+                        As of today, most front-end developers use Chrome and "Chrome Dev Tools" to develop front-end code. However, the most used modern
+                        browsers all offer a flavor of developer tools. Picking one to use for development is a subjective choice. The more important issue is
+                        knowing which browsers, on which devices, you have to support and then testing appropriately.
+                    </p>
+
+                    <h4 id="the-most-commonly-used-browsers-on-any-device-are">
+                        The
+                        <a
+                            href="https://netmarketshare.com/?options=%7B%22filter%22%3A%7B%22%24and%22%3A%5B%7B%22deviceType%22%3A%7B%22%24in%22%3A%5B%22Desktop%2Flaptop%22%2C%22Mobile%22%5D%7D%7D%5D%7D%2C%22dateLabel%22%3A%22Trend%22%2C%22attributes%22%3A%22share%22%2C%22group%22%3A%22browser%22%2C%22sort%22%3A%7B%22share%22%3A-1%7D%2C%22id%22%3A%22browsersDesktop%22%2C%22dateInterval%22%3A%22Monthly%22%2C%22dateStart%22%3A%222018-01%22%2C%22dateEnd%22%3A%222018-12%22%2C%22segments%22%3A%22-1000%22%7D"
+                            target="_blank"
+                            >most commonly used browsers</a
+                        >
+                        (on desktop and mobile) are:
+                    </h4>
+                    <ol>
+                        <li>
+                            <a href="http://www.google.com/chrome/" target="_blank">Chrome</a> (engine:
+                            <a href="https://en.wikipedia.org/wiki/Blink_%28layout_engine%29" target="_blank">Blink</a> +
+                            <a href="https://en.wikipedia.org/wiki/V8_%28JavaScript_engine%29" target="_blank">V8</a>)
+                        </li>
+                        <li>
+                            <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> (engine:
+                            <a href="https://en.wikipedia.org/wiki/Gecko_%28software%29" target="_blank">Gecko</a> +
+                            <a href="https://en.wikipedia.org/wiki/SpiderMonkey_%28software%29" target="_blank">SpiderMonkey</a>)
+                        </li>
+                        <li>
+                            <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Internet Explorer</a> (engine:
+                            <a href="https://en.wikipedia.org/wiki/Trident_%28layout_engine%29" target="_blank">Trident</a> +
+                            <a href="https://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29" target="_blank">Chakra</a>)
+                        </li>
+                        <li>
+                            <a href="https://www.apple.com/safari/" target="_blank">Safari</a> (engine:
+                            <a href="https://en.wikipedia.org/wiki/WebKit" target="_blank">Webkit</a> +
+                            <a href="https://trac.webkit.org/wiki/SquirrelFish" target="_blank">SquirrelFish</a>)
+                        </li>
+                    </ol>
+
+                    <h4 id="evolution-of-browsers--web-technologies-ie-apis">Evolution of Browsers &amp; Web Technologies (i.e., APIs)</h4>
+                    <ul>
+                        <li><a href="http://www.evolutionoftheweb.com/" target="_blank">evolutionoftheweb.com</a> [read]</li>
+                        <li><a href="https://en.wikipedia.org/wiki/Timeline_of_web_browsers" target="_blank">Timeline of web browsers</a> [read]</li>
+                    </ul>
+                    <h4 id="the-most-commonly-used-headless-browser-are">
+                        The Most Commonly Used <a href="http://www.asad.pw/HeadlessBrowsers/" target="_blank">Headless Browser</a> Are:
+                    </h4>
+                    <ul>
+                        <li>
+                            <a href="https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md" target="_blank">Headless Chromium</a> (engine:
+                            <a href="https://www.chromium.org/blink" target="_blank">Blink</a> + V8)
+                        </li>
+                    </ul>
+                    <h4 id="how-browsers-work">How Browsers Work</h4>
+                    <ul>
+                        <li>
+                            <a href="http://dbaron.org/talks/2012-03-11-sxsw/master.xhtml" target="_blank">Fast CSS: How Browsers Lay Out Web Pages</a> [read]
+                        </li>
+                        <li>
+                            <a href="http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/" target="_blank"
+                                >How Browsers Work: Behind the scenes of modern web browsers</a
+                            >
+                            [read]
+                        </li>
+                        <li>
+                            <a href="https://hacks.mozilla.org/2017/05/quantum-up-close-what-is-a-browser-engine/" target="_blank"
+                                >Quantum Up Close: What is a browser engine?</a
+                            >
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=SmE4OwHztCc" target="_blank">So How Does the Browser Actually Render a Website</a> [watch]
+                        </li>
+                        <li><a href="https://gist.github.com/paulirish/5d52fb081b3570c81e3a" target="_blank">What forces layout / reflow</a> [read]</li>
+                        <li>
+                            <a href="http://frontendbabel.info/articles/webpage-rendering-101/" target="_blank"
+                                >What Every Frontend Developer Should Know About Webpage Rendering</a
+                            >
+                            [read]
+                        </li>
+                    </ul>
+                    <h4 id="optimizing-for-browsers">Optimizing for Browsers:</h4>
+                    <ul>
+                        <li>
+                            <a href="https://www.udacity.com/course/browser-rendering-optimization--ud860" target="_blank">Browser Rendering Optimization</a>
+                            [watch]
+                        </li>
+                        <li>
+                            <a href="https://www.udacity.com/course/website-performance-optimization--ud884" target="_blank"
+                                >Website Performance Optimization</a
+                            >
+                            [watch]
+                        </li>
+                    </ul>
+                    <h4 id="comparing-browsers">Comparing Browsers</h4>
+                    <ul>
+                        <li><a href="https://en.wikipedia.org/wiki/Comparison_of_web_browsers" target="_blank">Comparison of Web Browsers</a> [read]</li>
+                    </ul>
+                    <h4>Browser Hacks</h4>
+                    <ul>
+                        <li><a href="http://browserhacks.com/" target="_blank">browserhacks.com</a> [read]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/slideout.min.js"></script>
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
+
+        <script>
+            // Create slide out TOC
+            var slideout = new Slideout({
+                panel: document.getElementById('panel'),
+                menu: document.getElementById('menu'),
+                padding: 356,
+                tolerance: 70,
+            });
+
+            // Create TOC dynamically from content
+            jQuery('.chapter').each(function(index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1);
+                    $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
+                });
+
+                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1 + '.' + (i + 1));
+                    $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
+                });
+            });
+
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+                window.open($(this).attr('href'));
+                return false;
+            });
+
+            // toggle TOC from hamburger icon
+            document.querySelector('#menuButton').addEventListener('click', function() {
+                slideout.toggle();
+            });
+
+            // toggle TOC on window resize
+            window.addEventListener('resize', resizeThrottler, false);
+            var resizeTimeout;
+            function resizeThrottler() {
+                // ignore resize events as long as an actualResizeHandler execution is in the queue
+                if (!resizeTimeout) {
+                    resizeTimeout = setTimeout(function() {
+                        resizeTimeout = null;
+                        actualResizeHandler();
+
+                        // The actualResizeHandler will execute at a rate of 15fps
+                    }, 66);
+                }
+            }
+            function actualResizeHandler() {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            }
+
+            // open TOC on load if window is wide enough
+            window.addEventListener('load', function(event) {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            });
+        </script>
+    </body>
+</html>

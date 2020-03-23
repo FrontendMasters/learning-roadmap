@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/prism.css" />
+        <script src="../js/prism.js"></script>
+        <title>The Title</title>
+    </head>
+
+    <body>
+        <div id="menu">
+            <a id="backToRoadMapLink" href="/">← Front-end Developer Roadmap</a>
+            <div id="toc"></div>
+        </div>
+
+        <div id="panel">
+            <div id="menuButton">|||</div>
+
+            <div id="bookPadding">
+                <h1>The Title</h1>
+
+                <h4 style="margin-top:0px">
+                    Written by
+                    <a href="http://codylindley.com/">Cody Lindley</a>
+                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                </h4>
+
+                <script>
+                    if (document.lastModified) {
+                        document.getElementById('lastMod').style.display = 'inline';
+                        document.getElementById('lastModDate').innerText = document.lastModified.split(' ')[0];
+                    }
+                </script>
+
+                <section>
+                    <p>
+                        <em
+                            ><a href="/">Guide books and roadmap</a> from <a href="https://frontendmasters.com/">Frontend Masters</a>.
+                            <br />
+                            Advancing your skills with in-depth, modern front-end engineering courses.</em
+                        >
+                    </p>
+                </section>
+
+                <hr />
+
+                <p><strong>Overview:</strong></p>
+
+                <p>
+                    learning resources and tools.
+                </p>
+
+                <!--                 <hr />
+
+                <p><strong>Definitions:</strong></p>
+
+                <dl>
+                    <dt>
+                        Web Page
+                    </dt>
+                    <dd>
+                        A document with a .html extensions that can be display in a web browser. This file can be loaded into a web browser from you local
+                        computer or it can be sent over the internet to a web browsers using HTTP. Web pages can link to other web pages. Web pages typically
+                        display a text, images, videos, audio, and graphical user interfaces.
+                    </dd>
+                    <dt>
+                        Website
+                    </dt>
+                    <dd>
+                        A group of web pages linked to each other by design.
+                    </dd>
+                    <dt>
+                        Web Server
+                    </dt>
+                    <dd>
+                        Aka, an "HTTP server". A device on the internet (a computer) setup to host and server web pages to other devices (computers, phones,
+                        etc...) that request web pages using HTTP. A web server can server static files as is or dynamic files that are built upon requesting,
+                        typically holding data from a database.
+                    </dd>
+                </dl> -->
+
+                <hr />
+                <p><strong>Contribute content, suggestions, and fixes on github</strong>:</p>
+
+                <p>
+                    <a href="https://github.com/FrontendMasters/guides">https://github.com/FrontendMasters/guides</a>
+                </p>
+
+                <hr />
+
+                <div id="chapter1" class="chapter">
+                    <h2>Learning Resources</h2>
+
+                    <ul>
+                        <li>
+                            <a href="https://www.udacity.com/course/browser-rendering-optimization--ud860" target="_blank">Browser Rendering Optimization</a>
+                            [watch]
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.amazon.com/Even-Faster-Web-Sites-Performance/dp/0596522304?&amp;_encoding=UTF8&amp;tag=frontend-handbook-20&amp;linkCode=ur2&amp;linkId=4fe6a82bbf727209ba337ecaa0e516bc&amp;camp=1789&amp;creative=9325"
+                                target="_blank"
+                                >Even Faster Web Sites: Performance Best Practices for Web Developers</a
+                            >
+                            [read][$]
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.amazon.com/High-Performance-Web-Sites-Essential/dp/0596529309/?&amp;_encoding=UTF8&amp;tag=frontend-handbook-20&amp;linkCode=ur2&amp;linkId=e93ab3ea06b7e3e93ee0d868249d0e3f&amp;camp=1789&amp;creative=9325"
+                                target="_blank"
+                                >High Performance Web Sites: Essential Knowledge for Front-End Engineers</a
+                            >
+                            [read][$]
+                        </li>
+                        <li><a href="http://javascriptrocks.com/" target="_blank">JavaScript Performance Rocks</a> [read][$]</li>
+
+                        <li><a href="http://www.perf-tooling.today/" target="_blank">perf-tooling.today</a> [read]</li>
+                        <li><a href="http://calendar.perfplanet.com" target="_blank">Performance Calendar</a> [read]</li>
+                        <li><a href="http://perf.rocks/" target="_blank">perf.rocks</a> [read]</li>
+                        <li>
+                            <a
+                                href="https://www.amazon.com/Using-WebPageTest-Rick-Viscomi/dp/1491902590/ref=sr_1_1?&amp;_encoding=UTF8&amp;tag=frontend-handbook-20&amp;linkCode=ur2&amp;linkId=91a76d5d4b4f47cf4e0d1392cc9cea30&amp;camp=1789&amp;creative=9325"
+                                target="_blank"
+                                >Using WebPageTest</a
+                            >
+                            [read][$]
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.amazon.com/Web-Performance-Daybook-Techniques-Optimizing/dp/1449332919/?&amp;_encoding=UTF8&amp;tag=frontend-handbook-20&amp;linkCode=ur2&amp;linkId=59e32c394c2377bb17af1d801b924d1d&amp;camp=1789&amp;creative=9325"
+                                target="_blank"
+                                >Web Performance Daybook Volume 2</a
+                            >
+                            [read][$]
+                        </li>
+                        <li><a href="https://frontendmasters.com/courses/web-performance/" target="_blank">Website Performance</a> [watch][$]</li>
+                        <li>
+                            <a href="https://frontendmasters.com/courses/performance-webpack/" target="_blank">Web Performance with Webpack 4</a> [watch][$]
+                        </li>
+                        <li>
+                            <a href="https://www.udacity.com/course/website-performance-optimization--ud884" target="_blank"
+                                >Website Performance Optimization</a
+                            >
+                            [watch]
+                        </li>
+                        <li>
+                            <a href="https://www.smashingmagazine.com/2019/01/front-end-performance-checklist-2019-pdf-pages/" target="_blank"
+                                >Front-End Performance Checklist 2019 [PDF, Apple Pages, MS Word]</a
+                            >
+                            [read]
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter2" class="chapter">
+                    <h2>Tools</h2>
+
+                    <h4 id="reporting">Reporting:</h4>
+                    <ul>
+                        <li><a href="https://bundlephobia.com/" target="_blank">bundlephobia.com</a></li>
+                        <li><a href="https://gtmetrix.com/" target="_blank">GTmetrix</a></li>
+                        <li><a href="https://www.sitespeed.io" target="_blank">sitespeed.io</a></li>
+                        <li><a href="https://speedcurve.com/" target="_blank">Speed Curve</a> [$]</li>
+                        <li><a href="http://www.webpagetest.org/" target="_blank">Web Page Test</a></li>
+                        <li><a href="https://sonarwhal.com" target="_blank">Sonarwhal</a></li>
+                        <li><a href="https://webhint.io" target="_blank">webhint.io</a></li>
+                        <li><a href="https://www.datadoghq.com" target="_blank">Datadog</a> [$]</li>
+                        <li><a href="https://developers.google.com/web/tools/lighthouse/" target="_blank">Lighthosue</a></li>
+                    </ul>
+                    <h4 id="js-tools">JS Tools:</h4>
+                    <ul>
+                        <li><a href="https://github.com/imagemin/imagemin" target="_blank">imagemin</a></li>
+                        <li><a href="http://jamiemason.github.io/ImageOptim-CLI/" target="_blank">ImageOptim-CLI</a></li>
+                    </ul>
+                    <h4 id="budgeting">Budgeting:</h4>
+                    <ul>
+                        <li><a href="http://www.performancebudget.io/" target="_blank">performancebudget.io</a></li>
+                    </ul>
+                    <h4>References/Docs:</h4>
+                    <ul>
+                        <li><a href="http://jankfree.org/" target="_blank">Jank Free</a></li>
+                        <li><a href="https://kpdecker.github.io/six-speed/" target="_blank">Performance of ES6 features relative to the ES5</a></li>
+                    </ul>
+                    <h4 id="checklist">Checklist:</h4>
+                    <ul>
+                        <li><a href="https://frontendchecklist.io/" target="_blank">The Front-End Checklist</a></li>
+                        <li>
+                            <a href="https://www.smashingmagazine.com/2019/01/front-end-performance-checklist-2019-pdf-pages/" target="_blank"
+                                >Front-End Performance Checklist 2019 [PDF, Apple Pages, MS Word]</a
+                            >
+                            [read]
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/slideout.min.js"></script>
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
+
+        <script>
+            // Create slide out TOC
+            var slideout = new Slideout({
+                panel: document.getElementById('panel'),
+                menu: document.getElementById('menu'),
+                padding: 356,
+                tolerance: 70,
+            });
+
+            // Create TOC dynamically from content
+            jQuery('.chapter').each(function(index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1);
+                    $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
+                });
+
+                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1 + '.' + (i + 1));
+                    $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
+                });
+            });
+
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+                window.open($(this).attr('href'));
+                return false;
+            });
+
+            // toggle TOC from hamburger icon
+            document.querySelector('#menuButton').addEventListener('click', function() {
+                slideout.toggle();
+            });
+
+            // toggle TOC on window resize
+            window.addEventListener('resize', resizeThrottler, false);
+            var resizeTimeout;
+            function resizeThrottler() {
+                // ignore resize events as long as an actualResizeHandler execution is in the queue
+                if (!resizeTimeout) {
+                    resizeTimeout = setTimeout(function() {
+                        resizeTimeout = null;
+                        actualResizeHandler();
+
+                        // The actualResizeHandler will execute at a rate of 15fps
+                    }, 66);
+                }
+            }
+            function actualResizeHandler() {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            }
+
+            // open TOC on load if window is wide enough
+            window.addEventListener('load', function(event) {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            });
+        </script>
+    </body>
+</html>

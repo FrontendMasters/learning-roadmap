@@ -1,840 +1,1339 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="node_modules/vis/dist/vis.min.css" />
-    <style type="text/css">
-      #mynetwork,
-      html,
-      body {
-        width: 100%;
-        height: 100%;
-      }
-      #key {
-        position: absolute;
-        right: 20px;
-        z-index: 1000000000;
-        top: 20px;
-        font-size: 12px;
-        text-align: center;
-        background: rgba(255, 255, 255, 0.7);
-        padding: 20px;
-      }
-      #primary {
-        border: solid 1px #2b7ce9;
-        padding: 5px;
-        background-color: #fff;
-        margin-top: 10px;
-      }
-      #secondary {
-        border: solid 1px #f4d442;
-        padding: 5px;
-        background-color: #fff;
-        margin-top: 10px;
-      }
-      #notyet {
-        border: solid 1px #4d4d4d;
-        padding: 5px;
-        background-color: #ededed;
-        margin-top: 10px;
-      }
-    </style>
-    <title>Roadmap of Front-end Developer Guides</title>
-  </head>
-  <body>
-    <div id="key">
-      <div>Key:</div>
-      <div id="primary">Foundational</div>
-      <div id="secondary">Professional</div>
-      <div id="notyet">Not Written Yet</div>
-    </div>
-    <div id="mynetwork"></div>
-    <script src="node_modules/vis/dist/vis.min.js"></script>
-    <script type="text/javascript">
-      const createLabel = labelContent => {
-        let title = `<b>${labelContent.title}</b>\n\n <i>covers:</i> \n`;
-        let covers = "";
-        labelContent.covers.forEach((item, index) => {
-          covers += `<code>${item}</code>`;
-          covers += labelContent.covers.length === index + 1 ? "" : "\n";
-        });
-        return title + covers;
-      };
-
-      var nodes = [
-        {
-          id: 0,
-          color: {
-            border: "#008000",
-            background: "#98FB98",
-            hover: {
-              border: "#008000",
-              background: "#98FB98"
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="node_modules/vis/dist/vis.min.css" />
+        <style type="text/css">
+            #mynetwork,
+            html,
+            body {
+                width: 100%;
+                height: 100%;
             }
-          },
-          margin: 30,
-          font: {
-            bold: "24px arial #000"
-          },
-          label:
-            "<b>Roadmap of Front-end Developer Guides</b> \n <code>Click a guide below to start reading</code>",
-          x: -600,
-          y: -670
-        },
-        {
-          id: 1,
-          color: {
-            border: "#2B7CE9",
-            background: "#ffffff",
-            hover: {
-              border: "#2B7CE9",
-              background: "#D2E5FF"
+            #key {
+                position: absolute;
+                right: 20px;
+                z-index: 1000000000;
+                top: 20px;
+                font-size: 12px;
+                text-align: center;
+                background: rgba(255, 255, 255, 0.7);
+                padding: 20px;
             }
-          },
-          title: "read now",
-          url: "guides/the-front-end-developer-profession/index.html",
-          label: createLabel({
-            title: "1 - The Front-end Developer Profession",
-            covers: [
-              "Overview of Occupation",
-              "Job Titles",
-              "Compensation",
-              "Required Skills",
-              "Overlapping Occupations",
-              "Occupational Challenges"
-            ]
-          }),
-          x: -475,
-          y: -500
-        },
-        {
-          id: 2,
-          color: {
-            border: "#f4d442",
-            background: "#ffffff",
-            hover: {
-              border: "#f4d442",
-              background: "#fff6a8"
+            #primary {
+                border: solid 1px #2b7ce9;
+                padding: 5px;
+                background-color: #fff;
+                margin-top: 10px;
             }
-          },
-          title: "read now",
-          url: "guides/getting-a-front-end-developer-job/index.html",
-          label: createLabel({
-            title: "2 - Getting a Front-end Developer Job",
-            covers: [
-              "A Self Directed Education",
-              "A Directed Education",
-              "Building a Resume",
-              "Interviewing",
-              "Finding a Job",
-              "Communities"
-            ]
-          }),
-          x: -150,
-          y: -600
-        },
-        {
-          id: 3,
-          color: {
-            border: "#2B7CE9",
-            background: "#ffffff",
-            hover: {
-              border: "#2B7CE9",
-              background: "#D2E5FF"
+            #secondary {
+                border: solid 1px #f4d442;
+                padding: 5px;
+                background-color: #fff;
+                margin-top: 10px;
             }
-          },
-          title: "read now",
-          url: "guides/front-end-development-tech-overview/index.html",
-          label: createLabel({
-            title: "3 - Front-end Development Tech Overview",
-            covers: [
-              "The World Wide Web (aka WWW)",
-              "The Internet",
-              "The Web Platform",
-              "HTTP",
-              "URL",
-              "HTML",
-              "CSS",
-              "JavaScript & DOM",
-              "JSON (data API's)",
-              "Web API's",
-              "Web Accessibility"
-            ]
-          }),
-          x: 150,
-          y: -500
-        },
-        {
-          id: 4,
-          color: {
-            border: "#2B7CE9",
-            background: "#ffffff",
-            hover: {
-              border: "#2B7CE9",
-              background: "#D2E5FF"
+            #notyet {
+                border: solid 1px #4d4d4d;
+                padding: 5px;
+                background-color: #ededed;
+                margin-top: 10px;
             }
-          },
-          title: "read now",
-          url: "guides/the-www-basic-mechanics/index.html",
-          label: createLabel({
-            title: "4 - The WWW Basic Mechanics",
-            covers: [
-              "Internet",
-              "TCP / IP / DNS",
-              "HTTP",
-              "URL's / Domains / Sub-Domains",
-              "Web Hosting",
-              "Domain Registrars"
-            ]
-          }),
-          x: -150,
-          y: -370
-        },
-        {
-          id: 5,
-          color: {
-            border: "#f4d442",
-            background: "#ffffff",
-            hover: {
-              border: "#f4d442",
-              background: "#fff6a8"
+        </style>
+        <title>Front-end Developer Roadmap</title>
+    </head>
+    <body>
+        <div id="key">
+            <div>Key:</div>
+            <div id="primary">Fundamental</div>
+            <div id="secondary">Specialize</div>
+        </div>
+        <div id="mynetwork"></div>
+        <script src="node_modules/vis/dist/vis.min.js"></script>
+        <script type="text/javascript">
+            const createLabel = labelContent => {
+                let title = `<b>${labelContent.title}</b>\n\n <i>covers:</i> \n`;
+                let covers = '';
+                labelContent.covers.forEach((item, index) => {
+                    covers += `<code>${item}</code>`;
+                    covers += labelContent.covers.length === index + 1 ? '' : '\n';
+                });
+                return title + covers;
+            };
+
+            var nodes = [
+                {
+                    id: 0,
+                    color: {
+                        border: '#008000',
+                        background: '#98FB98',
+                        hover: {
+                            border: '#008000',
+                            background: '#98FB98',
+                        },
+                    },
+                    margin: 30,
+                    font: {
+                        bold: '24px arial #000',
+                    },
+                    title: 'read now',
+                    label: '<b>Front-end Developer Roadmap</b> \n <code>Click on the Roadmap</code>',
+                    x: -700,
+                    y: -690,
+                },
+                {
+                    id: 1,
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    url: 'guides/the-front-end-developer-profession/index.html',
+                    label: createLabel({
+                        title: '1 - The Front-end Developer Profession',
+                        covers: [
+                            'Overview of Occupation',
+                            'Job Titles',
+                            'Compensation',
+                            'Required Skills',
+                            'Overlapping Occupations',
+                            'Occupational Challenges',
+                        ],
+                    }),
+                    x: -475,
+                    y: -500,
+                },
+                {
+                    id: 2,
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    url: 'guides/getting-a-front-end-developer-job/index.html',
+                    label: createLabel({
+                        title: '2 - Getting a Front-end Developer Job',
+                        covers: ['A Self Directed Education', 'A Directed Education', 'Building a Resume', 'Interviewing', 'Finding a Job', 'Communities'],
+                    }),
+                    x: -150,
+                    y: -630,
+                },
+                {
+                    id: 3,
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    url: 'guides/front-end-development-tech-overview/index.html',
+                    label: createLabel({
+                        title: '3 - Front-end Tech/Spec Overview',
+                        covers: [
+                            'The World Wide Web (aka WWW)',
+                            'The Internet',
+                            'The Web Platform',
+                            'HTTP',
+                            'URL',
+                            'HTML',
+                            'CSS',
+                            'JavaScript & DOM',
+                            "JSON (data API's)",
+                            "Web API's",
+                            'Web Accessibility',
+                        ],
+                    }),
+                    x: 150,
+                    y: -500,
+                },
+                {
+                    id: 4,
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    url: 'guides/the-www-basic-mechanics/index.html',
+                    label: createLabel({
+                        title: '4 - The WWW Basic Mechanics',
+                        covers: ['Internet', 'TCP / IP / DNS', 'HTTP', "URL's / Domains / Sub-Domains", 'Web Hosting', 'Domain Registrars'],
+                    }),
+                    x: -150,
+                    y: -370,
+                },
+                {
+                    id: 5,
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    url: 'guides/http/index.html',
+                    label: createLabel({
+                        title: '5 - HTTP & Web Sockets',
+                        covers: ['HTTP', 'Web Sockets'],
+                    }),
+                    x: -150,
+                    y: -200,
+                },
+                {
+                    id: 6,
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    url: 'guides/the-web-platform/index.html',
+                    label: createLabel({
+                        title: '6 - The Web Platform',
+                        covers: ["Web Platform API's", 'Web Runtimes', 'Web To Native', 'Developing for Browsers'],
+                    }),
+                    x: 80,
+                    y: -250,
+                },
+                {
+                    id: 7,
+                    url: 'guides/web-security/index.html',
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '7 - Web Security',
+                        covers: ['Learning Resources', 'Tools'],
+                    }),
+                    x: 400,
+                    y: -400,
+                },
+                {
+                    id: 8,
+                    url: 'guides/code-editors/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '8 - Code Editors',
+                        covers: ['Overview', 'VS code', 'codesandbox.io', 'Learning Resources'],
+                    }),
+                    x: 300,
+                    y: -220,
+                },
+                {
+                    id: 9,
+                    url: 'guides/html/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '9 - HTML',
+                        covers: ['HTML Elements', 'HTML Semantics', 'Web pages'],
+                    }),
+                    x: 550,
+                    y: -220,
+                },
+                {
+                    id: 10,
+                    url: 'guides/seo/index.html',
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '10 - SEO',
+                        covers: ['Learning Resources', 'Tools'],
+                    }),
+                    x: 600,
+                    y: -400,
+                },
+                {
+                    id: 11,
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '11 - Web Image Fundamentals',
+                        covers: ['Image Formats', 'Responsive Images'],
+                    }),
+                    x: 850,
+                    y: -20,
+                },
+                {
+                    id: 12,
+                    url: 'guides/accessibility/index.html',
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '12 - Accessibility',
+                        covers: ['Learning Resources', 'Tools'],
+                    }),
+                    x: 850,
+                    y: 200,
+                },
+                {
+                    id: 13,
+                    url: 'guides/css-fundamentals/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '13 - CSS Fundamentals',
+                        covers: ['Inheritance & Cacade', 'Specificity', 'Selectors', 'Box Model', 'Colors & Gradients'],
+                    }),
+                    x: 600,
+                    y: -30,
+                },
+                {
+                    id: 14,
+                    url: 'guides/css-fonts-&-units/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '14 - CSS Fonts & Units',
+                        covers: ['Web fonts', 'e.g. px, %, em, rem, pt, vw, vh'],
+                    }),
+                    x: 345,
+                    y: -30,
+                },
+                {
+                    id: 15,
+                    url: 'guides/css-positioning-&-layout/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '15 - CSS Positioning & Layout',
+                        covers: ['Position', 'Floats', 'Flexbox', 'Grids'],
+                    }),
+                    x: 100,
+                    y: -30,
+                },
+                {
+                    id: 16,
+                    url: 'guides/css-media-queries/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '16 - CSS Media Queries',
+                        covers: ['Print v.s. Screen', 'Adapt CSS to devices', 'Screen Size'],
+                    }),
+                    x: -150,
+                    y: -30,
+                },
+                {
+                    id: 17,
+                    url: 'guides/css-transitions-transforms-&-animations/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '17 - CSS Transitions, Transforms & Animation',
+                        covers: ['HTML & CSS Animations', 'JavaScript-less Animations'],
+                    }),
+                    x: -450,
+                    y: 50,
+                },
+                {
+                    id: 18,
+                    url: 'guides/html-email/index.html',
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '18 - HTML Emails',
+                        covers: ['Boilerplates', 'tools'],
+                    }),
+                    x: -350,
+                    y: -250,
+                },
+                {
+                    id: 19,
+                    url: 'guides/css-practices/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '19 - CSS Practices',
+                        covers: ['Architecture', 'Conventions', 'Resets'],
+                    }),
+                    x: -550,
+                    y: -150,
+                },
+                {
+                    id: 20,
+                    url: 'guides/ui-design-patterns/index.html',
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '20 - UI Design / Patterns',
+                        covers: ['Interaction Design', 'HCI', 'UI Patterns'],
+                    }),
+                    x: -550,
+                    y: -330,
+                },
+                {
+                    id: 21,
+                    url: 'guides/javascript-fundamentals/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '21 - JavaScript Fundamentals',
+                        covers: ['Syntax', 'Variables / Assignment', 'Values', 'Operators', 'Functions', 'Statements', 'Objects', 'Scope & Closure'],
+                    }),
+                    x: -800,
+                    y: -330,
+                },
+                {
+                    id: 22,
+                    url: 'guides/javascript-regular-expressions/index.html',
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '22 - JavaScript Regular Expressions',
+                        covers: ['Pattern Matching', 'Searching Strings'],
+                    }),
+                    x: -1100,
+                    y: -200,
+                },
+                {
+                    id: 23,
+                    url: 'guides/javascript-modules-scripts/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '23 - JavaScript/ES Modules & Scripts',
+                        covers: ['<script>', 'import', 'export'],
+                    }),
+                    x: -800,
+                    y: -100,
+                },
+                {
+                    id: 24,
+                    url: 'guides/command-line-interface/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '24 - Command Line Interface',
+                        covers: ['Bash', 'Terminal'],
+                    }),
+                    x: -980,
+                    y: 100,
+                },
+                {
+                    id: 25,
+                    url: 'guides/git/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '25 - GIT',
+                        covers: ['Github', 'Graphical Clients'],
+                    }),
+                    x: -700,
+                    y: 100,
+                },
+                {
+                    id: 26,
+                    url: 'guides/node-npm/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '26 - Node.js & NPM Registry',
+                        covers: ['NPM CLI', 'Yarn CLI', 'Semantic Versioning'],
+                    }),
+                    x: -950,
+                    y: 260,
+                },
+                {
+                    id: 27,
+                    url: 'guides/npm-yarn-scripts/index.html',
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '27 - NPM/Yarn Scripts',
+                        covers: ['NPM Scripts/Run', 'Yarn Scripts/Run', 'Building', 'Tasking'],
+                    }),
+                    x: -650,
+                    y: 270,
+                },
+                {
+                    id: 28,
+                    url: 'guides/css-tooling/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '28 - CSS Tooling',
+                        covers: ['Pre Processors', 'Post Processors', 'Linting/Hinting', 'Optimizer', 'Formatter'],
+                    }),
+                    x: -650,
+                    y: 450,
+                },
+                {
+                    id: 29,
+                    url: 'guides/css-ui-toolkits/index.html',
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '29 - CSS UI Toolkits',
+                        covers: ['Utility Toolkits', 'UI Toolkits'],
+                    }),
+                    x: -400,
+                    y: 450,
+                },
+                {
+                    id: 30,
+                    url: 'guides/dom-bom-cssom/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '30 - DOM, BOM, CSSOM',
+                        covers: ['Events', 'Programming Webpages', 'Programming Browsers', 'Behavior'],
+                    }),
+                    x: -420,
+                    y: 250,
+                },
+                {
+                    id: 31,
+                    url: 'guides/js-oop/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '31 - Object-Oriented Programming (OOP)',
+                        covers: ['Classes', 'Constructors', 'Inheritance', 'Methods'],
+                    }),
+                    x: -150,
+                    y: 150,
+                },
+                {
+                    id: 32,
+                    url: 'guides/js-async/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '32 - Asynchronous Programming',
+                        covers: ['Single Threaded', 'Event Loop', 'Concurrency', 'Callbacks'],
+                    }),
+                    x: -150,
+                    y: 350,
+                },
+                {
+                    id: 33,
+                    url: 'guides/js-fp/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '33 - Functional Programming (FP)',
+                        covers: ['Purity', 'Pure Functions', 'Immutability', 'First-Class Functions', 'Composition'],
+                    }),
+                    x: -150,
+                    y: 550,
+                },
+                {
+                    id: 34,
+                    url: 'guides/js-web-api/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: "34 - JavaScript Web/Browser API's",
+                        covers: ["Device API's", "Communication API's", "Data Management API's"],
+                    }),
+                    x: 120,
+                    y: 400,
+                },
+                {
+                    id: 35,
+                    url: 'guides/js-practices-tools/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '35 - JavaScript Practices & Tooling',
+                        covers: ['Conventions', 'Utilities', 'Linting/Hinting', 'Formatting'],
+                    }),
+                    x: 280,
+                    y: 180,
+                },
+                {
+                    id: 36,
+                    url: 'frameworks/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '36 - JavaScript UI Toolkits',
+                        covers: ['...', '...', '...', '...'],
+                    }),
+                    x: -500,
+                    y: 1200,
+                },
+                {
+                    id: 37,
+                    url: 'guides/js-runtime-ast/index.html',
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '37 - JavaScript Runtime & AST',
+                        covers: ['...', '...', '...', '...'],
+                    }),
+                    x: 550,
+                    y: 360,
+                },
+                {
+                    id: 38,
+                    url: 'guides/js-performance/index.html',
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '38 - JavaScript Performance',
+                        covers: ['...', '...', '...', '...'],
+                    }),
+                    x: 550,
+                    y: 560,
+                },
+                {
+                    id: 39,
+                    url: 'guides/js-cs/index.html',
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '39 - JavaScript & Computer Science',
+                        covers: ['...', '...', '...', '...'],
+                    }),
+                    x: 550,
+                    y: 750,
+                },
+                {
+                    id: 40,
+                    url: 'guides/js-animation/index.html',
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '40 - JavaScript Animation',
+                        covers: ['...', '...', '...', '...'],
+                    }),
+                    x: 550,
+                    y: 950,
+                },
+                {
+                    id: 41,
+                    url: 'guides/webdev-tools/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '41 - Web Developer Tools',
+                        covers: ['Chrome Dev Tools', '...', '...', '...'],
+                    }),
+                    x: 250,
+                    y: 600,
+                },
+                {
+                    id: 42,
+                    url: 'guides/jam-stack/index.html',
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '42 - JAM Stack',
+                        covers: ['...', '...', '...', '...'],
+                    }),
+                    x: 350,
+                    y: 930,
+                },
+
+                {
+                    id: 43,
+                    url: 'guides/rwd/index.html',
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '43 - Responsive Web Design',
+                        covers: ['...', '...', '...', '...'],
+                    }),
+                    x: 125,
+                    y: 930,
+                },
+                {
+                    id: 44,
+                    url: 'guides/pwa/index.html',
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '44 - Progressive Web Apps',
+                        covers: ['...', '...', '...', '...'],
+                    }),
+                    x: -125,
+                    y: 930,
+                },
+                {
+                    id: 45,
+                    url: 'guides/desk-apps/index.html',
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '45 - Desktop Apps',
+                        covers: ['...', '...', '...', '...'],
+                    }),
+                    x: -350,
+                    y: 930,
+                },
+                {
+                    id: 46,
+                    url: 'guides/mobile-apps/index.html',
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '46 - Mobile Apps',
+                        covers: ['...', '...', '...', '...'],
+                    }),
+                    x: -550,
+                    y: 930,
+                },
+                {
+                    id: 47,
+                    url: 'guides/js-module-loaders/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '47 - JavaScript Module Loaders',
+                        covers: ['Webpack', 'Parcel', 'Rollup'],
+                    }),
+                    x: -50,
+                    y: 720,
+                },
+                {
+                    id: 48,
+                    url: 'guides/x-compile-to-js/index.html',
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '48 - X Compile to JS',
+                        covers: ['Reason', 'Elm', 'ClojureScript', 'PureScript'],
+                    }),
+                    x: -390,
+                    y: 630,
+                },
+                {
+                    id: 49,
+                    url: 'guides/js-compile-to-js/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '49 - JS Compile to JS',
+                        covers: ['Babel', 'Typescript'],
+                    }),
+                    x: -700,
+                    y: 780,
+                },
+                {
+                    id: 50,
+                    url: 'guides/js-ui-frameworks/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '50 - JavaScript UI Frameworks',
+                        covers: ['React/JSX', 'Vue', 'Svelte'],
+                    }),
+                    x: -840,
+                    y: 1150,
+                },
+                {
+                    id: 51,
+                    url: 'guides/app-state/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '51 - Application State',
+                        covers: ['Mobx', 'Redux'],
+                    }),
+                    x: -200,
+                    y: 1200,
+                },
+                {
+                    id: 53,
+                    url: 'guides/data-apis/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: "53 - Data API's",
+                        covers: ['REST', 'GraphQL', 'JSON'],
+                    }),
+                    x: 0,
+                    y: 1200,
+                },
+                {
+                    id: 54,
+                    url: 'guides/ci/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '54 - Continuous Integration (CI)',
+                        covers: ['...', '...', '...', '...'],
+                    }),
+                    x: 400,
+                    y: 1200,
+                },
+                {
+                    id: 55,
+                    url: 'guides/testing/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '55 - Testing',
+                        covers: ['Unit', 'Integration', 'Functional'],
+                    }),
+                    x: 200,
+                    y: 1200,
+                },
+                {
+                    id: 56,
+                    url: 'guides/browser-webpage-performance/index.html',
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '55 - Browser/Webpage Performance',
+                        covers: ['Unit', 'Integration', 'Functional'],
+                    }),
+                    x: -1000,
+                    y: 940,
+                },
+            ];
+
+            var edges = [
+                { from: 0, to: 1, arrows: 'to' },
+                { from: 1, to: 3, arrows: 'to' },
+                { from: 2, to: 3, arrows: 'to' },
+                { from: 3, to: 4, arrows: 'to' },
+                { from: 1, to: 2, arrows: 'to' },
+                { from: 4, to: 5, arrows: 'to' },
+                { from: 5, to: 6, arrows: 'to' },
+                { from: 6, to: 7, arrows: 'to' },
+                { from: 6, to: 8, arrows: 'to' },
+                { from: 7, to: 8, arrows: 'to' },
+                { from: 8, to: 9, arrows: 'to' },
+                { from: 9, to: 10, arrows: 'to' },
+                { from: 9, to: 11, arrows: 'to' },
+                { from: 10, to: 11, arrows: 'to' },
+                { from: 11, to: 12, arrows: 'to' },
+                { from: 11, to: 13, arrows: 'to' },
+                { from: 12, to: 13, arrows: 'to' },
+                { from: 13, to: 14, arrows: 'to' },
+                { from: 15, to: 16, arrows: 'to' },
+                { from: 15, to: 16, arrows: 'to' },
+                { from: 14, to: 15, arrows: 'to' },
+
+                { from: 16, to: 17, arrows: 'to' },
+                { from: 17, to: 18, arrows: 'to' },
+                { from: 18, to: 19, arrows: 'to' },
+                { from: 17, to: 19, arrows: 'to' },
+                { from: 19, to: 20, arrows: 'to' },
+                { from: 20, to: 21, arrows: 'to' },
+                { from: 21, to: 22, arrows: 'to' },
+                { from: 21, to: 23, arrows: 'to' },
+                { from: 22, to: 23, arrows: 'to' },
+                { from: 23, to: 24, arrows: 'to' },
+
+                { from: 24, to: 25, arrows: 'to' },
+                { from: 25, to: 26, arrows: 'to' },
+
+                { from: 26, to: 28, arrows: 'to' },
+                { from: 26, to: 27, arrows: 'to' },
+                { from: 27, to: 28, arrows: 'to' },
+                { from: 28, to: 29, arrows: 'to' },
+                { from: 28, to: 30, arrows: 'to' },
+                { from: 29, to: 30, arrows: 'to' },
+                { from: 30, to: 31, arrows: 'to' },
+                { from: 31, to: 32, arrows: 'to' },
+                { from: 32, to: 33, arrows: 'to' },
+                { from: 33, to: 34, arrows: 'to' },
+
+                { from: 34, to: 35, arrows: 'to' },
+                { from: 35, to: 37, arrows: 'to' },
+                { from: 35, to: 38, arrows: 'to' },
+                { from: 35, to: 39, arrows: 'to' },
+                { from: 35, to: 40, arrows: 'to' },
+                { from: 35, to: 41, arrows: 'to' },
+
+                { from: 37, to: 38, arrows: 'to, from' },
+                { from: 38, to: 39, arrows: 'to, from' },
+                { from: 39, to: 40, arrows: 'to, from' },
+                { from: 40, to: 41, arrows: 'to' },
+
+                { from: 37, to: 41, arrows: 'to' },
+                { from: 38, to: 41, arrows: 'to' },
+                { from: 39, to: 41, arrows: 'to' },
+                { from: 40, to: 41, arrows: 'to' },
+                { from: 41, to: 47, arrows: 'to' },
+                { from: 47, to: 48, arrows: 'to' },
+                { from: 48, to: 49, arrows: 'to' },
+                { from: 47, to: 49, arrows: 'to' },
+
+                { from: 42, to: 43, arrows: 'to, from' },
+                { from: 43, to: 44, arrows: 'to, from' },
+                { from: 44, to: 45, arrows: 'to, from' },
+                { from: 45, to: 46, arrows: 'to, from' },
+
+                { from: 49, to: 50, arrows: 'to' },
+                { from: 50, to: 42, arrows: 'to' },
+                { from: 50, to: 43, arrows: 'to' },
+                { from: 50, to: 44, arrows: 'to' },
+                { from: 50, to: 45, arrows: 'to' },
+                { from: 50, to: 46, arrows: 'to' },
+
+                { from: 42, to: 36, arrows: 'to' },
+                { from: 43, to: 36, arrows: 'to' },
+                { from: 44, to: 36, arrows: 'to' },
+                { from: 45, to: 36, arrows: 'to' },
+                { from: 46, to: 36, arrows: 'to' },
+                { from: 50, to: 36, arrows: 'to' },
+                { from: 51, to: 53, arrows: 'to' },
+                { from: 53, to: 55, arrows: 'to' },
+                { from: 55, to: 54, arrows: 'to' },
+                { from: 49, to: 56, arrows: 'to' },
+                { from: 56, to: 50, arrows: 'to' },
+                { from: 36, to: 51, arrows: 'to' },
+            ];
+
+            var container = document.getElementById('mynetwork');
+
+            var data = {
+                nodes: nodes,
+                edges: edges,
+            };
+
+            var options = {
+                interaction: {
+                    hover: true,
+                    dragNodes: false,
+                },
+                edges: {
+                    font: {
+                        size: 12,
+                    },
+                },
+                nodes: {
+                    shape: 'box',
+                    color: {
+                        border: '#4d4d4d',
+                        background: '#ededed',
+                        hover: {
+                            border: '#4d4d4d',
+                            background: '#fff',
+                        },
+                    },
+                    shapeProperties: {
+                        borderRadius: 3,
+                    },
+                    font: {
+                        multi: true,
+                        bold: '12px arial #262626',
+                        mono: '11px arial #4d4d4d',
+                        ital: '11px arial #999',
+                    },
+                    widthConstraint: {
+                        maximum: 300,
+                    },
+                    margin: 16,
+                },
+                physics: {
+                    enabled: false,
+                },
+            };
+
+            var network = new vis.Network(container, data, options);
+
+            //Get the canvas HTML element
+            var networkCanvas = container.getElementsByTagName('canvas')[0];
+
+            function changeCursor(newCursorStyle) {
+                networkCanvas.style.cursor = newCursorStyle;
             }
-          },
-          title: "read now",
-          url: "guides/http/index.html",
-          label: createLabel({
-            title: "5 - HTTP",
-            covers: ["HTTP"]
-          }),
-          x: -150,
-          y: -200
-        },
-        {
-          id: 6,
-          label: createLabel({
-            title: "6 - The Web Platform",
-            covers: [
-              "Browser Runtime",
-              "Headless Browsers",
-              "Webview's",
-              "Web to Native",
-              "Web API's"
-            ]
-          }),
-          x: 80,
-          y: -250
-        },
-        {
-          id: 7,
-          label: createLabel({
-            title: "7 - Web Security",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: 400,
-          y: -400
-        },
-        {
-          id: 8,
-          label: createLabel({
-            title: "8 - Code Editors",
-            covers: ["What is it", "VS code", "codesandbox.io"]
-          }),
-          x: 300,
-          y: -220
-        },
-        {
-          id: 9,
-          label: createLabel({
-            title: "9 - HTML & Webpage Fundamentals",
-            covers: ["Markup", "Semantical HTML", "Accessibility", "SEO"]
-          }),
-          x: 550,
-          y: -220
-        },
-        {
-          id: 10,
-          label: createLabel({
-            title: "10 - Web Image Fundamentals",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: 850,
-          y: -20
-        },
-        {
-          id: 11,
-          label: createLabel({
-            title: "11 - CSS Fundamentals",
-            covers: [
-              "Inheritance & Cacade",
-              "Specificity",
-              "Selectors",
-              "Box Model",
-              "Flow",
-              "Units",
-              "Colors & Gradients"
-            ]
-          }),
-          x: 600,
-          y: -30
-        },
-        {
-          id: 12,
-          label: createLabel({
-            title: "12 - CSS Fonts & Typography",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: 345,
-          y: -30
-        },
-        {
-          id: 13,
-          label: createLabel({
-            title: "13 - CSS Grid & Flexbox",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: 100,
-          y: -30
-        },
-        {
-          id: 14,
-          label: createLabel({
-            title: "14 - CSS Media Queries & RWD",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: -150,
-          y: -30
-        },
-        {
-          id: 15,
-          label: createLabel({
-            title: "15 - CSS Transitions, Transforms & Animation",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: -450,
-          y: 50
-        },
-        {
-          id: 16,
-          label: createLabel({
-            title: "16 - HTML Emails",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: -350,
-          y: -250
-        },
-        {
-          id: 17,
-          label: createLabel({
-            title: "17 - CSS Practices",
-            covers: [
-              "Naming Systems",
-              "Architecture",
-              "Conventions",
-              "Resets",
-              "Style Guides"
-            ]
-          }),
-          x: -550,
-          y: -150
-        },
-        {
-          id: 18,
-          label: createLabel({
-            title: "18 - UI Design / Patterns",
-            covers: ["Interaction Design", "HCI", "UI Patterns"]
-          }),
-          x: -550,
-          y: -330
-        },
-        {
-          id: 19,
-          label: createLabel({
-            title: "19 - JavaScript Fundamentals",
-            covers: [
-              "Syntax",
-              "Variables / Assignment",
-              "Values",
-              "Operators",
-              "Functions",
-              "Statements",
-              "Objects",
-              "Scope & Closure"
-            ]
-          }),
-          x: -800,
-          y: -330
-        },
-        {
-          id: 20,
-          label: createLabel({
-            title: "20 - JavaScript Regular Expressions",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: -1100,
-          y: -200
-        },
-        {
-          id: 21,
-          label: createLabel({
-            title: "21 - JavaScript ES Modules / Scripts",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: -800,
-          y: -100
-        },
-        {
-          id: 22,
-          label: createLabel({
-            title: "22 - CLI",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: -880,
-          y: 100
-        },
-        {
-          id: 23,
-          label: createLabel({
-            title: "23 - GIT/Github",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: -700,
-          y: 100
-        },
-        {
-          id: 24,
-          label: createLabel({
-            title: "24 - NPM/Yarn & Node.js",
-            covers: ["NPM/Yarn", "Semantic Versioning", "Node.js Basics"]
-          }),
-          x: -900,
-          y: 300
-        },
-        {
-          id: 25,
-          label: createLabel({
-            title: "25 - NPM/Yarn Scripts/Run",
-            covers: ["Building/Automation", "...", "..."]
-          }),
-          x: -650,
-          y: 270
-        },
-        {
-          id: 26,
-          label: createLabel({
-            title: "26 - CSS Tooling",
-            covers: [
-              "Preprocessors",
-              "Postprocessors",
-              "Utitlites",
-              "Linting/Hinting",
-              "CSS in JS"
-            ]
-          }),
-          x: -650,
-          y: 450
-        },
-        {
-          id: 27,
-          label: createLabel({
-            title: "27 - CSS UI Toolkit's",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: -400,
-          y: 450
-        },
-        {
-          id: 28,
-          label: createLabel({
-            title: "28 - DOM, BOM, CSSOM",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: -400,
-          y: 250
-        },
-        {
-          id: 29,
-          label: createLabel({
-            title: "29 - JavaScript Inheritance",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: -150,
-          y: 150
-        },
-        {
-          id: 30,
-          label: createLabel({
-            title: "30 - JavaScript Promises/Async",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: -150,
-          y: 350
-        },
-        {
-          id: 31,
-          label: createLabel({
-            title: "31 - JavaScript FP Fundamentals",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: -150,
-          y: 550
-        },
-        {
-          id: 32,
-          label: createLabel({
-            title: "32 - JavaScript Web API's",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: 100,
-          y: 400
-        },
-        {
-          id: 33,
-          label: createLabel({
-            title: "33 - JavaScript Practices/Tools",
-            covers: [
-              "Libraries",
-              "Utilities",
-              "Linting/Hinting",
-              "Formatting",
-              "Style Guides"
-            ]
-          }),
-          x: 200,
-          y: 180
-        },
-        {
-          id: 34,
-          label: createLabel({
-            title: "34 - JavaScript UI Toolkit's",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: 550,
-          y: 160
-        },
-        {
-          id: 35,
-          label: createLabel({
-            title: "35 - JavaScript Runtime & AST",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: 550,
-          y: 360
-        },
-        {
-          id: 36,
-          label: createLabel({
-            title: "36 - JavaScript Performance",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: 550,
-          y: 560
-        },
-        {
-          id: 37,
-          label: createLabel({
-            title: "37 - JavaScript CS",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: 550,
-          y: 750
-        },
-        {
-          id: 38,
-          label: createLabel({
-            title: "38 - Web Developer Tools",
-            covers: ["Chrome Dev Tools", "...", "...", "..."]
-          }),
-          x: 250,
-          y: 600
-        },
-        {
-          id: 39,
-          label: createLabel({
-            title: "39 - Websites",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: 250,
-          y: 800
-        },
-        {
-          id: 40,
-          label: createLabel({
-            title: "40 - Progressive Web Apps",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: 0,
-          y: 720
-        },
-        {
-          id: 41,
-          label: createLabel({
-            title: "41 - JavaScript Module Loaders",
-            covers: ["Webpack", "Parcel", "Rollup"]
-          }),
-          x: -250,
-          y: 720
-        },
-        {
-          id: 42,
-          label: createLabel({
-            title: "42 - X Compiler to JS",
-            covers: [
-              "Typescript",
-              "Reason",
-              "Elm",
-              "ClojureScript",
-              "PureScript"
-            ]
-          }),
-          x: -500,
-          y: 630
-        },
-        {
-          id: 43,
-          label: createLabel({
-            title: "43 - JS Compilers to JS",
-            covers: ["Babel"]
-          }),
-          x: -500,
-          y: 800
-        },
-        {
-          id: 44,
-          label: createLabel({
-            title: "44 - React / JSX",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: -740,
-          y: 850
-        },
-        {
-          id: 45,
-          label: createLabel({
-            title: "45 - React Router",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: -700,
-          y: 630
-        },
-        {
-          id: 46,
-          label: createLabel({
-            title: "46 - Application State",
-            covers: ["Mobx", "Redux", "...", "..."]
-          }),
-          x: -900,
-          y: 530
-        },
-        {
-          id: 47,
-          label: createLabel({
-            title: "47 - Data API's",
-            covers: ["REST", "GraphQL", "...", "..."]
-          }),
-          x: -900,
-          y: 730
-        },
-        {
-          id: 48,
-          label: createLabel({
-            title: "48 - Web Software Development/Architecture/Practices",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: -1150,
-          y: 430
-        },
-        {
-          id: 49,
-          label: createLabel({
-            title: "49 - Serverless",
-            covers: ["...", "...", "...", "..."]
-          }),
-          x: -1100,
-          y: 690
-        },
-        {
-          id: 50,
-          label: createLabel({
-            title: "50 - Testing (unit, Integration, Functional",
-            covers: ["Jest", "Enzyme", "Chai", "Cypress"]
-          }),
-          x: -1100,
-          y: 930
-        }
-      ];
 
-      var edges = [
-        { from: 0, to: 1, arrows: "to" },
-        { from: 1, to: 3, arrows: "to" },
-        { from: 2, to: 3, arrows: "to" },
-        { from: 3, to: 4, arrows: "to" },
-        { from: 1, to: 2, arrows: "to" },
-        { from: 4, to: 5, arrows: "to" },
-        { from: 4, to: 6, arrows: "to" },
-        { from: 4.5, to: 5, arrows: "to" },
-        { from: 5, to: 6, arrows: "to" },
-        { from: 6, to: 7, arrows: "to" },
-        { from: 6, to: 8, arrows: "to" },
-        { from: 7, to: 8, arrows: "to" },
-        { from: 8, to: 9, arrows: "to" },
-        { from: 9, to: 10, arrows: "to" },
-        { from: 10, to: 11, arrows: "to" },
-        { from: 11, to: 12, arrows: "to" },
-        { from: 12, to: 13, arrows: "to" },
-        { from: 13, to: 14, arrows: "to" },
-        { from: 15, to: 16, arrows: "to" },
-        { from: 15, to: 16, arrows: "to" },
-        { from: 14, to: 15, arrows: "to" },
-        { from: 15, to: 17, arrows: "to" },
-        { from: 16, to: 17, arrows: "to" },
-        { from: 17, to: 18, arrows: "to" },
-        { from: 18, to: 19, arrows: "to" },
-        { from: 17, to: 19, arrows: "to" },
-        { from: 19, to: 20, arrows: "to" },
-        { from: 19, to: 21, arrows: "to" },
-        { from: 20, to: 21, arrows: "to" },
-        { from: 21, to: 22, arrows: "to" },
-        { from: 21, to: 23, arrows: "to" },
-        { from: 22, to: 23, arrows: "to" },
-        { from: 23, to: 24, arrows: "to" },
-        { from: 24, to: 26, arrows: "to" },
-        { from: 24, to: 25, arrows: "to" },
-        { from: 25, to: 26, arrows: "to" },
-        { from: 26, to: 28, arrows: "to" },
-        { from: 26, to: 27, arrows: "to" },
-        { from: 27, to: 28, arrows: "to" },
-        { from: 28, to: 29, arrows: "to" },
-        { from: 29, to: 30, arrows: "to" },
-        { from: 30, to: 31, arrows: "to" },
-        { from: 32, to: 33, arrows: "to" },
-        { from: 31, to: 32, arrows: "to" },
-        { from: 33, to: 38, arrows: "to" },
-        { from: 34, to: 38, arrows: "to" },
-        { from: 35, to: 38, arrows: "to" },
-        { from: 36, to: 37, arrows: "to" },
-        { from: 37, to: 38, arrows: "to" },
-        { from: 33, to: 34, arrows: "to" },
-        { from: 33, to: 35, arrows: "to" },
-        { from: 33, to: 36, arrows: "to" },
-        { from: 33, to: 37, arrows: "to" },
-        { from: 34, to: 35, arrows: "to, from" },
-        { from: 35, to: 36, arrows: "to, from" },
-        { from: 36, to: 37, arrows: "to, from" },
-        { from: 36, to: 38, arrows: "to" },
-        { from: 38, to: 39, arrows: "to" },
-        { from: 37, to: 38, arrows: "to" },
-        { from: 35, to: 36, arrows: "to, from" },
-        { from: 39, to: 40, arrows: "to" },
-        { from: 40, to: 41, arrows: "to" },
-        { from: 41, to: 42, arrows: "to" },
-        { from: 41, to: 43, arrows: "to" },
-        { from: 42, to: 43, arrows: "to" },
-        { from: 43, to: 44, arrows: "to" },
-        { from: 45, to: 46, arrows: "to" },
-        { from: 44, to: 45, arrows: "to" },
-        { from: 47, to: 48, arrows: "to" },
-        { from: 46, to: 47, arrows: "to" },
-        { from: 47, to: 50, arrows: "to" },
-        { from: 47, to: 49, arrows: "to" },
-        { from: 48, to: 49, arrows: "to, from" },
-        { from: 49, to: 50, arrows: "to, from" }
-      ];
+            network.on('click', params => {
+                const clickedNode = nodes.find(node => {
+                    return node.id === nodes[params.nodes[0]].id;
+                });
+                if (clickedNode.url !== undefined) {
+                    window.open(clickedNode.url, '_blank');
+                }
+            });
 
-      var container = document.getElementById("mynetwork");
-
-      var data = {
-        nodes: nodes,
-        edges: edges
-      };
-
-      var options = {
-        interaction: {
-          hover: true,
-          dragNodes: false
-        },
-        edges: {
-          font: {
-            size: 12
-          }
-        },
-        nodes: {
-          shape: "box",
-          title: "coming soon",
-
-          color: {
-            border: "#4d4d4d",
-            background: "#ededed",
-            hover: {
-              border: "#4d4d4d",
-              background: "#fff"
-            }
-          },
-          shapeProperties: {
-            borderRadius: 3
-          },
-          font: {
-            multi: true,
-            bold: "12px arial #262626",
-            mono: "11px arial #4d4d4d",
-            ital: "11px arial #999"
-          },
-          widthConstraint: {
-            maximum: 300
-          },
-          margin: 16
-        },
-        physics: {
-          enabled: false
-        }
-      };
-
-      var network = new vis.Network(container, data, options);
-
-      //Get the canvas HTML element
-      var networkCanvas = container.getElementsByTagName("canvas")[0];
-
-      function changeCursor(newCursorStyle) {
-        networkCanvas.style.cursor = newCursorStyle;
-      }
-
-      network.on("click", params => {
-        const clickedNode = nodes.find(node => {
-          return node.id === nodes[params.nodes[0]].id;
-        });
-        if (clickedNode.url !== undefined) {
-          window.open(clickedNode.url, "_blank");
-        }
-      });
-
-      network.on("hoverNode", function(params) {
-        console.log(params);
-        const hoveredNode = nodes.find(node => {
-          return node.id === nodes[params.node].id;
-        });
-        if (hoveredNode.url !== undefined) {
-          changeCursor("pointer");
-        }
-      });
-      network.on("blurNode", function(e) {
-        changeCursor("default");
-      });
-      network.on("hoverEdge", function(e) {
-        changeCursor("grab");
-      });
-      network.on("blurEdge", function(e) {
-        changeCursor("default");
-      });
-      network.on("dragStart", function(e) {
-        changeCursor("grabbing");
-      });
-      network.on("dragging", function(e) {
-        changeCursor("grabbing");
-      });
-      network.on("dragEnd", function(e) {
-        changeCursor("pointer");
-      });
-    </script>
-  </body>
+            network.on('hoverNode', function(params) {
+                console.log(params);
+                const hoveredNode = nodes.find(node => {
+                    return node.id === nodes[params.node].id;
+                });
+                if (hoveredNode.url !== undefined) {
+                    changeCursor('pointer');
+                }
+            });
+            network.on('blurNode', function(e) {
+                changeCursor('default');
+            });
+            network.on('hoverEdge', function(e) {
+                changeCursor('grab');
+            });
+            network.on('blurEdge', function(e) {
+                changeCursor('default');
+            });
+            network.on('dragStart', function(e) {
+                changeCursor('grabbing');
+            });
+            network.on('dragging', function(e) {
+                changeCursor('grabbing');
+            });
+            network.on('dragEnd', function(e) {
+                changeCursor('pointer');
+            });
+        </script>
+    </body>
 </html>

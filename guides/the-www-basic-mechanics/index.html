@@ -1,384 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/prism.css" />
-    <script src="../js/prism.js"></script>
-    <title>The WWW Basic Mechanics</title>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/prism.css" />
+        <script src="../js/prism.js"></script>
+        <title>The WWW Basic Mechanics</title>
+    </head>
 
-  <body>
-    <div id="menu">
-      <a id="backToRoadMapLink" href="/">← Front-end Developer Roadmap</a>
-      <div id="toc"></div>
-    </div>
-
-    <div id="panel">
-      <div id="menuButton">|||</div>
-
-      <div id="bookPadding">
-        <h1>The WWW Basic Mechanics</h1>
-
-        <h4 style="margin-top:0px">
-          Written by
-          <a href="http://codylindley.com/">Cody Lindley</a>
-          <span id="lastMod" style="display:none"
-            >updated <span id="lastModDate"></span
-          ></span>
-        </h4>
-
-        <script>
-          if (document.lastModified) {
-            document.getElementById("lastMod").style.display = "inline";
-            document.getElementById(
-              "lastModDate"
-            ).innerText = document.lastModified.split(" ")[0];
-          }
-        </script>
-
-        <section>
-          <p>
-            <em
-              ><a href="/">Guide books and roadmap</a> from
-              <a href="https://frontendmasters.com/">Frontend Masters</a>.
-              <br />
-              Advancing your skills with in-depth, modern front-end engineering
-              courses.</em
-            >
-          </p>
-        </section>
-
-        <hr />
-
-        <p><strong>Overview:</strong></p>
-
-        <p>
-          A closer look at the infrastructure of the World Wide Web.
-        </p>
-        <hr />
-
-        <p><strong>Definitions:</strong></p>
-
-        <dl>
-          <dt>
-            Web Page
-          </dt>
-          <dd>
-            A document with a .html extensions that can be display in a web
-            browser. This file can be loaded into a web browser from you local
-            computer or it can be sent over the internet to a web browsers using
-            HTTP. Web pages can link to other web pages. Web pages typically
-            display a text, images, videos, audio, and graphical user
-            interfaces.
-          </dd>
-          <dt>
-            Website
-          </dt>
-          <dd>
-            A group of web pages linked to each other by design.
-          </dd>
-          <dt>
-            Web Server
-          </dt>
-          <dd>
-            Aka, an "HTTP server". A device on the internet (a computer) setup
-            to host and server web pages to other devices (computers, phones,
-            etc...) that request web pages using HTTP. A web server can server
-            static files as is or dynamic files that are built upon requesting,
-            typically holding data from a database.
-          </dd>
-        </dl>
-        <hr />
-
-        <p>
-          <strong>Contribute content, suggestions, and fixes on github</strong>:
-        </p>
-
-        <p>
-          <a href="https://github.com/FrontendMasters/guides"
-            >https://github.com/FrontendMasters/guides</a
-          >
-        </p>
-
-        <hr />
-
-        <div id="chapter1" class="chapter">
-          <h2>The Internet</h2>
-
-          <p>
-            It is the internet that makes the World Wide Web possible. The
-            internet is a global system of connected devices, routers, and
-            modems.
-          </p>
-
-          <p class="image">
-            <a
-              href="http://www.theshulers.com/whitepapers/internet_whitepaper/index.html"
-            >
-              <img
-                alt="Internet Network"
-                src="images/ruswp_diag3.gif"
-                title="https://www.helloitsliam.com/2014/12/20/how-the-internet-works-infographic/"
-              />
-            </a>
-          </p>
-          <p class="imageCite">
-            <cite
-              >Image source:
-              <a
-                href="http://www.theshulers.com/whitepapers/internet_whitepaper/index.html"
-                target="_blank"
-                >http://www.theshulers.com/whitepapers/internet_whitepaper/index.html</a
-              ></cite
-            >
-          </p>
-
-          <p>
-            People will often think of the internet and the World Wide Web (aka
-            WWW) interchangeable, but the internet is specifically the layers of
-            networking that exist to make the connection of devices possible.
-            Most people are connected to the internet by paying an
-            <a href="https://www.whoismyisp.org/"
-              >Internet Service Provider (aka ISP)</a
-            >
-            for access in the form of a wired connection directly to a
-            business/home or a wireless connection from a cellular tower or
-            satellite.
-          </p>
-
-          <p>
-            No one person, company, or organization or government runs the
-            internet.
-          </p>
-
-          <p class="image">
-            <a
-              href="http://www.bitrebels.com/technology/find-out-who-runs-the-internet-chart/"
-            >
-              <img
-                alt="How the internet works"
-                src="images/who-runs-the-internet-infographic.jpg"
-                title="https://www.helloitsliam.com/2014/12/20/how-the-internet-works-infographic/"
-              />
-            </a>
-          </p>
-          <p class="imageCite">
-            <cite
-              >Image source:
-              <a
-                href="http://www.bitrebels.com/technology/find-out-who-runs-the-internet-chart/"
-                target="_blank"
-                >http://www.bitrebels.com/technology/find-out-who-runs-the-internet-chart/</a
-              ></cite
-            >
-          </p>
+    <body>
+        <div id="menu">
+            <a id="backToRoadMapLink" href="/">← Front-end Developer Roadmap</a>
+            <div id="toc"></div>
         </div>
 
-        <div id="chapter2" class="chapter">
-          <h2>TCP / IP / DNS</h2>
+        <div id="panel">
+            <div id="menuButton">|||</div>
 
-          <p>
-            The Transmission Control Protocol (aka TCP) is roughly the baseline
-            protocol that is used so that interconnected devices on the internet
-            can communicate with each other. In other words, the internet
-            infrastructure connects devices, but TCP is the baseline
-            language/interface (i.e. protocols) that allow devices (computers,
-            laptops, phones etc.) to speak to each other in a common way (i.e.
-            TCP defines how data travels on the internet).
-          </p>
-          <p>
-            TCP specifically directs packets (i.e. chunked data) of information
-            to a specific application on a specific device connected to the
-            network that can be identified using an Internet Protocol Address
-            (aka IP address).
-          </p>
+            <div id="bookPadding">
+                <h1>The WWW Basic Mechanics</h1>
 
-          <p>
-            Think of an IP address like your home address. Your home address
-            locates your home. IP's addresses locate a specific device in a
-            network. An IP address is written as a numeric string of characters
-            with periods and slashes using
-            <a
-              href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation"
-              >CIDR notation</a
-            >
-            (e.g. 192.168.100.14).
-          </p>
+                <h4 style="margin-top:0px">
+                    Written by
+                    <a href="http://codylindley.com/">Cody Lindley</a>
+                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                </h4>
 
-          <p>
-            Wouldn't it be horrible if every web site you wanted to visited you
-            had to memorize an IP address? To avoid this Domain Name Servers
-            (aka DNS) are used. They are essentially a service that returns an
-            IP address for a domain name. Without domain name servers a URL to
-            google.com would look something like:
-          </p>
+                <script>
+                    if (document.lastModified) {
+                        document.getElementById('lastMod').style.display = 'inline';
+                        document.getElementById('lastModDate').innerText = document.lastModified.split(' ')[0];
+                    }
+                </script>
 
-          <pre class="line-numbers"><code class="language-http noRun">
+                <section>
+                    <p>
+                        <em
+                            ><a href="/">Guide books and roadmap</a> from <a href="https://frontendmasters.com/">Frontend Masters</a>.
+                            <br />
+                            Advancing your skills with in-depth, modern front-end engineering courses.</em
+                        >
+                    </p>
+                </section>
+
+                <hr />
+
+                <p><strong>Overview:</strong></p>
+
+                <p>
+                    A closer look at the infrastructure of the World Wide Web.
+                </p>
+                <hr />
+
+                <p><strong>Definitions:</strong></p>
+
+                <dl>
+                    <dt>
+                        Web Page
+                    </dt>
+                    <dd>
+                        A document with a .html extensions that can be display in a web browser. This file can be loaded into a web browser from you local
+                        computer or it can be sent over the internet to a web browsers using HTTP. Web pages can link to other web pages. Web pages typically
+                        display a text, images, videos, audio, and graphical user interfaces.
+                    </dd>
+                    <dt>
+                        Website
+                    </dt>
+                    <dd>
+                        A group of web pages linked to each other by design.
+                    </dd>
+                    <dt>
+                        Web Server
+                    </dt>
+                    <dd>
+                        Aka, an "HTTP server". A device on the internet (a computer) setup to host and server web pages to other devices (computers, phones,
+                        etc...) that request web pages using HTTP. A web server can server static files as is or dynamic files that are built upon requesting,
+                        typically holding data from a database.
+                    </dd>
+                </dl>
+                <hr />
+
+                <p><strong>Contribute content, suggestions, and fixes on github</strong>:</p>
+
+                <p>
+                    <a href="https://github.com/FrontendMasters/guides">https://github.com/FrontendMasters/guides</a>
+                </p>
+
+                <hr />
+
+                <div id="chapter1" class="chapter">
+                    <h2>The Internet</h2>
+
+                    <p>
+                        It is the internet that makes the World Wide Web possible. The internet is a global system of connected devices, routers, and modems.
+                    </p>
+
+                    <p class="image">
+                        <a href="http://www.theshulers.com/whitepapers/internet_whitepaper/index.html">
+                            <img
+                                alt="Internet Network"
+                                src="images/ruswp_diag3.gif"
+                                title="https://www.helloitsliam.com/2014/12/20/how-the-internet-works-infographic/"
+                            />
+                        </a>
+                    </p>
+                    <p class="imageCite">
+                        <cite
+                            >Image source:
+                            <a href="http://www.theshulers.com/whitepapers/internet_whitepaper/index.html" target="_blank"
+                                >http://www.theshulers.com/whitepapers/internet_whitepaper/index.html</a
+                            ></cite
+                        >
+                    </p>
+
+                    <p>
+                        People will often think of the internet and the World Wide Web (aka WWW) interchangeable, but the internet is specifically the layers of
+                        networking that exist to make the connection of devices possible. Most people are connected to the internet by paying an
+                        <a href="https://www.whoismyisp.org/">Internet Service Provider (aka ISP)</a>
+                        for access in the form of a wired connection directly to a business/home or a wireless connection from a cellular tower or satellite.
+                    </p>
+
+                    <p>
+                        No one person, company, or organization or government runs the internet.
+                    </p>
+
+                    <p class="image">
+                        <a href="http://www.bitrebels.com/technology/find-out-who-runs-the-internet-chart/">
+                            <img
+                                alt="How the internet works"
+                                src="images/who-runs-the-internet-infographic.jpg"
+                                title="https://www.helloitsliam.com/2014/12/20/how-the-internet-works-infographic/"
+                            />
+                        </a>
+                    </p>
+                    <p class="imageCite">
+                        <cite
+                            >Image source:
+                            <a href="http://www.bitrebels.com/technology/find-out-who-runs-the-internet-chart/" target="_blank"
+                                >http://www.bitrebels.com/technology/find-out-who-runs-the-internet-chart/</a
+                            ></cite
+                        >
+                    </p>
+
+                    <p>Learn more about the internet:</p>
+
+                    <ul>
+                        <li><a href="https://www.youtube.com/watch?v=Dxcc6ycZ73M" target="_blank">What is the Internet?</a> [watch]</li>
+                        <li><a href="http://internetfundamentals.com" target="_blank">Internet Fundamentals</a> [watch]</li>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works" target="_blank"
+                                >How the Web works</a
+                            >
+                            [read]
+                        </li>
+                        <li>
+                            How does the Internet work?
+                            <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work" target="_blank"
+                                >https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work</a
+                            >
+                            and
+                            <a href="http://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm" target="_blank"
+                                >http://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm</a
+                            >
+                            [read]
+                        </li>
+                        <li>
+                            <a href="https://www.khanacademy.org/partner-content/code-org/internet-works" target="_blank">How the Internet Works</a> [watch]
+                        </li>
+                        <li><a href="https://www.youtube.com/watch?v=7_LPdttKXPc" target="_blank">How the Internet Works in 5 Minutes</a> [watch]</li>
+                        <li><a href="https://www.eventedmind.com/classes/how-the-web-works-7f40254c" target="_blank">How the Web Works</a> [watch]</li>
+                        <li>
+                            <a href="http://www.dontfeartheinternet.com/" target="_blank">Don’t Fear the Internet</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter2" class="chapter">
+                    <h2>TCP / IP / DNS</h2>
+
+                    <p>
+                        The Transmission Control Protocol (aka TCP) is roughly the baseline protocol that is used so that interconnected devices on the internet
+                        can communicate with each other. In other words, the internet infrastructure connects devices, but TCP is the baseline
+                        language/interface (i.e. protocols) that allow devices (computers, laptops, phones etc.) to speak to each other in a common way (i.e.
+                        TCP defines how data travels on the internet).
+                    </p>
+                    <p>
+                        TCP specifically directs packets (i.e. chunked data) of information to a specific application on a specific device connected to the
+                        network that can be identified using an Internet Protocol Address (aka IP address).
+                    </p>
+
+                    <p>
+                        Think of an IP address like your home address. Your home address locates your home. IP's addresses locate a specific device in a
+                        network. An IP address is written as a numeric string of characters with periods and slashes using
+                        <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation">CIDR notation</a>
+                        (e.g. 192.168.100.14).
+                    </p>
+
+                    <p>
+                        Wouldn't it be horrible if every web site you wanted to visited you had to memorize an IP address? To avoid this Domain Name Servers
+                        (aka DNS) are used. They are essentially a service that returns an IP address for a domain name. Without domain name servers a URL to
+                        google.com would look something like:
+                    </p>
+
+                    <pre class="line-numbers"><code class="language-http noRun">
   http://172.217.20.110 (actually works in a browser try it)
 
 </code></pre>
 
-          <p>instead of:</p>
+                    <p>instead of:</p>
 
-          <pre class="line-numbers"><code class="language-http noRun">
+                    <pre class="line-numbers"><code class="language-http noRun">
   http://google.com
   
 </code></pre>
 
-          <p>
-            DNS servers make it so URL's are more human friendly/readable and
-            can contain semantical meaning. Which means domains can be indexed
-            and searched for in a meaningful way using keywords via search
-            engines.
-          </p>
-        </div>
+                    <p>
+                        DNS servers make it so URL's are more human friendly/readable/writable and can contain semantical meaning (e.g. user enters google.com
+                        into a web browser and DNS translates that domain name to http://172.217.20.110 behind the scene for the user). Semantical IP addresses
+                        allow for domains to be indexed and searched for in a meaningful way using search engines and keywords.
+                    </p>
 
-        <div id="chapter3" class="chapter">
-          <h2>HTTP</h2>
-          <p>
-            The internet, TCP, and IP make it possible for one device to
-            exchange data with another device on the network using ones and
-            zeros (i.e. packets of data). On the world wide web when dealing
-            with web pages, a specific type of data exchange is taking place.
-            Typically a web browser or client/user-agent is asking for data from
-            a specific location/device serving a particular type of data over
-            the network (e.g. a computer running server software on the
-            network/internet). This requires a specific protocol sitting on top
-            of the baseline TCP/IP protocols. The WWW runs because a client like
-            a web browser can connect to a web server through the internet, and
-            this client can talk to a web server using the HyperText Transfer
-            Protocol (aka HTTP) to exchange data most commonly written in the
-            HyperText Markup Language (aka HTML). Other data that besides HTML
-            that be exchanged can include image, font, audio, video, CSS, and
-            JavaScript files.
-          </p>
+                    <p>Learn more about the internet:</p>
 
-          <p class="image">
-            <a href="https://odetocode.com/articles/743.aspx">
-              <img
-                alt="Client Server Stack"
-                src="images/netlayer.png"
-                title="https://www.helloitsliam.com/2014/12/20/how-the-internet-works-infographic/"
-              />
-            </a>
-          </p>
-          <p class="imageCite">
-            <cite
-              >Image source:
-              <a href="https://odetocode.com/articles/743.aspx" target="_blank"
-                >https://odetocode.com/articles/743.aspx</a
-              ></cite
-            >
-          </p>
+                    <ul>
+                        <li>
+                            <a
+                                href="https://www.digitalocean.com/community/tutorials/an-introduction-to-dns-terminology-components-and-concepts"
+                                target="_blank"
+                                >An Introduction to DNS Terminology, Components, and Concepts</a
+                            >
+                            [read]
+                        </li>
+                        <li><a href="https://www.youtube.com/watch?v=72snZctFFtA" target="_blank">DNS Explained</a> [watch]</li>
+                        <li><a href="https://howdns.works/ep1/" target="_blank">How DNS Works</a> [read]</li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=5o8CwafCxnU&amp;index=3&amp;list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7" target="_blank"
+                                >The Internet: IP Addresses and DNS</a
+                            >
+                            [watch]
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_domain_name" target="_blank"
+                                >What is a domain name?</a
+                            >
+                            [read]
+                        </li>
+                    </ul>
+                </div>
 
-          <p>
-            When a user enters a URL into a web browser/client (e.g.
-            google.com), an HTTP request is sent over the internet to a web
-            server. Generally, what is sent back from the request is a specific
-            <code>.html</code> document/file containing information written in
-            the HTML that is then used by the web browser/client to visually
-            display information to the user. Think of an HTML document as a very
-            particular kind of text document that can contain text, images, user
-            interface widgets, videos, audio files all wrap/tagged with
-            semantical meaning (i.e. HTML tags like an &lt;h1&gt;&lt;/h1&gt;) to be displayed to the user. Below is an example of an <code>.html</code> document.
-          </p>
+                <div id="chapter3" class="chapter">
+                    <h2>HTTP</h2>
+                    <p>
+                        The internet, TCP, and IP make it possible for one device to exchange data with another device on the network using ones and zeros (i.e.
+                        packets of data). On the world wide web when dealing with web pages, a specific type of data exchange is taking place. Typically a web
+                        browser or client/user-agent is asking for data from a specific location/device serving a particular type of data over the network (e.g.
+                        a computer running server software on the network/internet). This requires a specific protocol sitting on top of the baseline TCP/IP
+                        protocols.
+                    </p>
 
+                    <p class="image">
+                        <a href="https://odetocode.com/articles/743.aspx">
+                            <img
+                                alt="Client Server Stack"
+                                src="images/netlayer.png"
+                                title="https://www.helloitsliam.com/2014/12/20/how-the-internet-works-infographic/"
+                            />
+                        </a>
+                    </p>
+                    <p class="imageCite">
+                        <cite>Image source: <a href="https://odetocode.com/articles/743.aspx" target="_blank">https://odetocode.com/articles/743.aspx</a></cite>
+                    </p>
 
-          <div class="codesandboxlinkNotDynamic"><a href="https://codesandbox.io/s/p38w4j32vq">run/edit in
-            codesandbox.io</a></div>
+                    <p>
+                        The WWW runs because a client like a web browser can connect to a web server through the internet, and this client can talk to a web
+                        server using the HyperText Transfer Protocol (aka HTTP) to exchange data most commonly written in the HyperText Markup Language (aka
+                        HTML). Other data besides HTML that be exchanged can include image, font, audio, video, CSS, and JavaScript files. HTTP also allows for
+                        a web browser to parse an .html document with embedded http:// requests (e.g. image files, CSS files, JavaScript files, videos files,
+                        audio files) and fulfill those requests when it encounters them. For example, here are all the HTTP request made when visiting
+                        google.com in a web browser (i.e. the default HTML is sent first, then the browser fulfills embedded HTTP requests in the index.html
+                        page).
+                    </p>
 
-    <pre class="line-numbers"><code class="language-markup">
+                    <p class="image">
+                        <a href="https://www.webpagetest.org/result/190508_NF_4b9572348efa02e76204ff49351a7794/1/details/">
+                            <img alt="http" src="images/http.png" title="http" />
+                        </a>
+                    </p>
+                    <p class="imageCite">
+                        <cite
+                            >Image source:
+                            <a href="https://www.webpagetest.org/result/190508_NF_4b9572348efa02e76204ff49351a7794/1/details/" target="_blank"
+                                >https://www.webpagetest.org/result/190508_NF_4b9572348efa02e76204ff49351a7794/1/details/</a
+                            ></cite
+                        >
+                    </p>
+
+                    <p>
+                        When a user enters a URL into a web browser/client (e.g. google.com), an HTTP request is sent over the internet to a web server.
+                        Generally, what is sent back from the request is a specific
+                        <code>.html</code> document/file containing information written in the HTML that is then used by the web browser/client to visually
+                        display information to the user. Think of an HTML document as a very particular kind of text document that can contain text and user
+                        interface's, with its own internal HTTP requests to CSS, JavaScript, images, videos, and audio files all wrap/tagged with semantical
+                        meaning (i.e. HTML tags like an &lt;h1&gt;&lt;/h1&gt;) to be displayed to the user. Below is an example of an
+                        <code>.html</code> document.
+                    </p>
+
+                    <div class="codesandboxlinkNotDynamic">
+                        <a href="https://codesandbox.io/s/p38w4j32vq">run/edit in codesandbox.io</a>
+                    </div>
+
+                    <pre class="line-numbers"><code class="language-markup">
 &lt;!DOCTYPE html&gt;&#10;&lt;html&gt;&#10;&#10;&lt;head&gt;&#10;  &lt;meta charset=&quot;UTF-8&quot; /&gt;&#10;  &lt;title&gt;Name of Web Page&lt;/title&gt;&#10;&lt;/head&gt;&#10;&#10;&lt;body&gt;&#10;&#10;  &lt;h1&gt;I am a web page&lt;/h1&gt;&#10;&#10;&lt;/body&gt;&#10;&#10;&lt;/html&gt;
 
-</pre></code>
+</code></pre>
 
-          <p>
-            Hypertext Transfer Protocol (aka HTTP) is the webs foundational
-            protocol that sits on top of TCP and IP. In terms of the World Wide
-            Web, HTTP is the foundational mechanism that allows a user to
-            request and send data over the internet (i.e. request files like
-            .html, .jpg, .js, and .css etc.).
-          </p>
+                    <p>
+                        Hypertext Transfer Protocol (aka HTTP) is the webs foundational protocol that sits on top of TCP and IP. In terms of the World Wide Web,
+                        HTTP is the foundational mechanism that allows a user to request and send data over the internet (i.e. request files like .html, .jpg,
+                        .js, and .css etc.).
+                    </p>
 
-          <p>
-            A professional front-end developer will have an in-depth
-            understanding of HTTP.
-          </p>
+                    <p>
+                        A professional front-end developer will have an in-depth understanding of HTTP.
+                    </p>
 
-          <div class="notes">
-            <p>
-              <strong>Notes:</strong>
-            </p>
-            <ol>
-              <li>
-                <a href="https://tools.ietf.org/html/rfc2616"
-                  >HTTP specification</a
-                >.
-              </li>
-              <li>
-                HTTP is evolving to
-                <a href="https://httpwg.org/specs/rfc7540.html">HTTP/2</a>.
-              </li>
-            </ol>
-          </div>
-        </div>
+                    <div class="notes">
+                        <p>
+                            <strong>Notes:</strong>
+                        </p>
+                        <ol>
+                            <li><a href="https://tools.ietf.org/html/rfc2616">HTTP specification</a>.</li>
+                            <li>
+                                HTTP is evolving to
+                                <a href="https://httpwg.org/specs/rfc7540.html">HTTP/2</a>.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
 
-        <div id="chapter4" class="chapter">
-          <h2>URL's/ Domains / Sub-Domains</h2>
+                <div id="chapter4" class="chapter">
+                    <h2>URL's/ Domains / Sub-Domains</h2>
 
-          <p class="image">
-            <a href="https://sitechecker.pro/what-is-url/">
-              <img alt="What is url" src="images/url-structure.jpg" />
-            </a>
-          </p>
-          <p class="imageCite">
-            <cite
-              >Image source:
-              <a href="https://sitechecker.pro/what-is-url/" target="_blank"
-                >https://sitechecker.pro/what-is-url/</a
-              ></cite
-            >
-          </p>
+                    <p class="image">
+                        <a href="https://sitechecker.pro/what-is-url/">
+                            <img alt="What is url" src="images/url-structure.jpg" />
+                        </a>
+                    </p>
+                    <p class="imageCite">
+                        <cite>Image source: <a href="https://sitechecker.pro/what-is-url/" target="_blank">https://sitechecker.pro/what-is-url/</a></cite>
+                    </p>
 
-          <p>
-            Browsers use a Uniform Resource Locator (aka a URL) to locate unique
-            resources over the internet on web servers (i.e. HTML files, CSS
-            files, JavaScript files, image files, video files, font's files,
-            etc.).
-          </p>
+                    <p>
+                        Browsers use a Uniform Resource Locator (aka a URL) to locate unique resources over the internet on web servers (i.e. HTML files, CSS
+                        files, JavaScript files, image files, video files, font's files, etc.).
+                    </p>
 
-          <p>
-            A URL is broken down into the following parts (Protocol &gt; Domain
-            Name &gt; Path (optional) &gt; Parameters/Query (optional) &gt;
-            Fragment/Anchor (optional)):
-          </p>
+                    <p>
+                        A URL is broken down into the following parts (Protocol &gt; Domain Name &gt; Path (optional) &gt; Parameters/Query (optional) &gt;
+                        Fragment/Anchor (optional)):
+                    </p>
 
-          <h4>Protocol</h4>
+                    <h4>Protocol</h4>
 
-          <p>
-            As you might expect the protocol of the World Wide Web is HTTP. So a
-            URL will start with:
-          </p>
-          <pre class="line-numbers"><code class="language-http noRun">
+                    <p>
+                        As you might expect the protocol of the World Wide Web is HTTP. So a URL will start with:
+                    </p>
+                    <pre class="line-numbers"><code class="language-http noRun">
 http://
                     </code></pre>
 
-          <h4>Domain Name</h4>
+                    <h4>Domain Name</h4>
 
-          <p>
-            The next part of a URL is a domain name. The domain name is made up
-            of three subparts separated by a period. The Top Level Domain, label
-            1, and label 2.
-          </p>
+                    <p>
+                        The next part of a URL is a domain name. The domain name is made up of three subparts separated by a period. The Top Level Domain, label
+                        1, and label 2.
+                    </p>
 
-          <pre class="line-numbers"><code class="language-http noRun">
+                    <pre class="line-numbers"><code class="language-http noRun">
 http://label2.label1.topleveldomain
 
 e.g.
@@ -387,34 +388,29 @@ http://www.google.com or http://google.com (the label 2 or www is optional)
 
 </code></pre>
 
-          <p>
-            Typically label 1 is a semantical cue as to the content found at the
-            domain. The Top Level Domain portion is a fixed set of characters,
-            the most common being <code>.com</code>, but nowadays more options
-            are available (e.g. .biz, .org, .us etc.).
-          </p>
+                    <p>
+                        Typically label 1 is a semantical cue as to the content found at the domain. The Top Level Domain portion is a fixed set of characters,
+                        the most common being <code>.com</code>, but nowadays more options are available (e.g. .biz, .org, .us etc.).
+                    </p>
 
-          <p>
-            Domains are purchased from a domain host and once you own a domain
-            name you can subdivide the domain using label 2. Label 2 is often
-            refereed to as a sub-domain.
-          </p>
+                    <p>
+                        Domains are purchased from a domain host and once you own a domain name you can subdivide the domain using label 2. Label 2 is often
+                        refereed to as a sub-domain.
+                    </p>
 
-          <pre class="line-numbers"><code class="language-http noRun">     
+                    <pre class="line-numbers"><code class="language-http noRun">     
 http://email.google.com (goes to gmail not google homepage)
               </code></pre>
 
-          <h4>Path (optional)</h4>
+                    <h4>Path (optional)</h4>
 
-          <p>
-            If a URL has a valid protocol and domain, then it has located a
-            specific web server. A path is used to request specific files from
-            the web server. Roughly speaking a path is how you tell a web server
-            to look in X folder and find file Y, and server that file to the web
-            browser (typically that file is a .html document).
-          </p>
+                    <p>
+                        If a URL has a valid protocol and domain, then it has located a specific web server. A path is used to request specific files from the
+                        web server. Roughly speaking a path is how you tell a web server to look in X folder and find file Y, and server that file to the web
+                        browser (typically that file is a .html document).
+                    </p>
 
-          <pre class="line-numbers"><code class="language-http noRun">
+                    <pre class="line-numbers"><code class="language-http noRun">
 http://label2.label1.topleveldomain/folder1/folder2insideof1/folder3insideof2/file.type
             
 e.g. 
@@ -426,224 +422,186 @@ or
 http://mydomain.com/about/index.html (But could just be http://mydomain.com/about/)
           </code></pre>
 
-          <p>
-            Note that paths or directories are indicated by using a single
-            <code>/</code>. A server can be setup up to server default files
-            from a directory/folder but a path can also end by requesting a
-            specific file from a folder/directory.
-          </p>
+                    <p>
+                        Note that paths or directories are indicated by using a single
+                        <code>/</code>. A server can be setup up to server default files from a directory/folder but a path can also end by requesting a
+                        specific file from a folder/directory.
+                    </p>
 
-          <p>
-            If no path is used then a default file (typically
-            <code>index.html</code>) is returned from the root directory.
-          </p>
+                    <p>
+                        If no path is used then a default file (typically
+                        <code>index.html</code>) is returned from the root directory.
+                    </p>
 
-          <h4>Parameters (optional, aka query)</h4>
+                    <h4>Parameters (optional, aka query)</h4>
 
-          <p>
-            The URL can be used to send data from the URL to the web server. At
-            any point after the path if you add <code>?</code> followed by
-            <code>name=jill&lastname=doe</code> the data <code>name</code> and
-            <code>lastname</code> and their values will be sent to the server as
-            part of the request.
-          </p>
+                    <p>
+                        The URL can be used to send data from the URL to the web server. At any point after the path if you add <code>?</code> followed by
+                        <code>name=jill&lastname=doe</code> the data <code>name</code> and <code>lastname</code> and their values will be sent to the server as
+                        part of the request.
+                    </p>
 
-          <pre class="line-numbers"><code class="language-http noRun">
+                    <pre class="line-numbers"><code class="language-http noRun">
 http://mydomain.com/about/?name=jill&lastname=doe
                         </code></pre>
 
-          <h4>Fragment Identifier (optional, aka anchors)</h4>
+                    <h4>Fragment Identifier (optional, aka anchors)</h4>
 
-          <p>
-            A fragment identifier can be used to tell the client/browser to
-            adjust the view so that something specific in the HTML document is
-            within the viewport of the browser. Some speak of fragment
-            identifiers as way of bookmarking and directly linking to a
-            particular part of a web page. To add an anchor to a URL use
-            <code>#</code> at the end of a URL followed by a name:
-          </p>
+                    <p>
+                        A fragment identifier can be used to tell the client/browser to adjust the view so that something specific in the HTML document is
+                        within the viewport of the browser. Some speak of fragment identifiers as way of bookmarking and directly linking to a particular part
+                        of a web page. To add an anchor to a URL use
+                        <code>#</code> at the end of a URL followed by a name:
+                    </p>
 
-          <pre class="line-numbers"><code class="language-http noRun">
+                    <pre class="line-numbers"><code class="language-http noRun">
 http://mydomain.com/contact/?answer=yes#section1.2
                                       </code></pre>
 
-          <p>
-            Note that for the browser to adjust the viewport to a specific part
-            of the HTML document that HTML document has to have an element with
-            an id attribute that matches the name provided in the URL (e.g.
-            <code>&lt;div id=&quot;section1.2&quot;&gt;&lt;/div&gt;</code>).
-          </p>
+                    <p>
+                        Note that for the browser to adjust the viewport to a specific part of the HTML document that HTML document has to have an element with
+                        an id attribute that matches the name provided in the URL (e.g.
+                        <code>&lt;div id=&quot;section1.2&quot;&gt;&lt;/div&gt;</code>).
+                    </p>
 
-          <div class="notes">
-            <p>
-              <strong>Notes:</strong>
-            </p>
-            <ol>
-              <li>
-                <a href="https://www.w3.org/Addressing/URL/url-spec.txt"
-                  >Original URL specification.</a
-                >
-              </li>
-              <li>
-                <a href="https://url.spec.whatwg.org/"
-                  >Newer URL specification.</a
-                >.
-              </li>
-              <li>
-                When you see in the URL with <code>https://</code> instead of
-                <code>http://</code> this indicates that the all communication
-                from the client to the server is using an encrypted http
-                protocol.
-              </li>
-            </ol>
-          </div>
+                    <div class="notes">
+                        <p>
+                            <strong>Notes:</strong>
+                        </p>
+                        <ol>
+                            <li>
+                                <a href="https://www.w3.org/Addressing/URL/url-spec.txt">Original URL specification.</a>
+                            </li>
+                            <li><a href="https://url.spec.whatwg.org/">Newer URL specification.</a>.</li>
+                            <li>
+                                When you see in the URL with <code>https://</code> instead of <code>http://</code> this indicates that the all communication
+                                from the client to the server is using an encrypted http protocol.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="chapter5" class="chapter">
+                    <h2>
+                        Web Hosting
+                    </h2>
+
+                    <blockquote>
+                        <p>
+                            A web hosting service is a type of Internet hosting service that allows individuals and organizations to make their website
+                            accessible via the World Wide Web. Web hosts are companies that provide space on a server owned or leased for use by clients, as
+                            well as providing Internet connectivity, typically in a data center.
+                        </p>
+                        <p>
+                            <cite>— <a href="https://en.wikipedia.org/wiki/Web_hosting_service" target="_blank">Wikipedia</a></cite>
+                        </p>
+                    </blockquote>
+
+                    <p>
+                        While it's possible to make a home computer connected to the internet a web server and available on the internet, most people use a web
+                        hosting service to serve web pages. Web hosts set up a web server for you (e.g. <a href="https://www.apache.org/">apache</a> or
+                        <a href="https://nodejs.org/en/">Node.js</a>) to use and the tools needed to connect a domain name to the web server. A popular web
+                        hosting service would be <a href="https://www.bluehost.com">bluehost</a> (Not uncommon for a web hosting service to offer domain hosting
+                        service as well)
+                    </p>
+
+                    <p>
+                        A web hosting service is not strictly required to serve web pages. One can
+                        <a href="https://github.com/indexzero/http-server#readme">
+                            One can run web server software on their local computer using a local IP address One can
+                        </a>
+                        (typically 127.0.0.1) and connect to the server locally using the URL http://localhost:8080 or http://127.0.0.1:8080. Front-end
+                        developers typically develop web pages locally using local web server to facilitate the client-server relationship without having to pay
+                        for web hosting or a domain name.
+                    </p>
+                </div>
+
+                <div id="chapter6" class="chapter">
+                    <h2>
+                        Domain Registrars
+                    </h2>
+
+                    <p>
+                        Services are available, called Domain Registers that are simply used to purchase and host domain names. If you want to buy a domain
+                        called,
+                        <a
+                            href="https://www.godaddy.com/domainsearch/find?isc=gofdh073&checkAvail=1&tmskey=1dom_03_godaddynb&domainToCheck=pinkandyellowflyingelephants.com"
+                            >pinkandyellowflyingelephants.com</a
+                        >
+                        you will search for its availability and if available purchase it using a domain host. The domain host, after domain purchases, then
+                        provides the settings to send requests to the domain to a specific web server (i.e. send requests to pinkandyellowflyingelephants.com to
+                        X device connected to the internet). A popular domain host would be
+                        <a href="https://www.godaddy.com">GoDaddy</a> (It is not uncommon for a domain host to offer web hosting services as well).
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <div id="chapter5" class="chapter">
-          <h2>
-            Web Hosting
-          </h2>
+        <script src="../js/slideout.min.js"></script>
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
 
-          <blockquote>
-            <p>
-              A web hosting service is a type of Internet hosting service that
-              allows individuals and organizations to make their website
-              accessible via the World Wide Web. Web hosts are companies that
-              provide space on a server owned or leased for use by clients, as
-              well as providing Internet connectivity, typically in a data
-              center.
-            </p>
-            <p>
-              <cite
-                >—
-                <a
-                  href="https://en.wikipedia.org/wiki/Web_hosting_service"
-                  target="_blank"
-                  >Wikipedia</a
-                ></cite
-              >
-            </p>
-          </blockquote>
+        <script>
+            // Create slide out TOC
+            var slideout = new Slideout({
+                panel: document.getElementById('panel'),
+                menu: document.getElementById('menu'),
+                padding: 356,
+                tolerance: 70,
+            });
 
-          <p>
-            While it's possible to make a home computer connected to the
-            internet a web server and available on the internet, most people use
-            a web hosting service to serve web pages. Web hosts set up a web
-            server for you (e.g. <a href="https://www.apache.org/">apache</a> or
-            <a href="https://nodejs.org/en/">Node.js</a>) to use and the tools
-            needed to connect a domain name to the web server. A popular web
-            hosting service would be
-            <a href="https://www.bluehost.com">bluehost</a> (Not uncommon for a
-            web hosting service to offer domain hosting service as well)
-          </p>
+            // Create TOC dynamically from content
+            jQuery('.chapter').each(function(index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1);
+                    $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
+                });
 
-          <p>
-            A web hosting service is not strictly required to serve web pages.
-            One can run web server software on their local computer using a
-            local IP address (typically 127.0.0.1) and connect to the server
-            locally using the URL http://localhost:3000 or
-            http://127.0.0.1:3000. Front-end developers typically develop web
-            pages locally using local web server to facilitate the client-server
-            relationship without having to pay for web hosting or a domain name.
-          </p>
-        </div>
+                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1 + '.' + (i + 1));
+                    $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
+                });
+            });
 
-        <div id="chapter6" class="chapter">
-          <h2>
-            Domain Registrars
-          </h2>
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+                window.open($(this).attr('href'));
+                return false;
+            });
 
-          <p>
-            Services are available, called Domain Registers that are simply used
-            to purchase and host domain names. A popular domain host would be
-            <a href="https://www.godaddy.com">GoDaddy</a> (It is not uncommon
-            for a domain host to offer web hosting services as well).
-          </p>
-        </div>
-      </div>
-    </div>
+            // toggle TOC from hamburger icon
+            document.querySelector('#menuButton').addEventListener('click', function() {
+                slideout.toggle();
+            });
 
-    <script src="../js/slideout.min.js"></script>
-    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+            // toggle TOC on window resize
+            window.addEventListener('resize', resizeThrottler, false);
+            var resizeTimeout;
+            function resizeThrottler() {
+                // ignore resize events as long as an actualResizeHandler execution is in the queue
+                if (!resizeTimeout) {
+                    resizeTimeout = setTimeout(function() {
+                        resizeTimeout = null;
+                        actualResizeHandler();
 
-    <script>
-      // Create slide out TOC
-      var slideout = new Slideout({
-        panel: document.getElementById("panel"),
-        menu: document.getElementById("menu"),
-        padding: 356,
-        tolerance: 70
-      });
+                        // The actualResizeHandler will execute at a rate of 15fps
+                    }, 66);
+                }
+            }
+            function actualResizeHandler() {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            }
 
-      // Create TOC dynamically from content
-      jQuery(".chapter").each(function(index) {
-        jQuery("h2", "#chapter" + (index + 1)).each(function(i) {
-          $(this).attr("id", index + 1);
-          $("#toc").append(
-            '<h5><a href="#' + (index + 1) + '">' + $(this).html() + "</a></h5>"
-          );
-        });
-
-        jQuery("h3", "#chapter" + (index + 1)).each(function(i) {
-          $(this).attr("id", index + 1 + "." + (i + 1));
-          $("#toc").append(
-            '<h6><a href="#' +
-              (index + 1) +
-              "." +
-              (i + 1) +
-              '">' +
-              $(this).html() +
-              "</a></h6>"
-          );
-        });
-      });
-
-      jQuery("#panel").on(
-        "click",
-        "a:not(.codesandboxlink a, .toolbar a)",
-        function() {
-          window.open($(this).attr("href"));
-          return false;
-        }
-      );
-
-      // toggle TOC from hamburger icon
-      document
-        .querySelector("#menuButton")
-        .addEventListener("click", function() {
-          slideout.toggle();
-        });
-
-      // toggle TOC on window resize
-      window.addEventListener("resize", resizeThrottler, false);
-      var resizeTimeout;
-      function resizeThrottler() {
-        // ignore resize events as long as an actualResizeHandler execution is in the queue
-        if (!resizeTimeout) {
-          resizeTimeout = setTimeout(function() {
-            resizeTimeout = null;
-            actualResizeHandler();
-
-            // The actualResizeHandler will execute at a rate of 15fps
-          }, 66);
-        }
-      }
-      function actualResizeHandler() {
-        if (window.innerWidth > 1036) {
-          slideout.open();
-        } else {
-          slideout.close();
-        }
-      }
-
-      // open TOC on load if window is wide enough
-      window.addEventListener("load", function(event) {
-        if (window.innerWidth > 1036) {
-          slideout.open();
-        } else {
-          slideout.close();
-        }
-      });
-    </script>
-  </body>
+            // open TOC on load if window is wide enough
+            window.addEventListener('load', function(event) {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            });
+        </script>
+    </body>
 </html>

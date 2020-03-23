@@ -1,167 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/prism.css" />
-    <script src="../js/prism.js"></script>
-    <title>HTTP</title>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/prism.css" />
+        <script src="../js/prism.js"></script>
+        <title>HTTP & Web Sockets</title>
+    </head>
 
-  <body>
-    <div id="menu">
-      <a id="backToRoadMapLink" href="/">← Front-end Developer Roadmap</a>
-      <div id="toc"></div>
-    </div>
+    <body>
+        <div id="menu">
+            <a id="backToRoadMapLink" href="/">← Front-end Developer Roadmap</a>
+            <div id="toc"></div>
+        </div>
 
-    <div id="panel">
-      <div id="menuButton">|||</div>
+        <div id="panel">
+            <div id="menuButton">|||</div>
 
-      <div id="bookPadding">
-        <h1>HTTP</h1>
+            <div id="bookPadding">
+                <h1>HTTP & Web Sockets</h1>
 
-        <h4 style="margin-top:0px">
-          Written by
-          <a href="http://codylindley.com/">Cody Lindley</a>
-          <span id="lastMod" style="display:none"
-            >updated <span id="lastModDate"></span
-          ></span>
-        </h4>
+                <h4 style="margin-top:0px">
+                    Written by
+                    <a href="http://codylindley.com/">Cody Lindley</a>
+                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                </h4>
+
+                <script>
+                    if (document.lastModified) {
+                        document.getElementById('lastMod').style.display = 'inline';
+                        document.getElementById('lastModDate').innerText = document.lastModified.split(' ')[0];
+                    }
+                </script>
+
+                <section>
+                    <p>
+                        <em
+                            ><a href="/">Guide books and roadmap</a> from <a href="https://frontendmasters.com/">Frontend Masters</a>.
+                            <br />
+                            Advancing your skills with in-depth, modern front-end engineering courses.</em
+                        >
+                    </p>
+                </section>
+
+                <hr />
+
+                <p><strong>Overview:</strong></p>
+
+                <p>
+                    HTTP and Web Sockets specifications, learning resources, and tools.
+                </p>
+
+                <hr />
+
+                <p><strong>Definitions:</strong></p>
+
+                <dl>
+                    <dt>
+                        HTTP
+                    </dt>
+                    <dd>
+                        Hypertext Transfer Protocol is an application-layer protocol for transmitting hypermedia documents, such as HTML. It was designed for
+                        communication between web browsers and web servers
+                    </dd>
+                    <dt>
+                        CORS
+                    </dt>
+                    <dd>
+                        Cross-site HTTP requests are HTTP requests for resources from a different domain than the domain of the resource making the request.
+                    </dd>
+                    <dt>
+                        Web Sockets
+                    </dt>
+                    <dd>
+                        A protocol that allows for a persistent TCP connection between server and client so they can exchange data at any time.
+                    </dd>
+                </dl>
+
+                <hr />
+                <p><strong>Contribute content, suggestions, and fixes on github</strong>:</p>
+
+                <p>
+                    <a href="https://github.com/FrontendMasters/guides">https://github.com/FrontendMasters/guides</a>
+                </p>
+
+                <hr />
+
+                <div id="chapter1" class="chapter">
+                    <h2>HTTP</h2>
+
+                    <h3>Specifications</h3>
+                    <ul>
+                        <li>
+                            <a href="https://http2.github.io/" target="_blank">HTTP/2</a>
+                        </li>
+                        <li>
+                            <a href="https://httpwg.org/specs/rfc7230.html" target="_blank">Hypertext Transfer Protocol -- HTTP/1.1</a>
+                        </li>
+                    </ul>
+
+                    <h3>Docs</h3>
+
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP" target="_blank">MDN HTTP</a> [read]</li>
+                    </ul>
+
+                    <h3>HTTP Books/Videos/Articles/Tutorials</h3>
+
+                    <ul>
+                        <li>
+                            <a href="https://hpbn.co" target="_blank">High Performance Browser Networking:</a>
+                            [read]
+                        </li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview" target="_blank">MDN: An overview of HTTP</a> [read]</li>
+                        <li>
+                            <a
+                                href="https://www.amazon.com/HTTP-Definitive-Guide-Guides/dp/1565925092/ref=cm_cr_arp_d_product_top?&amp;_encoding=UTF8&amp;tag=frontend-handbook-20&amp;linkCode=ur2&amp;linkId=11b990b79d33ddbef63712765715a9c1&amp;camp=1789&amp;creative=9325"
+                                target="_blank"
+                                >HTTP: The Definitive Guide (Definitive Guides)</a
+                            >
+                            [read][$]
+                        </li>
+                        <li>
+                            <a href="https://http2.github.io/faq/#what-are-the-key-differences-to-http1x" target="_blank">HTTP/2 Frequently Asked Questions</a>
+                            [read]
+                        </li>
+                        <li><a href="http://www.pluralsight.com/courses/xhttp-fund" target="_blank">HTTP Fundamentals</a> [watch][$]</li>
+                        <li>
+                            <a href="https://app.pluralsight.com/library/courses/http2-fundamentals/table-of-contents" target="_blank">HTTP/2 Fundamentals</a>
+                            [watch][$]
+                        </li>
+                        <li>
+                            <a href="http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177" target="_blank"
+                                >HTTP: The Protocol Every Web Developer Must Know - Part 1</a
+                            >
+                            [read]
+                        </li>
+                        <li>
+                            <a href="http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-2--net-31155" target="_blank"
+                                >HTTP: The Protocol Every Web Developer Must Know - Part 2</a
+                            >
+                            [read]
+                        </li>
+                        <li><a href="http://code.tutsplus.com/series/http-succinctly--net-33683" target="_blank">HTTP Succinctly</a> [read]</li>
+                    </ul>
+
+                    <h3>HTTP Status Codes</h3>
+
+                    <ul>
+                        <li>
+                            <a href="https://httpstatuses.com/" target="_blank">HTTP Status Codes</a>
+                        </li>
+                        <li>
+                            <a href="http://webdesign.tutsplus.com/tutorials/http-status-codes-in-60-seconds--cms-24317" target="_blank"
+                                >HTTP Status Codes in 60 Seconds</a
+                            >
+                            [watch]
+                        </li>
+                    </ul>
+
+                    <h3>CORS Specification</h3>
+
+                    <ul>
+                        <li>
+                            <a href="https://www.w3.org/TR/cors/" target="_blank">Cross-Origin Resource Sharing</a>
+                        </li>
+                    </ul>
+
+                    <h3>CORS Books/Articles</h3>
+
+                    <ul>
+                        <li>
+                            <a
+                                href="https://www.amazon.com/CORS-Action-Creating-consuming-cross-origin/dp/161729182X/?&amp;_encoding=UTF8&amp;tag=frontend-handbook-20&amp;linkCode=ur2&amp;linkId=47ebd885d688a4ed69f77a1bd8273f8a&amp;camp=1789&amp;creative=9325"
+                                target="_blank"
+                                >CORS in Action</a
+                            >
+                            [read][$]
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS" target="_blank">HTTP Access Control (CORS)</a>
+                            [read]
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter2" class="chapter">
+                    <h2>HTTP/Network Tools</h2>
+                    <ul>
+                        <li><a href="http://www.charlesproxy.com/" target="_blank">Charles</a> [$]</li>
+                        <li>
+                            <a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading" target="_blank"
+                                >Chrome DevTools Network Panel</a
+                            >
+                        </li>
+                        <li><a href="https://insomnia.rest/" target="_blank">Insomnia</a> [free - $]</li>
+                        <li><a href="https://mitmproxy.org/" target="_blank">Mitmproxy</a> [free]</li>
+                        <li><a href="https://paw.cloud/" target="_blank">Paw</a> [$]</li>
+                        <li><a href="https://www.getpostman.com/" target="_blank">Postman</a> [free - $]</li>
+                        <li><a href="https://postwoman.io/" target="_blank">Postwoman.io</a> [free]</li>
+                    </ul>
+                </div>
+
+                <div id="chapter3" class="chapter">
+                    <h2>Web Sockets</h2>
+
+                    <h3>Specifications</h3>
+                    <ul>
+                        <li><a href="https://tools.ietf.org/html/rfc6455" target="_blank">The WebSocket Protocol</a> [read]</li>
+                    </ul>
+
+                    <h3>Books/Articles</h3>
+
+                    <ul>
+                        <li>
+                            <a href="https://code.tutsplus.com/courses/connect-the-web-with-websockets" target="_blank">Connect the Web With WebSockets</a>
+                            [watch]
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.amazon.com/WebSocket-Client-Server-Communications-Andrew-Lombardi/dp/1449369278/?&amp;_encoding=UTF8&amp;tag=frontend-handbook-20&amp;linkCode=ur2&amp;linkId=dd39395cf3d2ab4fc7c820d7c19db39a&amp;camp=1789&amp;creative=9325"
+                                target="_blank"
+                                >WebSocket: Lightweight Client-Server Communications</a
+                            >
+                            [read][$]
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/slideout.min.js"></script>
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
 
         <script>
-          if (document.lastModified) {
-            document.getElementById("lastMod").style.display = "inline";
-            document.getElementById(
-              "lastModDate"
-            ).innerText = document.lastModified.split(" ")[0];
-          }
+            // Create slide out TOC
+            var slideout = new Slideout({
+                panel: document.getElementById('panel'),
+                menu: document.getElementById('menu'),
+                padding: 356,
+                tolerance: 70,
+            });
+
+            // Create TOC dynamically from content
+            jQuery('.chapter').each(function(index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1);
+                    $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
+                });
+
+                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1 + '.' + (i + 1));
+                    $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
+                });
+            });
+
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+                window.open($(this).attr('href'));
+                return false;
+            });
+
+            // toggle TOC from hamburger icon
+            document.querySelector('#menuButton').addEventListener('click', function() {
+                slideout.toggle();
+            });
+
+            // toggle TOC on window resize
+            window.addEventListener('resize', resizeThrottler, false);
+            var resizeTimeout;
+            function resizeThrottler() {
+                // ignore resize events as long as an actualResizeHandler execution is in the queue
+                if (!resizeTimeout) {
+                    resizeTimeout = setTimeout(function() {
+                        resizeTimeout = null;
+                        actualResizeHandler();
+
+                        // The actualResizeHandler will execute at a rate of 15fps
+                    }, 66);
+                }
+            }
+            function actualResizeHandler() {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            }
+
+            // open TOC on load if window is wide enough
+            window.addEventListener('load', function(event) {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            });
         </script>
-
-        <section>
-          <p>
-            <em
-              ><a href="/">Guide books and roadmap</a> from
-              <a href="https://frontendmasters.com/">Frontend Masters</a>.
-              <br />
-              Advancing your skills with in-depth, modern front-end engineering
-              courses.</em
-            >
-          </p>
-        </section>
-
-        <hr />
-
-        <h3>Overview:</h3>
-
-        <p>
-          What you need to know about HTTP.
-        </p>
-        <hr />
-        <p>
-          <strong>Contribute content, suggestions, and fixes on github</strong>:
-        </p>
-
-        <p>
-          <a href="https://github.com/FrontendMasters/guides"
-            >https://github.com/FrontendMasters/guides</a
-          >
-        </p>
-
-        <hr />
-
-        <div id="chapter1" class="chapter">
-          <h2>Title</h2>
-        </div>
-      </div>
-    </div>
-
-    <script src="../js/slideout.min.js"></script>
-    <script src="../js/jquery-3.3.1.slim.min.js"></script>
-
-    <script>
-      // Create slide out TOC
-      var slideout = new Slideout({
-        panel: document.getElementById("panel"),
-        menu: document.getElementById("menu"),
-        padding: 356,
-        tolerance: 70
-      });
-
-      // Create TOC dynamically from content
-      jQuery(".chapter").each(function(index) {
-        jQuery("h2", "#chapter" + (index + 1)).each(function(i) {
-          $(this).attr("id", index + 1);
-          $("#toc").append(
-            '<h5><a href="#' + (index + 1) + '">' + $(this).html() + "</a></h5>"
-          );
-        });
-
-        jQuery("h3", "#chapter" + (index + 1)).each(function(i) {
-          $(this).attr("id", index + 1 + "." + (i + 1));
-          $("#toc").append(
-            '<h6><a href="#' +
-              (index + 1) +
-              "." +
-              (i + 1) +
-              '">' +
-              $(this).html() +
-              "</a></h6>"
-          );
-        });
-      });
-
-      jQuery("#panel").on(
-        "click",
-        "a:not(.codesandboxlink a, .toolbar a)",
-        function() {
-          window.open($(this).attr("href"));
-          return false;
-        }
-      );
-
-      // toggle TOC from hamburger icon
-      document
-        .querySelector("#menuButton")
-        .addEventListener("click", function() {
-          slideout.toggle();
-        });
-
-      // toggle TOC on window resize
-      window.addEventListener("resize", resizeThrottler, false);
-      var resizeTimeout;
-      function resizeThrottler() {
-        // ignore resize events as long as an actualResizeHandler execution is in the queue
-        if (!resizeTimeout) {
-          resizeTimeout = setTimeout(function() {
-            resizeTimeout = null;
-            actualResizeHandler();
-
-            // The actualResizeHandler will execute at a rate of 15fps
-          }, 66);
-        }
-      }
-      function actualResizeHandler() {
-        if (window.innerWidth > 1036) {
-          slideout.open();
-        } else {
-          slideout.close();
-        }
-      }
-
-      // open TOC on load if window is wide enough
-      window.addEventListener("load", function(event) {
-        if (window.innerWidth > 1036) {
-          slideout.open();
-        } else {
-          slideout.close();
-        }
-      });
-    </script>
-  </body>
+    </body>
 </html>

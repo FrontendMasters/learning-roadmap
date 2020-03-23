@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/prism.css" />
+        <script src="../js/prism.js"></script>
+        <title>Code Editors</title>
+    </head>
+
+    <body>
+        <div id="menu">
+            <a id="backToRoadMapLink" href="/">← Front-end Developer Roadmap</a>
+            <div id="toc"></div>
+        </div>
+
+        <div id="panel">
+            <div id="menuButton">|||</div>
+
+            <div id="bookPadding">
+                <h1>Code Editors</h1>
+
+                <h4 style="margin-top:0px">
+                    Written by
+                    <a href="http://codylindley.com/">Cody Lindley</a>
+                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                </h4>
+
+                <script>
+                    if (document.lastModified) {
+                        document.getElementById('lastMod').style.display = 'inline';
+                        document.getElementById('lastModDate').innerText = document.lastModified.split(' ')[0];
+                    }
+                </script>
+
+                <section>
+                    <p>
+                        <em
+                            ><a href="/">Guide books and roadmap</a> from <a href="https://frontendmasters.com/">Frontend Masters</a>.
+                            <br />
+                            Advancing your skills with in-depth, modern front-end engineering courses.</em
+                        >
+                    </p>
+                </section>
+
+                <hr />
+
+                <p><strong>Overview:</strong></p>
+
+                <p>
+                    learning resources and tools.
+                </p>
+
+                <hr />
+
+                <p><strong>Definitions:</strong></p>
+
+                <dl>
+                    <dt>
+                        Code Editor
+                    </dt>
+                    <dd>
+                        A source code editor is a text editor program designed specifically for editing source code of computer programs by programmers. It may
+                        be a standalone application or it may be built into an integrated development environment (IDE) or web browser. Source code editors are
+                        the most fundamental programming tool, as the fundamental job of programmers is to write and edit source code.
+                    </dd>
+                </dl>
+
+                <hr />
+                <p><strong>Contribute content, suggestions, and fixes on github</strong>:</p>
+
+                <p>
+                    <a href="https://github.com/FrontendMasters/guides">https://github.com/FrontendMasters/guides</a>
+                </p>
+
+                <hr />
+
+                <div id="chapter1" class="chapter">
+                    <h2>Overview</h2>
+
+                    <p>
+                        Front-end code can minimally be edited with a simple text editing application like Notepad or TextEdit. But, most front-end
+                        practitioners use a code editor specifically design for editing a programming language.
+                    </p>
+                    <p>
+                        Code editors come in all sorts of flavors, so to speak. Selecting one is a rather subjective engagement. Choose one, learn it inside and
+                        out, then get on to learning HTML, CSS, DOM, and JavaScript.
+                    </p>
+                    <p>However, I do strongly believe, minimally, a code editor should have the following qualities (by default or by way of plugins):</p>
+                    <ol>
+                        <li>Good documentation on how to use the editor</li>
+                        <li>Report (i.e., hinting/linting/errors) on the code quality of HTML, CSS, and JavaScript.</li>
+                        <li>Offer syntax highlighting for HTML, CSS, and JavaScript.</li>
+                        <li>Offer code completion for HTML, CSS, and JavaScript.</li>
+                        <li>Be customizable by way of a plug-in architecture</li>
+                        <li>Have available a large repository of third-party/community plug-ins that can be used to customize the editor to your liking</li>
+                        <li>Be small, simple, and not coupled to the code (i.e., not required to edit the code)</li>
+                    </ol>
+
+                    <p>
+                        I recommending using <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> because of the quality of the tool
+                        and the continuous improvements made to the editor by Microsoft. Additionally, today it is the most widely used editor among front-end
+                        developers.
+                    </p>
+                    <p class="image">
+                        <a href="https://2019.stateofjs.com/other-tools/text_editors" target="_blank"><img src="images/vscode.png"/></a>
+                    </p>
+                    <p>
+                        <cite
+                            >Image source:
+                            <a href="https://2019.stateofjs.com/other-tools/text_editors" target="_blank"
+                                >https://2019.stateofjs.com/other-tools/text_editors</a
+                            ></cite
+                        >
+                    </p>
+                </div>
+
+                <div id="chapter2" class="chapter">
+                    <h2>Learning Resources</h2>
+                    <ul>
+                        <li><a href="https://frontendmasters.com/courses/customize-vs-code/">Visual Studio Code Can Do That? [video][$]</a></li>
+                        <li><a href="https://code.visualstudio.com/docs/introvideos/basics">Getting started with Visual Studio Code</a></li>
+                    </ul>
+                </div>
+
+                <div id="chapter3" class="chapter">
+                    <h2>Code Editors</h2>
+                    <ul>
+                        <li><a href="https://atom.io/" target="_blank">Atom</a></li>
+                        <li><a href="https://www.jetbrains.com/webstorm/whatsnew/" target="_blank">WebStorm</a> [$]</li>
+                        <li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
+                    </ul>
+                </div>
+
+                <div id="chapter4" class="chapter">
+                    <h2>Shareable & Runnable Online Code Editors</h2>
+                    <ul>
+                        <li><a href="https://paiza.cloud" target="_blank">PaizaCloud</a> [free to $]</li>
+                        <li><a href="https://aws.amazon.com/cloud9/" target="_blank">AWS Cloud9</a> [$]</li>
+                        <li><a href="https://codeanywhere.com" target="_blank">Codeanywhere</a> [free to $]</li>
+                        <li><a href="https://stackblitz.com/" target="_blank">StackBliz</a></li>
+                        <li><a href="https://codesandbox.io/" target="_blank">codeSandbox</a></li>
+                    </ul>
+                </div>
+
+                <div id="chapter5" class="chapter">
+                    <h2>Simple Shareable & Runnable Online Code Snippets</h2>
+
+                    <ul>
+                        <li><a href="http://codepen.io/" target="_blank">CodePen</a> [free to $]</li>
+                        <li><a href="http://jsbin.com/" target="_blank">jsbin.com</a> [free to $]</li>
+                        <li><a href="http://jsfiddle.net/" target="_blank">jsfiddle.net</a></li>
+                        <li><a href="https://glitch.com/" target="_blank">glitch</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/slideout.min.js"></script>
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
+
+        <script>
+            // Create slide out TOC
+            var slideout = new Slideout({
+                panel: document.getElementById('panel'),
+                menu: document.getElementById('menu'),
+                padding: 356,
+                tolerance: 70,
+            });
+
+            // Create TOC dynamically from content
+            jQuery('.chapter').each(function(index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1);
+                    $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
+                });
+
+                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1 + '.' + (i + 1));
+                    $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
+                });
+            });
+
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+                window.open($(this).attr('href'));
+                return false;
+            });
+
+            // toggle TOC from hamburger icon
+            document.querySelector('#menuButton').addEventListener('click', function() {
+                slideout.toggle();
+            });
+
+            // toggle TOC on window resize
+            window.addEventListener('resize', resizeThrottler, false);
+            var resizeTimeout;
+            function resizeThrottler() {
+                // ignore resize events as long as an actualResizeHandler execution is in the queue
+                if (!resizeTimeout) {
+                    resizeTimeout = setTimeout(function() {
+                        resizeTimeout = null;
+                        actualResizeHandler();
+
+                        // The actualResizeHandler will execute at a rate of 15fps
+                    }, 66);
+                }
+            }
+            function actualResizeHandler() {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            }
+
+            // open TOC on load if window is wide enough
+            window.addEventListener('load', function(event) {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            });
+        </script>
+    </body>
+</html>

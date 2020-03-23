@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/prism.css" />
+        <script src="../js/prism.js"></script>
+        <title>CSS Fundamentals</title>
+    </head>
+
+    <body>
+        <div id="menu">
+            <a id="backToRoadMapLink" href="/">← Front-end Developer Roadmap</a>
+            <div id="toc"></div>
+        </div>
+
+        <div id="panel">
+            <div id="menuButton">|||</div>
+
+            <div id="bookPadding">
+                <h1>CSS Fundamentals</h1>
+
+                <h4 style="margin-top:0px">
+                    Written by
+                    <a href="http://codylindley.com/">Cody Lindley</a>
+                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                </h4>
+
+                <script>
+                    if (document.lastModified) {
+                        document.getElementById('lastMod').style.display = 'inline';
+                        document.getElementById('lastModDate').innerText = document.lastModified.split(' ')[0];
+                    }
+                </script>
+
+                <section>
+                    <p>
+                        <em
+                            ><a href="/">Guide books and roadmap</a> from <a href="https://frontendmasters.com/">Frontend Masters</a>.
+                            <br />
+                            Advancing your skills with in-depth, modern front-end engineering courses.</em
+                        >
+                    </p>
+                </section>
+
+                <hr />
+
+                <p><strong>Overview:</strong></p>
+
+                <p>
+                    learning resources and tools.
+                </p>
+
+                <hr />
+
+                <p><strong>Definitions:</strong></p>
+
+                <dl>
+                    <dt>
+                        CSS
+                    </dt>
+                    <dd>
+                        Cascading Style Sheets (CSS) is a style sheet language used for describing the look and formatting of a document written in a markup
+                        language. Although most often used to change the style of web pages and user interfaces written in HTML and XHTML, the language can be
+                        applied to any kind of XML document, including plain XML, SVG and XUL. Along with HTML and JavaScript, CSS is a cornerstone technology
+                        used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile
+                        applications.
+                    </dd>
+                </dl>
+
+                <hr />
+                <p><strong>Contribute content, suggestions, and fixes on github</strong>:</p>
+
+                <p>
+                    <a href="https://github.com/FrontendMasters/guides">https://github.com/FrontendMasters/guides</a>
+                </p>
+
+                <hr />
+
+                <div id="chapter1" class="chapter">
+                    <h2>Learning Resources</h2>
+
+                    <ul>
+                        <li><a href="https://learn.shayhowe.com/html-css/getting-to-know-css/" target="_blank">Getting to Know CSS</a> [read]</li>
+                        <li><a href="https://marksheet.io/css-basics.html" target="_blank">Painting with code</a> [read]</li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank">MDN: CSS</a> [read]</li>
+                        <li>
+                            <a href="https://webdesign.tutsplus.com/courses/understanding-the-css-box-model" target="_blank">Understanding the CSS Box Model</a>
+                            [watch][$]
+                        </li>
+                        <li><a href="http://flukeout.github.io/" target="_blank">CSS Diner</a> [interact]</li>
+                        <li><a href="http://css4-selectors.com/selectors/" target="_blank">CSS Selectors from CSS4 till CSS1</a> [read]</li>
+                        <li>
+                            <a
+                                href="https://www.amazon.com/CSS-Secrets-Solutions-Everyday-Problems/dp/1449372635/?&amp;_encoding=UTF8&amp;tag=frontend-handbook-20&amp;linkCode=ur2&amp;linkId=40a9480c18839b4b2ea798aa2afafd0e&amp;camp=1789&amp;creative=9325"
+                                target="_blank"
+                                >CSS Secrets: Better Solutions to Everyday Web Design Problems</a
+                            >
+                            [read][$]
+                        </li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3" target="_blank">CSS3</a> [read]</li>
+                        <li><a href="https://frontendmasters.com/courses/css-in-depth-v2/" target="_blank">CSS In-Depth, v2</a> [watch][$]</li>
+                    </ul>
+                </div>
+
+                <div id="chapter2" class="chapter">
+                    <h2>Standards/Specifications:</h2>
+
+                    <ul>
+                        <li>
+                            <a href="http://www.w3.org/Style/CSS/current-work#roadmap" target="_blank">All W3C CSS Specifications</a>
+                        </li>
+                        <li>
+                            <a href="https://drafts.csswg.org/css2/" target="_blank">Cascading Style Sheets Level 2 Revision 2 (CSS 2.2) Specification</a>
+                        </li>
+                        <li>
+                            <a href="https://drafts.csswg.org/indexes/" target="_blank">CSS Indexes - A listing of every term defined by CSS specs</a>
+                        </li>
+                        <li>
+                            <a href="http://www.w3.org/TR/css3-selectors/" target="_blank">Selectors Level 3</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter3" class="chapter">
+                    <h2>References/Docs</h2>
+                    <ul>
+                        <li>
+                            <a href="http://csstriggers.com/" target="_blank">CSS Triggers...a Game of Layout, Paint, and Composite</a>
+                        </li>
+                        <li>
+                            <a href="https://chromium.googlesource.com/chromium/blink/+/master/Source/core/css/html.css" target="_blank"
+                                >Default CSS for Chrome Browser</a
+                            >
+                        </li>
+                        <li>
+                            <a href="http://csscursor.info/" target="_blank">CSS Cursors</a>
+                        </li>
+                        <li>
+                            <a href="http://css3clickchart.com/" target="_blank">css3clickchart.com</a>
+                        </li>
+                        <li>
+                            <a href="http://cssreference.io/" target="_blank">cssreference.io</a>
+                        </li>
+                        <li>
+                            <a href="https://drafts.csswg.org/indexes/" target="_blank">CSS Indexes - A listing of every term defined by CSS specs</a>
+                        </li>
+                        <li>
+                            <a href="http://css4-selectors.com/" target="_blank">css4-selectors.com</a>
+                        </li>
+                        <li>
+                            <a href="https://css-tricks.com/almanac/" target="_blank">CSS Tricks Almanac</a>
+                        </li>
+                        <li>
+                            <a href="http://cssvalues.com/" target="_blank">cssvalues.com</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">MDN CSS Reference</a>
+                        </li>
+                        <li>
+                            <a href="https://adam-marsden.co.uk/css-cheat-sheet/" target="_blank">CSS Cheat Sheet</a>
+                        </li>
+                        <li>
+                            <a href="https://cssdb.org/" target="_blank">What’s next for CSS?</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter4" class="chapter">
+                    <h2>Tools</h2>
+
+                    <ul>
+                        <li>
+                            <a href="https://atomiks.github.io/30-seconds-of-css/" target="_blank"
+                                >30 Seconds of CSS - A curated collection of useful CSS snippets you can understand in 30 seconds or less.</a
+                            >
+                            [read]
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter5" class="chapter">
+                    <h2>Glossary/Vocabulary</h2>
+                    <ul>
+                        <li>
+                            <a href="https://www.codecademy.com/articles/glossary-css" target="_blank"
+                                >CSS Glossary - Programming Reference for CSS Covering Comments, Properties, and Selectors</a
+                            >
+                        </li>
+                        <li>
+                            <a href="http://apps.workflower.fi/vocabs/css/en" target="_blank">CSS Vocabulary</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/slideout.min.js"></script>
+        <script src="../js/jquery-3.3.1.slim.min.js"></script>
+
+        <script>
+            // Create slide out TOC
+            var slideout = new Slideout({
+                panel: document.getElementById('panel'),
+                menu: document.getElementById('menu'),
+                padding: 356,
+                tolerance: 70,
+            });
+
+            // Create TOC dynamically from content
+            jQuery('.chapter').each(function(index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1);
+                    $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
+                });
+
+                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                    $(this).attr('id', index + 1 + '.' + (i + 1));
+                    $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
+                });
+            });
+
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+                window.open($(this).attr('href'));
+                return false;
+            });
+
+            // toggle TOC from hamburger icon
+            document.querySelector('#menuButton').addEventListener('click', function() {
+                slideout.toggle();
+            });
+
+            // toggle TOC on window resize
+            window.addEventListener('resize', resizeThrottler, false);
+            var resizeTimeout;
+            function resizeThrottler() {
+                // ignore resize events as long as an actualResizeHandler execution is in the queue
+                if (!resizeTimeout) {
+                    resizeTimeout = setTimeout(function() {
+                        resizeTimeout = null;
+                        actualResizeHandler();
+
+                        // The actualResizeHandler will execute at a rate of 15fps
+                    }, 66);
+                }
+            }
+            function actualResizeHandler() {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            }
+
+            // open TOC on load if window is wide enough
+            window.addEventListener('load', function(event) {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -148,7 +148,7 @@ hr {
     bottom: 0;
     width: 356px;
     min-height: 100vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     z-index: 0;
     display: none;
@@ -177,7 +177,7 @@ hr {
     margin-right: auto;
     max-width: 1024px;
     padding: 0 60px 0 60px;
-    margin-bottom: 200px
+    margin-bottom: 200px;
 }
 
 .slideout-open .slideout-panel {
@@ -273,7 +273,7 @@ blockquote {
 
 blockquote::before {
     font-family: Arial;
-    content: "\201C";
+    content: '\201C';
     color: #78c0a8;
     font-size: 4em;
     position: absolute;
@@ -282,7 +282,7 @@ blockquote::before {
 }
 
 blockquote::after {
-    content: "";
+    content: '';
 }
 
 blockquote span {
@@ -345,25 +345,25 @@ tbody tr:nth-child(odd) {
 
 dl {
     margin-top: 30px;
-    font-size: 17px;
+    font-size: 14px;
     line-height: 1.7;
 }
 
 dt {
     float: left;
     clear: left;
-    width: 120px;
+    width: 190px;
     text-align: right;
     font-weight: bold;
     color: #666666;
 }
 
 dt::after {
-    content: ":";
+    content: ':';
     margin-right: 10px;
 }
 
 dd {
-    margin: 0 0 0 110px;
+    margin: 0 0 20px 200px;
     padding: 0 0 0.5em 0;
 }
