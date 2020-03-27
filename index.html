@@ -41,7 +41,7 @@
                 margin-top: 10px;
             }
         </style>
-        <title>Front-end Developer Roadmap</title>
+        <title>Front-end Developer Learning Roadmap</title>
     </head>
     <body>
         <div id="key">
@@ -78,7 +78,7 @@
                         bold: '24px arial #000',
                     },
                     title: 'read now',
-                    label: '<b>Front-end Developer Roadmap</b> \n <code>Click on the Roadmap</code>',
+                    label: '<b>Front-end Developer Learning Roadmap</b> \n <code>Click roadmap for learning resources</code>',
                     x: -700,
                     y: -690,
                 },
@@ -1308,7 +1308,6 @@
             });
 
             network.on('hoverNode', function(params) {
-                console.log(params);
                 const hoveredNode = nodes.find(node => {
                     return node.id === nodes[params.node].id;
                 });
