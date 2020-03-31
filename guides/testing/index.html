@@ -54,34 +54,34 @@
                     learning resources and tools.
                 </p>
 
-                <!--                 <hr />
+                <hr />
 
                 <p><strong>Definitions:</strong></p>
 
                 <dl>
                     <dt>
-                        Web Page
+                        Unit Testing
                     </dt>
                     <dd>
-                        A document with a .html extensions that can be display in a web browser. This file can be loaded into a web browser from you local
-                        computer or it can be sent over the internet to a web browsers using HTTP. Web pages can link to other web pages. Web pages typically
-                        display a text, images, videos, audio, and graphical user interfaces.
+                        In computer programming, unit testing is a software testing method by which individual units of source code, sets of one or more
+                        computer program modules together with associated control data, usage procedures, and operating procedures, are tested to determine
+                        whether they are fit for use. Intuitively, one can view a unit as the smallest testable part of an application.
                     </dd>
                     <dt>
-                        Website
+                        Integration Testing
                     </dt>
                     <dd>
-                        A group of web pages linked to each other by design.
+                        Integration testing is the phase in software testing in which individual software modules are combined and tested as a group. It occurs
+                        after unit testing.
                     </dd>
                     <dt>
-                        Web Server
+                        End to End Testing
                     </dt>
                     <dd>
-                        Aka, an "HTTP server". A device on the internet (a computer) setup to host and server web pages to other devices (computers, phones,
-                        etc...) that request web pages using HTTP. A web server can server static files as is or dynamic files that are built upon requesting,
-                        typically holding data from a database.
+                        End to end testing (E2E testing) refers to a software testing method that involves testing an application’s workflow from beginning to
+                        end. This method basically aims to replicate real user scenarios so that the system can be validated for integration and data integrity.
                     </dd>
-                </dl> -->
+                </dl>
 
                 <hr />
                 <p><strong>Contribute content, suggestions, and fixes on github</strong>:</p>
@@ -94,11 +94,110 @@
 
                 <div id="chapter1" class="chapter">
                     <h2>Learning Resources</h2>
+
+                    <ul>
+                        <li>
+                            <a href="https://testingjavascript.com/">Testing Javascript with Kent C. Dodds</a>
+                        </li>
+                        <li>
+                            <a href="https://frontendmasters.com/courses/testing-practices-principles/">JavaScript Testing Practices and Principles</a>
+                        </li>
+                    </ul>
                 </div>
 
                 <div id="chapter2" class="chapter">
-                    <h2>Tools</h2>
+                    <h2>Testing Runnners</h2>
                 </div>
+                <h4 id="software-testing-frameworks">Software Testing Frameworks:</h4>
+                <ul>
+                    <li>
+                        <a href="https://theintern.io/" target="_blank">Intern</a>
+                    </li>
+                    <li>
+                        <a href="https://jestjs.io/" target="_blank">Jest</a>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/Raathigesh/majestic" target="_blank">majestic</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="https://github.com/avajs/ava" target="_blank">AVA</a>
+                    </li>
+                </ul>
+                <h4>Testing Assertions for Unit Testing:</h4>
+                <ul>
+                    <li>
+                        <a href="http://chaijs.com/" target="_blank">Chai</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Automattic/expect.js" target="_blank">expect.js</a>
+                    </li>
+                    <li>
+                        <a href="http://shouldjs.github.io/" target="_blank">should.js</a>
+                    </li>
+                </ul>
+                <h4>Test Spies, Stubs, and Mocks for Unit Testing:</h4>
+                <ul>
+                    <li>
+                        <a href="http://sinonjs.org/" target="_blank">sinon.js</a>
+                    </li>
+                    <li>
+                        <a href="http://devlucky.github.io/kakapo-js" target="_blank">Kakapo.js</a>
+                    </li>
+                </ul>
+                <h4>Hosted Testing/Automation for Browsers:</h4>
+                <ul>
+                    <li><a href="https://www.browserling.com/" target="_blank">Browserling</a> [$]</li>
+                    <li><a href="https://www.browserstack.com" target="_blank">BrowserStack</a> [$]</li>
+                    <li><a href="http://crossbrowsertesting.com/" target="_blank">CrossBrowserTesting.com</a> [$]</li>
+                    <li><a href="https://saucelabs.com/" target="_blank">Sauce Labs</a> [$]</li>
+                </ul>
+                <h4 id="integrationfunctional-testing">Integration/Functional Testing:</h4>
+                <ul>
+                    <li>
+                        <a href="https://www.cypress.io/" target="_blank">Cypress</a>
+                    </li>
+                    <li>
+                        <a href="http://nightwatchjs.org/" target="_blank">Nightwatch</a>
+                    </li>
+                    <li>
+                        <a href="http://webdriver.io/" target="_blank">WebDriver.io</a>
+                    </li>
+                </ul>
+                <h4 id="ui-testing-tools">UI Testing Tools:</h4>
+                <ul>
+                    <li>
+                        <a href="https://github.com/marmelab/gremlins.js" target="_blank">gremlins.js</a>
+                    </li>
+                    <li>
+                        <a href="https://percy.io" target="_blank">Percy</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/garris/BackstopJS" target="_blank">BackstopJS</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Huddle/PhantomCSS" target="_blank">PhantomCSS</a>
+                    </li>
+                    <li>
+                        <a href="https://ghostinspector.com/" target="_blank">Ghost Inspector</a>
+                    </li>
+                    <li>
+                        <a href="https://diff.io/" target="_blank">diff.io</a>
+                    </li>
+                </ul>
+                <h4>Automated dead link and error detectors:</h4>
+                <ul>
+                    <li>
+                        <a href="https://monkeytest.it/" target="_blank">Monkey Test It</a>
+                    </li>
+                </ul>
+                <h4>HTTP Stubbing</h4>
+                <ul>
+                    <li>
+                        <a href="https://netflix.github.io/pollyjs/#/README" target="_blank">Polly.JS</a>
+                    </li>
+                </ul>
             </div>
         </div>
 
