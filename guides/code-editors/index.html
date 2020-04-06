@@ -23,10 +23,10 @@
             <div id="bookPadding">
                 <h1>Code Editors</h1>
 
-                <h4 style="margin-top:0px">
+                <h4 style="margin-top: 0px;">
                     Written by
                     <a href="http://codylindley.com/">Cody Lindley</a>
-                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                    <span id="lastMod" style="display: none;">updated <span id="lastModDate"></span></span>
                 </h4>
 
                 <script>
@@ -106,7 +106,7 @@
                         developers.
                     </p>
                     <p class="image">
-                        <a href="https://2019.stateofjs.com/other-tools/text_editors" target="_blank"><img src="images/vscode.png"/></a>
+                        <a href="https://2019.stateofjs.com/other-tools/text_editors" target="_blank"><img src="images/vscode.png" /></a>
                     </p>
                     <p>
                         <cite
@@ -138,11 +138,8 @@
                 <div id="chapter4" class="chapter">
                     <h2>Shareable & Runnable Online Code Editors</h2>
                     <ul>
-                        <li><a href="https://paiza.cloud" target="_blank">PaizaCloud</a> [free to $]</li>
-                        <li><a href="https://aws.amazon.com/cloud9/" target="_blank">AWS Cloud9</a> [$]</li>
-                        <li><a href="https://codeanywhere.com" target="_blank">Codeanywhere</a> [free to $]</li>
-                        <li><a href="https://stackblitz.com/" target="_blank">StackBliz</a></li>
                         <li><a href="https://codesandbox.io/" target="_blank">codeSandbox</a></li>
+                        <li><a href="https://glitch.com/" target="_blank">glitch</a></li>
                     </ul>
                 </div>
 
@@ -151,9 +148,7 @@
 
                     <ul>
                         <li><a href="http://codepen.io/" target="_blank">CodePen</a> [free to $]</li>
-                        <li><a href="http://jsbin.com/" target="_blank">jsbin.com</a> [free to $]</li>
                         <li><a href="http://jsfiddle.net/" target="_blank">jsfiddle.net</a></li>
-                        <li><a href="https://glitch.com/" target="_blank">glitch</a></li>
                     </ul>
                 </div>
             </div>
@@ -172,25 +167,25 @@
             });
 
             // Create TOC dynamically from content
-            jQuery('.chapter').each(function(index) {
-                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+            jQuery('.chapter').each(function (index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1);
                     $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
                 });
 
-                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                jQuery('h3', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1 + '.' + (i + 1));
                     $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
                 });
             });
 
-            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function () {
                 window.open($(this).attr('href'));
                 return false;
             });
 
             // toggle TOC from hamburger icon
-            document.querySelector('#menuButton').addEventListener('click', function() {
+            document.querySelector('#menuButton').addEventListener('click', function () {
                 slideout.toggle();
             });
 
@@ -200,7 +195,7 @@
             function resizeThrottler() {
                 // ignore resize events as long as an actualResizeHandler execution is in the queue
                 if (!resizeTimeout) {
-                    resizeTimeout = setTimeout(function() {
+                    resizeTimeout = setTimeout(function () {
                         resizeTimeout = null;
                         actualResizeHandler();
 
@@ -217,7 +212,7 @@
             }
 
             // open TOC on load if window is wide enough
-            window.addEventListener('load', function(event) {
+            window.addEventListener('load', function (event) {
                 if (window.innerWidth > 1036) {
                     slideout.open();
                 } else {

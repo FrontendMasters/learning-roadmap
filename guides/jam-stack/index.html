@@ -23,10 +23,10 @@
             <div id="bookPadding">
                 <h1>JAM Stack</h1>
 
-                <h4 style="margin-top:0px">
+                <h4 style="margin-top: 0px;">
                     Written by
                     <a href="http://codylindley.com/">Cody Lindley</a>
-                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                    <span id="lastMod" style="display: none;">updated <span id="lastModDate"></span></span>
                 </h4>
 
                 <script>
@@ -54,34 +54,20 @@
                     learning resources and tools.
                 </p>
 
-                <!--                 <hr />
+                <hr />
 
                 <p><strong>Definitions:</strong></p>
 
                 <dl>
                     <dt>
-                        Web Page
+                        JAM stack
                     </dt>
                     <dd>
-                        A document with a .html extensions that can be display in a web browser. This file can be loaded into a web browser from you local
-                        computer or it can be sent over the internet to a web browsers using HTTP. Web pages can link to other web pages. Web pages typically
-                        display a text, images, videos, audio, and graphical user interfaces.
+                        You may have already seen or worked on a Jamstack site! They do not have to include all attributes of JavaScript, APIs, and Markup. They
+                        might be built using sites built by hand, or with Jekyll, Hugo, Nuxt, Next, Gatsby, or another static site generator... The thing that
+                        they all have in common is that they don’t depend on a web server.
                     </dd>
-                    <dt>
-                        Website
-                    </dt>
-                    <dd>
-                        A group of web pages linked to each other by design.
-                    </dd>
-                    <dt>
-                        Web Server
-                    </dt>
-                    <dd>
-                        Aka, an "HTTP server". A device on the internet (a computer) setup to host and server web pages to other devices (computers, phones,
-                        etc...) that request web pages using HTTP. A web server can server static files as is or dynamic files that are built upon requesting,
-                        typically holding data from a database.
-                    </dd>
-                </dl> -->
+                </dl>
 
                 <hr />
                 <p><strong>Contribute content, suggestions, and fixes on github</strong>:</p>
@@ -94,10 +80,12 @@
 
                 <div id="chapter1" class="chapter">
                     <h2>Learning Resources</h2>
-                </div>
 
-                <div id="chapter2" class="chapter">
-                    <h2>Tools</h2>
+                    <ul>
+                        <li><a href="https://jamstack.org/" target="_blank">JAMstack</a> [read]</li>
+                        <li><a href="https://jamstack.wtf/" target="_blank">JAMstack WTF</a> [read]</li>
+                        <li><a href="https://frontendmasters.com/courses/jamstack/" target="_blank">Introduction to the JAMStack</a> [watch][$]</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -115,25 +103,25 @@
             });
 
             // Create TOC dynamically from content
-            jQuery('.chapter').each(function(index) {
-                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+            jQuery('.chapter').each(function (index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1);
                     $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
                 });
 
-                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                jQuery('h3', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1 + '.' + (i + 1));
                     $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
                 });
             });
 
-            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function () {
                 window.open($(this).attr('href'));
                 return false;
             });
 
             // toggle TOC from hamburger icon
-            document.querySelector('#menuButton').addEventListener('click', function() {
+            document.querySelector('#menuButton').addEventListener('click', function () {
                 slideout.toggle();
             });
 
@@ -143,7 +131,7 @@
             function resizeThrottler() {
                 // ignore resize events as long as an actualResizeHandler execution is in the queue
                 if (!resizeTimeout) {
-                    resizeTimeout = setTimeout(function() {
+                    resizeTimeout = setTimeout(function () {
                         resizeTimeout = null;
                         actualResizeHandler();
 
@@ -160,7 +148,7 @@
             }
 
             // open TOC on load if window is wide enough
-            window.addEventListener('load', function(event) {
+            window.addEventListener('load', function (event) {
                 if (window.innerWidth > 1036) {
                     slideout.open();
                 } else {

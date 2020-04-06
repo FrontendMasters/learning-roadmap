@@ -23,10 +23,10 @@
             <div id="bookPadding">
                 <h1>Mobile Applications</h1>
 
-                <h4 style="margin-top:0px">
+                <h4 style="margin-top: 0px;">
                     Written by
                     <a href="http://codylindley.com/">Cody Lindley</a>
-                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                    <span id="lastMod" style="display: none;">updated <span id="lastModDate"></span></span>
                 </h4>
 
                 <script>
@@ -93,11 +93,33 @@
                 <hr />
 
                 <div id="chapter1" class="chapter">
-                    <h2>Learning Resources</h2>
+                    <h2>Mobile Web Application Frameworks (i.e. Runs on web platform in browser or webview)</h2>
+
+                    <ul>
+                        <li>
+                            <a href="http://onsen.io/" target="_blank">onsen.io</a>
+                        </li>
+                        <li>
+                            <a href="https://mobile.ant.design/docs/react/introduce" target="_blank">Ant Design Mobile</a>
+                        </li>
+                    </ul>
                 </div>
 
                 <div id="chapter2" class="chapter">
-                    <h2>Tools</h2>
+                    <h2>Mobile Native-hybrid Application Frameworks (i.e. web stuff to native app)</h2>
+
+                    <ul>
+                        <li>
+                            <a href="https://www.nativescript.org/" target="_blank">NativeScript</a>
+                        </li>
+                        <li>
+                            <a href="https://flutter.io/" target="_blank">Flutter</a>
+                        </li>
+                        <li>
+                            <a href="https://facebook.github.io/react-native/" target="_blank">React Native</a>
+                        </li>
+                        <li><a href="https://tabrisjs.com/" target="_blank">tabris.js</a> [free to $]</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -115,25 +137,25 @@
             });
 
             // Create TOC dynamically from content
-            jQuery('.chapter').each(function(index) {
-                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+            jQuery('.chapter').each(function (index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1);
                     $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
                 });
 
-                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                jQuery('h3', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1 + '.' + (i + 1));
                     $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
                 });
             });
 
-            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function () {
                 window.open($(this).attr('href'));
                 return false;
             });
 
             // toggle TOC from hamburger icon
-            document.querySelector('#menuButton').addEventListener('click', function() {
+            document.querySelector('#menuButton').addEventListener('click', function () {
                 slideout.toggle();
             });
 
@@ -143,7 +165,7 @@
             function resizeThrottler() {
                 // ignore resize events as long as an actualResizeHandler execution is in the queue
                 if (!resizeTimeout) {
-                    resizeTimeout = setTimeout(function() {
+                    resizeTimeout = setTimeout(function () {
                         resizeTimeout = null;
                         actualResizeHandler();
 
@@ -160,7 +182,7 @@
             }
 
             // open TOC on load if window is wide enough
-            window.addEventListener('load', function(event) {
+            window.addEventListener('load', function (event) {
                 if (window.innerWidth > 1036) {
                     slideout.open();
                 } else {

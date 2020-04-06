@@ -23,10 +23,10 @@
             <div id="bookPadding">
                 <h1>Accessibility</h1>
 
-                <h4 style="margin-top:0px">
+                <h4 style="margin-top: 0px;">
                     Written by
                     <a href="http://codylindley.com/">Cody Lindley</a>
-                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                    <span id="lastMod" style="display: none;">updated <span id="lastModDate"></span></span>
                 </h4>
 
                 <script>
@@ -59,17 +59,18 @@
                 <p><strong>Definitions:</strong></p>
 
                 <dl>
+                    <dt>Accessibility</dt>
                     <dd>
-                        Accessibility refers to the design of products, devices, services, or environments for people with disabilities. The concept of
-                        accessible design ensures both “direct access” (i.e., unassisted) and "indirect access" meaning compatibility with a person's assistive
-                        technology (for example, computer screen readers). Accessibility can be viewed as the "ability to access" and benefit from some system
-                        or entity. The concept focuses on enabling access for people with disabilities, or special needs, or enabling access through the use of
-                        assistive technology; however, research and development in accessibility brings benefits to everyone. Accessibility is not to be
-                        confused with usability, which is the extent to which a product (such as a device, service, or environment) can be used by specified
-                        users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use.Accessibility is strongly
-                        related to universal design which is the process of creating products that are usable by people with the widest possible range of
-                        abilities, operating within the widest possible range of situations. This is about making things accessible to all people (whether they
-                        have a disability or not).
+                        Refers to the design of products, devices, services, or environments for people with disabilities. The concept of accessible design
+                        ensures both “direct access” (i.e., unassisted) and "indirect access" meaning compatibility with a person's assistive technology (for
+                        example, computer screen readers). Accessibility can be viewed as the "ability to access" and benefit from some system or entity. The
+                        concept focuses on enabling access for people with disabilities, or special needs, or enabling access through the use of assistive
+                        technology; however, research and development in accessibility brings benefits to everyone. Accessibility is not to be confused with
+                        usability, which is the extent to which a product (such as a device, service, or environment) can be used by specified users to achieve
+                        specified goals with effectiveness, efficiency and satisfaction in a specified context of use.Accessibility is strongly related to
+                        universal design which is the process of creating products that are usable by people with the widest possible range of abilities,
+                        operating within the widest possible range of situations. This is about making things accessible to all people (whether they have a
+                        disability or not).
                     </dd>
                 </dl>
 
@@ -119,6 +120,7 @@
                         </li>
                         <li><a href="http://rosenfeldmedia.com/books/a-web-for-everyone/" target="_blank">A Web for Everyone</a> [read][$]</li>
                         <li><a href="https://frontendmasters.com/courses/web-accessibility/" target="_blank">Web Accessibility</a> [watch][$]</li>
+                        <li><a href="Accessibility in JavaScript Applications" target="_blank">Accessibility in JavaScript Applications</a> [watch][$]</li>
                         <li><a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g" target="_blank">A11ycasts</a> [watch]</li>
                         <li>
                             <a href="https://www.udacity.com/course/web-accessibility--ud891" target="_blank">Accessibility by Google</a> - Udacity course
@@ -244,25 +246,25 @@
             });
 
             // Create TOC dynamically from content
-            jQuery('.chapter').each(function(index) {
-                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+            jQuery('.chapter').each(function (index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1);
                     $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
                 });
 
-                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                jQuery('h3', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1 + '.' + (i + 1));
                     $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
                 });
             });
 
-            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function () {
                 window.open($(this).attr('href'));
                 return false;
             });
 
             // toggle TOC from hamburger icon
-            document.querySelector('#menuButton').addEventListener('click', function() {
+            document.querySelector('#menuButton').addEventListener('click', function () {
                 slideout.toggle();
             });
 
@@ -272,7 +274,7 @@
             function resizeThrottler() {
                 // ignore resize events as long as an actualResizeHandler execution is in the queue
                 if (!resizeTimeout) {
-                    resizeTimeout = setTimeout(function() {
+                    resizeTimeout = setTimeout(function () {
                         resizeTimeout = null;
                         actualResizeHandler();
 
@@ -289,7 +291,7 @@
             }
 
             // open TOC on load if window is wide enough
-            window.addEventListener('load', function(event) {
+            window.addEventListener('load', function (event) {
                 if (window.innerWidth > 1036) {
                     slideout.open();
                 } else {

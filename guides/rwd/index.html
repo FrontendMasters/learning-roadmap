@@ -23,10 +23,10 @@
             <div id="bookPadding">
                 <h1>Responsive Web Design</h1>
 
-                <h4 style="margin-top:0px">
+                <h4 style="margin-top: 0px;">
                     Written by
                     <a href="http://codylindley.com/">Cody Lindley</a>
-                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                    <span id="lastMod" style="display: none;">updated <span id="lastModDate"></span></span>
                 </h4>
 
                 <script>
@@ -93,11 +93,65 @@
                 <hr />
 
                 <div id="chapter1" class="chapter">
-                    <h2>Learning Resources</h2>
+                    <h2>General Responsive Web Design Learning</h2>
+
+                    <ul>
+                        <li>
+                            <a href="https://frontendmasters.com/courses/css-grids-flexbox/" target="_blank">Responsive Web Design Basics</a>
+                            [read]
+                        </li>
+                        <li>
+                            <a href="https://www.udacity.com/course/responsive-web-design-fundamentals--ud893" target="_blank"
+                                >Responsive Web Design Fundamentals</a
+                            >
+                            [watch]
+                        </li>
+                    </ul>
                 </div>
 
                 <div id="chapter2" class="chapter">
-                    <h2>Tools</h2>
+                    <h2>Learning Responsive Layout</h2>
+
+                    <ul>
+                        <li>
+                            <a href="https://frontendmasters.com/courses/css-grids-flexbox/" target="_blank">CSS Grids and Flexbox for Responsive Web Design</a>
+                            [watch][$]
+                        </li>
+                        <li><a href="https://frontendmasters.com/courses/advanced-css-layouts/" target="_blank">Advanced CSS Layouts</a> [watch][$]</li>
+                    </ul>
+                </div>
+
+                <div id="chapter3" class="chapter">
+                    <h2>Learning Responsive Typography</h2>
+
+                    <ul>
+                        <li>
+                            <a href="https://frontendmasters.com/courses/responsive-typography-v2/" target="_blank">Responsive Web Typography v2</a> [watch][$]
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter4" class="chapter">
+                    <h2>Learning Responsive Images</h2>
+
+                    <ul>
+                        <li><a href="https://www.udacity.com/course/responsive-images--ud882" target="_blank">Responsive Images</a> [watch]</li>
+                        <li><a href="https://svgontheweb.com/" target="_blank">SVG ON THE WEB A Practical Guide</a> [read]</li>
+                        <li>
+                            <a href=" https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images" target="_blank"
+                                >Responsive images</a
+                            >
+                            [read]
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter5" class="chapter">
+                    <h2>Learning Responsive Email Design</h2>
+
+                    <ul>
+                        <li><a href="https://frontendmasters.com/courses/responsive-email/" target="_blank">Responsive HTML Email Design</a> [watch][$]</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -115,25 +169,25 @@
             });
 
             // Create TOC dynamically from content
-            jQuery('.chapter').each(function(index) {
-                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+            jQuery('.chapter').each(function (index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1);
                     $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
                 });
 
-                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                jQuery('h3', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1 + '.' + (i + 1));
                     $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
                 });
             });
 
-            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function () {
                 window.open($(this).attr('href'));
                 return false;
             });
 
             // toggle TOC from hamburger icon
-            document.querySelector('#menuButton').addEventListener('click', function() {
+            document.querySelector('#menuButton').addEventListener('click', function () {
                 slideout.toggle();
             });
 
@@ -143,7 +197,7 @@
             function resizeThrottler() {
                 // ignore resize events as long as an actualResizeHandler execution is in the queue
                 if (!resizeTimeout) {
-                    resizeTimeout = setTimeout(function() {
+                    resizeTimeout = setTimeout(function () {
                         resizeTimeout = null;
                         actualResizeHandler();
 
@@ -160,7 +214,7 @@
             }
 
             // open TOC on load if window is wide enough
-            window.addEventListener('load', function(event) {
+            window.addEventListener('load', function (event) {
                 if (window.innerWidth > 1036) {
                     slideout.open();
                 } else {

@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="../css/styles.css" />
         <link rel="stylesheet" href="../css/prism.css" />
         <script src="../js/prism.js"></script>
-        <title>CSS UI Toolkits</title>
+        <title>CSS in JavaScript</title>
     </head>
 
     <body>
@@ -21,12 +21,12 @@
             <div id="menuButton">|||</div>
 
             <div id="bookPadding">
-                <h1>CSS UI Toolkits</h1>
+                <h1>CSS in JavaScript</h1>
 
-                <h4 style="margin-top: 0px;">
+                <h4 style="margin-top:0px">
                     Written by
                     <a href="http://codylindley.com/">Cody Lindley</a>
-                    <span id="lastMod" style="display: none;">updated <span id="lastModDate"></span></span>
+                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
                 </h4>
 
                 <script>
@@ -60,7 +60,7 @@
 
                 <dl>
                     <dt>
-                        CSS ToolKits
+                        Web Page
                     </dt>
                     <dd>
                         A document with a .html extensions that can be display in a web browser. This file can be loaded into a web browser from you local
@@ -93,48 +93,46 @@
                 <hr />
 
                 <div id="chapter1" class="chapter">
-                    <h2>Utility Toolkits</h2>
+                    <h2>Learning Resources</h2>
 
                     <ul>
                         <li>
-                            <a href="http://basscss.com/" target="_blank">Basscss</a>
+                            <a href="https://css-tricks.com/bridging-the-gap-between-css-and-javascript-css-in-js/" target="_blank"
+                                >Bridging the Gap Between CSS and JavaScript: CSS-in-JS</a
+                            >
+                            [read]
                         </li>
                         <li>
-                            <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>
-                        </li>
-                        <li>
-                            <a href="https://tachyons.io/" target="_blank">Tachyons</a>
-                        </li>
-                        <li>
-                            <a href="https://primer.style/css/" target="_blank">Primer CSS</a>
-                        </li>
-                        <li>
-                            <a href="https://solid.buzzfeed.com/" target="_blank">Solid</a>
-                        </li>
-                        <li>
-                            <a href="https://turretcss.com/" target="_blank">turretcss</a>
+                            <a href="https://mxstbr.com/thoughts/css-in-js" target="_blank">Why I Write CSS in JavaScript</a>
+                            [read]
                         </li>
                     </ul>
                 </div>
 
                 <div id="chapter2" class="chapter">
-                    <h2>UI + Utility Toolkits</h2>
+                    <h2>Tools</h2>
 
                     <ul>
                         <li>
-                            <a href="http://bulma.io/" target="_blank">Bulma</a>
+                            <a href="https://www.styled-components.com/" target="_blank">styled components</a>
                         </li>
                         <li>
-                            <a href="https://materializecss.com/" target="_blank">Materialize</a>
+                            <a href="https://emotion.sh/docs/introduction" target="_blank">Emotion</a>
                         </li>
                         <li>
-                            <a href="https://getbootstrap.com/" target="_blank">Bootstrap 4</a>
+                            <a href="https://github.com/css-modules/css-modules" target="_blank">CSS Modules</a>
                         </li>
                         <li>
-                            <a href="https://getuikit.com/" target="_blank">UIkit</a>
+                            <a href="https://cssinjs.org/" target="_blank">JSS</a>
                         </li>
                         <li>
-                            <a href="http://semantic-ui.com/" target="_blank">Semantic UI</a>
+                            <a href="https://github.com/zeit/styled-jsx" target="_blank">Styled JSX</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/styled-components/polished" target="_blank">polished</a>
+                        </li>
+                        <li>
+                            <a href="https://css2js.dotenv.dev/" target="_blank">css2js</a>
                         </li>
                     </ul>
                 </div>
@@ -154,25 +152,25 @@
             });
 
             // Create TOC dynamically from content
-            jQuery('.chapter').each(function (index) {
-                jQuery('h2', '#chapter' + (index + 1)).each(function (i) {
+            jQuery('.chapter').each(function(index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
                     $(this).attr('id', index + 1);
                     $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
                 });
 
-                jQuery('h3', '#chapter' + (index + 1)).each(function (i) {
+                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
                     $(this).attr('id', index + 1 + '.' + (i + 1));
                     $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
                 });
             });
 
-            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function () {
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
                 window.open($(this).attr('href'));
                 return false;
             });
 
             // toggle TOC from hamburger icon
-            document.querySelector('#menuButton').addEventListener('click', function () {
+            document.querySelector('#menuButton').addEventListener('click', function() {
                 slideout.toggle();
             });
 
@@ -182,7 +180,7 @@
             function resizeThrottler() {
                 // ignore resize events as long as an actualResizeHandler execution is in the queue
                 if (!resizeTimeout) {
-                    resizeTimeout = setTimeout(function () {
+                    resizeTimeout = setTimeout(function() {
                         resizeTimeout = null;
                         actualResizeHandler();
 
@@ -199,7 +197,7 @@
             }
 
             // open TOC on load if window is wide enough
-            window.addEventListener('load', function (event) {
+            window.addEventListener('load', function(event) {
                 if (window.innerWidth > 1036) {
                     slideout.open();
                 } else {

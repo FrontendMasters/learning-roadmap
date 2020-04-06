@@ -23,10 +23,10 @@
             <div id="bookPadding">
                 <h1>Progressive Web Apps</h1>
 
-                <h4 style="margin-top:0px">
+                <h4 style="margin-top: 0px;">
                     Written by
                     <a href="http://codylindley.com/">Cody Lindley</a>
-                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                    <span id="lastMod" style="display: none;">updated <span id="lastModDate"></span></span>
                 </h4>
 
                 <script>
@@ -54,34 +54,31 @@
                     learning resources and tools.
                 </p>
 
-                <!--                 <hr />
+                <hr />
 
                 <p><strong>Definitions:</strong></p>
 
                 <dl>
                     <dt>
-                        Web Page
+                        Progressive Web App
                     </dt>
                     <dd>
-                        A document with a .html extensions that can be display in a web browser. This file can be loaded into a web browser from you local
-                        computer or it can be sent over the internet to a web browsers using HTTP. Web pages can link to other web pages. Web pages typically
-                        display a text, images, videos, audio, and graphical user interfaces.
+                        A type of application software delivered through the web, built using common web technologies including HTML, CSS and JavaScript. It is
+                        intended to work on any platform that uses a standards-compliant browser. Functionality includes working offline, push notifications,
+                        and device hardware access, enabling creating user experiences similar to native applications on desktop and mobile devices. Since a
+                        progressive web app is a type of webpage or website known as a web application, there is no requirement for developers or users to
+                        install the web apps via digital distribution systems like Apple App Store or Google Play. While web applications have been available
+                        for mobile devices from the start, they have generally been slower, have had fewer features, and been less used than native apps. But
+                        with the ability to work offline, previously only available to native apps, PWAs running on mobile devices can perform much faster and
+                        provide more features, closing the gap with native apps, in addition to being portable across both desktop and mobile platforms. PWAs do
+                        not require separate bundling or distribution. Publication of a progressive web app is as it would be for any other web page. PWAs work
+                        in any browser, but "app-like" features such as being independent of connectivity, install to home screen, and push messaging depend on
+                        browser support. As of April 2018, those features are supported to varying degrees by the Microsoft Edge, Google Chrome, Mozilla
+                        Firefox, and Apple Safari browsers, but more browsers may support the features needed in the future.[1][2] Several businesses highlight
+                        significant improvements[3] in a wide variety of key performance indicators after PWA implementation, like increased time spent on page,
+                        conversions, or revenue.
                     </dd>
-                    <dt>
-                        Website
-                    </dt>
-                    <dd>
-                        A group of web pages linked to each other by design.
-                    </dd>
-                    <dt>
-                        Web Server
-                    </dt>
-                    <dd>
-                        Aka, an "HTTP server". A device on the internet (a computer) setup to host and server web pages to other devices (computers, phones,
-                        etc...) that request web pages using HTTP. A web server can server static files as is or dynamic files that are built upon requesting,
-                        typically holding data from a database.
-                    </dd>
-                </dl> -->
+                </dl>
 
                 <hr />
                 <p><strong>Contribute content, suggestions, and fixes on github</strong>:</p>
@@ -94,10 +91,23 @@
 
                 <div id="chapter1" class="chapter">
                     <h2>Learning Resources</h2>
-                </div>
 
-                <div id="chapter2" class="chapter">
-                    <h2>Tools</h2>
+                    <ul>
+                        <li><a href="https://web.dev/progressive-web-apps/" target="_blank">Progressive Web Apps</a> [read]</li>
+                        <li>
+                            <a href="https://codelabs.developers.google.com/codelabs/your-first-pwapp/index.html?index=..%2F..index#0" target="_blank"
+                                >Your First Progressive Web App</a
+                            >
+                            [read]
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps" target="_blank">Progressive web apps (PWAs)</a> [read]
+                        </li>
+                        <li>
+                            <a href="https://frontendmasters.com/courses/progressive-web-apps/" target="_blank">Progressive Web Applications and Offline</a>
+                            [watch][$]
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -115,25 +125,25 @@
             });
 
             // Create TOC dynamically from content
-            jQuery('.chapter').each(function(index) {
-                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+            jQuery('.chapter').each(function (index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1);
                     $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
                 });
 
-                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                jQuery('h3', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1 + '.' + (i + 1));
                     $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
                 });
             });
 
-            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function () {
                 window.open($(this).attr('href'));
                 return false;
             });
 
             // toggle TOC from hamburger icon
-            document.querySelector('#menuButton').addEventListener('click', function() {
+            document.querySelector('#menuButton').addEventListener('click', function () {
                 slideout.toggle();
             });
 
@@ -143,7 +153,7 @@
             function resizeThrottler() {
                 // ignore resize events as long as an actualResizeHandler execution is in the queue
                 if (!resizeTimeout) {
-                    resizeTimeout = setTimeout(function() {
+                    resizeTimeout = setTimeout(function () {
                         resizeTimeout = null;
                         actualResizeHandler();
 
@@ -160,7 +170,7 @@
             }
 
             // open TOC on load if window is wide enough
-            window.addEventListener('load', function(event) {
+            window.addEventListener('load', function (event) {
                 if (window.innerWidth > 1036) {
                     slideout.open();
                 } else {

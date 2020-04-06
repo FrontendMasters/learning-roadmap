@@ -52,8 +52,8 @@
         <div id="mynetwork"></div>
         <script src="node_modules/vis/dist/vis.min.js"></script>
         <script type="text/javascript">
-            const createLabel = labelContent => {
-                let title = `<b>${labelContent.title}</b>\n\n <i>covers:</i> \n`;
+            const createLabel = (labelContent) => {
+                let title = `<b>${labelContent.title}</b>\n\n <i>topics:</i> \n`;
                 let covers = '';
                 labelContent.covers.forEach((item, index) => {
                     covers += `<code>${item}</code>`;
@@ -590,7 +590,7 @@
                     title: 'read now',
                     label: createLabel({
                         title: '26 - Node.js & NPM Registry',
-                        covers: ['NPM CLI', 'Yarn CLI', 'Semantic Versioning'],
+                        covers: ['Node', 'NPM CLI', 'Yarn CLI', 'Semantic Versioning'],
                     }),
                     x: -950,
                     y: 260,
@@ -780,7 +780,7 @@
                     title: 'read now',
                     label: createLabel({
                         title: '36 - JavaScript UI Toolkits',
-                        covers: ['Kendo UI', 'Webix', 'Senca'],
+                        covers: ['Kendo UI', 'Webix', 'Sencha'],
                     }),
                     x: -150,
                     y: 1300,
@@ -894,7 +894,7 @@
                     title: 'read now',
                     label: createLabel({
                         title: '42 - JAM Stack',
-                        covers: ['...', '...', '...', '...'],
+                        covers: ['Static assets', 'CDN', "API's", 'Markdown'],
                     }),
                     x: 400,
                     y: 870,
@@ -914,7 +914,7 @@
                     title: 'read now',
                     label: createLabel({
                         title: '43 - Responsive Web Design',
-                        covers: ['...', '...', '...', '...'],
+                        covers: ['Responsive Images', 'Responsive Type', 'Responsive Layout'],
                     }),
                     x: 175,
                     y: 870,
@@ -933,7 +933,7 @@
                     title: 'read now',
                     label: createLabel({
                         title: '44 - Progressive Web Apps',
-                        covers: ['...', '...', '...', '...'],
+                        covers: ['Responsive', 'installable', 'offline', 'accessible'],
                     }),
                     x: -75,
                     y: 870,
@@ -951,10 +951,10 @@
                     },
                     title: 'read now',
                     label: createLabel({
-                        title: '45 - Desktop Apps',
-                        covers: ['...', '...', '...', '...'],
+                        title: '45 - Desktop Apps (From Web Tech)',
+                        covers: ['Electron', 'Flutter', 'NW.js'],
                     }),
-                    x: -300,
+                    x: -350,
                     y: 870,
                 },
                 {
@@ -970,11 +970,11 @@
                     },
                     title: 'read now',
                     label: createLabel({
-                        title: '46 - Mobile Apps',
-                        covers: ['...', '...', '...', '...'],
+                        title: '46 - Mobile Apps (From Web Tech)',
+                        covers: ['React Native', 'NativeScript', 'Flutter'],
                     }),
-                    x: -500,
-                    y: 870,
+                    x: -650,
+                    y: 970,
                 },
                 {
                     id: 47,
@@ -1030,7 +1030,7 @@
                         title: '49 - JS Compile to JS',
                         covers: ['Babel', 'Typescript', 'scw', 'sucrase'],
                     }),
-                    x: -700,
+                    x: -750,
                     y: 780,
                 },
                 {
@@ -1128,6 +1128,25 @@
                     x: -1000,
                     y: 940,
                 },
+                {
+                    id: 57,
+                    url: 'guides/css-in-js/index.html',
+                    color: {
+                        border: '#f4d442',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#f4d442',
+                            background: '#fff6a8',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: '57 - CSS in JS',
+                        covers: ['Styled Components', 'JSS', 'Emotion'],
+                    }),
+                    x: -550,
+                    y: 1300,
+                },
             ];
 
             var edges = [
@@ -1159,6 +1178,7 @@
                 { from: 18, to: 19, arrows: 'to' },
                 { from: 17, to: 19, arrows: 'to' },
                 { from: 19, to: 20, arrows: 'to' },
+                { from: 19, to: 21, arrows: 'to' },
                 { from: 20, to: 21, arrows: 'to' },
                 { from: 21, to: 22, arrows: 'to' },
                 { from: 21, to: 23, arrows: 'to' },
@@ -1218,7 +1238,7 @@
                 { from: 44, to: 51, arrows: 'to, from' },
                 { from: 45, to: 51, arrows: 'to, from' },
                 { from: 46, to: 51, arrows: 'to, from' },
-                { from: 50, to: 51, arrows: 'to, from' },
+                { from: 50, to: 51, arrows: 'to' },
 
                 { from: 51, to: 53, arrows: 'to' },
                 { from: 53, to: 55, arrows: 'to' },
@@ -1228,6 +1248,8 @@
 
                 { from: 51, to: 36, arrows: 'to' },
                 { from: 36, to: 53, arrows: 'to' },
+                { from: 50, to: 57, arrows: 'to' },
+                { from: 57, to: 51, arrows: 'to' },
             ];
 
             var container = document.getElementById('mynetwork');
@@ -1286,9 +1308,9 @@
                 networkCanvas.style.cursor = newCursorStyle;
             }
 
-            network.on('click', params => {
+            network.on('click', (params) => {
                 console.log(params);
-                const node = nodes.find(node => {
+                const node = nodes.find((node) => {
                     return node.id === params.nodes[0];
                 });
                 console.log(node);
@@ -1296,20 +1318,20 @@
                 window.open(node.url, '_blank');
             });
 
-            network.on('hoverNode', function(params) {
+            network.on('hoverNode', function (params) {
                 changeCursor('pointer');
             });
 
-            network.on('blurNode', function(e) {
+            network.on('blurNode', function (e) {
                 changeCursor('default');
             });
-            network.on('dragStart', function(e) {
+            network.on('dragStart', function (e) {
                 changeCursor('grabbing');
             });
-            network.on('dragging', function(e) {
+            network.on('dragging', function (e) {
                 changeCursor('grabbing');
             });
-            network.on('dragEnd', function(e) {
+            network.on('dragEnd', function (e) {
                 changeCursor('pointer');
             });
         </script>
