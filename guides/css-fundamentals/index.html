@@ -23,10 +23,10 @@
             <div id="bookPadding">
                 <h1>CSS Fundamentals</h1>
 
-                <h4 style="margin-top:0px">
+                <h4 style="margin-top: 0px;">
                     Written by
                     <a href="http://codylindley.com/">Cody Lindley</a>
-                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                    <span id="lastMod" style="display: none;">updated <span id="lastModDate"></span></span>
                 </h4>
 
                 <script>
@@ -51,7 +51,7 @@
                 <p><strong>Overview:</strong></p>
 
                 <p>
-                    learning resources and tools.
+                    Learning resources and tools.
                 </p>
 
                 <hr />
@@ -64,10 +64,9 @@
                     </dt>
                     <dd>
                         Cascading Style Sheets (CSS) is a style sheet language used for describing the look and formatting of a document written in a markup
-                        language. Although most often used to change the style of web pages and user interfaces written in HTML and XHTML, the language can be
-                        applied to any kind of XML document, including plain XML, SVG and XUL. Along with HTML and JavaScript, CSS is a cornerstone technology
-                        used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile
-                        applications.
+                        language. Although most often used to change the style of web pages and user interfaces written in HTML, the language can be applied to
+                        any kind of XML document, including plain XML, SVG and XUL. Along with HTML and JavaScript, CSS is a cornerstone technology used by most
+                        websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile applications.
                     </dd>
                 </dl>
 
@@ -92,7 +91,7 @@
                             [watch][$]
                         </li>
                         <li><a href="http://flukeout.github.io/" target="_blank">CSS Diner</a> [interact]</li>
-                        <li><a href="http://css4-selectors.com/selectors/" target="_blank">CSS Selectors from CSS4 till CSS1</a> [read]</li>
+
                         <li>
                             <a
                                 href="https://www.amazon.com/CSS-Secrets-Solutions-Everyday-Problems/dp/1449372635/?&amp;_encoding=UTF8&amp;tag=frontend-handbook-20&amp;linkCode=ur2&amp;linkId=40a9480c18839b4b2ea798aa2afafd0e&amp;camp=1789&amp;creative=9325"
@@ -110,6 +109,7 @@
                     <h2>Standards/Specifications:</h2>
 
                     <ul>
+                        <li><a href="http://css4-selectors.com/selectors/" target="_blank">CSS Selectors from CSS4 till CSS1</a> [read]</li>
                         <li>
                             <a href="http://www.w3.org/Style/CSS/current-work#roadmap" target="_blank">All W3C CSS Specifications</a>
                         </li>
@@ -128,9 +128,6 @@
                 <div id="chapter3" class="chapter">
                     <h2>References/Docs</h2>
                     <ul>
-                        <li>
-                            <a href="http://csstriggers.com/" target="_blank">CSS Triggers...a Game of Layout, Paint, and Composite</a>
-                        </li>
                         <li>
                             <a href="https://chromium.googlesource.com/chromium/blink/+/master/Source/core/css/html.css" target="_blank"
                                 >Default CSS for Chrome Browser</a
@@ -166,23 +163,13 @@
                         <li>
                             <a href="https://cssdb.org/" target="_blank">What’s next for CSS?</a>
                         </li>
-                    </ul>
-                </div>
-
-                <div id="chapter4" class="chapter">
-                    <h2>Tools</h2>
-
-                    <ul>
                         <li>
-                            <a href="https://atomiks.github.io/30-seconds-of-css/" target="_blank"
-                                >30 Seconds of CSS - A curated collection of useful CSS snippets you can understand in 30 seconds or less.</a
-                            >
-                            [read]
+                            <a href="http://csstriggers.com/" target="_blank">CSS Triggers...a Game of Layout, Paint, and Composite</a>
                         </li>
                     </ul>
                 </div>
 
-                <div id="chapter5" class="chapter">
+                <div id="chapter4" class="chapter">
                     <h2>Glossary/Vocabulary</h2>
                     <ul>
                         <li>
@@ -192,6 +179,23 @@
                         </li>
                         <li>
                             <a href="http://apps.workflower.fi/vocabs/css/en" target="_blank">CSS Vocabulary</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter5" class="chapter">
+                    <h2>CSS Units Learning Resources</h2>
+
+                    <ul>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units" target="_blank"
+                                >CSS values and units</a
+                            >
+                            [read]
+                        </li>
+                        <li>
+                            <a href="https://gist.github.com/basham/2175a16ab7c60ce8e001" target="_blank">CSS units</a>
+                            [read]
                         </li>
                     </ul>
                 </div>
@@ -211,25 +215,25 @@
             });
 
             // Create TOC dynamically from content
-            jQuery('.chapter').each(function(index) {
-                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+            jQuery('.chapter').each(function (index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1);
                     $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
                 });
 
-                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                jQuery('h3', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1 + '.' + (i + 1));
                     $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
                 });
             });
 
-            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function () {
                 window.open($(this).attr('href'));
                 return false;
             });
 
             // toggle TOC from hamburger icon
-            document.querySelector('#menuButton').addEventListener('click', function() {
+            document.querySelector('#menuButton').addEventListener('click', function () {
                 slideout.toggle();
             });
 
@@ -239,7 +243,7 @@
             function resizeThrottler() {
                 // ignore resize events as long as an actualResizeHandler execution is in the queue
                 if (!resizeTimeout) {
-                    resizeTimeout = setTimeout(function() {
+                    resizeTimeout = setTimeout(function () {
                         resizeTimeout = null;
                         actualResizeHandler();
 
@@ -256,7 +260,7 @@
             }
 
             // open TOC on load if window is wide enough
-            window.addEventListener('load', function(event) {
+            window.addEventListener('load', function (event) {
                 if (window.innerWidth > 1036) {
                     slideout.open();
                 } else {

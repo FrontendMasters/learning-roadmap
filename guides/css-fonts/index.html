@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="../css/styles.css" />
         <link rel="stylesheet" href="../css/prism.css" />
         <script src="../js/prism.js"></script>
-        <title>CSS Fonts & Units</title>
+        <title>CSS Fonts</title>
     </head>
 
     <body>
@@ -21,12 +21,12 @@
             <div id="menuButton">|||</div>
 
             <div id="bookPadding">
-                <h1>CSS Fonts & Units</h1>
+                <h1>CSS Fonts</h1>
 
-                <h4 style="margin-top:0px">
+                <h4 style="margin-top: 0px;">
                     Written by
                     <a href="http://codylindley.com/">Cody Lindley</a>
-                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                    <span id="lastMod" style="display: none;">updated <span id="lastModDate"></span></span>
                 </h4>
 
                 <script>
@@ -51,7 +51,7 @@
                 <p><strong>Overview:</strong></p>
 
                 <p>
-                    learning resources and tools.
+                    Learning resources and tools.
                 </p>
 
                 <!--                 <hr />
@@ -93,33 +93,27 @@
                 <hr />
 
                 <div id="chapter1" class="chapter">
-                    <h2>Learning Resources</h2>
+                    <h2>CSS Font Learning Resources</h2>
 
                     <ul>
-                        <li>
-                            <a href="http://www.html5rocks.com/en/tutorials/webfonts/quick/" target="_blank">Quick Guide to Webfonts via @font-face</a> [read]
-                        </li>
                         <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts" target="_blank">MDN: Web fonts</a> [read]</li>
                         <li>
-                            <a href="https://frontendmasters.com/courses/responsive-typography-v2/" target="_blank">Responsive Web Typography, v2</a> [watch][$]
+                            <a href="http://www.html5rocks.com/en/tutorials/webfonts/quick/" target="_blank">Quick Guide to Webfonts via @font-face</a> [read]
                         </li>
                         <li>
                             <a href="https://www.zachleat.com/web/comprehensive-webfonts/" target="_blank">A Comprehensive Guide to Font Loading Strategies</a>
                             [read]
                         </li>
+                    </ul>
+                </div>
+
+                <div id="chapter2" class="chapter">
+                    <h2>Google Fonts</h2>
+
+                    <ul>
+                        <li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a></li>
                         <li>
-                            <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units" target="_blank"
-                                >CSS values and units</a
-                            >
-                            [read]
-                        </li>
-                        <li>
-                            <a href="https://css-tricks.com/the-lengths-of-css/" target="_blank">The Lengths of CSS</a>
-                            [read]
-                        </li>
-                        <li>
-                            <a href="https://gist.github.com/basham/2175a16ab7c60ce8e001" target="_blank">CSS units</a>
-                            [read]
+                            <a href="https://developers.google.com/fonts/docs/getting_started" target="_blank">Get Started with the Google Fonts API</a>
                         </li>
                     </ul>
                 </div>
@@ -139,25 +133,25 @@
             });
 
             // Create TOC dynamically from content
-            jQuery('.chapter').each(function(index) {
-                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+            jQuery('.chapter').each(function (index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1);
                     $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
                 });
 
-                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                jQuery('h3', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1 + '.' + (i + 1));
                     $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
                 });
             });
 
-            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function () {
                 window.open($(this).attr('href'));
                 return false;
             });
 
             // toggle TOC from hamburger icon
-            document.querySelector('#menuButton').addEventListener('click', function() {
+            document.querySelector('#menuButton').addEventListener('click', function () {
                 slideout.toggle();
             });
 
@@ -167,7 +161,7 @@
             function resizeThrottler() {
                 // ignore resize events as long as an actualResizeHandler execution is in the queue
                 if (!resizeTimeout) {
-                    resizeTimeout = setTimeout(function() {
+                    resizeTimeout = setTimeout(function () {
                         resizeTimeout = null;
                         actualResizeHandler();
 
@@ -184,7 +178,7 @@
             }
 
             // open TOC on load if window is wide enough
-            window.addEventListener('load', function(event) {
+            window.addEventListener('load', function (event) {
                 if (window.innerWidth > 1036) {
                     slideout.open();
                 } else {

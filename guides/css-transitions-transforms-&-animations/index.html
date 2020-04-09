@@ -23,10 +23,10 @@
             <div id="bookPadding">
                 <h1>CSS Transitions, Transforms & Animation</h1>
 
-                <h4 style="margin-top:0px">
+                <h4 style="margin-top: 0px;">
                     Written by
                     <a href="http://codylindley.com/">Cody Lindley</a>
-                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                    <span id="lastMod" style="display: none;">updated <span id="lastModDate"></span></span>
                 </h4>
 
                 <script>
@@ -51,7 +51,7 @@
                 <p><strong>Overview:</strong></p>
 
                 <p>
-                    learning resources and tools.
+                    Learning resources and tools.
                 </p>
 
                 <!--                 <hr />
@@ -155,16 +155,13 @@
                 <div id="chapter4" class="chapter">
                     <h2>Tools</h2>
 
-                    <h4 id="css-and-javascript-utilities">CSS and JavaScript Utilities:</h4>
+                    <h4 id="css-and-javascript-utilities">CSS Animation Libraries:</h4>
                     <ul>
                         <li>
                             <a href="https://github.com/daneden/animate.css" target="_blank">Animate</a>
                         </li>
                         <li>
                             <a href="http://animista.net/" target="_blank">Animista.net</a>
-                        </li>
-                        <li>
-                            <a href="https://webkul.github.io/micron/" target="_blank">Micron.js</a>
                         </li>
                     </ul>
                     <h4 id="animation-references">Animation References:</h4>
@@ -194,25 +191,25 @@
             });
 
             // Create TOC dynamically from content
-            jQuery('.chapter').each(function(index) {
-                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+            jQuery('.chapter').each(function (index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1);
                     $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
                 });
 
-                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                jQuery('h3', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1 + '.' + (i + 1));
                     $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
                 });
             });
 
-            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function () {
                 window.open($(this).attr('href'));
                 return false;
             });
 
             // toggle TOC from hamburger icon
-            document.querySelector('#menuButton').addEventListener('click', function() {
+            document.querySelector('#menuButton').addEventListener('click', function () {
                 slideout.toggle();
             });
 
@@ -222,7 +219,7 @@
             function resizeThrottler() {
                 // ignore resize events as long as an actualResizeHandler execution is in the queue
                 if (!resizeTimeout) {
-                    resizeTimeout = setTimeout(function() {
+                    resizeTimeout = setTimeout(function () {
                         resizeTimeout = null;
                         actualResizeHandler();
 
@@ -239,7 +236,7 @@
             }
 
             // open TOC on load if window is wide enough
-            window.addEventListener('load', function(event) {
+            window.addEventListener('load', function (event) {
                 if (window.innerWidth > 1036) {
                     slideout.open();
                 } else {

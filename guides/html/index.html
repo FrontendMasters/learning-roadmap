@@ -23,10 +23,10 @@
             <div id="bookPadding">
                 <h1>HTML</h1>
 
-                <h4 style="margin-top:0px">
+                <h4 style="margin-top: 0px;">
                     Written by
                     <a href="http://codylindley.com/">Cody Lindley</a>
-                    <span id="lastMod" style="display:none">updated <span id="lastModDate"></span></span>
+                    <span id="lastMod" style="display: none;">updated <span id="lastModDate"></span></span>
                 </h4>
 
                 <script>
@@ -51,7 +51,7 @@
                 <p><strong>Overview:</strong></p>
 
                 <p>
-                    learning resources and tools.
+                    Learning resources and tools.
                 </p>
 
                 <hr />
@@ -163,11 +163,9 @@
 
                     <h4 id="html-templatesboilerplatesstarter-kits">HTML Templates/Boilerplates/Starter Kits:</h4>
                     <ul>
-                        <li><a href="http://www.dcodes.net/2/docs/index.html" target="_blank">dCodes</a></li>
-                        <li><a href="https://github.com/seanpowell/Email-Boilerplate" target="_blank">Email-Boilerplate</a></li>
                         <li><a href="https://html5boilerplate.com/" target="_blank">HTML5 Boilerplate</a></li>
                         <li><a href="http://html5bones.com/" target="_blank">HTML5 Bones</a></li>
-                        <li><a href="https://html5boilerplate.com/mobile/" target="_blank">Mobile boilerplate</a></li>
+                        <li><a href="http://www.dcodes.net/2/docs/index.html" target="_blank">dCodes</a></li>
                     </ul>
 
                     <h4>Pre Processor:</h4>
@@ -192,9 +190,9 @@
                     <ul>
                         <li><a href="http://kangax.github.io/html-minifier/" target="_blank">HTML Minifier</a></li>
                     </ul>
-                    <h4>Online Creation/Generation/Experimentation Tools:</h4>
+                    <h4>Online HTML Generation Tools:</h4>
                     <ul>
-                        <li><a href="http://www.tablesgenerator.com/" target="_blank">tablesgenerator.com</a></li>
+                        <li><a href="http://www.tablesgenerator.com/html_tables" target="_blank">tablesgenerator.com</a></li>
                     </ul>
                     <h4 id="authoring-conventions">Authoring Conventions:</h4>
                     <ul>
@@ -204,10 +202,6 @@
                     <h4 id="workflow">Workflow:</h4>
                     <ul>
                         <li><a href="http://emmet.io/" target="_blank">Emmet</a></li>
-                    </ul>
-                    <h4 id="html-outliner">HTML Outliner:</h4>
-                    <ul>
-                        <li><a href="https://gsnedders.html5.org/outliner/" target="_blank">HTML 5 Outliner</a></li>
                     </ul>
                 </div>
 
@@ -237,25 +231,25 @@
             });
 
             // Create TOC dynamically from content
-            jQuery('.chapter').each(function(index) {
-                jQuery('h2', '#chapter' + (index + 1)).each(function(i) {
+            jQuery('.chapter').each(function (index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1);
                     $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
                 });
 
-                jQuery('h3', '#chapter' + (index + 1)).each(function(i) {
+                jQuery('h3', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1 + '.' + (i + 1));
                     $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
                 });
             });
 
-            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function() {
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function () {
                 window.open($(this).attr('href'));
                 return false;
             });
 
             // toggle TOC from hamburger icon
-            document.querySelector('#menuButton').addEventListener('click', function() {
+            document.querySelector('#menuButton').addEventListener('click', function () {
                 slideout.toggle();
             });
 
@@ -265,7 +259,7 @@
             function resizeThrottler() {
                 // ignore resize events as long as an actualResizeHandler execution is in the queue
                 if (!resizeTimeout) {
-                    resizeTimeout = setTimeout(function() {
+                    resizeTimeout = setTimeout(function () {
                         resizeTimeout = null;
                         actualResizeHandler();
 
@@ -282,7 +276,7 @@
             }
 
             // open TOC on load if window is wide enough
-            window.addEventListener('load', function(event) {
+            window.addEventListener('load', function (event) {
                 if (window.innerWidth > 1036) {
                     slideout.open();
                 } else {
