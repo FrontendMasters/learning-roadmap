@@ -34,12 +34,6 @@
                 background-color: #fff;
                 margin-top: 10px;
             }
-            #notyet {
-                border: solid 1px #4d4d4d;
-                padding: 5px;
-                background-color: #ededed;
-                margin-top: 10px;
-            }
         </style>
         <title>Front-end Developer Learning Roadmap</title>
     </head>
@@ -66,16 +60,16 @@
                 {
                     id: 0,
                     color: {
-                        border: '#cccccc',
+                        border: '#999',
                         background: '#ffffff',
                         hover: {
-                            border: '#cccccc',
+                            border: '#999',
                             background: '#ffffff',
                         },
                     },
                     margin: 30,
                     font: {
-                        bold: '24px arial #000',
+                        bold: '28px arial #000',
                     },
                     title: 'read now',
                     label: '<b>Front-end Developer Learning Roadmap</b> \n <code>Click roadmap for learning resources</code>',
@@ -1309,12 +1303,13 @@
             }
 
             network.on('click', (params) => {
-                console.log(params);
                 const node = nodes.find((node) => {
                     return node.id === params.nodes[0];
                 });
-                console.log(node);
 
+                if (node === undefined) {
+                    return;
+                }
                 window.open(node.url, '_blank');
             });
 
