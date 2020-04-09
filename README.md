@@ -1,4 +1,4 @@
-# Front-end Developer Learning Roadmap
+# Front-end Developer Learning Roadmap 2020
 
 ##### Formally the [Front-End Developer Handbook](https://github.com/FrontendMasters/front-end-handbook-2019)
 
@@ -6,11 +6,11 @@
 
 _Sponsored by [Frontend Masters](https://frontendmasters.com/), advancing your skills with in-depth, modern front-end engineering courses_
 
-This is a curated roadmap to becoming a professional Front-end developer that anyone could use to learn about the practice of front-end development. It broadly outlines and briefly discusses the practice of front-end engineering: how to learn it and what tools are used when practicing it in 2020.
+This is a curated roadmap to becoming a professional Front-end Developer that anyone could use to learn about the practice of front-end development. It broadly outlines and briefly discusses the practice of front-end engineering: how to learn it and what tools are used when practicing it in 2020.
 
 It is specifically written with the intention of being a professional resource for potential and currently practicing front-end developers to equip themselves with learning materials and development tools. Secondarily, it can be used by managers, CTOs, instructors, and head hunters to gain insights into the practice of front-end development.
 
-The content of the handbook favors web technologies (HTML, CSS, DOM, and JavaScript) and those solutions that are directly built on top of these open technologies. The materials referenced and discussed in the book are either best in class or the current offering to a problem.
+The content of the handbook favors web technologies (HTML, CSS, DOM, and JavaScript) and those solutions that are directly built on top of these open technologies. The resources and tools referenced and discussed in the book are either best in class or the current offering to a problem.
 
 The roadmap should not be considered a comprehensive outline of all resources available to a front-end developer. The value of the roadmap is tied up in a terse, focused, and timely curation of just enough categorical information so as not to overwhelm anyone on any one particular subject matter.
 
