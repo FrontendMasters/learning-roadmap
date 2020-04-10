@@ -876,7 +876,7 @@
                 },
                 {
                     id: 42,
-                    url: 'guides/jam-stack/index.html',
+                    url: 'guides/mobile-apps/index.html',
                     color: {
                         border: '#f4d442',
                         background: '#ffffff',
@@ -887,16 +887,16 @@
                     },
                     title: 'read now',
                     label: createLabel({
-                        title: 'JAM Stack',
-                        covers: ['Static assets', 'CDN', "API's", 'Markdown'],
+                        title: 'Native Mobile Apps (from Web Tech)',
+                        covers: ['React Native', 'NativeScript', 'Flutter'],
                     }),
-                    x: 400,
-                    y: 870,
+                    x: 600,
+                    y: 920,
                 },
 
                 {
                     id: 43,
-                    url: 'guides/rwd/index.html',
+                    url: 'guides/desktop-apps/index.html',
                     color: {
                         border: '#f4d442',
                         background: '#ffffff',
@@ -907,10 +907,10 @@
                     },
                     title: 'read now',
                     label: createLabel({
-                        title: 'Responsive Web Design',
-                        covers: ['Responsive Images', 'Responsive Type', 'Responsive Layout'],
+                        title: 'Native Desktop Apps (from Web Tech)',
+                        covers: ['Electron', 'Flutter', 'NW.js'],
                     }),
-                    x: 175,
+                    x: 275,
                     y: 870,
                 },
                 {
@@ -929,12 +929,12 @@
                         title: 'Progressive Web Apps',
                         covers: ['Responsive', 'Installable', 'Offline', 'accessible'],
                     }),
-                    x: -75,
+                    x: 0,
                     y: 900,
                 },
                 {
                     id: 45,
-                    url: 'guides/desktop-apps/index.html',
+                    url: 'guides/rwd/index.html',
                     color: {
                         border: '#f4d442',
                         background: '#ffffff',
@@ -945,15 +945,15 @@
                     },
                     title: 'read now',
                     label: createLabel({
-                        title: 'Desktop Apps (from Web Tech)',
-                        covers: ['Electron', 'Flutter', 'NW.js'],
+                        title: 'Responsive Web Design',
+                        covers: ['Responsive Images', 'Responsive Type', 'Responsive Layout'],
                     }),
-                    x: -350,
+                    x: -250,
                     y: 870,
                 },
                 {
                     id: 46,
-                    url: 'guides/mobile-apps/index.html',
+                    url: 'guides/jam-stack/index.html',
                     color: {
                         border: '#f4d442',
                         background: '#ffffff',
@@ -964,11 +964,30 @@
                     },
                     title: 'read now',
                     label: createLabel({
-                        title: 'Mobile Apps (from Web Tech)',
-                        covers: ['React Native', 'NativeScript', 'Flutter'],
+                        title: 'JAM Stack',
+                        covers: ['Static assets', 'CDN', "API's", 'Markdown'],
+                    }),
+                    x: -500,
+                    y: 850,
+                },
+                {
+                    id: 58,
+                    url: 'guides/web-apps/index.html',
+                    color: {
+                        border: '#2B7CE9',
+                        background: '#ffffff',
+                        hover: {
+                            border: '#2B7CE9',
+                            background: '#D2E5FF',
+                        },
+                    },
+                    title: 'read now',
+                    label: createLabel({
+                        title: 'Web Apps',
+                        covers: ['React/JSX', 'Vue', 'Svelte', 'Angular'],
                     }),
                     x: -650,
-                    y: 970,
+                    y: 950,
                 },
                 {
                     id: 47,
@@ -1040,10 +1059,10 @@
                     },
                     title: 'read now',
                     label: createLabel({
-                        title: 'JavaScript Application Frameworks',
-                        covers: ['React/JSX', 'Vue', 'Svelte', 'Angular', 'Stencil'],
+                        title: 'JavaScript Web Application Frameworks/Libraries',
+                        covers: ['React/JSX', 'Vue', 'Svelte', 'Angular'],
                     }),
-                    x: -840,
+                    x: -860,
                     y: 1150,
                 },
                 {
@@ -1059,7 +1078,7 @@
                     },
                     title: 'read now',
                     label: createLabel({
-                        title: 'JavaScript State Management',
+                        title: ' JavaScript State Management',
                         covers: ['Mobx', 'Redux'],
                     }),
                     x: -300,
@@ -1081,7 +1100,7 @@
                         title: "Data API's & Data Formats",
                         covers: ['REST', 'GraphQL', 'JSON'],
                     }),
-                    x: 100,
+                    x: 0,
                     y: 1100,
                 },
                 {
@@ -1100,8 +1119,8 @@
                         title: 'Testing',
                         covers: ['Unit', 'Integration', 'End to End Testing'],
                     }),
-                    x: 350,
-                    y: 1200,
+                    x: 300,
+                    y: 1100,
                 },
                 {
                     id: 56,
@@ -1139,7 +1158,7 @@
                         covers: ['Styled Components', 'JSS', 'Emotion'],
                     }),
                     x: -550,
-                    y: 1300,
+                    y: 1200,
                 },
             ];
 
@@ -1221,28 +1240,32 @@
                 { from: 45, to: 46, arrows: 'to, from' },
 
                 { from: 49, to: 50, arrows: 'to' },
-                { from: 50, to: 42, arrows: 'to' },
-                { from: 50, to: 43, arrows: 'to' },
-                { from: 50, to: 44, arrows: 'to' },
-                { from: 50, to: 45, arrows: 'to' },
-                { from: 50, to: 46, arrows: 'to' },
 
-                { from: 42, to: 51, arrows: 'to, from' },
-                { from: 43, to: 51, arrows: 'to, from' },
-                { from: 44, to: 51, arrows: 'to, from' },
-                { from: 45, to: 51, arrows: 'to, from' },
-                { from: 46, to: 51, arrows: 'to, from' },
-                { from: 50, to: 51, arrows: 'to' },
+                { from: 50, to: 58, arrows: 'to' },
+
+                { from: 42, to: 55, arrows: 'to, from' },
+                { from: 43, to: 55, arrows: 'to, from' },
+                { from: 44, to: 55, arrows: 'to, from' },
+                { from: 45, to: 55, arrows: 'to, from' },
+                { from: 46, to: 55, arrows: 'to, from' },
+
+                { from: 53, to: 42, arrows: 'to' },
+                { from: 53, to: 43, arrows: 'to' },
+                { from: 53, to: 44, arrows: 'to' },
+                { from: 53, to: 45, arrows: 'to' },
+                { from: 53, to: 46, arrows: 'to' },
+
+                { from: 58, to: 51, arrows: 'to' },
 
                 { from: 51, to: 53, arrows: 'to' },
-                { from: 53, to: 55, arrows: 'to' },
+
                 { from: 55, to: 54, arrows: 'to' },
                 { from: 49, to: 56, arrows: 'to' },
                 { from: 56, to: 50, arrows: 'to' },
 
                 { from: 51, to: 36, arrows: 'to' },
                 { from: 36, to: 53, arrows: 'to' },
-                { from: 50, to: 57, arrows: 'to' },
+                { from: 58, to: 57, arrows: 'to' },
                 { from: 57, to: 51, arrows: 'to' },
             ];
 
