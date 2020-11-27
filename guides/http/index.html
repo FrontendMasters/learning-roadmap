@@ -64,10 +64,15 @@
                     </dd>
                     <dt>CORS</dt>
                     <dd>
-                        Cross-site HTTP requests are HTTP requests for resources from a different domain than the domain of the resource making the request.
+                        Cross-site HTTP requests are HTTP requests for resources from a different domain than the domain of the resource making the request
+                        (e.g. using JavaScript an HTTP request is made from http://domainA.com to http://domainB.com that would otherwise be blocked due to
+                        cross site scripting limitations but is possible due to CORs).
                     </dd>
                     <dt>Web Sockets</dt>
-                    <dd>A protocol that allows for a persistent TCP connection between server and client so they can exchange data at any time.</dd>
+                    <dd>
+                        A protocol that allows for a persistent TCP connection between server and client so they can exchange data at any time (e.g. The server
+                        can reach out to the client to invoke a change v.s. the client only being able to request changes.).
+                    </dd>
                 </dl>
 
                 <hr />
@@ -191,7 +196,7 @@
                         <li><a href="https://mitmproxy.org/" target="_blank">Mitmproxy</a> [free]</li>
                         <li><a href="https://paw.cloud/" target="_blank">Paw</a> [$]</li>
                         <li><a href="https://www.getpostman.com/" target="_blank">Postman</a> [free - $]</li>
-                        <li><a href="https://postwoman.io/" target="_blank">Postwoman.io</a> [free]</li>
+                        <li><a href="https://hoppscotch.io/" target="_blank">hoppscotch.io</a> [free]</li>
                     </ul>
                 </div>
 
