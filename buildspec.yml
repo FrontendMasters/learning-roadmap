@@ -8,6 +8,9 @@ build:
     # replace index.html with empty string
     # - sed -i -- 's/index.html//g' index.html
 
+    # replace guide href with prod version
+    - sed -i -- 's/"backToRoadMapLink" href="\/"/"backToRoadMapLink" href="\/guides\/learning-roadmap\/"/g' ./guides/**/index.html
+
     # create the guides path if necessary
     - mkdir -p /efs/www/frontendmasters.com/learning-roadmap/guides
 
