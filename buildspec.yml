@@ -1,0 +1,18 @@
+version: 0.2
+
+build:
+    commands:
+    # install npm modules
+    - npm i
+
+    # replace index.html with empty string
+    # - sed -i -- 's/index.html//g' index.html
+
+    # create the guides path if necessary
+    - mkdir -p /efs/www/frontendmasters.com/learning-roadmap/guides
+
+    # copy the learning guide index
+    - cp ./index.html /efs/www/frontendmasters.com/learning-roadmap/
+
+    # copy the guides
+    - cp -r ./guides /efs/www/frontendmasters.com/learning-roadmap/
