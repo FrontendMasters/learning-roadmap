@@ -16,3 +16,9 @@ build:
 
     # copy the guides
     - cp -r ./guides /efs/www/frontendmasters.com/learning-roadmap/
+    
+    # copy the node modules
+    - cp -r ./node_modules /efs/www/frontendmasters.com/learning-roadmap/
+
+    # make nginx the owner of the guides
+    - chown -hR nginx:nginx /efs/www/frontendmasters.com/learning-roadmap/
