@@ -1333,7 +1333,7 @@
                 if (node === undefined) {
                     return;
                 }
-                window.open(node.url, '');
+                window.open(node.url, '_self');
             });
 
             network.on('hoverNode', function (params) {
