@@ -1,27 +1,28 @@
 version: 0.2
 
-build:
-    commands:
-    # install npm modules
-    - npm i
+phases:
+    build:
+        commands:
+        # install npm modules
+        - npm i
 
-    # replace index.html with empty string
-    # - sed -i -- 's/index.html//g' index.html
+        # replace index.html with empty string
+        - sed -i -- 's/index.html//g' index.html
 
-    # replace guide href with prod version
-    - sed -i -- 's/"backToRoadMapLink" href="\/"/"backToRoadMapLink" href="\/guides\/learning-roadmap\/"/g' ./guides/**/index.html
+        # replace guide href with prod version
+        - sed -i -- 's/"backToRoadMapLink" href="\/"/"backToRoadMapLink" href="\/guides\/learning-roadmap\/"/g' ./guides/**/index.html
 
-    # create the guides path if necessary
-    - mkdir -p /efs/www/frontendmasters.com/learning-roadmap/guides
+        # create the guides path if necessary
+        - mkdir -p /efs/www/frontendmasters.com/learning-roadmap/guides
 
-    # copy the learning guide index
-    - cp ./index.html /efs/www/frontendmasters.com/learning-roadmap/
+        # copy the learning guide index
+        - cp ./index.html /efs/www/frontendmasters.com/learning-roadmap/
 
-    # copy the guides
-    - cp -r ./guides /efs/www/frontendmasters.com/learning-roadmap/
-    
-    # copy the node modules
-    - cp -r ./node_modules /efs/www/frontendmasters.com/learning-roadmap/
+        # copy the guides
+        - cp -r ./guides /efs/www/frontendmasters.com/learning-roadmap/
+        
+        # copy the node modules
+        - cp -r ./node_modules /efs/www/frontendmasters.com/learning-roadmap/
 
-    # make nginx the owner of the guides
-    - chown -hR nginx:nginx /efs/www/frontendmasters.com/learning-roadmap/
+        # make nginx the owner of the guides, doesn't work in codebuild
+        # - chown -hR nginx:nginx /efs/www/frontendmasters.com/learning-roadmap/
