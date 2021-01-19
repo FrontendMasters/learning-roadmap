@@ -7,7 +7,7 @@ phases:
         - npm i
 
         # replace index.html with empty string
-        # - sed -i -- 's/index.html//g' index.html
+        - sed -i -- 's/index.html//g' index.html
 
         # replace guide href with prod version
         - sed -i -- 's/"backToRoadMapLink" href="\/"/"backToRoadMapLink" href="\/guides\/learning-roadmap\/"/g' ./guides/**/index.html
@@ -24,5 +24,5 @@ phases:
         # copy the node modules
         - cp -r ./node_modules /efs/www/frontendmasters.com/learning-roadmap/
 
-        # make nginx the owner of the guides
-        - chown -hR nginx:nginx /efs/www/frontendmasters.com/learning-roadmap/
+        # make nginx the owner of the guides, doesn't work in codebuild
+        # - chown -hR nginx:nginx /efs/www/frontendmasters.com/learning-roadmap/
