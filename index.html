@@ -14,37 +14,53 @@
             }
             #key {
                 position: absolute;
-                right: 20px;
+                right: 25px;
                 z-index: 1000000000;
                 top: 20px;
-                font-size: 12px;
+                font-family: arial, sans-serif;
+                font-size: 18px;
                 text-align: center;
-                background: rgba(255, 255, 255, 0.6);
+                background: rgba(255, 255, 255, 0.7);
                 padding: 20px;
             }
             #primary {
                 border: solid 1px #9ecd54;
                 padding: 5px;
-                color: #fff;
-                background-color: #9ecd54;
+                color: black;
+                background-color: #e0f2c3;
                 margin-top: 10px;
             }
             #secondary {
                 border: solid 1px #00eaff;
                 padding: 5px;
-                color: #fff;
-                background-color: #00eaff;
+                color: black;
+                background-color: #b7f9ff;
                 margin-top: 10px;
+            }
+            #betaTag {
+                color: #fff;
+                background-color: #fd7219;
+                background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 100"><polygon points="70 0, 0 50, 70 100, 70 70" fill="rgba(230, 225, 215, 100)"/></svg>');
+                background-repeat: no-repeat;
+                background-position-x: right;
+                padding: 15px 25px;
+                margin: 15px 0px 0px -15px;
+                width: 75px;
+                position: absolute;
+                flex-wrap: nowrap;
             }
         </style>
         <title>Roadmap to Front-end Development</title>
     </head>
-    <body style="background-color:rgba(230, 225, 215, 100);">
+    <body style="background-color:rgba(230, 225, 215, 100); margin: 0px;">
         <div id="key">
             <div>Key:</div>
             <div id="primary">Fundamental</div>
             <div id="secondary">Specialize</div>
         </div>
+        <div id="betaTag">
+            <div>BETA</div>
+        </div> 
         <div id="mynetwork"></div>
         <script src="node_modules/vis/dist/vis.min.js"></script>
         <script type="text/javascript">
