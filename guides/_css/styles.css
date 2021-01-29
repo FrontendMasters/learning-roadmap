@@ -9,6 +9,28 @@ p cite {
     display: block;
 }
 
+#betaHeader {
+    background-color:#fd7219;
+    padding: 15px 25px 15px 55px;
+    width: 115px;
+    position:relative;
+    margin: 0;
+    float: right;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 100"><polygon points="0 0, 70 100, 0 100" fill="rgba(255, 255, 255, 100)"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: left;
+}
+
+#betaHeader h1{
+    color: #fff;
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0px;
+    line-height: normal;
+}
+
+
 #panel a:link {
     background-color: rgba(187, 239, 253, 0.3);
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
