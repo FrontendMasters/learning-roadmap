@@ -12,15 +12,11 @@ phases:
         # replace guide href with prod version
         - sed -i -- 's/"backToRoadMapLink" href="\/"/"backToRoadMapLink" href="\/guides\/learning-roadmap\/"/g' ./**/index.html
 
-        # create the guides path if necessary
-        - mkdir -p /efs/www/frontendmasters.com/learning-roadmap/guides
-
         # copy the learning guide index
-        - cp ./index.html /efs/www/frontendmasters.com/learning-roadmap/
+        - cp -i ./index.html /efs/www/frontendmasters.com/learning-roadmap/  
 
         # copy the guides
         - cp -r ./* /efs/www/frontendmasters.com/learning-roadmap/
-        
 
         # make nginx the owner of the guides, doesn't work in codebuild
         # - chown -hR nginx:nginx /efs/www/frontendmasters.com/learning-roadmap/
