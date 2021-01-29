@@ -1,8 +1,8 @@
 # The Front-End Developer Learning Roadmap
 
-##### Formally the [Front-End Developer Handbook](https://github.com/FrontendMasters/front-end-handbook-2019)
-
 Authored by [Cody Lindley](http://codylindley.com/) | _Published by [Frontend Masters](https://frontendmasters.com/) - Advancing your skills with in-depth, modern front-end engineering courses_
+
+##### Formally the [Front-End Developer Handbook](https://github.com/FrontendMasters/front-end-handbook-2019)
 
 __
 ### Read Online: [https://frontendmasters.com/guides/learning-roadmap/](https://frontendmasters.com/guides/learning-roadmap/)
