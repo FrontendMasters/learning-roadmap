@@ -1,4 +1,6 @@
-# [Front-end Developer Learning Roadmap](https://frontendmasters.com/guides/learning-roadmap/)
+# The Front-End Developer Learning Roadmap
+
+Read Online: [https://frontendmasters.com/guides/learning-roadmap/](https://frontendmasters.com/guides/learning-roadmap/)
 
 ##### Formally the [Front-End Developer Handbook](https://github.com/FrontendMasters/front-end-handbook-2019)
 
@@ -18,7 +20,7 @@ The intention is to release an update to the content yearly.
 
 ---
 
-**[Read Online](https://frontendmasters.com/guides/learning-roadmap/)**:
+**[Read Online](https://frontendmasters.com/guides/learning-roadmap/)**
 
 ---
 
