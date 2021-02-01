@@ -1,4 +1,7 @@
-{
+{ 
+  "scripts": {
+    "start": "python -m SimpleHTTPServer 8000"
+  },
   "dependencies": {
     "vis": "^4.21.0"
   }
