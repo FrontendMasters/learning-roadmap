@@ -84,7 +84,6 @@
                     id: 0,
                     color: {
                         border: '#999',
-                        borderWidth: 2,
                         background: '#ffffff',
                         hover: {
                             border: '#999',
@@ -104,7 +103,6 @@
                     id: 1,
                     color: {
                         border: '#9ecd54',
-                        borderWidth: 2,
                         background: '#ffffff',
                         hover: {
                             border: '#9ecd54',
@@ -1316,7 +1314,6 @@
                     shape: 'box',
                     color: {
                         border: '#4d4d4d',
-                        borderWidth: 2,
                         background: '#ededed',
                         hover: {
                             border: '#4d4d4d',
@@ -1351,6 +1348,16 @@
                 networkCanvas.style.cursor = newCursorStyle;
             }
 
+            var isCmdControlPressed = false;
+
+            document.addEventListener('keydown', function(e) {
+                isCmdControlPressed = e.ctrlKey || e.metaKey;
+            });
+
+            document.addEventListener('keyup', function(e) {
+                isCmdControlPressed = e.ctrlKey || e.metaKey;
+            });
+
             network.on('click', (params) => {
                 const node = nodes.find((node) => {
                     return node.id === params.nodes[0];
@@ -1359,7 +1366,12 @@
                 if (node === undefined) {
                     return;
                 }
-                window.open(node.url, '_self');
+
+                if (isCmdControlPressed) {
+                    window.open(node.url, '_blank');
+                } else {
+                    window.open(node.url, '_self');
+                }
             });
 
             network.on('hoverNode', function (params) {
