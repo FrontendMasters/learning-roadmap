@@ -71,7 +71,8 @@ p cite {
     background-position-x: left;
 }
 
-#betaHeader h1{
+#betaHeader::after {
+    content: "BETA";
     color: #fff;
     font-family: Open Sans;
     font-weight: 600;

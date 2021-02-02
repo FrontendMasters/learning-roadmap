@@ -53,19 +53,36 @@
                 position: absolute;
                 flex-wrap: nowrap;
             }
+            #betaTag::after {
+                content: "BETA";
+                color: #fff;
+                font-family: Open Sans;
+                font-weight: 600;
+                font-size: 16px;
+                margin: 0px;
+                line-height: normal;
+            }
+            .visually-hidden {
+                clip: rect(0 0 0 0);
+                clip-path: inset(50%);
+                height: 1px;
+                overflow: hidden;
+                position: absolute;
+                white-space: nowrap;
+                width: 1px;
+            }
         </style>
         <title>The Front-End Developer Learning Roadmap by Frontend Masters</title>
         <meta name="description" content="Guides to learning the front-end development industry tools and techniques visualized as a roadmap." />
     </head>
     <body style="background-color: rgba(230, 225, 215, 100); margin: 0px">
+        <h1 class="visually-hidden">The Front-End Developer Learning Roadmap by Frontend Masters</h1>
         <div id="key">
             <div>Key:</div>
             <div id="primary">Fundamental</div>
             <div id="secondary">Specialize</div>
         </div>
-        <div id="betaTag">
-            <div>BETA</div>
-        </div>
+        <div id="betaTag"></div>
         <div id="mynetwork"></div>
         <script src="node_modules/vis/dist/vis.min.js"></script>
         <script type="text/javascript">
