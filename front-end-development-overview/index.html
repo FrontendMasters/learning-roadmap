@@ -1,837 +1,587 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="../_css/reset.css" />
-    <link rel="stylesheet" href="../_css/styles.css" />
-    <link rel="stylesheet" href="../_css/prism.css" />
-    <script src="../_js/prism.js"></script>
-    <title>The Front-end Development Tech/Spec Overview</title>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../_css/reset.css" />
+        <link rel="stylesheet" href="../_css/styles.css" />
+        <link rel="stylesheet" href="../_css/prism.css" />
+        <script src="../_js/prism.js"></script>
+        <title>The Front-end Development Tech/Spec Overview</title>
+    </head>
 
-  <body>
-    <div id="menu">
-      <a id="backToRoadMapLink" href="/">← Front-End Developer Learning Roadmap</a>
-      <div id="toc"></div>
-    </div>
-
-    <div id="panel">
-      <div id="menuButton">|||</div>
-      <div id="betaHeader"><h1>BETA</h1></div>
-      <div id="bookPadding">
-        <h1>The Front-end Development Tech/Spec Overview</h1>
-
-        <h4 style="margin-top:0px">
-          Written by
-          <a href="http://codylindley.com/" rel="nofollow">Cody Lindley</a>
-          <span id="lastMod" style="display:none"
-            >updated <span id="lastModDate"></span
-          ></span>
-        </h4>
-
-        <script>
-          if (document.lastModified) {
-            document.getElementById("lastMod").style.display = "inline";
-            document.getElementById(
-              "lastModDate"
-            ).innerText = document.lastModified.split(" ")[0];
-          }
-        </script>
-
-        <section>
-          <p>
-            <em
-              ><a href="https://frontendmasters.com/guides/learning-roadmap/">The Front-End Developer Roadmap</a> from
-              <a href="https://frontendmasters.com/">Frontend Masters</a>.
-              <br />
-              Advancing your skills with in-depth, modern front-end engineering
-              courses.</em
-            >
-          </p>
-        </section>
-
-        <hr />
-
-        <p><strong>Overview:</strong></p>
-
-        <p>
-         Briefly introduce and
-          define the infrastructure and technologies used to do front-end
-          development.
-        </p>
-        <hr />
-        <p>
-          <strong>Contribute content, suggestions, and fixes on github</strong>:
-        </p>
-
-        <p>
-          <a href="https://github.com/FrontendMasters/guides"
-            >https://github.com/FrontendMasters/guides</a
-          >
-        </p>
-
-        <hr />
-
-        <div id="chapter1" class="chapter">
-          <h2>The World Wide Web</h2>
-
-          <blockquote>
-            <p>
-              The World Wide Web (WWW), commonly known as the Web, is an
-              information space where documents and other web resources are
-              identified by Uniform Resource Locators (URLs, such as
-              https://www.example.com/), which may be interlinked by hypertext,
-              and are accessible over the Internet. The resources of the WWW may
-              be accessed by users by a software application called a web
-              browser.
-            </p>
-
-            <p>
-              English scientist Tim Berners-Lee invented the World Wide Web in
-              1989. He wrote the first web browser in 1990 while employed at
-              CERN near Geneva, Switzerland. The browser was released outside
-              CERN in 1991, first to other research institutions starting in
-              January 1991 and then to the general public in August 1991. The
-              World Wide Web has been central to the development of the
-              Information Age and is the primary tool billions of people use to
-              interact on the Internet.
-            </p>
-
-            <p>
-              Web resources may be any type of downloaded media, but web pages
-              are hypertext media that have been formatted in Hypertext Markup
-              Language (HTML). Such formatting allows for embedded hyperlinks
-              that contain URLs and permit users to navigate to other web
-              resources. In addition to text, web pages may contain images,
-              video, audio, and software components that are rendered in the
-              user's web browser as coherent pages of multimedia content.
-            </p>
-
-            <p>
-              Multiple web resources with a common theme, a common domain name,
-              or both, make up a website. Websites are stored in computers that
-              are running a program called a web server that responds to
-              requests made over the Internet from web browsers running on a
-              user's computer. Website content can be largely provided by a
-              publisher, or interactively where users contribute content or the
-              content depends upon the users or their actions. Websites may be
-              provided for a myriad of informative, entertainment, commercial,
-              governmental, or non-governmental reasons.
-            </p>
-
-            <p>
-              <cite
-                >—
-                <a href="https://en.wikipedia.org/wiki/Internet" target="_blank"
-                  >Wikipedia</a
-                ></cite
-              >
-            </p>
-          </blockquote>
+    <body>
+        <div id="menu">
+            <a id="backToRoadMapLink" href="/">← Front-End Developer Learning Roadmap</a>
+            <div id="toc"></div>
         </div>
 
-        <div id="chapter2" class="chapter">
-          <h2>The Internet</h2>
+        <div id="panel">
+            <div id="menuButton">|||</div>
+            <div id="betaHeader"><h1>BETA</h1></div>
+            <div id="bookPadding">
+                <h1>The Front-end Development Tech/Spec Overview</h1>
 
-          <blockquote>
-            <p>
-              The Internet (contraction of interconnected network) is the global
-              system of interconnected computer networks that use the Internet
-              protocol suite (TCP/IP) to link devices worldwide. It is a network
-              of networks that consists of private, public, academic, business,
-              and government networks of local to global scope, linked by a
-              broad array of electronic, wireless, and optical networking
-              technologies. The Internet carries a vast range of information
-              resources and services, such as the inter-linked hypertext
-              documents and applications of the World Wide Web (WWW), electronic
-              mail, telephony, and file sharing.
-            </p>
-            <p>
-              <cite
-                >—
-                <a href="https://en.wikipedia.org/wiki/Internet" target="_blank"
-                  >Wikipedia</a
-                ></cite
-              >
-            </p>
-          </blockquote>
+                <h4 style="margin-top: 0px">
+                    Written by
+                    <a href="http://codylindley.com/" rel="nofollow">Cody Lindley</a>
+                    <span id="lastMod" style="display: none">updated <span id="lastModDate"></span></span>
+                </h4>
 
-          <p>In-depth Internet overviews:</p>
+                <script>
+                    if (document.lastModified) {
+                        document.getElementById('lastMod').style.display = 'inline';
+                        document.getElementById('lastModDate').innerText = document.lastModified.split(' ')[0];
+                    }
+                </script>
 
-          <ul>
-            <li>
-              <a href="http://internetfundamentals.com/"
-                >Internet Fundamentals</a
-              > <span title="Video">🎥</span>
-            </li>
-            <li>
-              <a
-                href="https://www.khanacademy.org/partner-content/code-org/internet-works"
-                >How the Internet Works</a
-              > <span title="Video">🎥</span>
-            </li>
-            <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work"
-                  >How does the Internet work?
-                  </a
-                > <span title="Read">📕</span>
-              </li>
-          </ul>
-        </div>
+                <section>
+                    <p>
+                        <em
+                            ><a href="https://frontendmasters.com/guides/learning-roadmap/">The Front-End Developer Roadmap</a> from
+                            <a href="https://frontendmasters.com/">Frontend Masters</a>.
+                            <br />
+                            Advancing your skills with in-depth, modern front-end engineering courses.</em
+                        >
+                    </p>
+                </section>
 
-        <div id="chapter3" class="chapter">
-          <h2>The Web Platform</h2>
+                <hr />
 
-          <blockquote>
-            <p>
-              The Web platform is a collection of technologies developed as open
-              standards by the World Wide Web Consortium and other
-              standardization bodies such as The Web Hypertext Application
-              Technology Working Group, the Unicode Consortium, the Internet
-              Engineering Task Force, and Ecma International. It is the umbrella
-              term introduced by the World Wide Web Consortium, and in 2011 it
-              was defined as "a platform for innovation, consolidation and cost
-              efficiencies" by W3C CEO Jeff Jaffe. Being built on The evergreen
-              Web (where rapid, automatic software updates, vendor co-operation,
-              standardization, and competition take place) has allowed for the
-              addition of new capabilities while addressing security and privacy
-              risks. Additionally, developers are enabled to build interoperable
-              content on a cohesive platform.
-            </p>
+                <p><strong>Overview:</strong></p>
 
-            <p>
-              The Web platform includes technologies—computer languages and
-              APIs—that were originally created in relation to the publication
-              of Web pages. This includes HTML, CSS 2.1, CSS, SVG, MathML,
-              WAI-ARIA, ECMAScript, WebGL, Web Storage, Indexed Database API,
-              Web Components, WebAssembly, Web Workers, WebSocket, Geolocation
-              API, Server-Sent Events, DOM Events, Media Fragments,
-              XMLHttpRequest, Cross-Origin Resource Sharing, File API, RDFa,
-              WOFF, HTTP, TLS 1.2, and IRI.
-            </p>
-            <p>
-              <cite
-                >—
-                <a href="https://en.wikipedia.org/wiki/Internet" target="_blank"
-                  >Wikipedia</a
-                ></cite
-              >
-            </p>
-          </blockquote>
-          <p>The Web platform: Browser technologies:</p>
+                <p>Briefly introduce and define the infrastructure and technologies used to do front-end development.</p>
+                <hr />
+                <p><strong>Contribute content, suggestions, and fixes on github</strong>:</p>
 
-          <ul>
-            <li>
-              <a href="https://platform.html5.org/"
-                >https://platform.html5.org/</a
-              > <span title="Read">📕</span>
-            </li>
-          </ul>
+                <p>
+                    <a href="https://github.com/FrontendMasters/guides">https://github.com/FrontendMasters/guides</a>
+                </p>
 
-          <p>In-depth Web Platform overview:</p>
+                <hr />
 
-          <ul>
-            <li>
-              <a href="https://www.eventedmind.com/classes/how-the-web-works-7f40254c/introduction-how-the-web-works-fd9f78b1"
-                >Introduction: How The Web Works</a
-              > <span title="Video">🎥</span>
-            </li>
-          </ul>
-        </div>
+                <div id="chapter1" class="chapter">
+                    <h2>The World Wide Web</h2>
 
-        <div id="chapter4" class="chapter">
-            <h2 id="hypertext-transfer-protocol-aka-http">
-              Hypertext Transfer Protocol (aka HTTP)
-            </h2>
-            <blockquote>
-              <p>
-                The Hypertext Transfer Protocol (HTTP) is an application protocol
-                for distributed, collaborative, hypermedia information systems.
-                HTTP is the foundation of data communication for the World Wide
-                Web.
-              </p>
-              <p>
-                <cite
-                  >—
-                  <a
-                    href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol"
-                    target="_blank"
-                    >Wikipedia</a
-                  ></cite
-                >
-              </p>
-            </blockquote>
-            <p>Most relevant specifications:</p>
-            <ul>
-              <li>
-                <a href="https://tools.ietf.org/html/rfc2616" target="_blank"
-                  >Hypertext Transfer Protocol -- HTTP/1.1</a
-                >
-              </li>
-              <li>
-                <a href="http://httpwg.org/specs/rfc7540.html" target="_blank"
-                  >HTTP/2</a
-                >
-              </li>
-            </ul>
-          </div>
-  
-          <div id="chapter5" class="chapter">
-            <h2>Uniform Resource Locators (aka URL)</h2>
-            <blockquote>
-              <p>
-                A uniform resource locator (URL) (also called a web address) is a
-                reference to a resource that specifies the location of the
-                resource on a computer network and a mechanism for retrieving it.
-                A URL is a specific type of uniform resource identifier (URI),
-                although many people use the two terms interchangeably. A URL
-                implies the means to access an indicated resource, which is not
-                true of every URI. URLs occur most commonly to reference web pages
-                (http), but are also used for file transfer (ftp), email (mailto),
-                database access (JDBC), and many other applications.
-              </p>
-              <p>
-                <cite
-                  >—
-                  <a
-                    href="https://en.wikipedia.org/wiki/Uniform_Resource_Locator"
-                    target="_blank"
-                    >Wikipedia</a
-                  ></cite
-                >
-              </p>
-            </blockquote>
-            <p>Most relevant specifications:</p>
-            <ul>
-              <li>
-                <a
-                  href="http://www.w3.org/Addressing/URL/url-spec.txt"
-                  target="_blank"
-                  >Uniform Resource Locators (URL)</a
-                >
-              </li>
-              <li>
-                <a href="https://url.spec.whatwg.org/" target="_blank"
-                  >URL Living Standard</a
-                >
-              </li>
-            </ul>
-          </div>
+                    <blockquote>
+                        <p>
+                            The World Wide Web (WWW), commonly known as the Web, is an information space where documents and other web resources are identified
+                            by Uniform Resource Locators (URLs, such as https://www.example.com/), which may be interlinked by hypertext, and are accessible
+                            over the Internet. The resources of the WWW may be accessed by users by a software application called a web browser.
+                        </p>
 
-        <div id="chapter6" class="chapter">
-          <h2>HyperText Markup Language (aka HTML)</h2>
+                        <p>
+                            English scientist Tim Berners-Lee invented the World Wide Web in 1989. He wrote the first web browser in 1990 while employed at CERN
+                            near Geneva, Switzerland. The browser was released outside CERN in 1991, first to other research institutions starting in January
+                            1991 and then to the general public in August 1991. The World Wide Web has been central to the development of the Information Age
+                            and is the primary tool billions of people use to interact on the Internet.
+                        </p>
 
-          <blockquote>
-            <p>
-              HyperText Markup Language, commonly referred to as HTML, is the
-              standard markup language used to create web pages. Web browsers
-              can read HTML files and render them into visible or audible web
-              pages. HTML describes the structure of a website semantically
-              along with cues for presentation, making it a markup language,
-              rather than a programming language.
-            </p>
-            <p>
-              <cite
-                >—
-                <a href="https://en.wikipedia.org/wiki/HTML" target="_blank"
-                  >Wikipedia</a
-                ></cite
-              >
-            </p>
-          </blockquote>
+                        <p>
+                            Web resources may be any type of downloaded media, but web pages are hypertext media that have been formatted in Hypertext Markup
+                            Language (HTML). Such formatting allows for embedded hyperlinks that contain URLs and permit users to navigate to other web
+                            resources. In addition to text, web pages may contain images, video, audio, and software components that are rendered in the user's
+                            web browser as coherent pages of multimedia content.
+                        </p>
 
-          <p>Below is an example of a basic HTML file, with a <code>&lt;h1&gt;&lt;/h1&gt;</code> heading that a web browser will read.</p>
+                        <p>
+                            Multiple web resources with a common theme, a common domain name, or both, make up a website. Websites are stored in computers that
+                            are running a program called a web server that responds to requests made over the Internet from web browsers running on a user's
+                            computer. Website content can be largely provided by a publisher, or interactively where users contribute content or the content
+                            depends upon the users or their actions. Websites may be provided for a myriad of informative, entertainment, commercial,
+                            governmental, or non-governmental reasons.
+                        </p>
 
-    <pre class="line-numbers"><code class="language-markup">
+                        <p>
+                            <cite>— <a href="https://en.wikipedia.org/wiki/Internet" target="_blank">Wikipedia</a></cite>
+                        </p>
+                    </blockquote>
+                </div>
+
+                <div id="chapter2" class="chapter">
+                    <h2>The Internet</h2>
+
+                    <blockquote>
+                        <p>
+                            The Internet (contraction of interconnected network) is the global system of interconnected computer networks that use the Internet
+                            protocol suite (TCP/IP) to link devices worldwide. It is a network of networks that consists of private, public, academic, business,
+                            and government networks of local to global scope, linked by a broad array of electronic, wireless, and optical networking
+                            technologies. The Internet carries a vast range of information resources and services, such as the inter-linked hypertext documents
+                            and applications of the World Wide Web (WWW), electronic mail, telephony, and file sharing.
+                        </p>
+                        <p>
+                            <cite>— <a href="https://en.wikipedia.org/wiki/Internet" target="_blank">Wikipedia</a></cite>
+                        </p>
+                    </blockquote>
+
+                    <p>In-depth Internet overviews:</p>
+
+                    <ul>
+                        <li><a href="http://internetfundamentals.com/">Internet Fundamentals</a> <span title="Video">🎥</span></li>
+                        <li>
+                            <a href="https://www.khanacademy.org/partner-content/code-org/internet-works">How the Internet Works</a>
+                            <span title="Video">🎥</span>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work"
+                                >How does the Internet work?
+                            </a>
+                            <span title="Read">📕</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter3" class="chapter">
+                    <h2>The Web Platform</h2>
+
+                    <blockquote>
+                        <p>
+                            The Web platform is a collection of technologies developed as open standards by the World Wide Web Consortium and other
+                            standardization bodies such as The Web Hypertext Application Technology Working Group, the Unicode Consortium, the Internet
+                            Engineering Task Force, and Ecma International. It is the umbrella term introduced by the World Wide Web Consortium, and in 2011 it
+                            was defined as "a platform for innovation, consolidation and cost efficiencies" by W3C CEO Jeff Jaffe. Being built on The evergreen
+                            Web (where rapid, automatic software updates, vendor co-operation, standardization, and competition take place) has allowed for the
+                            addition of new capabilities while addressing security and privacy risks. Additionally, developers are enabled to build
+                            interoperable content on a cohesive platform.
+                        </p>
+
+                        <p>
+                            The Web platform includes technologies—computer languages and APIs—that were originally created in relation to the publication of
+                            Web pages. This includes HTML, CSS 2.1, CSS, SVG, MathML, WAI-ARIA, ECMAScript, WebGL, Web Storage, Indexed Database API, Web
+                            Components, WebAssembly, Web Workers, WebSocket, Geolocation API, Server-Sent Events, DOM Events, Media Fragments, XMLHttpRequest,
+                            Cross-Origin Resource Sharing, File API, RDFa, WOFF, HTTP, TLS 1.2, and IRI.
+                        </p>
+                        <p>
+                            <cite>— <a href="https://en.wikipedia.org/wiki/Internet" target="_blank">Wikipedia</a></cite>
+                        </p>
+                    </blockquote>
+                    <p>The Web platform: Browser technologies:</p>
+
+                    <ul>
+                        <li><a href="https://platform.html5.org/">https://platform.html5.org/</a> <span title="Read">📕</span></li>
+                    </ul>
+
+                    <p>In-depth Web Platform overview:</p>
+
+                    <ul>
+                        <li>
+                            <a href="https://www.eventedmind.com/classes/how-the-web-works-7f40254c/introduction-how-the-web-works-fd9f78b1"
+                                >Introduction: How The Web Works</a
+                            >
+                            <span title="Video">🎥</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter4" class="chapter">
+                    <h2 id="hypertext-transfer-protocol-aka-http">Hypertext Transfer Protocol (aka HTTP)</h2>
+                    <blockquote>
+                        <p>
+                            The Hypertext Transfer Protocol (HTTP) is an application protocol for distributed, collaborative, hypermedia information systems.
+                            HTTP is the foundation of data communication for the World Wide Web.
+                        </p>
+                        <p>
+                            <cite>— <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" target="_blank">Wikipedia</a></cite>
+                        </p>
+                    </blockquote>
+                    <p>Most relevant specifications:</p>
+                    <ul>
+                        <li>
+                            <a href="https://tools.ietf.org/html/rfc2616" target="_blank">Hypertext Transfer Protocol -- HTTP/1.1</a>
+                        </li>
+                        <li>
+                            <a href="http://httpwg.org/specs/rfc7540.html" target="_blank">HTTP/2</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter5" class="chapter">
+                    <h2>Uniform Resource Locators (aka URL)</h2>
+                    <blockquote>
+                        <p>
+                            A uniform resource locator (URL) (also called a web address) is a reference to a resource that specifies the location of the
+                            resource on a computer network and a mechanism for retrieving it. A URL is a specific type of uniform resource identifier (URI),
+                            although many people use the two terms interchangeably. A URL implies the means to access an indicated resource, which is not true
+                            of every URI. URLs occur most commonly to reference web pages (http), but are also used for file transfer (ftp), email (mailto),
+                            database access (JDBC), and many other applications.
+                        </p>
+                        <p>
+                            <cite>— <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Locator" target="_blank">Wikipedia</a></cite>
+                        </p>
+                    </blockquote>
+                    <p>Most relevant specifications:</p>
+                    <ul>
+                        <li>
+                            <a href="http://www.w3.org/Addressing/URL/url-spec.txt" target="_blank">Uniform Resource Locators (URL)</a>
+                        </li>
+                        <li>
+                            <a href="https://url.spec.whatwg.org/" target="_blank">URL Living Standard</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter6" class="chapter">
+                    <h2>HyperText Markup Language (aka HTML)</h2>
+
+                    <blockquote>
+                        <p>
+                            HyperText Markup Language, commonly referred to as HTML, is the standard markup language used to create web pages. Web browsers can
+                            read HTML files and render them into visible or audible web pages. HTML describes the structure of a website semantically along with
+                            cues for presentation, making it a markup language, rather than a programming language.
+                        </p>
+                        <p>
+                            <cite>— <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">Wikipedia</a></cite>
+                        </p>
+                    </blockquote>
+
+                    <p>Below is an example of a basic HTML file, with a <code>&lt;h1&gt;&lt;/h1&gt;</code> heading that a web browser will read.</p>
+
+                    <pre class="line-numbers"><code class="language-markup">
 &lt;!DOCTYPE html&gt;&#10;&lt;html&gt;&#10;&#10;&lt;head&gt;&#10;  &lt;meta charset=&quot;UTF-8&quot; /&gt;&#10;  &lt;title&gt;Name of Web Page&lt;/title&gt;&#10;&lt;/head&gt;&#10;&#10;&lt;body&gt;&#10;&#10;  &lt;h1&gt;I am a web page&lt;/h1&gt;&#10;&lt;/body&gt;&#10;&#10;&lt;/html&gt;
 
-</pre></code>
+</code></pre>
 
+                    <p>Most relevant specifications / documentation:</p>
+                    <ul>
+                        <li>
+                            <a href="http://www.w3.org/standards/techs/html#w3c_all" target="_blank">All W3C HTML Spec</a>
+                        </li>
+                        <li>
+                            <a href="https://html.spec.whatwg.org/multipage" target="_blank">The elements of HTML</a>
+                            from the Living Standard
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes" target="_blank">Global attributes</a>
+                        </li>
+                        <li>
+                            <a href="https://www.w3.org/TR/2017/REC-html52-20171214/" target="_blank">HTML 5.2 from W3C</a>
+                        </li>
+                        <li>
+                            <a href="http://w3c.github.io/html/" target="_blank">HTML 5.3 from W3C</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank">HTML attribute reference</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">HTML element reference</a>
+                        </li>
+                        <li>
+                            <a href="https://html.spec.whatwg.org/multipage/syntax.html#syntax" target="_blank">The HTML Syntax</a>
+                            from the Living Standard
+                        </li>
+                    </ul>
+                </div>
 
-          <p>Most relevant specifications / documentation:</p>
-          <ul>
-            <li>
-              <a
-                href="http://www.w3.org/standards/techs/html#w3c_all"
-                target="_blank"
-                >All W3C HTML Spec</a
-              >
-            </li>
-            <li>
-              <a href="https://html.spec.whatwg.org/multipage" target="_blank"
-                >The elements of HTML</a
-              >
-              from the Living Standard
-            </li>
-            <li>
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes"
-                target="_blank"
-                >Global attributes</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.w3.org/TR/2017/REC-html52-20171214/"
-                target="_blank"
-                >HTML 5.2 from W3C</a
-              >
-            </li>
-            <li>
-              <a href="http://w3c.github.io/html/" target="_blank"
-                >HTML 5.3 from W3C</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes"
-                target="_blank"
-                >HTML attribute reference</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
-                target="_blank"
-                >HTML element reference</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://html.spec.whatwg.org/multipage/syntax.html#syntax"
-                target="_blank"
-                >The HTML Syntax</a
-              >
-              from the Living Standard
-            </li>
-          </ul>
-        </div>
+                <div id="chapter7" class="chapter">
+                    <h2>Cascading Style Sheets (aka CSS)</h2>
+                    <blockquote>
+                        <p>
+                            Cascading Style Sheets (CSS) is a style sheet language used for describing the look and formatting of a document written in a markup
+                            language. Although most often used to change the style of web pages and user interfaces written in HTML and XHTML, the language can
+                            be applied to any kind of XML document, including plain XML, SVG and XUL. Along with HTML and JavaScript, CSS is a cornerstone
+                            technology used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for
+                            many mobile applications.
+                        </p>
+                        <p>
+                            <cite>— <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank">Wikipedia</a></cite>
+                        </p>
+                    </blockquote>
 
-        <div id="chapter7" class="chapter">
-          <h2>
-            Cascading Style Sheets (aka CSS)
-          </h2>
-          <blockquote>
-            <p>
-              Cascading Style Sheets (CSS) is a style sheet language used for
-              describing the look and formatting of a document written in a
-              markup language. Although most often used to change the style of
-              web pages and user interfaces written in HTML and XHTML, the
-              language can be applied to any kind of XML document, including
-              plain XML, SVG and XUL. Along with HTML and JavaScript, CSS is a
-              cornerstone technology used by most websites to create visually
-              engaging webpages, user interfaces for web applications, and user
-              interfaces for many mobile applications.
-            </p>
-            <p>
-              <cite
-                >—
-                <a
-                  href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets"
-                  target="_blank"
-                  >Wikipedia</a
-                ></cite
-              >
-            </p>
-          </blockquote>
+                    <p>
+                        Below is an example of a basic HTML file, with an internal CSS style sheet that styles the <code>&lt;h1&gt;&lt;/h1&gt;</code> red using
+                        a CSS declaration.
+                    </p>
 
-          <p>Below is an example of a basic HTML file, with an internal CSS style sheet that styles the <code>&lt;h1&gt;&lt;/h1&gt;</code> red using a CSS declaration.</p>
-
-    <pre class="line-numbers"><code class="language-markup">
+                    <pre class="line-numbers"><code class="language-markup">
 &lt;!DOCTYPE html&gt;&#10;&lt;html&gt;&#10;  &lt;head&gt;&#10;    &lt;meta charset=&quot;UTF-8&quot; /&gt;&#10;    &lt;title&gt;Name of Web Page&lt;/title&gt;&#10;    &lt;!-- internal style sheet --&gt;&#10;    &lt;style type=&quot;text/css&quot;&gt;&#10;      /* css declaration */&#10;      h1 {&#10;        color: red;&#10;      }&#10;    &lt;/style&gt;&#10;  &lt;/head&gt;&#10;&#10;  &lt;body&gt;&#10;    &lt;h1&gt;I am a web page&lt;/h1&gt;&#10;  &lt;/body&gt;&#10;&lt;/html&gt;
-</pre></code>
+</code></pre>
 
-          <p>Most relevant specifications / documentation:</p>
-          <ul>
-            <li>
-              <a href="http://www.w3.org/Style/CSS/current-work" target="_blank"
-                >All W3C CSS Specifications</a
-              >
-            </li>
-            <li>
-              <a href="https://www.w3.org/TR/CSS22/" target="_blank"
-                >Cascading Style Sheets Level 2 Revision 2 (CSS 2.2)
-                Specification</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference"
-                target="_blank"
-                >CSS reference</a
-              >
-            </li>
-            <li>
-              <a href="http://www.w3.org/TR/css3-selectors/" target="_blank"
-                >Selectors Level 3</a
-              >
-            </li>
-          </ul>
-        </div>
+                    <p>Most relevant specifications / documentation:</p>
+                    <ul>
+                        <li>
+                            <a href="http://www.w3.org/Style/CSS/current-work" target="_blank">All W3C CSS Specifications</a>
+                        </li>
+                        <li>
+                            <a href="https://www.w3.org/TR/CSS22/" target="_blank">Cascading Style Sheets Level 2 Revision 2 (CSS 2.2) Specification</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">CSS reference</a>
+                        </li>
+                        <li>
+                            <a href="http://www.w3.org/TR/css3-selectors/" target="_blank">Selectors Level 3</a>
+                        </li>
+                    </ul>
+                </div>
 
-        <div id="chapter8" class="chapter">
-          <h2>Document Object Model (aka DOM)</h2>
-          <blockquote>
-            <p>
-              The Document Object Model (DOM) is a cross-platform and
-              language-independent convention for representing and interacting
-              with objects in HTML, XHTML, and XML documents. The nodes of every
-              document are organized in a tree structure, called the DOM tree.
-              Objects in the DOM tree may be addressed and manipulated by using
-              methods on the objects. The public interface of a DOM is specified
-              in its application programming interface (API).
-            </p>
-            <p>
-              <cite
-                >—
-                <a
-                  href="https://en.wikipedia.org/wiki/Document_Object_Model"
-                  target="_blank"
-                  >Wikipedia</a
-                ></cite
-              >
-            </p>
-          </blockquote>
-          <p>Most relevant specifications / documentation:</p>
-          <ul>
-            <li>
-              <a href="https://dom.spec.whatwg.org/" target="_blank"
-                >DOM Living Standard</a
-              >
-            </li>
-            <li>
-              <a href="https://www.w3.org/TR/domcore/" target="_blank"
-                >W3C DOM4</a
-              >
-            </li>
-            <li>
-              <a href="https://www.w3.org/TR/uievents/" target="_blank"
-                >UI Events</a
-              >
-            </li>
-          </ul>
-        </div>
+                <div id="chapter8" class="chapter">
+                    <h2>Document Object Model (aka DOM)</h2>
+                    <blockquote>
+                        <p>
+                            The Document Object Model (DOM) is a cross-platform and language-independent convention for representing and interacting with
+                            objects in HTML, XHTML, and XML documents. The nodes of every document are organized in a tree structure, called the DOM tree.
+                            Objects in the DOM tree may be addressed and manipulated by using methods on the objects. The public interface of a DOM is specified
+                            in its application programming interface (API).
+                        </p>
+                        <p>
+                            <cite>— <a href="https://en.wikipedia.org/wiki/Document_Object_Model" target="_blank">Wikipedia</a></cite>
+                        </p>
+                    </blockquote>
+                    <p>Most relevant specifications / documentation:</p>
+                    <ul>
+                        <li>
+                            <a href="https://dom.spec.whatwg.org/" target="_blank">DOM Living Standard</a>
+                        </li>
+                        <li>
+                            <a href="https://www.w3.org/TR/domcore/" target="_blank">W3C DOM4</a>
+                        </li>
+                        <li>
+                            <a href="https://www.w3.org/TR/uievents/" target="_blank">UI Events</a>
+                        </li>
+                    </ul>
+                </div>
 
-        <div id="chapter9" class="chapter">
-          <h2>JavaScript Programming Language (aka ECMAScript 262)</h2>
-          <blockquote>
-            <p>
-              JavaScript is a high level, dynamic, untyped, and interpreted
-              programming language. It has been standardized in the ECMAScript
-              language specification. Alongside HTML and CSS, it is one of the
-              three essential technologies of World Wide Web content production;
-              the majority of websites employ it and it is supported by all
-              modern web browsers without plugins. JavaScript is
-              prototype-based with first-class functions, making it a
-              multi-paradigm language, supporting object-oriented, imperative,
-              and functional programming styles. It has an API for working with
-              text, arrays, dates and regular expressions, but does not include
-              any I/O, such as networking, storage or graphics facilities,
-              relying for these upon the host environment in which it is
-              embedded.
-            </p>
-            <p>
-              <cite
-                >—
-                <a
-                  href="https://en.wikipedia.org/wiki/JavaScript"
-                  target="_blank"
-                  >Wikipedia</a
-                ></cite
-              >
-            </p>
-          </blockquote>
+                <div id="chapter9" class="chapter">
+                    <h2>JavaScript Programming Language (aka ECMAScript 262)</h2>
+                    <blockquote>
+                        <p>
+                            JavaScript is a high level, dynamic, untyped, and interpreted programming language. It has been standardized in the ECMAScript
+                            language specification. Alongside HTML and CSS, it is one of the three essential technologies of World Wide Web content production;
+                            the majority of websites employ it and it is supported by all modern web browsers without plugins. JavaScript is prototype-based
+                            with first-class functions, making it a multi-paradigm language, supporting object-oriented, imperative, and functional programming
+                            styles. It has an API for working with text, arrays, dates and regular expressions, but does not include any I/O, such as
+                            networking, storage or graphics facilities, relying for these upon the host environment in which it is embedded.
+                        </p>
+                        <p>
+                            <cite>— <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">Wikipedia</a></cite>
+                        </p>
+                    </blockquote>
 
-          <p>Below is an example of a basic HTML file containing inline JavaScript which uses the DOM API's to add a click event to the <code>&lt;h1&gt;&lt;/h1&gt;</code> so that when the <code>&lt;h1&gt;&lt;/h1&gt;</code> is clicked by the mouse pointer a browser alert appears with a custom message.</p>
+                    <p>
+                        Below is an example of a basic HTML file containing inline JavaScript which uses the DOM APIs to add a click event to the
+                        <code>&lt;h1&gt;&lt;/h1&gt;</code> so that when the <code>&lt;h1&gt;&lt;/h1&gt;</code> is clicked by the mouse pointer a browser alert
+                        appears with a custom message.
+                    </p>
 
-    <pre class="line-numbers"><code class="language-markup">
+                    <pre class="line-numbers"><code class="language-markup">
 &lt;!DOCTYPE html&gt;&#10;&lt;html&gt;&#10;  &lt;head&gt;&#10;    &lt;meta charset=&quot;UTF-8&quot; /&gt;&#10;    &lt;title&gt;Name of Web Page&lt;/title&gt;&#10;    &lt;!-- internal style sheet --&gt;&#10;    &lt;style type=&quot;text/css&quot;&gt;&#10;      /* css declaration */&#10;      h1 {&#10;        color: red;&#10;      }&#10;    &lt;/style&gt;&#10;  &lt;/head&gt;&#10;&#10;  &lt;body&gt;&#10;    &lt;h1&gt;I am a web page&lt;/h1&gt;&#10;    &lt;!-- internal javascript --&gt;&#10;    &lt;script type=&quot;text/javascript&quot;&gt;&#10;      // document.querySelector.onclick this is a DOM API&#10;      document.querySelector(&quot;h1&quot;).onclick = function() {&#10;        alert(&quot;You click an h1!&quot;);&#10;      };&#10;    &lt;/script&gt;&#10;  &lt;/body&gt;&#10;&lt;/html&gt;
         
-</pre></code>
-          <p>Most relevant specifications / documentation:</p>
-          <ul>
-            <li>
-              <a
-                href="http://ecma-international.org/ecma-262/9.0/index.html#Title"
-                target="_blank"
-                >ECMAScript® 2018 Language Specification</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources"
-                target="_blank"
-                >All ECMAScript Language Specifications</a
-              >
-            </li>
-          </ul>
+</code></pre>
+                    <p>Most relevant specifications / documentation:</p>
+                    <ul>
+                        <li>
+                            <a href="http://ecma-international.org/ecma-262/9.0/index.html#Title" target="_blank">ECMAScript® 2018 Language Specification</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources" target="_blank"
+                                >All ECMAScript Language Specifications</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter10" class="chapter">
+                    <h2>Web APIs (aka Browser APIs)</h2>
+                    <blockquote>
+                        <p>
+                            When writing code for the Web using JavaScript, there are a great many APIs available. Below is a list of all the interfaces (that
+                            is, types of objects) that you may be able to use while developing your Web app or site.
+                        </p>
+                        <p>
+                            <cite>— <a href="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank">Mozilla</a></cite>
+                        </p>
+                    </blockquote>
+                    <p>Most relevant documentation:</p>
+                    <ul>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank">Web API Interfaces</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter11" class="chapter">
+                    <h2>JavaScript Object Notation (aka JSON)</h2>
+                    <blockquote>
+                        <p>
+                            It is the primary data format used for asynchronous browser/server communication (AJAJ), largely replacing XML (used by AJAX).
+                            Although originally derived from the JavaScript scripting language, JSON is a language-independent data format. Code for parsing and
+                            generating JSON data is readily available in many programming languages. The JSON format was originally specified by Douglas
+                            Crockford. It is currently described by two competing standards, RFC 7159 and ECMA-404. The ECMA standard is minimal, describing
+                            only the allowed grammar syntax, whereas the RFC also provides some semantic and security considerations. The official Internet
+                            media type for JSON is application/json. The JSON filename extension is .json.
+                        </p>
+                        <p>
+                            <cite>— <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">Wikipedia</a></cite>
+                        </p>
+                    </blockquote>
+                    <p>Most relevant specifications:</p>
+                    <ul>
+                        <li>
+                            <a href="http://json.org/" target="_blank">Introducing JSON</a>
+                        </li>
+                        <li><a href="http://jsonapi.org/" target="_blank">JSON API</a></li>
+                        <li>
+                            <a href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf" target="_blank"
+                                >The JSON Data Interchange Format</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="chapter12" class="chapter">
+                    <h2>Web Content Accessibility Guidelines (aka WCAG) &amp; Accessible Rich Internet Applications (aka ARIA)</h2>
+                    <blockquote>
+                        <p>
+                            Accessibility refers to the design of products, devices, services, or environments for people with disabilities. The concept of
+                            accessible design ensures both “direct access” (i.e., unassisted) and "indirect access" meaning compatibility with a person's
+                            assistive technology (for example, computer screen readers).
+                        </p>
+                        <p>
+                            <cite>— <a href="https://en.wikipedia.org/wiki/Accessibility" target="_blank">Wikipedia</a></cite>
+                        </p>
+                    </blockquote>
+                    <ul>
+                        <li>
+                            <a href="https://www.w3.org/WAI/standards-guidelines/" target="_blank">Web Accessibility Initiative (WAI)</a>
+                        </li>
+                        <li>
+                            <a href="http://www.w3.org/standards/techs/wcag#w3c_all" target="_blank"
+                                >Web Content Accessibility Guidelines (WCAG) Current Status</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <div id="chapter10" class="chapter">
-          <h2>Web APIs (aka Browser APIs)</h2>
-          <blockquote>
-            <p>
-              When writing code for the Web using JavaScript, there are a great
-              many APIs available. Below is a list of all the interfaces (that
-              is, types of objects) that you may be able to use while developing
-              your Web app or site.
-            </p>
-            <p>
-              <cite
-                >—
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/API"
-                  target="_blank"
-                  >Mozilla</a
-                ></cite
-              >
-            </p>
-          </blockquote>
-          <p>Most relevant documentation:</p>
-          <ul>
-            <li>
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/API"
-                target="_blank"
-                >Web API Interfaces</a
-              >
-            </li>
-          </ul>
-        </div>
+        <script src="../_js/slideout.min.js"></script>
+        <script src="../_js/jquery-3.3.1.slim.min.js"></script>
 
-        <div id="chapter11" class="chapter">
-          <h2>JavaScript Object Notation (aka JSON)</h2>
-          <blockquote>
-            <p>
-              It is the primary data format used for asynchronous browser/server
-              communication (AJAJ), largely replacing XML (used by AJAX).
-              Although originally derived from the JavaScript scripting
-              language, JSON is a language-independent data format. Code for
-              parsing and generating JSON data is readily available in many
-              programming languages. The JSON format was originally specified by
-              Douglas Crockford. It is currently described by two competing
-              standards, RFC 7159 and ECMA-404. The ECMA standard is minimal,
-              describing only the allowed grammar syntax, whereas the RFC also
-              provides some semantic and security considerations. The official
-              Internet media type for JSON is application/json. The JSON
-              filename extension is .json.
-            </p>
-            <p>
-              <cite
-                >—
-                <a href="https://en.wikipedia.org/wiki/JSON" target="_blank"
-                  >Wikipedia</a
-                ></cite
-              >
-            </p>
-          </blockquote>
-          <p>Most relevant specifications:</p>
-          <ul>
-            <li>
-              <a href="http://json.org/" target="_blank">Introducing JSON</a>
-            </li>
-            <li><a href="http://jsonapi.org/" target="_blank">JSON API</a></li>
-            <li>
-              <a
-                href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf"
-                target="_blank"
-                >The JSON Data Interchange Format</a
-              >
-            </li>
-          </ul>
-        </div>
+        <script>
+            // Create slide out TOC
+            var slideout = new Slideout({
+                panel: document.getElementById('panel'),
+                menu: document.getElementById('menu'),
+                padding: 356,
+                tolerance: 70,
+            });
 
-        <div id="chapter12" class="chapter">
-          <h2>
-            Web Content Accessibility Guidelines (aka WCAG) &amp; Accessible
-            Rich Internet Applications (aka ARIA)
-          </h2>
-          <blockquote>
-            <p>
-              Accessibility refers to the design of products, devices, services,
-              or environments for people with disabilities. The concept of
-              accessible design ensures both “direct access” (i.e., unassisted)
-              and "indirect access" meaning compatibility with a person's
-              assistive technology (for example, computer screen readers).
-            </p>
-            <p>
-              <cite
-                >—
-                <a
-                  href="https://en.wikipedia.org/wiki/Accessibility"
-                  target="_blank"
-                  >Wikipedia</a
-                ></cite
-              >
-            </p>
-          </blockquote>
-          <ul>
-            <li>
-              <a
-                href="https://www.w3.org/WAI/standards-guidelines/"
-                target="_blank"
-                >Web Accessibility Initiative (WAI)</a
-              >
-            </li>
-            <li>
-              <a
-                href="http://www.w3.org/standards/techs/wcag#w3c_all"
-                target="_blank"
-                >Web Content Accessibility Guidelines (WCAG) Current Status</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+            // Create TOC dynamically from content
+            jQuery('.chapter').each(function (index) {
+                jQuery('h2', '#chapter' + (index + 1)).each(function (i) {
+                    $(this).attr('id', index + 1);
+                    $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
+                });
 
-    <script src="../_js/slideout.min.js"></script>
-    <script src="../_js/jquery-3.3.1.slim.min.js"></script>
+                jQuery('h3', '#chapter' + (index + 1)).each(function (i) {
+                    $(this).attr('id', index + 1 + '.' + (i + 1));
+                    $('#toc').append('<h6><a href="#' + (index + 1) + '.' + (i + 1) + '">' + $(this).html() + '</a></h6>');
+                });
+            });
 
-    <script>
-      // Create slide out TOC
-      var slideout = new Slideout({
-        panel: document.getElementById("panel"),
-        menu: document.getElementById("menu"),
-        padding: 356,
-        tolerance: 70
-      });
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function () {
+                window.open($(this).attr('href'));
+                return false;
+            });
 
-      // Create TOC dynamically from content
-      jQuery(".chapter").each(function(index) {
-        jQuery("h2", "#chapter" + (index + 1)).each(function(i) {
-          $(this).attr("id", index + 1);
-          $("#toc").append(
-            '<h5><a href="#' + (index + 1) + '">' + $(this).html() + "</a></h5>"
-          );
-        });
+            // toggle TOC from hamburger icon
+            document.querySelector('#menuButton').addEventListener('click', function () {
+                slideout.toggle();
+            });
 
-        jQuery("h3", "#chapter" + (index + 1)).each(function(i) {
-          $(this).attr("id", index + 1 + "." + (i + 1));
-          $("#toc").append(
-            '<h6><a href="#' +
-              (index + 1) +
-              "." +
-              (i + 1) +
-              '">' +
-              $(this).html() +
-              "</a></h6>"
-          );
-        });
-      });
+            // toggle TOC on window resize
+            window.addEventListener('resize', resizeThrottler, false);
+            var resizeTimeout;
+            function resizeThrottler() {
+                // ignore resize events as long as an actualResizeHandler execution is in the queue
+                if (!resizeTimeout) {
+                    resizeTimeout = setTimeout(function () {
+                        resizeTimeout = null;
+                        actualResizeHandler();
 
-      jQuery("#panel").on(
-        "click",
-        "a:not(.codesandboxlink a, .toolbar a)",
-        function() {
-          window.open($(this).attr("href"));
-          return false;
-        }
-      );
-
-      // toggle TOC from hamburger icon
-      document
-        .querySelector("#menuButton")
-        .addEventListener("click", function() {
-          slideout.toggle();
-        });
-
-      // toggle TOC on window resize
-      window.addEventListener("resize", resizeThrottler, false);
-      var resizeTimeout;
-      function resizeThrottler() {
-        // ignore resize events as long as an actualResizeHandler execution is in the queue
-        if (!resizeTimeout) {
-          resizeTimeout = setTimeout(function() {
-            resizeTimeout = null;
-            actualResizeHandler();
-
-            // The actualResizeHandler will execute at a rate of 15fps
-          }, 66);
-        }
-      }
-      function actualResizeHandler() {
-        if (window.innerWidth > 1036) {
-          slideout.open();
-        } else {
-          slideout.close();
-        }
-      }
-
-      // open TOC on load if window is wide enough
-      window.addEventListener("load", function(event) {
-        if (window.innerWidth > 1036) {
-          slideout.open();
-        } else {
-          slideout.close();
-        }
-      });
-
-      jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function () {
-            window.open($(this).attr('href'));
-            return false;
-        });
-        
-        // create link to codesandob
-        jQuery('.line-numbers:has(.language-js)').not(':has(.noRun)').before('<div class="codesandboxlink"><a href="#">run/edit in codesandbox.io</a></div>');
-        
-        // create event handler for codesandbox link
-        jQuery('#panel').on('click', '.codesandboxlink a', function (e) {
-            const code = $(this).parent().next('.code-toolbar:has(.language-js)').find('code').text();
-            var newWindow = window.open("", "_blank");
-            fetch("https://codesandbox.io/api/v1/sandboxes/define?json=1", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    Accept: "application/json"
-                },
-                body: JSON.stringify({
-                    files: {
-                        "index.js": {
-                            content: code
-                        },
-                        "index.html": {
-                            content: '<script src="./node_modules/babel-polyfill/dist/polyfill.js"><\/script><script src="https://unpkg.com/core-js-bundle@3.0.0-beta.3/index.js"><\/script><script src="index.js"><\/script>'
-                        },
-                        ".babelrc": {
-                            "content": {
-                                "presets": ["env", "stage-0"]
-                            }
-                        },
-                        "package.json": {
-                            "content": {
-                                "name": "ES2015+ Enlightenment Code Example",
-                                "version": "1.0.0",
-                                "description": "Simple Parcel/Babel Sandbox",
-                                "main": "index.html",
-                                "scripts": {
-                                    "start": "parcel index.html --open",
-                                    "build": "parcel build index.html"
-                                },
-                                "dependencies": { "babel-polyfill": "6.26.0" },
-                                "devDependencies": {
-                                    "parcel-bundler": "^1.9.7",
-                                    "babel-preset-env": "^1.7.0",
-                                    "babel-preset-stage-0": "^6.24.1"
-                                }
-                            }
-                        }
-                    }
-                })
-            })
-                .then(x => x.json())
-                .then(data => {
-                    newWindow.location.href = 'https://codesandbox.io/embed/' + data.sandbox_id + '?forcerefresh=1&eslint=1&expanddevtools=1&hidenavigation=1&module=%2Findex.js';
+                        // The actualResizeHandler will execute at a rate of 15fps
+                    }, 66);
                 }
-                );
-            e.preventDefault();
-        });
-    </script>
-  </body>
+            }
+            function actualResizeHandler() {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            }
+
+            // open TOC on load if window is wide enough
+            window.addEventListener('load', function (event) {
+                if (window.innerWidth > 1036) {
+                    slideout.open();
+                } else {
+                    slideout.close();
+                }
+            });
+
+            jQuery('#panel').on('click', 'a:not(.codesandboxlink a, .toolbar a)', function () {
+                window.open($(this).attr('href'));
+                return false;
+            });
+
+            // create link to codesandob
+            jQuery('.line-numbers:has(.language-js)')
+                .not(':has(.noRun)')
+                .before('<div class="codesandboxlink"><a href="#">run/edit in codesandbox.io</a></div>');
+
+            // create event handler for codesandbox link
+            jQuery('#panel').on('click', '.codesandboxlink a', function (e) {
+                const code = $(this).parent().next('.code-toolbar:has(.language-js)').find('code').text();
+                var newWindow = window.open('', '_blank');
+                fetch('https://codesandbox.io/api/v1/sandboxes/define?json=1', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Accept: 'application/json',
+                    },
+                    body: JSON.stringify({
+                        files: {
+                            'index.js': {
+                                content: code,
+                            },
+                            'index.html': {
+                                content:
+                                    '<script src="./node_modules/babel-polyfill/dist/polyfill.js"><\/script><script src="https://unpkg.com/core-js-bundle@3.0.0-beta.3/index.js"><\/script><script src="index.js"><\/script>',
+                            },
+                            '.babelrc': {
+                                content: {
+                                    presets: ['env', 'stage-0'],
+                                },
+                            },
+                            'package.json': {
+                                content: {
+                                    name: 'ES2015+ Enlightenment Code Example',
+                                    version: '1.0.0',
+                                    description: 'Simple Parcel/Babel Sandbox',
+                                    main: 'index.html',
+                                    scripts: {
+                                        start: 'parcel index.html --open',
+                                        build: 'parcel build index.html',
+                                    },
+                                    dependencies: { 'babel-polyfill': '6.26.0' },
+                                    devDependencies: {
+                                        'parcel-bundler': '^1.9.7',
+                                        'babel-preset-env': '^1.7.0',
+                                        'babel-preset-stage-0': '^6.24.1',
+                                    },
+                                },
+                            },
+                        },
+                    }),
+                })
+                    .then((x) => x.json())
+                    .then((data) => {
+                        newWindow.location.href =
+                            'https://codesandbox.io/embed/' + data.sandbox_id + '?forcerefresh=1&eslint=1&expanddevtools=1&hidenavigation=1&module=%2Findex.js';
+                    });
+                e.preventDefault();
+            });
+        </script>
+    </body>
 </html>
