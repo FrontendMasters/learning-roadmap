@@ -1,4 +1,6 @@
-# The Front-End Developer Learning Roadmap
+# The Frontend  Learning Roadmap
+
+![The Frontend Learning Roadmap](og-learning-roadmap.jpg?raw=true "The Frontend Learning Roadmap")
 
 Authored by [Cody Lindley](http://codylindley.com/) | _Published by [Frontend Masters](https://frontendmasters.com/) - Advancing your skills with in-depth, modern front-end engineering courses_
 
