@@ -54,14 +54,21 @@
                 <dl>
                     <dt>Unit Testing</dt>
                     <dd>
-                        In computer programming, unit testing is a software testing method by which individual units of source code, sets of one or more
-                        computer program modules together with associated control data, usage procedures, and operating procedures, are tested to determine
-                        whether they are fit for use. Intuitively, one can view a unit as the smallest testable part of an application.
+                        A piece of code whose inputs you control in order to verify the outputs.
+
+                        For a test to be considered an unit test, it must respect certain characteristics, such as:
+                        <ul>
+                            <li>It should be fast. If a test takes 2 minutes to be executed, then it's not an unit test.</li>
+                            <li>It should be reliable. If a test works only if the network is on, then it's not an unit test.</li>
+                            <li>It should be trustworthy. If you are not sure that a test you wrote will still work in a year when the associated production code has not changed, then it's not an unit test.</li>
+                            <li>It should be automated. If you need to press a button to execute the test, then it's not an unit test.</li>
+                        </ul>
+
+                        Contrary to popular belief, it is possible for a test to traverse several units of code, be they functions, classes or modules.
                     </dd>
                     <dt>Integration Testing</dt>
                     <dd>
-                        Integration testing is the phase in software testing in which individual software modules are combined and tested as a group. It occurs
-                        after unit testing.
+                        A test that is not an unit test is an integration test. If it is slow, or if it is not deterministic, or if it accesses a database, then it's an integration test.
                     </dd>
                     <dt>End to End Testing</dt>
                     <dd>
