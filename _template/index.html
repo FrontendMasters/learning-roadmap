@@ -112,7 +112,7 @@
             jQuery('.chapter').each(function (index) {
                 jQuery('h2', '#chapter' + (index + 1)).each(function (i) {
                     $(this).attr('id', index + 1);
-                    $('#toc').append('<h5><a href="#' + (index + 1) + '">' + $(this).html() + '</a></h5>');
+                    $('#toc').append('<h5><a href="#' + (index + 1) + '" class="anchor">' + $(this).html() + '</a></h5>');
                 });
 
                 jQuery('h3', '#chapter' + (index + 1)).each(function (i) {
@@ -125,6 +125,12 @@
                 window.open($(this).attr('href'));
                 return false;
             });
+
+            jQuery('#toc').on('click', 'a.anchor', function(event) {
+                event.preventDefault();
+                window.history.pushState({}, '', event.target.hash);
+                document.getElementById('chapter' + event.target.hash.split('#')[1]).scrollIntoView({behavior:'smooth'});
+            })
 
             // toggle TOC from hamburger icon
             document.querySelector('#menuButton').addEventListener('click', function () {
